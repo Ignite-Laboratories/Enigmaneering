@@ -7,6 +7,26 @@ import (
 	"time"
 )
 
+func main() {
+	clock := NewClock(1000000)
+	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, Potential)
+	clock.Start()
+}
+
+func Potential(ctx Context) bool {
+	// Run on every beat of the clock
+	return true
+}
+
+func Action(ctx Context) {
+	fmt.Printf("Action #%d - Beat %d\n", ctx.Kernel.GetID(), ctx.Beat)
+	time.Sleep(1 * time.Second)
+}
+
 type Clock struct {
 	ID      uint64
 	Period  int
@@ -89,24 +109,4 @@ type Context struct {
 	Clock     *Clock
 	Kernel    Kernel
 	waitGroup *sync.WaitGroup
-}
-
-func main() {
-	clock := NewClock(1000000)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.Start()
-}
-
-func Potential(ctx Context) bool {
-	// Run on every beat of the clock
-	return true
-}
-
-func Action(ctx Context) {
-	fmt.Printf("Action #%d - Beat %d\n", ctx.Kernel.GetID(), ctx.Beat)
-	time.Sleep(1 * time.Second)
 }
