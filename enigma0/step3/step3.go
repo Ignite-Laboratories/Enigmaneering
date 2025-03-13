@@ -7,6 +7,27 @@ import (
 	"time"
 )
 
+var desiredDuration = time.Second / 100
+
+func main() {
+	clock := NewClock(1024)
+	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, Potential)
+	clock.Start()
+}
+
+func Potential(ctx Context) bool {
+	return true
+}
+
+func Action(ctx Context) {
+	fmt.Printf("Action #%d - Beat #%d\n", ctx.Kernel.GetID(), ctx.Beat)
+	time.Sleep(1 * time.Second)
+}
+
 type Clock struct {
 	ID         uint64
 	BPL        int
@@ -32,7 +53,7 @@ func (c *Clock) Start() {
 	beatCountStart := lastNow
 
 	for core.Alive {
-		// Now should always be saved as the first step of the loop
+		// Now should always be saved as the first step of the loop!
 		now := time.Now()
 		beatCount++
 
@@ -87,8 +108,8 @@ type Kernel interface {
 type actionPotential struct {
 	ID uint64
 
-	// lastTrigger is the last beat's moment this actionPotential was activated.
-	lastTrigger time.Time
+	// lastBeatMoment is the last beat's moment from which this actionPotential was activated.
+	lastBeatMoment time.Time
 
 	// lastCompletion is the last moment in time this actionPotential finished execution.
 	lastCompletion time.Time
@@ -108,7 +129,6 @@ func (ap *actionPotential) Execute(ctx Context) {
 			ctx.Delta = ctx.Moment.Sub(ap.lastTrigger)
 			ctx.LastDuration = ap.lastCompletion.Sub(ap.lastTrigger)
 		}
-		ap.lastTrigger = ctx.Moment
 
 		go func() {
 			ap.action(ctx)
@@ -118,6 +138,9 @@ func (ap *actionPotential) Execute(ctx Context) {
 
 			ap.executing = false
 		}()
+
+		// Temporally regress this beat's contextual information for historical reference
+		ap.lastBeatMoment = ctx.Moment
 	}
 	ctx.waitGroup.Done()
 }
@@ -140,35 +163,18 @@ type Context struct {
 	waitGroup    *sync.WaitGroup
 }
 
-type TemporalFrame struct {
+var timeline sync.Map
+
+type TemporalFragment struct {
 	lastNow      time.Time
 	lastDuration time.Duration
 	delta        time.Duration
 }
 
-func NewTemporalFrame(now time.Time, duration time.Duration) TemporalFrame {
-	return TemporalFrame{
+func NewTemporalFragment(now time.Time, duration time.Duration) TemporalFragment {
+	return TemporalFragment{
 		lastNow:      now,
 		lastDuration: duration,
-		//delta:        duration - pulseDuration,
+		delta:        duration - desiredDuration,
 	}
-}
-
-func main() {
-	clock := NewClock(1024)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.Start()
-}
-
-func Potential(ctx Context) bool {
-	return true
-}
-
-func Action(ctx Context) {
-	fmt.Printf("Action #%d - Beat #%d\n", ctx.Kernel.GetID(), ctx.Beat)
-	time.Sleep(1 * time.Second)
 }
