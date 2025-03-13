@@ -170,7 +170,7 @@ Finally, let's explore a contrived example that demonstrates a set of actions th
 once the last round of execution ends - even though they are stimulated on every beat of the clock -
 
     func main() {
-        clock := NewClock(1000000)
+        clock := NewClock(1024)
         clock.AddKernel(Action, Potential)
         clock.AddKernel(Action, Potential)
         clock.AddKernel(Action, Potential)
@@ -185,7 +185,7 @@ once the last round of execution ends - even though they are stimulated on every
     }
     
     func Action(ctx Context) {
-        fmt.Printf("Action #%d - Beat %d\n", ctx.Kernel.GetID(), ctx.Beat)
+        fmt.Printf("Action #%d - Beat #%d\n", ctx.Kernel.GetID(), ctx.Beat)
         time.Sleep(1 * time.Second)
     }
 

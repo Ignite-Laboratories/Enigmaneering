@@ -17,7 +17,7 @@ var waitGroup *sync.WaitGroup
 func main() {
 	waitGroup = &sync.WaitGroup{}
 	clock := Clock{
-		LoopPeriod: 1000,
+		LoopPeriod: 1024,
 		Actions: []func(int, int){
 			Action,
 			Action,
@@ -52,6 +52,6 @@ func Potential(beat int) bool {
 }
 
 func Action(id int, beat int) {
-	fmt.Printf("Action #%d - Beat %d\n", id, beat)
+	fmt.Printf("Action #%d - Beat #%d\n", id, beat)
 	waitGroup.Done()
 }

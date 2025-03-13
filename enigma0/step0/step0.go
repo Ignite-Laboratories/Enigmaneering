@@ -34,5 +34,5 @@ func Potential(beat int) bool {
 }
 
 func Action(beat int) {
-	fmt.Printf("Beat %d\n", beat)
+	fmt.Printf("Beat #%d\n", beat)
 }

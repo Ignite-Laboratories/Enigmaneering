@@ -83,7 +83,7 @@ context to the action potential functions as desired:
     }
     
     func Action(beat int) {
-        fmt.Printf("Beat %d\n", beat)
+        fmt.Printf("Beat #%d\n", beat)
     }
 
 Truly - _that is all it takes to begin building an action-potential execution pipeline!_

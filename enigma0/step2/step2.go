@@ -23,7 +23,7 @@ func Potential(ctx Context) bool {
 }
 
 func Action(ctx Context) {
-	fmt.Printf("Action #%d - Beat %d\n", ctx.Kernel.GetID(), ctx.Beat)
+	fmt.Printf("Action #%d - Beat #%d\n", ctx.Kernel.GetID(), ctx.Beat)
 	time.Sleep(1 * time.Second)
 }
 

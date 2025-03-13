@@ -92,7 +92,7 @@ type Context struct {
 }
 
 func main() {
-	clock := NewClock(1000000)
+	clock := NewClock(1024)
 	clock.AddKernel(Action, Potential)
 	clock.AddKernel(Action, Potential)
 	clock.AddKernel(Action, Potential)
@@ -106,6 +106,6 @@ func Potential(ctx Context) bool {
 }
 
 func Action(ctx Context) {
-	fmt.Printf("Action #%d - Beat %d\n", ctx.Kernel.GetID(), ctx.Beat)
+	fmt.Printf("Action #%d - Beat #%d\n", ctx.Kernel.GetID(), ctx.Beat)
 	time.Sleep(1 * time.Second)
 }
