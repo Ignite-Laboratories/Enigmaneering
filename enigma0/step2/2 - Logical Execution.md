@@ -92,7 +92,7 @@ promote the `Kernel` to its own type that the clock executes -
         ID          uint64
         LoopPeriod  int
         Beat        int
-        Kernels     []Kernel
+        kernels     []Kernel
     }
     
     func (c *Clock) Start() {
@@ -105,8 +105,8 @@ promote the `Kernel` to its own type that the clock executes -
             ctx.Clock = c
             ctx.waitGroup = &wg
     
-            wg.Add(len(c.Kernels))
-            for _, k := range c.Kernels {
+            wg.Add(len(c.kernels))
+            for _, k := range c.kernels {
                 ctx.Kernel = k
                 go k.Execute(ctx)
             }
@@ -122,24 +122,25 @@ promote the `Kernel` to its own type that the clock executes -
     type Kernel interface {
         Execute(ctx Context)
         GetID() uint64
+	    IsExecuting() bool
     }
     
     func (c *Clock) AddKernel(action func(ctx Context), potential func(ctx Context) bool) {
         ap := &actionPotential{
-            id:        core.NextID(),
+            ID:        core.NextID(),
             action:    action,
             potential: potential,
         }
-        c.Kernels = append(c.Kernels, ap)
+        c.kernels = append(c.kernels, ap)
     }
 
-`Kernel` is a _handler_ for interfacing with executing contexts.  Currently, it only has two
+`Kernel` is a _handler_ for interfacing with executing contexts.  Currently, it only has three
 functions, but that'll evolve shortly.  The most important thing to note is _this_ is the
 publicly exported way to work with execution contexts, whereas the concrete implementation is
 in the `actionPotential` -
 
     type actionPotential struct {
-        id        uint64
+        ID        uint64
         executing bool
         action    func(ctx Context)
         potential func(ctx Context) bool
@@ -157,7 +158,11 @@ in the `actionPotential` -
     }
     
     func (ap *actionPotential) GetID() uint64 {
-        return ap.id
+        return ap.ID
+    }
+
+    func (ap *actionPotential) IsExecuting() bool {
+        return ap.executing
     }
 
 Here's where we have implemented the concept of a neuron that cannot be invoked again until

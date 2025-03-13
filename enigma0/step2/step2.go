@@ -28,16 +28,16 @@ func Action(ctx Context) {
 }
 
 type Clock struct {
-	ID      uint64
-	Period  int
-	Beat    int
-	Kernels []Kernel
+	ID         uint64
+	LoopPeriod int
+	Beat       int
+	kernels    []Kernel
 }
 
 func NewClock(period int) Clock {
 	return Clock{
-		ID:     core.NextID(),
-		Period: period,
+		ID:         core.NextID(),
+		LoopPeriod: period,
 	}
 }
 
@@ -51,15 +51,15 @@ func (c *Clock) Start() {
 		ctx.Clock = c
 		ctx.waitGroup = &wg
 
-		wg.Add(len(c.Kernels))
-		for _, k := range c.Kernels {
+		wg.Add(len(c.kernels))
+		for _, k := range c.kernels {
 			ctx.Kernel = k
 			go k.Execute(ctx)
 		}
 		wg.Wait()
 
 		c.Beat++
-		if c.Beat >= c.Period {
+		if c.Beat >= c.LoopPeriod {
 			c.Beat = 0
 		}
 	}
@@ -67,22 +67,23 @@ func (c *Clock) Start() {
 
 func (c *Clock) AddKernel(action func(ctx Context), potential func(ctx Context) bool) {
 	ap := &actionPotential{
-		id:        core.NextID(),
+		ID:        core.NextID(),
 		action:    action,
 		potential: potential,
 	}
-	c.Kernels = append(c.Kernels, ap)
+	c.kernels = append(c.kernels, ap)
 }
 
 // Kernel is how others interface with the project as the public API and should be exported, thus capitalized
 type Kernel interface {
 	Execute(ctx Context)
 	GetID() uint64
+	IsExecuting() bool
 }
 
 // actionPotential is only used by the clock for execution and shouldn't be exported, thus lowercase
 type actionPotential struct {
-	id        uint64
+	ID        uint64
 	executing bool
 	action    func(ctx Context)
 	potential func(ctx Context) bool
@@ -100,7 +101,11 @@ func (ap *actionPotential) Execute(ctx Context) {
 }
 
 func (ap *actionPotential) GetID() uint64 {
-	return ap.id
+	return ap.ID
+}
+
+func (ap *actionPotential) IsExecuting() bool {
+	return ap.executing
 }
 
 type Context struct {

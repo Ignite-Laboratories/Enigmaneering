@@ -1,4 +1,4 @@
-# 3 - Loop Regulation
+# 4 - Loop Regulation
 #### Alex Petz, Ignite Laboratories, March 2025
 
 ## Get those chakras in alignment
