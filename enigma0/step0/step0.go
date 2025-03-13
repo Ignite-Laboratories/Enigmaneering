@@ -3,15 +3,15 @@ package main
 import "fmt"
 
 type Clock struct {
-	Period int
-	Beat   int
-	Action func(int)
+	LoopPeriod int
+	Beat       int
+	Action     func(int)
 }
 
 var Alive = true
 
 func main() {
-	clock := Clock{Period: 1000, Action: Action}
+	clock := Clock{LoopPeriod: 1024, Action: Action}
 
 	for Alive {
 
@@ -20,14 +20,14 @@ func main() {
 		}
 
 		clock.Beat++
-		if clock.Beat >= clock.Period {
+		if clock.Beat >= clock.LoopPeriod {
 			clock.Beat = 0
 		}
 	}
 }
 
 func Potential(beat int) bool {
-	if beat == 0 {
+	if beat == 42 {
 		return true
 	}
 	return false

@@ -6,9 +6,9 @@ import (
 )
 
 type Clock struct {
-	Period  int
-	Beat    int
-	Actions []func(int, int)
+	LoopPeriod int
+	Beat       int
+	Actions    []func(int, int)
 }
 
 var Alive = true
@@ -17,7 +17,7 @@ var waitGroup *sync.WaitGroup
 func main() {
 	waitGroup = &sync.WaitGroup{}
 	clock := Clock{
-		Period: 1000,
+		LoopPeriod: 1000,
 		Actions: []func(int, int){
 			Action,
 			Action,
@@ -28,7 +28,7 @@ func main() {
 	}
 
 	for Alive {
-		waitGroup.Add(5)
+		waitGroup.Add(len(clock.Actions))
 		for i, action := range clock.Actions {
 			if Potential(clock.Beat) {
 				go action(i, clock.Beat)
@@ -37,7 +37,7 @@ func main() {
 		waitGroup.Wait()
 
 		clock.Beat++
-		if clock.Beat >= clock.Period {
+		if clock.Beat >= clock.LoopPeriod {
 			clock.Beat = 0
 		}
 	}
