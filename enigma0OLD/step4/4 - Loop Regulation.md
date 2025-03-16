@@ -29,9 +29,11 @@ other systems that you currently reside in a _safe environment._  I will be circ
 through activations later, but for now you can breathe - _we're gonna write some pointless code!_
 
 Seriously, the entirety of this step is meant to demonstrate a neurological feedback loop and explain both its _purpose_
-and its _manifestation_ through the fabric of the reality around you!
+and its _manifestation_ through the very fabric of reality!
 
-In the very next step, every aspect of what we write here will be immediately thrown out the window - _but that's okay!_
+In the very next step, every aspect of what we write here will immediately be thrown out the window - _but that's okay!_
 
 ### Do you trust me? 
 It's just words on a page, after all =)
+
+_I never said this would be easy_ - but we can _always_ choose to make it fun!

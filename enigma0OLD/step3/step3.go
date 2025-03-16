@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/core"
+	"github.com/ignite-laboratories/core/impulse"
 	"sync"
 	"time"
 )
@@ -11,21 +12,53 @@ var desiredDuration = time.Second / 100
 
 func main() {
 	clock := NewClock(1024)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
-	clock.AddKernel(Action, Potential)
+	clock.AddKernel(Action, OnDownbeat)
+	clock.AddKernel(Action, OnDownbeat)
+	clock.AddKernel(Action, OnDownbeat)
+	clock.AddKernel(Action, OnDownbeat)
+	clock.AddKernel(Action, OnDownbeat)
 	clock.Start()
 }
 
-func Potential(ctx Context) bool {
-	return true
+// OnDownbeat is our new potential function
+func OnDownbeat(ctx Context) bool {
+	if ctx.Beat == 0 {
+		return true
+	}
+	return false
 }
 
-func Action(ctx Context) {
-	fmt.Printf("Action #%d - Beat #%d\n", ctx.Kernel.GetID(), ctx.Beat)
-	time.Sleep(1 * time.Second)
+func ObserveAndPrint(ctx Context) {
+	activation(ctx, true)
+}
+func Observe(ctx Context) {
+	activation(ctx, false)
+}
+
+// activation is our new action function
+func activation(ctx Context, print bool) {
+	// Get the local 'now' to activation
+	now := time.Now()
+
+	// Build the new temporal frame
+	var frame TemporalFragment
+	var delta time.Duration
+	value, ok := timeline.Load(ctx.Kernel.GetID())
+	if ok {
+		// If a frame existed, calculate the delta between frames.
+		lastFrame, _ := value.(TemporalFragment)
+		delta = now.Sub(lastFrame.lastNow)
+	}
+	frame = NewTemporalFragment(now, delta)
+
+	// Print out that this kernel did something
+	if print {
+		fmt.Printf("%v | %v", frame.lastDuration, ctx.Clock.LoopPeriod)
+	}
+
+	// Save off the new temporal context
+	frame.lastNow = now
+	timeline.Store(ctx.Kernel.GetID(), frame)
 }
 
 type Clock struct {
