@@ -158,6 +158,8 @@ represents the same index in time.  In a computer, this allows the data to rapid
 which is effectively _executing_ the concepts of calculus through integration.
 
     tl;dr - Recorded data is temporally aligned for easy parallel calculation
+          - Calculus is used to create temporal predictive calculations
+          - Thus, we are executing calculus concepts - simply in reverse of the norm
 
 ### Phew - that's a lotta code!
 Don't worry, after this step much of the code will be migrated into its own package - for now, let's
@@ -181,6 +183,49 @@ continue!  Now that we have some data points to record we need to create some st
 
 The `Timeline` variable is a `sync.Map` as it provides thread safe access to read and write against, but 
 it's effectively just a slice of `TemporalFragment` slices - effectively making each dictionary entry
-a _track_ of time in a looping timeline.  Visually, it helps to consider a digital audio workstation and
-each kernel as a unique instrument that records its specific track of data.  It can only record one instant
-at a time, but when many instruments are recording they can fill in a complete set of information.
+a _track_ of time in a looping timeline.  Visually, it helps to consider a `Digital Audio Workstation` with
+each kernel as a unique instrument that performs its specific track of data in good timing.  It can only 
+do one thing at any instant at a time, but when many instruments perform they collectively compose a symphony.
+
+Next, we need a way to observe a value neurologically -
+
+    // OnDownbeat is our new potential function
+    func OnDownbeat(ctx Context) bool {
+        if ctx.Beat == 0 {
+            return true
+        }
+        return false
+    }
+    
+    func ObserveAndPrint(ctx Context) {
+        activation(ctx, true)
+    }
+    func Observe(ctx Context) {
+        activation(ctx, false)
+    }
+    
+    // activation is our new action function
+    func activation(ctx Context, print bool) {
+        // Get the local 'now' to activation
+        now := time.Now()
+    
+        // Build the new temporal frame
+        var frame TemporalFragment
+        var delta time.Duration
+        value, ok := timeline.Load(ctx.Kernel.GetID())
+        if ok {
+            // If a frame existed, calculate the delta between frames.
+            lastFrame, _ := value.(TemporalFragment)
+            delta = now.Sub(lastFrame.lastNow)
+        }
+        frame = NewTemporalFragment(now, delta)
+    
+        // Print out that this kernel did something
+        if print {
+            fmt.Printf("%v | %v", frame.lastDuration, ctx.Clock.LoopPeriod)
+        }
+    
+        // Save off the new temporal context
+        frame.lastNow = now
+        timeline.Store(ctx.Kernel.GetID(), frame)
+    }
