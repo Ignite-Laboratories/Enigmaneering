@@ -90,7 +90,7 @@ can still refer to a specific index on a temporal frame buffer which is coalesce
 to go too far into the weeds about that, yet - but visually it's easy to understand at this point in the process -
 
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D6 - Logical Activation.svg" height="500" >
+<img alt="JanOS Logo" src="../assets/E0S1D6 - Logical Activation.svg" height="650" >
 </picture>
 
 Each activation knows which _impulse index_ of the abstract timeline it should be "coloring" in a value for.  A looping 
