@@ -1,4 +1,4 @@
-# E0S0.0 - Inception
+# E0S0 - Inception
 #### Alex Petz, Ignite Laboratories, March 2025
 
 ---

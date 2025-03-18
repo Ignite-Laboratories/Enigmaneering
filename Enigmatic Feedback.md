@@ -1,6 +1,8 @@
 # Enigmaneering
 #### Alex Petz, Ignite Laboratories, March 2025
 
+---
+
 The concept of enigmaneering is near and dear to my heart.  It's how I navigate my
 every day life!  Each issue a mystery to tackle, if I'm willing to put in the time
 and effort.  The challenge, for me, has been in how to document the random creations
