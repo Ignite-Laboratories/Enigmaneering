@@ -5,12 +5,13 @@
 
 ### Activation?
 
-Yes!  Remember before how I stated that this enigma is the only one we _really_ need to think about the **kernel** in?
-Well, that's because the _entire concept_ of a neural impulse engine hinges on the concept of _activating_ execution.
+Yes!  Remember before how I stated that this enigma is the only one we _really_ need to think about _kernels_ in?
+Well, that's because the _entire concept_ of a neural impulse engine hinges on the concept of _activating_ execution,
+but it does it a little differently than traditional kernel architecture.
 
 What is important to understand is that an _activation_ uses the concepts of kernel execution, but treats it as an
 _invocation_.  Rather than owning the lifespan of execution, the engine simply sparks off a function and then tracks 
-if it should be re-invoked on every impulse because the last invocation finished.
+if it should be re-invoked on every impulse.
 
 Colloquially, the terms `activate` and `execute` are pretty interchangeable - but an _activation_ happens _cyclically!_
 Neurons are microscopic little programmatic loops, at their core, constantly being stimulated with impulses from which
