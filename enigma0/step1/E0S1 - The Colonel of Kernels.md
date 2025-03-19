@@ -1,4 +1,4 @@
-# E0S0 - Looping Activation
+# E0S0 - The Colonel of Kernels
 #### Alex Petz, Ignite Laboratories, March 2025
 
 ---
