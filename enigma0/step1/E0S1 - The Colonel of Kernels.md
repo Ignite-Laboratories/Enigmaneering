@@ -17,21 +17,17 @@ Colloquially, the terms `activate` and `execute` are pretty interchangeable - bu
 Neurons are microscopic little programmatic loops, at their core, constantly being stimulated with impulses from which
 they perform the same calculations over and over again.  It's crucial to understand how activation happens across time.
 
-<div style="text-align: center;">
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D0 - Single Beat.svg" width="300" >
+<img alt="JanOS Logo" src="../assets/E0S1D0 - Single Beat.svg" width="300" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
-</div>
 
 The first concept of activation is the _impulse_.  For every loop of the engine, an impulse of execution is coordinated.
 Immediately, the current moment of _time_ is recorded and provided to every activation through a `core.Context`
 structure.  The appropriate activations are invoked, the engine's current beat is incremented, and the process loops.
 
-<div style="text-align: center;">
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D1 - Multiple Beats.svg" width="700" >
+<img alt="JanOS Logo" src="../assets/E0S1D1 - Multiple Beats.svg" width="700" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
-</div>
 
 Each cycle of the loop, itself, is an **impulse**.  Right now we are looking at the timeline of a loop currently at 
 beat 42. Abstractly, there is no concept of _time_ through this lens - but the provided `core.Context` given by the engine
@@ -42,11 +38,9 @@ every 15 beats by modulo-ing the provided beat number with 16?
 These are the kinds of decisions a neural impulse engine provides it's kernel activations! Let's look at a single
 activation across time - this one is still executing and has yet to calculate a value:
 
-<div style="text-align: center;">
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D2 - Activation.svg" width="700" >
+<img alt="JanOS Logo" src="../assets/E0S1D2 - Activation.svg" width="700" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
-</div>
 
 The first thing you can see is that an activation does _not_ begin at the impulse moment!  That's because coordinating
 the launch of many activations requires _time_.  Above, that is chocked up purely to _entropy_ - but, thanks to the
@@ -59,11 +53,9 @@ actions - much like the output of a Digital Audio Workstation, just coordinating
 The final thing you should notice is that an activation _can_ span across multiple impulses - if it is _asynchronously_
 invoked.  If not, it's considered a _blocking activation_ that quite literally slows the rate of impulse.
 
-<div style="text-align: center;">
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D5 - Blocking Activation.svg" width="1000" >
+<img alt="JanOS Logo" src="../assets/E0S1D5 - Blocking Activation.svg" width="1000" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
-</div>
 
 Here, the activation finished and simply returned back the beat number it was passed.  Since it was instantiated
 on impulse beat 42, the value is associated with that grid position on the X-axis representing _impulse time_.  As impulse
@@ -77,21 +69,17 @@ If an activation is triggered _asynchronously_ it can either be executed in one 
 activation for every single impulse.  In this setup, the activations fire as fast as possible without care for whether
 the last activation has finished -
 
-<div style="text-align: center;">
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D4 - Asynchronous Activation.svg" width="1000" >
+<img alt="JanOS Logo" src="../assets/E0S1D4 - Asynchronous Activation.svg" width="1000" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
-</div>
 
 The second kind of asynchronous activation is a _looping activation_.  For this configuration, a single kernel is cyclically
 executed on the following impulse after completion.  The period between completion and re-invocation is considered the 
 _refractory period_ between neural activations.
 
-<div style="text-align: center;">
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D3 - Cyclic Activation.svg" width="1000" >
+<img alt="JanOS Logo" src="../assets/E0S1D3 - Cyclic Activation.svg" width="1000" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
-</div>
 
 ### Clustered Activation
 
@@ -100,11 +88,9 @@ a _wait group_ and when all of them call `Done()` a relay activation would be al
 
 It truly is that simple, but the concept is _powerful_ -
 
-<div style="text-align: center;">
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D7 - Clustered Activation.svg" width="1000" >
+<img alt="JanOS Logo" src="../assets/E0S1D7 - Clustered Activation.svg" width="1000" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
-</div>
 
 
 
@@ -116,11 +102,9 @@ context_.  While these activations occur entirely _concurrently_, rather than ne
 can still refer to a specific index on a temporal frame buffer which is coalesced by a looping activation.  I don't intend
 to go too far into the weeds about that, yet - but visually it's easy to understand at this point in the process -
 
-<div style="text-align: center;">
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D6 - Logical Activation.svg" width="1000" >
+<img alt="JanOS Logo" src="../assets/E0S1D6 - Logical Activation.svg" width="1000" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
-</div>
 
 Each activation knows which _impulse index_ of the abstract timeline it should be "coloring" in a value for.  A looping 
 activation can observe the data recorded by these temporal fragment shaders at it's own pace and the activation window, itself, 
