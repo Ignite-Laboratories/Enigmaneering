@@ -81,6 +81,19 @@ _refractory period_ between neural activations.
 <img alt="JanOS Logo" src="../assets/E0S1D3 - Cyclic Activation.svg" height="350" >
 </picture>
 
+### Clustered Activation
+
+The next concept I'd like to explore is _clustered activation_.  It's quite simple - a wave of activations is provided
+a _wait group_ and when all of them call `Done()` a relay activation would be allowed to re-stimulate the cluster.
+
+It truly is that simple, but the concept is _powerful_ -
+
+<picture>
+<img alt="JanOS Logo" src="../assets/E0S1D7 - Clustered Activation.svg" height="450" >
+</picture>
+
+
+
 ### Temporal Fragment Calculation And Regulation
 
 Before we proceed any further I want to briefly tease you with what this kind of activation scheme can yield.  Just as pixel
