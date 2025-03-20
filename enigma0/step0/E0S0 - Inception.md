@@ -37,21 +37,12 @@ The next thing you will find is that every _JanOS_ instance is _alive at creatio
 to the moment of `Inception` -
 
     var Alive = true
-    var Inception time.Time
-    var Self self
+    var Inception = time.Now()
+    var ID = NextID()
 
-    func init() {
-        Inception = time.Now()
-    }
-
-    type self struct {
-        ID uint64
-        Ignition time.Time
-    }
-    
-Since a system can be initialized without any activations sparking, the moment of `Ignition`, is also recorded -
-representing the _first_ impulse moment.  However, it is placed into a new structure - `self`.  You might be asking
-why `Alive` lives outside of `Self`?  _Well, the _host_ is `Alive` while the `Self` manifests within._
+This, again, is by design.  A system can exist without yet sparking neural activation - thus, the condition of _alive_ 
+is distinct from having _neural activation_.  The latter typically requires _external intervention of some sorts - in
+our system, through invoking a neural `Spark()` (we'll get to that later)
 
 ### Unique Identification
 
@@ -61,7 +52,7 @@ _fundamental_ to JanOS belongs in the `core` package, including everything above
 `core` also provides a very important function to the _entire_ JanOS ecosystem - `NextID()`
 
 This function, when called, always provides a unique `uint64` relative to this JanOS instance.  This mechanism isn't extremely
-important at this point, but it will come in handy as we progress forward.  For now, let's briefly touch on _how_ it works.
+important at this point, but it will come in handy as we progress forward.  For now, let's touch briefly on _how_ it works.
 
 
     var masterId uint64
@@ -69,7 +60,7 @@ important at this point, but it will come in handy as we progress forward.  For 
         return atomic.AddUint64(&masterId, 1)
     }
 
-This uses a very important concept in parallel execution: _atomic operation_.  In JanOS, many different threads can call
+This uses a common concept in parallel execution: _atomic operation_.  In a parallel system, many different threads can call
 this function at the same time - so who gets what result?  Without _atomics_, two threads can enter a _race condition_ where
 both get the same value from `NextID()` before either incremented the number.  Lucky for us, Go provides some very robust ways
 of ensuring _atomic access_ to a shared point in memory using _synchronization_.  By incrementing the number using an _atomic_
@@ -97,4 +88,4 @@ figure out when 'now' is every time it runs!
 
 If I sound like a broken record, welcome to the loop of my life =)
 
-Don't worry, we'll break free from that soon - I promise
+Don't worry, we'll break free from that soon - I promise <3
