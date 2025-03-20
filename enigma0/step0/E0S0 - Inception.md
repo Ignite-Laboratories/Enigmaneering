@@ -33,11 +33,30 @@ the _creation_ of language _through_ neurological systems.
 
     tl;dr - your neurons, at their core, use code to make you speak - let's keep it positive for others =)
 
+The next thing you will find is that every _JanOS_ instance is _alive at creation_, and is always provided a reference
+to the moment of `Inception` -
+
+    var Alive = true
+    var Inception time.Time
+    var Self self
+
+    func init() {
+        Inception = time.Now()
+    }
+
+    type self struct {
+        ID uint64
+        Ignition time.Time
+    }
+    
+Since a system can be initialized without any activations sparking, the moment of `Ignition`, is also recorded -
+representing the _first_ impulse moment.  However, it is placed into a new structure - `self`.  You might be asking
+why `Alive` lives outside of `Self`?  _Well, the _host_ is `Alive` while the `Self` manifests within._
+
 ### Unique Identification
 
 So, now that we've established the most principal part of JanOS - a boolean - let's put it somewhere!  Anything absolutely
-_fundamental_ to JanOS belongs in the `core` package, including `core.Alive` and the moment of `core.Inception` (or the
-moment the program was turned on)
+_fundamental_ to JanOS belongs in the `core` package, including everything above.
 
 `core` also provides a very important function to the _entire_ JanOS ecosystem - `NextID()`
 
