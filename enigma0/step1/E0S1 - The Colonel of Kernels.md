@@ -3,7 +3,7 @@
 
 ---
 
-### Activation?
+### _Execution_ or _Activation_?
 
 Yes!  Remember before how I stated that this enigma is the only one we _really_ need to think about _kernels_ in?
 Well, that's because the _entire concept_ of a neural impulse engine hinges on the concept of _activating_ execution,
@@ -59,22 +59,21 @@ invoked.  If not, it's considered a _blocking activation_ that quite literally s
 
 Here, the activation finished and simply returned back the beat number it was passed.  Since it was instantiated
 on impulse beat 42, the value is associated with that grid position on the X-axis representing _impulse time_.  As impulse
-time is sympathetic to time, itself - the two are one and the same, simply _observed_ from different vantage points.
+time is sympathetic to time, itself - the two are _relativistically_ the same, simply _observed_ from different vantage points.
 
 As noted, this activation style blocks the next impulse from happening until it completes.  This quality can be leveraged 
 to add temporal _weight_ to the system, slowing it's overall execution to ease load on the host architecture.  We don't 
 need to worry about regulation _quite yet_, but it's still important to keep in mind!
 
-If an activation is triggered _asynchronously_ it can either be executed in one of two ways.  The first is a *stimulated*
-activation for every single impulse.  In this setup, the activations fire as fast as possible without care for whether
-the last activation has finished -
+If an activation is triggered _asynchronously_ it can either be executed in one of two ways.  The first is an
+*impulsive* activation which, as it's name suggests, activates asynchronously on every impulse.
 
 <picture>
-<img alt="JanOS Logo" src="../assets/E0S1D4 - Asynchronous Activation.svg" width="1000" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="JanOS Logo" src="../assets/E0S1D4 - Impulsive Activation.svg" width="1000" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
-The second kind of asynchronous activation is a _looping activation_.  For this configuration, a single kernel is cyclically
-executed on the following impulse after completion.  The period between completion and re-invocation is considered the 
+The second kind of is a _looping activation_.  For this configuration, its cyclically invoked on the
+next impulse after each completion.  The period in-between completion and re-invocation is the 
 _refractory period_ between neural activations.
 
 <picture>
@@ -84,7 +83,7 @@ _refractory period_ between neural activations.
 ### Clustered Activation
 
 The next concept I'd like to explore is _clustered activation_.  It's quite simple - a wave of activations is provided
-a _wait group_ and when all of them call `Done()` a relay activation would be allowed to re-stimulate the cluster.
+a synchronization pointer that blocks a "relay" activation used to re-stimulate the cluster.
 
 It truly is that simple, but the concept is _powerful_ -
 
@@ -106,14 +105,14 @@ to go too far into the weeds about that, yet - but visually it's easy to underst
 <img alt="JanOS Logo" src="../assets/E0S1D6 - Logical Activation.svg" width="1000" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
-Each activation knows which _impulse index_ of the abstract timeline it should be "coloring" in a value for.  A looping 
-activation can observe the data recorded by these temporal fragment shaders at it's own pace and the activation window, itself, 
-frames the range it should calculate.  It knows which beat it activated on, and the beat the last activation ended on - thus, 
-it can always reliably retrieve the exact indexes since the last coalesce activation.  This creates a variable window of 
-observable data _provided_ by the existence of activation through compositional context.
+Each activation knows which _impulse index_ of the abstract timeline it should be "coloring" in a value for.  A "coalesce" 
+activation can observe the data recorded by these temporal fragment shaders at it's own pace and _its own activation window_ 
+frames the range it should calculate next.  It knows which beat it started on, and the beat the last activation started 
+on - thus, it can always reliably retrieve the exact indexes since the last coalesce activation.  This creates a variable 
+window of observable data _provided_ by the passing of _concurrent time_.
 
 Because of this, the more impulses that can be recorded between coalescence - the more information each of the coalesce 
-activations gets to process.  This means that as calculations get more complex the rate of impulse should be _regulated_,
+activations are provided.  This means that as calculations get more complex the rate of impulse should be _regulated_,
 or else the system will continue to record at an unmanageable rate.  While the coalesce function _could_ be written
 to ignore the extra data - why would you record stuff that'll never get utilized by your program's calculations?
 
