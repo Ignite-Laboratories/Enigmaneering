@@ -51,4 +51,28 @@ detailing exactly how long the impulse period took.
 
 The first thing you'll notice is that I said _roughly_ 8 data points per loop - that's because temporal
 analysis has _no guarantees_ of how wide the sampled data is at this point!  But that's okay, as we'll
-see in the next step.
+see in the next few steps.  
+
+### General Data
+
+You probably noticed that the data copied from the observer's timeline was of type `core.Data[T any]` before
+we pulled the data's _Point_ information out.  This is a very straightforward type, but it provides temporal
+_context_ - 
+
+    type Data[T any] struct {
+        Context
+        Point T
+    }
+
+    type Context struct {
+        ID             int 
+        Beat           int
+        Moment         time.Time
+        Period         time.Duration
+        LastImpulse    Runtime
+        LastActivation Runtime
+    }
+
+This means that _every_ observed value by a dimension is timestamped with it's temporal context, free of 
+charge!  In turn, it's possible to evaluate the timeline entries and discard duplicates - but we'll get to
+that later.  For now, just keep in mind that the temporal information is _always_ available =)
