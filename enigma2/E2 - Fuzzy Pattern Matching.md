@@ -1,4 +1,4 @@
-# Fuzzy Pattern Matching
+# E2 - Fuzzy Pattern Matching
 #### Alex Petz, Ignite Laboratories, March 2025
 
 ---
