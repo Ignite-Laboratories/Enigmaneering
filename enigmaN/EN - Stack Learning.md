@@ -1,6 +1,6 @@
-# Stack Learning
-### A.K.A. Reverse Polish Notation Learning
-#### Alex Petz, Ignite Laboratories, March 2025
+# `Stack Learning`
+## `A.K.A. Reverse Polish Notation Learning`
+### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---
 

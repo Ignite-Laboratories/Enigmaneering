@@ -1,11 +1,12 @@
-# E1S1 - Point Calculation
-#### Alex Petz, Ignite Laboratories, March 2025
+# `E1S1 - Point Calculation`
+### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---
 
 ### What if you want a more complex observation?
 
-We'll evolve the last example a little bit by replacing the _observer_ with an _incrementer_.
+We'll evolve the last example a little bit by replacing the _observer_ with an _calculation_ - in this
+example it just increments a value -
 
     var incrementer = calc.NewCalculation[int](core.Impulse, condition.Always, false, increment)
 
@@ -19,7 +20,7 @@ Here, the terminology has changed to a _calculation_.  Calculations return some 
 that calculates a value when activated, the complexity of which is up to you.  Anonymous functions
 can be utilized to build even more intelligent activation, should you need it.
 
-For now, let's look at the output -
+For now, let's look at the output timeline -
 
     []
     [1 2 3 4 5]
@@ -33,6 +34,6 @@ For now, let's look at the output -
 
 Right away you'll notice that there are _duplicate_ entries from our print function.  That's because
 the dimension, itself, provides a _rolling window of observance_.  By default, all dimensions are
-created with a 2 second observable window - but you can adjust that with it's `Window` field.  The
+created with a 2 second observable window - but you can adjust that with its `Window` field.  The
 print function isn't doing anything besides printing whatever is in the timeline buffer, so it
 isn't able to filter out the duplicates - we'll handle that in the next step.

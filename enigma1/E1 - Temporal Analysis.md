@@ -1,5 +1,5 @@
-# E1 - Temporal Analysis
-#### Alex Petz, Ignite Laboratories, March 2025
+# `E1 - Temporal Analysis`
+### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---
 
@@ -29,5 +29,7 @@ _Window_ of the dimension.  The Stimulator is activated impulsively to populate 
 last notable thing a dimension contains is a synchronization object - _Mutex_ - which we will see heavily used throughout 
 these steps.
 
-The majority of the work in these steps will leverage the final package of core - `calc` - this is a container of helper
+### core.Temporal
+
+The majority of the work in these steps will leverage the final package of core - `temporal` - this is a container of helper
 methods for _creating_ and _working with_ dimensions.

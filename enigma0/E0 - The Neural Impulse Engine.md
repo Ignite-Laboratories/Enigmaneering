@@ -1,6 +1,6 @@
-# E0 - The Neural Impulse Engine
-### A.K.A. The Self-Regulating Looping Clock
-#### Alex Petz, Ignite Laboratories, March 2025
+# `E0 - The Neural Impulse Engine`
+## `A.K.A. The Self-Regulating Looping Clock`
+### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---
 

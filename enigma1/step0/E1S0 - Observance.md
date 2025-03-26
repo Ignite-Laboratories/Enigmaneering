@@ -1,5 +1,5 @@
-# E1S0 - Observance
-#### Alex Petz, Ignite Laboratories, March 2025
+# `E1S0 - Observance`
+### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---
 
@@ -13,33 +13,34 @@ First - by _observing_ something.  For this example, we'll monitor the last impu
 
     var observer = calc.NewObservation[core.Runtime](core.Impulse, condition.Always, false, &core.Impulse.Last)
 
-It's really that simple - the only caveat is that you must _provide_ the engine you would like to observe using.  For
-this example, we are manually grabbing the timeline data and pulling the impulse stats out before printing them to the
-console.  In the next step, that process gets a lot easier.  For now, let's walk through what is happening -
+It's really that simple - the only two caveats are that you must _provide_ the engine you would like to observe using,
+and the observed variable should be passed by _reference_.  For this example, we are manually grabbing the timeline data 
+and pulling the impulse stats out before printing them to the console.  In the next step, that process gets a lot easier.
+
+For now, let's create a loop that analyzes the observed timeline -
 
     main() -
         loopFreq := 0.5
         core.Impulse.Loop(printTimeline, condition.Frequency(&loopFreq), false)
 
-        func printTimeline(ctx core.Context) {
-            observer.Mutex.Lock()
-            data := make([]core.Data[core.Runtime], len(observer.Timeline))
-            copy(data, observer.Timeline)
-            observer.Mutex.Unlock()
-        
-            values := make([]time.Duration, len(data))
-            for i, v := range data {
-                values[i] = v.Point.Duration + v.Point.RefractoryPeriod
-            }
-        
-            fmt.Printf("%v\n", values)
+    func printTimeline(ctx core.Context) {
+        observer.Mutex.Lock()
+        data := make([]core.Data[core.Runtime], len(observer.Timeline))
+        copy(data, observer.Timeline)
+        observer.Mutex.Unlock()
+    
+        values := make([]time.Duration, len(data))
+        for i, v := range data {
+            values[i] = v.Point.Duration + v.Point.RefractoryPeriod
         }
+    
+        fmt.Printf("%v\n", values)
+    }
 
 It's quite straightforward, but the mechanic is important.  First, we lock the dimension and copy the timeline
-data.  This works because dimensions _also_ lock to modify their timeline - so by order of execution, things
-naturally play out in the right order.
+data.  This works because dimensions _also_ lock to modify their timeline - so things naturally play out as expected.
 
-On our output we see roughly 8 data points per print loop (as we are printing ever 2 seconds at 4 hz), each 
+On our output we see roughly 8 data points per print loop (as we are printing every 2 seconds at 4 hz), each 
 detailing exactly how long the impulse period took.   
 
     []
@@ -56,8 +57,9 @@ see in the next few steps.
 ### General Data
 
 You probably noticed that the data copied from the observer's timeline was of type `core.Data[T any]` before
-we pulled the data's _Point_ information out.  This is a very straightforward type, but it provides temporal
-_context_ - 
+we pulled the data's _Point_ information out -in this example, of type `core.Runtime`.
+
+This is a very straightforward type, but it provides temporal _context_ - 
 
     type Data[T any] struct {
         Context

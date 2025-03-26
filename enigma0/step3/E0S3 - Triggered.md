@@ -1,5 +1,5 @@
-# E0S3 - Triggered
-#### Alex Petz, Ignite Laboratories, March 2025
+# `E0S3 - Triggered`
+### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---
 

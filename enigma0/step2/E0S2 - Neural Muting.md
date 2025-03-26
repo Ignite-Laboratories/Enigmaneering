@@ -1,5 +1,5 @@
-# E0S2 - Neural Muting
-#### Alex Petz, Ignite Laboratories, March 2025
+# `E0S2 - Neural Muting`
+### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---
 
