@@ -8,4 +8,6 @@ The next feature of dimensional analysis is creating dimensions that are _derive
 torn at this point because our examples thus far have been entirely contrived - let's start gathering some
 real world data from which to perform intelligent operations.  The easiest input to capture would be
 the _mouse position,_ with one minor caveat - Go doesn't natively provide a way to capture the mouse
-information!  
+information!  Thankfully, JanOS has another module that provides such access - `host`
+
+If you'd like to read more about how it's implemented, check out `enigma2` =)
