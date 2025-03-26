@@ -1,36 +1,41 @@
 package main
 
 import (
-	"github.com/ignite-laboratories/core" // v0.0.5
-	"github.com/ignite-laboratories/core/when"
+	"fmt"
+	"github.com/ignite-laboratories/core"
+	"github.com/ignite-laboratories/core/beat"
+	"github.com/ignite-laboratories/core/condition"
 	"time"
 )
 
 func main() {
-	// Block every 16th beat by 1 second
-	core.Impulse.Block(when.Modulo(16, regulate))
+	// Keep the beat counting for out a few seconds at a time
+	core.Impulse.Loop(Hold, condition.Always, false)
 
-	// Loop every 16th beat as fast as calculable
-	// The loop takes 2.5 seconds, so it'll activate with every third blocking impulse.
-	core.Impulse.Loop(when.Modulo(16, pulse))
+	// Print out even beats
+	core.Impulse.Stimulate(func(ctx core.Context) {
+		PrintParity(ctx, "Even")
+	}, beat.Even, false)
 
-	// Stimulate every 8th beat
-	core.Impulse.Stimulate(when.Modulo(8, stimulate))
+	// Print out odd beats
+	core.Impulse.Stimulate(func(ctx core.Context) {
+		PrintParity(ctx, "Odd")
+	}, beat.Odd, false)
+
+	// Limit the impulse rate to 4hz
+	core.Impulse.MaxFrequency = 4
+
+	// Alternatively, increase impulse resistance
+	//core.Impulse.Resistance = 800000000
 
 	// Make it so
-	_ = core.Impulse.Spark()
+	core.Impulse.Spark()
 }
 
-func regulate(ctx core.Context) {
-	println("Regulating beat ", ctx.Beat)
-	time.Sleep(1 * time.Second)
+func Hold(ctx core.Context) {
+	time.Sleep(time.Second * 5)
 }
 
-func pulse(ctx core.Context) {
-	println("Pulsing on beat ", ctx.Beat)
-	time.Sleep(2500 * time.Millisecond)
-}
-
-func stimulate(ctx core.Context) {
-	println("Stimulating beat ", ctx.Beat)
+func PrintParity(ctx core.Context, parity string) {
+	fmt.Printf("%d - %v\n", ctx.Beat, parity)
 }

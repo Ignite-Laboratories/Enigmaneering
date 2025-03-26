@@ -16,7 +16,7 @@ This brings us to our first, and most important, definitions for the future of t
 
 * **An Instant** - _any_ abstract moment in time with no reference point.
 * **A Moment** - a well defined, or _concrete_, moment in time.
-* **_Concrete_ vs _Abstract_** - A moment is 'well defined' if it has an offset to an external source of time.  This could be the number of nanoseconds since a system was turned on, since a signal happened, or even the moment two systems _"turned each other on"_.  An instant is abstract because the very concept of a thread of execution observing a singular value _requires_ an instant of time, but knowing _when_ it happened requires a referential point.
+* **_Concrete_ vs _Abstract_** - A moment is 'well defined' if it has an offset to an external source of time.  This could be the number of nanoseconds since a system was turned on, since a signal happened, or even the moment two systems _"turned each other on."_  An instant is abstract because the very concept of a thread of execution observing a singular value _requires_ an instant of time, but knowing _when_ it happened requires a referential point.
 
 So let's circle back to my wording above - one thread of execution can only read a single
 _**Instant**_ of time at any given _**Moment**_.  The thread, itself, has no concept of what
@@ -31,7 +31,7 @@ and run for a single execution before being re-invoked in good timing with the c
 externally driven loop._  A bonus is that we can provide a looping count with stimulation which the
 kernels can incorporate into their calculation.
 
-### ...Temporality?
+### _...Temporality?_
 
 Yes.
 
@@ -43,7 +43,7 @@ to reference time. One thread can actively observe data and record a timeline of
 perform live calculations against.
 
 Don't worry, the _entire point_ of a **Neural Impulse Engine** is to make it _easier_ to work with these concepts,
-so I'll do my best to ease into these topics.  For now, let's start with a primer of the basics -
+so I'll do my best to ease into it.  For now, let's start with a primer of the basics -
 
 **Thread**
 
@@ -55,7 +55,7 @@ Eventually, you'll either keep looping through steps or finish execution and ret
 
 All threads are _asynchronous_ to the host architecture, but each _synchronously_ executes a set of instructions.
 This basically means that many different threads can execute the same code _concurrently_.  In Go, a function can 
-be called _asynchronously_ simply by prepending it with the `go` keyword - a pillar of it's genius!
+be called _asynchronously_ simply by prepending it with the `go` keyword - _a pillar of it's genius!_
 
 **Kernels**
 
@@ -65,14 +65,19 @@ code, in it's most abstract form.  Don't stress too much on it beyond that - it'
 **The Loop Period**
 
 A neural engine, as I said above, also provides a looping count to all execution.  The loop period allows
-unique kinds of kernel activation, such as _downbeat_ and _modulo_ activation, which can pace the rate of stimulus.
+unique kinds of kernel activation, such as _downbeat_ and _modulo_ potentials, which can pace the rate of stimulus
+while stepping incrementally through data.  For live systems, the beat number is more of an indicator of the longest
+running period of asynchronous execution - for static data, the beat number can literally act as the _index_ to "step" 
+through a file with.
 
-### It's so simple!
+    tl;dr - everything is synchronously activated, but asynchronously executes
+
+### _It's so simple!_
 
 I kid - I know it might sound daunting, but it really _isn't_.
 
 The devil is in the details, as they say - so rather than trying to explain everything at once I'd like
-to try breaking it into logical steps.  As I progress through those steps, I'll explain the logic and reasoning
+to try breaking it into logical steps.  As I progress through them, I'll explain the logic and reasoning
 in my choices and provide perpetually working examples for each.
 
 Rather than constructing this component by component, I intend to provide the philosophical reasoning behind

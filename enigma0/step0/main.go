@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/ignite-laboratories/core" // v0.0.5
+	"github.com/ignite-laboratories/core"
 	"time"
 )
 
