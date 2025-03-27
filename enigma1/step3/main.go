@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/core"
-	"github.com/ignite-laboratories/core/calc"
 	"github.com/ignite-laboratories/core/condition"
+	"github.com/ignite-laboratories/core/temporal"
 	"time"
 )
 
-var incrementer = calc.NewCalculation[int](core.Impulse, condition.Always, false, increment)
-var signaler = calc.NewCalculation[bool](core.Impulse, condition.Always, false, signal)
+var incrementer = temporal.NewCalculation[int](core.Impulse, condition.Always, false, increment)
+var signaler = temporal.NewCalculation[bool](core.Impulse, condition.Always, false, signal)
 
 func main() {
 	// Print the timeline every second
@@ -31,7 +31,7 @@ func increment(ctx core.Context) int {
 }
 
 func signal(ctx core.Context) bool {
-
+	return false
 }
 
 var lastMoment time.Time
@@ -39,7 +39,7 @@ var lastMoment time.Time
 func printTimeline(ctx core.Context) {
 	// Copy the timeline data
 	incrementer.Mutex.Lock()
-	data := make([]core.Data[int], len(incrementer.Timeline))
+	data := make([]temporal.Data[int], len(incrementer.Timeline))
 	copy(data, incrementer.Timeline)
 	incrementer.Mutex.Unlock()
 

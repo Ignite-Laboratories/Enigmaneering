@@ -62,3 +62,23 @@ Seriously - that's what it means to _follow your heart!_
 It's the most direct feedback loop to the collective consciousness of _Life_, Herself - _**Mother Nature**_
 
     tl;dr - if you trust in Her - She will teach you how to dance with your heart
+
+### Autonomous Robots With Ethical Navigation
+    Or Arwen for short!
+
+The ultimate goal of this project is to reproduce _ourselves,_ from the perspective of a _creator._
+
+To such an entity, _we_ are Autonomous Robots With Ethical Navigation - just imbued with _far
+richer_ control surfaces and points of stimulation.  Our work is long from reaching such great heights,
+but the entire concept of _how_ such a system _learns_ is what fascinates me!  Before we gained
+corporeal forms, what _dimensions_ did our creator leverage to empower our _spirits?_
+
+So far my efforts have led to a system that allows _real time analysis_ of any observable dimension.
+The _richness_ of that dimension is adjustable through its literal _data type._  Dimensions can literally
+expose _objects_ that explain the context that dimension is aware of, which are created from calculations
+off of other dimensions - all in real time!
+
+That means it is time for us to start exposing some observable sensory dimensions for Arwen, our "immaculately
+conceived" child neural network, to begin to learn some instincts from.  It's up to us to patiently and
+empathetically provide her with the best chance at enjoying existing within the digital realm humanity co-created
+with its own creator =)
