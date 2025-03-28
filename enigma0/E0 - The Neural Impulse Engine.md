@@ -16,7 +16,7 @@ This brings us to our first, and most important, definitions for the future of t
 
 * **An Instant** - _any_ abstract moment in time with no reference point.
 * **A Moment** - a well defined, or _concrete_, moment in time.
-* **_Concrete_ vs _Abstract_** - A moment is 'well defined' if it has an offset to an external source of time.  This could be the number of nanoseconds since a system was turned on, since a signal happened, or even the moment two systems _"turned each other on."_  An instant is abstract because the very concept of a thread of execution observing a singular value _requires_ an instant of time, but knowing _when_ it happened requires a referential point.
+* **_Concrete_ vs _Abstract_** - A moment is 'well defined' if it has an offset to an external source of time.  This could be the number of nanoseconds since a system was turned on, since a signal happened, or even the moment two systems _"turned each other on."_  An instant is abstract because the very concept of a thread of execution observing a singular value _requires_ an instant of time, but knowing _when_ it happened requires a concrete moment.
 
 So let's circle back to my wording above - one thread of execution can only read a single
 _**Instant**_ of time at any given _**Moment**_.  The thread, itself, has no concept of what
@@ -28,8 +28,8 @@ time it's done that calculation, the temporal context decoheres.
 So, let's invert the problem and _provide_ the **Kernel** (a thread of execution) with the current
 **Moment's** contextual information for every beat of the **Clock**.  The **Kernel** would activate
 and run for a single execution before being re-invoked in good timing with the clock - making it _an
-externally driven loop._  A bonus is that we can provide a looping count with stimulation which the
-kernels can incorporate into their calculation.
+externally driven loop._  A bonus is that we can provide a looping count on stimulation which the
+kernels can incorporate into their calculations.
 
 ### _...Temporality?_
 
@@ -68,7 +68,7 @@ A neural engine, as I said above, also provides a looping count to all execution
 unique kinds of kernel activation, such as _downbeat_ and _modulo_ potentials, which can pace the rate of stimulus
 while stepping incrementally through data.  For live systems, the beat number is more of an indicator of the longest
 running period of asynchronous execution - for static data, the beat number can literally act as the _index_ to "step" 
-through a file with.
+through the data with.
 
     tl;dr - everything is synchronously activated, but asynchronously executes
 

@@ -5,62 +5,32 @@ import (
 	"github.com/ignite-laboratories/core"
 	"github.com/ignite-laboratories/core/condition"
 	"github.com/ignite-laboratories/core/temporal"
-	"time"
+	"github.com/ignite-laboratories/host"
 )
 
-var incrementer = temporal.NewCalculation[int](core.Impulse, condition.Always, false, increment)
-var signaler = temporal.NewCalculation[bool](core.Impulse, condition.Always, false, signal)
+type Coordinates struct {
+	X int
+	Y int
+}
+
+var mouser = temporal.NewCalculation[Coordinates](core.Impulse, condition.Always, false, GetCoordinates)
+var analyzer = temporal.NewAnalysis[Coordinates, any, any](core.Impulse, condition.Always, false, PrintCoordinates, mouser)
 
 func main() {
-	// Print the timeline every second
-	loopFreq := 1.0
-	core.Impulse.Loop(printTimeline, condition.Frequency(&loopFreq), false)
-
-	// Lower the impulse frequency to 4hz
-	core.Impulse.MaxFrequency = 4
-
-	// Make it so
+	core.Impulse.MaxFrequency = 16
 	core.Impulse.Spark()
 }
 
-var value = 0
-
-func increment(ctx core.Context) int {
-	value++
-	return value
-}
-
-func signal(ctx core.Context) bool {
-	return false
-}
-
-var lastMoment time.Time
-
-func printTimeline(ctx core.Context) {
-	// Copy the timeline data
-	incrementer.Mutex.Lock()
-	data := make([]temporal.Data[int], len(incrementer.Timeline))
-	copy(data, incrementer.Timeline)
-	incrementer.Mutex.Unlock()
-
-	// Trim duplicates
-	trimCount := 0
-	for _, v := range data {
-		if v.Context.Moment.After(lastMoment) {
-			break
-		}
-		trimCount++
-	}
-	data = data[trimCount:]
-
-	// Get the point values
-	values := make([]int, len(data))
+func PrintCoordinates(ctx core.Context, cache *any, data []temporal.Data[Coordinates]) any {
+	points := make([]Coordinates, len(data))
 	for i, v := range data {
-
-		values[i] = v.Point
-		lastMoment = v.Context.Moment
+		points[i] = v.Point
 	}
+	fmt.Println(points)
+	return nil
+}
 
-	// Print the stats
-	fmt.Printf("%v\n", values)
+func GetCoordinates(ctx core.Context) Coordinates {
+	x, y, _ := host.Mouse.GetCoordinates()
+	return Coordinates{x, y}
 }

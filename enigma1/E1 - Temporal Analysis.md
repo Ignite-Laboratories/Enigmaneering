@@ -24,12 +24,12 @@ I promise, my work aims to make all of this _easier_ =)
 
 The most primitive component of dimensional analysis is the `Dimension` - a structure that contains both the _Current_ 
 value and a _Timeline_ of historical values that this dimension has held.  A dimension contains two neurons - a _Trimmer_
-and a _Stimulator_.  The Trimmer is activated as a loop that actively trims timeline entries older than the observational
-_Window_ of the dimension.  The Stimulator is activated impulsively to populate entries on the dimensional timeline. The 
-last notable thing a dimension contains is a synchronization object - _Mutex_ - which we will see heavily used throughout 
-these steps.
+and a _Stimulator_.  The Trimmer is activated as a loop that constantly trims timeline entries older than the observational
+_Window_ of the dimension - by default, 2 seconds.  The Stimulator is typically activated _impulsively_ to populate entries on 
+the dimensional timeline, though more advanced analyzers can leverage _looping_ stimulators. The last notable thing a dimension 
+contains is a synchronization object - _Mutex_ - which should be locked anytime the dimension's timeline is being modified.
 
-### core.Temporal
+### core.temporal
 
-The majority of the work in these steps will leverage the final package of core - `temporal` - this is a container of helper
+The majority of the work in these steps will leverage the next package of core - `temporal` - this is a container of helper
 methods for _creating_ and _working with_ dimensions.

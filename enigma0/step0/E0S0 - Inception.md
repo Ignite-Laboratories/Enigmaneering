@@ -40,7 +40,7 @@ reference to the moment of `Inception` -
     var Inception = time.Now()
     var ID = NextID()
 
-This, again, is by design.  A system can exist without yet sparking neural activation - thus, the condition of _alive_ 
+This, again, is by design.  A system can exist without having sparked neural activation - thus, the condition of _alive_ 
 is distinct from having _neural activation_.  The latter typically requires _external_ intervention of some sorts - in
 our system, through firing the `core.Impulse.Spark()` (we'll get to that later)
 

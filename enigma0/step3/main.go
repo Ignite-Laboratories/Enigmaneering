@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/core"
-	"github.com/ignite-laboratories/core/condition"
+	"github.com/ignite-laboratories/core/when"
 )
 
 func init() {
@@ -16,7 +16,7 @@ func main() {
 		_, _ = fmt.Scanln()
 
 		// Trigger a stimulation
-		core.Impulse.Trigger(PrintParity, condition.Always, true)
+		core.Impulse.Trigger(PrintParity, when.Always, true)
 	}
 }
 

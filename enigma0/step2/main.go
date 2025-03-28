@@ -3,14 +3,14 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/core"
-	"github.com/ignite-laboratories/core/condition"
+	"github.com/ignite-laboratories/core/when"
 	"time"
 )
 
-var printer = core.Impulse.Stimulate(PrintParity, condition.Always, true)
+var printer = core.Impulse.Stimulate(PrintParity, when.Always, true)
 
 func main() {
-	core.Impulse.Loop(Toggle, condition.Always, false)
+	core.Impulse.Loop(Toggle, when.Always, false)
 	core.Impulse.MaxFrequency = 4
 	core.Impulse.Spark()
 }

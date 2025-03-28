@@ -9,10 +9,10 @@ Well, because a potential tells if a neuron _should_ activate when impulsed - bu
 the neuron should even _test_ it's potential.  This is a very powerful feature when combined with
 a neural _reference_ -
 
-    var printer = core.Impulse.Stimulate(PrintParity, condition.Always, true)
+    var printer = core.Impulse.Stimulate(PrintParity, when.Always, true)
     
     func main() {
-        core.Impulse.Loop(Toggle, condition.Always, false)
+        core.Impulse.Loop(Toggle, when.Always, false)
         core.Impulse.MaxFrequency = 4
         core.Impulse.Spark()
     }
@@ -30,8 +30,6 @@ action potential.  In our above configuration, the `Toggle` function is looped -
         time.Sleep(time.Second * 2)
     }
 
-In here, the neuron can directly be _suppressed_ and _unsuppressed_ from activation without affecting
-its underlying potential.  This allows neurons to lie _dormant_ until another system un-suppresses it,
-and demonstrates the beginnings of intra-neural _signaling_.
-
-Hey, look at that - the examples are getting less complex!  That's a wonderful sign =)
+Every two seconds the printer's `Muted` field is toggled between high and low.  Here, the neuron can directly 
+be _suppressed_ and _unsuppressed_ from activation without affecting its operation.  This allows neurons to 
+lie _dormant_ until another system un-suppresses it, and demonstrates the beginnings of intra-neural _signaling_.

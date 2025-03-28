@@ -13,5 +13,6 @@ github.com/ignite-laboratories/core v0.1.5 h1:WiHN9vUb66BfVhsLc+b0rQ9Ab4c87xPghO
 github.com/ignite-laboratories/core v0.1.5/go.mod h1:PEz/yjlZvAltPVjyvO8+G2vjsWw4ohU4+bmqJIu6L/Q=
 github.com/ignite-laboratories/core v0.1.6 h1:r1o3hu2YCXtLKlBOv1RYyVwq50Qta+T1/+parIHlWHU=
 github.com/ignite-laboratories/core v0.1.6/go.mod h1:PEz/yjlZvAltPVjyvO8+G2vjsWw4ohU4+bmqJIu6L/Q=
+github.com/ignite-laboratories/core v0.2.2/go.mod h1:PEz/yjlZvAltPVjyvO8+G2vjsWw4ohU4+bmqJIu6L/Q=
 golang.org/x/exp v0.0.0-20250305212735-054e65f0b394 h1:nDVHiLt8aIbd/VzvPWN6kSOPE7+F/fNFDSXLVYkE/Iw=
 golang.org/x/exp v0.0.0-20250305212735-054e65f0b394/go.mod h1:sIifuuw/Yco/y6yb6+bDNfyeQ/MdPUy/hKEMYQV17cM=

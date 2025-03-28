@@ -6,10 +6,10 @@
 The concept of enigmaneering is near and dear to my heart.  It's how I navigate my
 every day life!  Each issue a mystery to tackle, if I'm willing to put in the time
 and effort.  The challenge, for me, has been in how to document the random creations
-that come from living in this fashion.  As they are typically abstract in nature I
+that come from living in this fashion.  As they are typically abstract in nature, I
 often find that my work can overwhelm (or even unknowingly challenge) others.  Since
-I truly only want the ability to gain feedback from my ideas through others - rather 
-than just the soundboard of _my own mind_ - I've turned to writing!
+I truly only want the ability to gain external feedback from my ideas - rather than 
+just the soundboard of _my own mind_ - I've turned to writing!
 
 I have no expectations of what this project shall turn into, but I've found
 a pathway towards a set of designs that I would love to build - _with others!_
@@ -32,8 +32,8 @@ of my labor into a sequence of enigmas for others to unravel at their own leisur
 
 I have no desire to keep expanding this file as I discover each puzzle piece - simply because
 each typically builds upon the last!  Instead, I will unravel each component and why it was
-created as I construct them.  Follow through the enigmatic breadcrumbs in each folder, and I'll 
-do my best to keep each step as brief as possible =)
+created as I construct them.  Follow through the breadcrumbs in each folder, and I'll do my 
+best to keep each step as brief as possible =)
 
 ### Minimum System Requirements
 
@@ -48,9 +48,9 @@ that simplicity whenever possible.  Any code external to the enigma is a tagged 
 source repository, ensuring you can continue to follow my documentation as it stood at that moment 
 in time.
 
-Eventually, I fully expect to be including some OpenGL and hardware I/O - so Go's grandfather _C_ 
+Eventually, I fully expect to be including some OpenGL and hardware I/O - so Go's grandparent, _C_, 
 will also get it's time to shine, but I will do my absolute best to make understanding _how_ to 
-incorporate C into Go as easy as possible when those times come.
+incorporate C into Go as easy as possible when the time comes.
 
 Genuinely - _the minimum requirement is curiosity!_
 
