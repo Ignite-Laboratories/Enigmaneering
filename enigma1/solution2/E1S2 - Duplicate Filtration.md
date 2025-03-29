@@ -33,6 +33,9 @@ the provided temporal context to trim off _this_ activation's duplicates -
 
 Legitimately, _it's that simple_ with this kind of architecture =)
 
+The data is always provided in a _temporally aligned_ fashion, meaning walking from left-to-right allows the system
+to 'break' early when the desired condition is met.
+
 Here's the new output -
 
     []
