@@ -26,3 +26,4 @@ go.work.sum
 # env file
 .env
 enigma0/go.sum
+*.sum
