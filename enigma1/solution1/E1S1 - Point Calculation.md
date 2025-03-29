@@ -5,10 +5,10 @@
 
 ### What if you want a more complex observation?
 
-We'll evolve the last example a little bit by replacing the _observer_ with a _differential_ - in this
+We'll evolve the last example a little bit by replacing the _observer_ with a _calculation_ - in this
 example it just increments a value -
 
-    var incrementer = temporal.Differential(core.Impulse, when.Always, false, increment)
+    var incrementer = temporal.Calculation(core.Impulse, when.Always, false, increment)
 
     var value = 0
     func increment(ctx core.Context) int {
@@ -16,11 +16,9 @@ example it just increments a value -
         return value
     }
 
-Here, the terminology has changed to a _differential_.  Differentials return some kind of function
-that calculates a value when activated, the complexity of which is up to you.  The terminology is
-intentional - the incrementer _dimension_ represents a differential data set, calculated point
-by point.  The incrementer here isn't doing any  _differential calculation,_ per-say, but that's 
-not because it _can't!_
+Here, the terminology has changed to a _calculation_.  Calculation take in a `PointCalculation`
+function that calculates a value when activated.  The terminology is intentional - the incrementer 
+_dimension_ represents a calculated data set, generated point by point.
 
 Let's look at the output timeline -
 

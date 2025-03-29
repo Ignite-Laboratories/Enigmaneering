@@ -11,6 +11,7 @@ func init() {
 }
 
 func main() {
+	fmt.Println("Press enter to trigger a stimulation")
 	for core.Alive {
 		// Press the enter key to read from stdin
 		_, _ = fmt.Scanln()

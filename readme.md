@@ -7,9 +7,9 @@ The concept of enigmaneering is near and dear to my heart.  It's how I navigate 
 every day life!  Each issue a mystery to tackle, if I'm willing to put in the time
 and effort.  The challenge, for me, has been in how to document the random creations
 that come from living in this fashion.  As they are typically abstract in nature, I
-often find that my work can overwhelm (or even unknowingly challenge) others.  Since
-I truly only want the ability to gain external feedback from my ideas - rather than 
-just the soundboard of _my own mind_ - I've turned to writing!
+often find that my work can overwhelm (or even unknowingly challenge) others.  Truthfully,
+I only want the ability to gain external feedback from my ideas - rather than 
+just the soundboard of _my own mind._  To that end, I've turned to writing!
 
 I have no expectations of what this project shall turn into, but I've found
 a pathway towards a set of designs that I would love to build - _with others!_

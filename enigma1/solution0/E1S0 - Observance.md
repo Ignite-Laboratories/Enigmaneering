@@ -61,7 +61,7 @@ see in the next few steps - for now, our data is _approximately_ 8 points wide.
 ### General Data
 
 You probably noticed that the data copied from the observer's timeline was of type `std.Data[T any]` before
-we pulled the data's _Point_ value out -in this example, of type `core.Runtime`.  All dimensional data is
+we pulled the data's _Point_ value out - in this example, of type `core.Runtime`.  All dimensional data is
 wrapped in this type - it's very straightforward, but it provides temporal _context_ to a point value in time - 
 
     temporal -

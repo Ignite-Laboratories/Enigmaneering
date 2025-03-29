@@ -30,6 +30,7 @@ action potential.  In our above configuration, the `Toggle` function is looped -
         time.Sleep(time.Second * 2)
     }
 
-Every two seconds the printer's `Muted` field is toggled between high and low.  Here, the neuron can directly 
-be _suppressed_ and _unsuppressed_ from activation without affecting its operation.  This allows neurons to 
-lie _dormant_ until another system un-suppresses it, and demonstrates the beginnings of intra-neural _signaling_.
+Every two seconds the printer's `Muted` field is toggled between high and low.  The neuron can be directly 
+_suppressed_ and _unsuppressed_ from activation without affecting its operation - called neural _muting_.  
+This allows neurons to lie _dormant_ until another system un-suppresses it, and demonstrates the beginnings 
+of intra-neural _signaling_.

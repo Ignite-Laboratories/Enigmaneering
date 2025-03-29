@@ -15,6 +15,7 @@ In this example, the data from `stdin` becomes the trigger for stimulating a rea
     }
     
     func main() {
+	    fmt.Println("Press enter to trigger a stimulation")
         for core.Alive {
             // Press the enter key to read from stdin
             _, _ = fmt.Scanln()
@@ -30,8 +31,8 @@ In this example, the data from `stdin` becomes the trigger for stimulating a rea
 
 Here we are simply reading from stdin and then triggering an impulse if it gives us any data. Obviously,
 this is a highly contrived example, but it demonstrates the _reuse_ of temporal methods by non-temporal
-threads.  Here, the main execution thread is able to stimulate the PrintParity function without any
-fancy loops.
+threads.  Here, the main execution thread is able to stimulate the PrintParity function without any extra
+work.
 
 Even though it's a single activation, it still requires a potential to operate.  In most cases, `when.Always`
 is a perfectly acceptable potential to utilize.
