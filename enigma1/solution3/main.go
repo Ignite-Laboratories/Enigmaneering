@@ -22,13 +22,16 @@ func increment(ctx core.Context) int {
 	return value
 }
 
-func printTimeline(ctx core.Context, cache *any, data []std.Data[int]) int {
+func printTimeline(ctx core.Context, cache *int, data []std.Data[int]) int {
 	total := 0
-	for _, v := range data {
+	values := make([]int, len(data))
+	for i, v := range data {
+		values[i] = v.Point
 		total += v.Point
 	}
+	*cache += total
 
 	// Print the stats
-	fmt.Printf("%v - %v\n", data, total)
+	fmt.Printf("%v - %d - %d\n", values, total, *cache)
 	return total
 }

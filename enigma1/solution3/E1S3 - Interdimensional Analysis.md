@@ -21,21 +21,26 @@ A temporal integration requires the print function to change its signature to an
     type Integral[TIn any, TOut any, TCache any] func(core.Context, *TCache, []TIn) TOut
 
 Integrals are provided a slice of temporal data points to calculate a single point from.  In addition to this,
-they are provided a _cache_ reference that can be used to pass information between integral activations.  That's
-not as relevant at this point, but it will come in handy much later.
+they are provided a _cache_ reference that can be used to pass information between integral activations.  Let's
+leverage it to keep a long-running "total" for the entire dimension, accessible at any time from the dimension's
+`Cache` field by other threads.
 
-    func printTimeline(ctx core.Context, cache *any, data []std.Data[int]) int {
+    func printTimeline(ctx core.Context, cache *int, data []std.Data[int]) int {
         total := 0
-        for _, v := range data {
+        values := make([]int, len(data))
+        for i, v := range data {
+            values[i] = v.Point
             total += v.Point
         }
+        *cache += total
     
-        fmt.Printf("%v - %v\n", data, total)
+        // Print the stats
+        fmt.Printf("%v - %d - %d\n", values, total, *cache)
         return total
     }
 
 Our printTimeline _integral_ now returns back an `int`, making the timeline of the integration dimension of type
-`*Dimension[int, any]`.  The integral dimension provides the latest found "total" of the source dimension,
+`*Dimension[int, int]`.  The integral dimension provides the latest found "total" of the source dimension,
 since our print function adds the latest found data together.  This mechanism provides a way of _calculating_
 the "area under a curve" as fast as possible, if not throttled with a slower frequency potential.
 
@@ -52,17 +57,23 @@ allowing it to neatly be provided as a _local_ variable in context at creation -
 ### Output
 Let's take a look at the output for a moment -
 
-    [] - 0
-    [1 2 3 4] - 10
-    [5 6 7 8] - 26
-    [9 10 11 12 13] - 55
-    [14 15 16] - 45
-    [17 18 19 20] - 74
-    [21 22 23 24] - 90
+    [Values] - [Frame Total] - [Running Total]
 
-The left represents the temporal information found by the integral at each activation.  The right represents the
-total of all the values found, which is also our integral dimension's timeline values.  Right now, we are
-forcing the two dimensions to operate in good timing by using a slower frequency than the target dimension - as
-we step forward we will begin to work with the concept of _resonant frequency_ calculation.  For now, it's as
-obvious as it sounds - dimensions can activate at a sympathetic frequency to each other, facilitating logical
+    [1] - 1 - 1
+    [2 3 4] - 9 - 10
+    [5 6 7 8] - 26 - 36
+    [9 10 11 12 13] - 55 - 91
+    [14 15 16] - 45 - 136
+    [17 18 19 20 21] - 95 - 231
+
+The left represents the temporal information found by the integral at each activation.  The middle represents the
+total of all the values found, which is also our integral dimension's timeline values.  Finally, the right
+represents the _running total_ of all the past totaling operations.  Because temporal context is known by all
+data points, this can be leveraged to "coalesce" data intelligently.
+
+The concept of 'data between activations' is what I call a **Temporal Frame** of data points.
+
+Right now, we are forcing the two dimensions to operate in good timing by using a slower frequency than the target 
+dimension - as we step forward we will begin to work with the concept of _resonant frequency_ calculation.  For now, 
+it's as obvious as it sounds - dimensions can activate at a sympathetic frequency to each other, facilitating logical
 ordered calculation across time.
