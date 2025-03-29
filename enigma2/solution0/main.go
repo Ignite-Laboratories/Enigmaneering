@@ -1,7 +1,7 @@
 package main
 
 import (
-	"enigma2/step0/host"
+	"enigma2/solution0/host"
 	"fmt"
 	"github.com/ignite-laboratories/core"
 )

@@ -5,10 +5,10 @@
 
 ### What if you want a more complex observation?
 
-We'll evolve the last example a little bit by replacing the _observer_ with an _calculation_ - in this
+We'll evolve the last example a little bit by replacing the _observer_ with a _differential_ - in this
 example it just increments a value -
 
-    var incrementer = calc.NewCalculation[int](core.Impulse, condition.Always, false, increment)
+    var incrementer = temporal.Differential(core.Impulse, when.Always, false, increment)
 
     var value = 0
     func increment(ctx core.Context) int {
@@ -16,11 +16,13 @@ example it just increments a value -
         return value
     }
 
-Here, the terminology has changed to a _calculation_.  Calculations return some kind of function
-that calculates a value when activated, the complexity of which is up to you.  Anonymous functions
-can be utilized to build even more intelligent activation, should you need it.
+Here, the terminology has changed to a _differential_.  Differentials return some kind of function
+that calculates a value when activated, the complexity of which is up to you.  The terminology is
+intentional - the incrementer _dimension_ represents a differential data set, calculated point
+by point.  The incrementer here isn't doing any  _differential calculation,_ per-say, but that's 
+not because it _can't!_
 
-For now, let's look at the output timeline -
+Let's look at the output timeline -
 
     []
     [1 2 3 4 5]
@@ -36,4 +38,4 @@ Right away you'll notice that there are _duplicate_ entries from our print funct
 the dimension, itself, provides a _rolling window of observance_.  By default, all dimensions are
 created with a 2 second observable window - but you can adjust that with its `Window` field.  The
 print function isn't doing anything besides printing whatever is in the timeline buffer, so it
-isn't able to filter out the duplicates - we'll handle that in the next step.
+isn't able to filter out the duplicates - we'll handle that in the next solution.

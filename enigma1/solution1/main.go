@@ -3,17 +3,16 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/core"
-	"github.com/ignite-laboratories/core/condition"
+	"github.com/ignite-laboratories/core/std"
 	"github.com/ignite-laboratories/core/temporal"
-	"time"
+	"github.com/ignite-laboratories/core/when"
 )
 
-var incrementer = temporal.NewCalculation[int](core.Impulse, condition.Always, false, increment)
+var incrementer = temporal.Calculation(core.Impulse, when.Always, false, increment)
 
 func main() {
 	// Print the timeline every second
-	loopFreq := 1.0
-	core.Impulse.Loop(printTimeline, condition.Frequency(&loopFreq), false)
+	core.Impulse.Loop(printTimeline, when.Frequency(std.HardRef(1.0).Ref), false)
 
 	// Lower the impulse frequency to 4hz
 	core.Impulse.MaxFrequency = 4
@@ -29,31 +28,17 @@ func increment(ctx core.Context) int {
 	return value
 }
 
-var lastMoment time.Time
-
 func printTimeline(ctx core.Context) {
 	// Copy the timeline data
 	incrementer.Mutex.Lock()
-	data := make([]temporal.Data[int], len(incrementer.Timeline))
+	data := make([]std.Data[int], len(incrementer.Timeline))
 	copy(data, incrementer.Timeline)
 	incrementer.Mutex.Unlock()
-
-	// Trim duplicates
-	trimCount := 0
-	for _, v := range data {
-		if v.Context.Moment.After(lastMoment) {
-			break
-		}
-		trimCount++
-	}
-	data = data[trimCount:]
 
 	// Get the point values
 	values := make([]int, len(data))
 	for i, v := range data {
-
 		values[i] = v.Point
-		lastMoment = v.Context.Moment
 	}
 
 	// Print the stats

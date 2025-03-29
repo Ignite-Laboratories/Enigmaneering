@@ -3,18 +3,18 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/core"
-	"github.com/ignite-laboratories/core/condition"
+	"github.com/ignite-laboratories/core/std"
 	"github.com/ignite-laboratories/core/temporal"
+	"github.com/ignite-laboratories/core/when"
 	"time"
 )
 
 // Observe the last impulse of the core impulse engine
-var observer = temporal.NewObservation[core.Runtime](core.Impulse, condition.Always, false, &core.Impulse.Last)
+var observer = temporal.Observer(core.Impulse, when.Always, false, std.Target(&core.Impulse.Last))
 
 func main() {
-	// Print the timeline every 2 seconds
-	loopFreq := 0.5
-	core.Impulse.Loop(printTimeline, condition.Frequency(&loopFreq), false)
+	// Print the timeline every half second
+	core.Impulse.Loop(printTimeline, when.Frequency(std.HardRef(0.5).Ref), false)
 
 	// Lower the impulse frequency to 4hz
 	core.Impulse.MaxFrequency = 4
@@ -26,7 +26,7 @@ func main() {
 func printTimeline(ctx core.Context) {
 	// Copy the timeline data
 	observer.Mutex.Lock()
-	data := make([]temporal.Data[core.Runtime], len(observer.Timeline))
+	data := make([]std.Data[core.Runtime], len(observer.Timeline))
 	copy(data, observer.Timeline)
 	observer.Mutex.Unlock()
 

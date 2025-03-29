@@ -16,7 +16,7 @@ This brings us to our first, and most important, definitions for the future of t
 
 * **An Instant** - _any_ abstract moment in time with no reference point.
 * **A Moment** - a well defined, or _concrete_, moment in time.
-* **_Concrete_ vs _Abstract_** - A moment is 'well defined' if it has an offset to an external source of time.  This could be the number of nanoseconds since a system was turned on, since a signal happened, or even the moment two systems _"turned each other on."_  An instant is abstract because the very concept of a thread of execution observing a singular value _requires_ an instant of time, but knowing _when_ it happened requires a concrete moment.
+* **_Concrete_ vs _Abstract_** - A moment is 'well defined' if it has an offset to an external source of time.  This could be the number of nanoseconds since a system was turned on, since a signal happened, or even the moment two systems _"turned each other on."_  An instant is abstract because the very concept of a thread of execution observing a singular value _requires_ an abstract instant of time, but knowing _when_ it happened requires a concrete moment.
 
 So let's circle back to my wording above - one thread of execution can only read a single
 _**Instant**_ of time at any given _**Moment**_.  The thread, itself, has no concept of what
@@ -27,9 +27,9 @@ time it's done that calculation, the temporal context decoheres.
 
 So, let's invert the problem and _provide_ the **Kernel** (a thread of execution) with the current
 **Moment's** contextual information for every beat of the **Clock**.  The **Kernel** would activate
-and run for a single execution before being re-invoked in good timing with the clock - making it _an
+and run for a single round of execution before being re-invoked in good timing with the clock - making it _an
 externally driven loop._  A bonus is that we can provide a looping count on stimulation which the
-kernels can incorporate into their calculations.
+kernels can incorporate into their temporal calculations.
 
 ### _...Temporality?_
 
@@ -78,10 +78,10 @@ I kid - I know it might sound daunting, but it really _isn't_.
 
 The devil is in the details, as they say - so rather than trying to explain everything at once I'd like
 to try breaking it into logical steps.  As I progress through them, I'll explain the logic and reasoning
-in my choices and provide perpetually working examples for each.
+in my choices and provide perpetually working solutions for each.
 
 Rather than constructing this component by component, I intend to provide the philosophical reasoning behind
-the project and why each step was executed.  This is not to bore, it's quite literally how this work came
+the project and how each solution was found.  This is not to bore, it's quite literally how this work came
 into creation in the first place - _through reflection and introspection!_
 
 As we explore the concepts of creating conscious systems, we must also be conscious of ourselves =)

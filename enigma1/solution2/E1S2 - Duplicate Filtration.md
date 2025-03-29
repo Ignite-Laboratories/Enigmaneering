@@ -5,7 +5,7 @@
 
 ### Leveraging Temporal Context
 
-There is only a _very_ small tweak that allows duplicate filtration - walk the data and leverage
+There is only a _very_ small tweak that allows duplicate filtration - walk the data and use
 the provided temporal context to trim off _this_ activation's duplicates -
 
     var lastMoment time.Time
@@ -44,5 +44,6 @@ Here's the new output -
     [22 23 24 25]
     [26 27 28]
 
-Now, our print function will _only_ process new timeline entries and ignores anything it's already handled!  Don't
-worry, in the next few steps the process of duplicate filtration gets simpler.
+Now, our print function will _only_ process new timeline entries and ignores anything it's already handled!
+
+That's all fine and dandy, but the print function is excessively complex - let's make it simpler in the next solution =)

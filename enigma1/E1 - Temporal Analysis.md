@@ -31,5 +31,41 @@ contains is a synchronization object - _Mutex_ - which should be locked anytime 
 
 ### core.temporal
 
-The majority of the work in these steps will leverage the next package of core - `temporal` - this is a container of helper
-methods for _creating_ and _working with_ dimensions.
+The majority of the work in these solutions leverages the next package of core - `temporal` - this is a container of helper
+methods for _creating_ and _working with_ dimensions.  As we walk through the solutions, we'll explore the temporal package.
+
+### core.std
+
+The final package in the `core` module is `std` - this contains some commonly used types across the system.  For the majority
+of this enigma, we will be leveraging the standard _coordinate_ structures - `XY[T] - XYZ[T] - XYZW[T]` - these require a type
+constraint of `core.Numeric`, which constrains them to `integer` _and_ `floating point` types.  We'll also be leveraging
+a type called `HardRef` that allows for _inline_ references to fixed values, rather than referencing another variable.
+
+Obviously, if your system requires a _variable_ then a _hard_ reference simply will not do - but for _prototyping_, it's 
+very handy!
+
+Here's an example -
+
+    Without HardRef -
+        var freq = 16.0
+        core.Impulse.Loop(Stimulate, when.Frequency(&freq), true)
+
+    With HardRef -
+        core.Impulse.Loop(Stimulate, when.Frequency(std.HardRef(16.0).Ref), true)
+
+Finally, we have a standard method signature for retrieving a reference to a target variable, called a `TargetFunc` -
+
+    core.std -
+        type TargetFunc[TValue any] func() *TValue
+        
+        func Target[TValue any](val *TValue) TargetFunc[TValue] {
+            return func() *TValue {
+                return val
+            }
+        }
+
+The method `std.Target(val)` provides a quick shorthand for creating a `TargetFunc`
+
+We're in "bat country" - everything is a pointer and how we retrieve and pass them around is _important!_  The tools
+in the `std` package have been very carefully curated to help you navigate this journey _effectively_.  I won't detail
+every type in this package here, but as we are introduced to them I'll explain their design and purpose.
