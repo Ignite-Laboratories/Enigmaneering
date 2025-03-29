@@ -16,7 +16,13 @@ print function to one created by `temporal` -
 This dimension _naturally_ performs the duplicate filtration that we just implemented - providing an _integral
 dimension,_ rather than a neural activation.
 
-Because of this, we can change our print function to take in the data set with which to perform integration upon -
+A temporal integration requires the print function to change its signature to an `Integral` -
+
+    type Integral[TIn any, TOut any, TCache any] func(core.Context, *TCache, []TIn) TOut
+
+Integrals are provided a slice of temporal data points to calculate a single point from.  In addition to this,
+they are provided a _cache_ reference that can be used to pass information between integral activations.  That's
+not as relevant at this point, but it will come in handy much later.
 
     func printTimeline(ctx core.Context, cache *any, data []std.Data[int]) int {
         total := 0
