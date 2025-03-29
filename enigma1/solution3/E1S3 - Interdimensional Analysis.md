@@ -16,7 +16,7 @@ print function to one created by `temporal` -
 This dimension _naturally_ performs the duplicate filtration that we just implemented - providing an _integral
 dimension,_ rather than a neural activation.
 
-A temporal integration requires the print function to change its signature to an `Integral` -
+A temporal integration requires the print function to change its signature to an `Integral` function -
 
     type Integral[TIn any, TOut any, TCache any] func(core.Context, *TCache, []TIn) TOut
 
