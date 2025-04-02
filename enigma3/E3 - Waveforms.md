@@ -29,11 +29,8 @@ system, as things like physics require the passing of a logical amount of time t
 calculations.  Rendering systems are a prime example of a time-_consuming_ system as they aim to _maximize_
 their frames-per-second, rather than calculating temporal values.
 
-The neural impulse engine provides a way of spreading calculation logically across time - a form of temporal 
-concurrency, if you will - making it wonderful for creating intricate simulations.  _Rendering,_ on the other 
-hand, operates _asynchronously_ to the logical simulation and can run at any chaotic pace.
+But - if the data is always rendering it's part of a grand picture _in good timing_ then they can render
+at a high frequency while the main rendering loop fires at a _reasonable_ rate - like 120hz.  This is the
+foundation of _resonant frequency computation_ and we'll explore that more as this progresses.
 
-The point of this project is to demonstrate how to _bridge_ the two designs in an idiomatic fashion.  Thus, 
-_how_ we implement `glitter` is important as it doesn't use the impulse engine to drive its loop.  
-
-I aim to show that starting from a timeline of contextual information makes this entire process an absolute _breeze_ =)
+For now, let's start creating some `viewports` =)
