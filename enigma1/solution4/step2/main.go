@@ -22,8 +22,8 @@ func main() {
 
 var threshold = 100.0
 
-func VelocityReaction(ctx core.Context, old std.Data[std.XY[int]], current std.Data[std.XY[int]]) {
-	delta := current.Point.X - old.Point.X
+func VelocityReaction(ctx core.Context, old std.Data[std.MouseState], current std.Data[std.MouseState]) {
+	delta := current.Point.GlobalPosition.X - old.Point.GlobalPosition.X
 	deltaAbs := math.Abs(float64(delta))
 	if deltaAbs > threshold {
 		fmt.Println("Slow down!!!")

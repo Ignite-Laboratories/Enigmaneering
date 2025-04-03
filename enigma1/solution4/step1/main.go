@@ -10,7 +10,7 @@ import (
 )
 
 /**
-This example prints the mouse coordinates whenever the cursor
+This example prints the mouse state whenever the cursor
 hovers back over any part of the screen that is half the distance
 from the furthest point the cursor has traveled since launching.
 */
@@ -22,12 +22,12 @@ func main() {
 
 var highestWidth = 0
 
-func CalcCoords(ctx core.Context) std.XY[int] {
+func CalcCoords(ctx core.Context) *std.MouseState {
 	coords := mouse.Sample()
-	if coords.X < highestWidth/2 {
-		fmt.Println(coords)
-	} else if coords.X > highestWidth {
-		highestWidth = coords.X
+	if coords.GlobalPosition.X < highestWidth/2 {
+		fmt.Println(*coords)
+	} else if coords.GlobalPosition.X > highestWidth {
+		highestWidth = coords.GlobalPosition.X
 	}
-	return *coords
+	return coords
 }
