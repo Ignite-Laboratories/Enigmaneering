@@ -13,8 +13,8 @@ two critical modules to the `JanOS` ecosystem - `spark` and `glitter`
 _Spark_ provides a toolkit for orchestrating dimensional systems, to put it eloquently.  The term intends
 to express that you are _sparking a dimension into existence_, as that's literally what you're doing!
 
-_Glitter_ provides a toolkit for rendering graphical _viewports_ of dimensional systems, as well as
-everything to facilitate the OpenGL component of JanOS.
+_Glitter_ provides a toolkit for rendering graphical _viewports_ of dimensional systems.  This includes
+the basic structures to build your own renderable outputs, which is what this enigma will explore.
 
 The goal of this particular enigma is to demonstrate creating many viewports coordinated by a singular
 impulse engine, with each calculating its waveform data off of the others in real time.  The later,
@@ -29,8 +29,6 @@ system, as things like physics require the passing of a logical amount of time t
 calculations.  Rendering systems are a prime example of a time-_consuming_ system as they aim to _maximize_
 their frames-per-second, rather than calculating temporal values.
 
-But - if the data is always rendering it's part of a grand picture _in good timing_ then they can render
-at a high frequency while the main rendering loop fires at a _reasonable_ rate - like 120hz.  This is the
-foundation of _resonant frequency computation_ and we'll explore that more as this progresses.
+
 
 For now, let's start creating some `viewports` =)

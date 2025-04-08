@@ -31,7 +31,8 @@ each of us through that revelation!  If you're really astute, you'll eventually 
 code!  Why?  Because code was _created_ by the _creator_ for us to _creatively_ collaborate with, and it's what facilitated
 the _creation_ of language _through_ neurological systems!
 
-    tl;dr - your neurons, at their core, use code to make you speak - let's keep it positive for others =)
+    tl;dr - your neurons, at their core, use code to make you speak
+          - let's keep it positive for others =)
 
 Thus, the first thing you will find is that every _JanOS_ instance is _alive at creation_, and is always provided a 
 reference to the moment of `Inception` -
