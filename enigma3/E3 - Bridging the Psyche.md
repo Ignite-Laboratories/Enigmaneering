@@ -1,4 +1,4 @@
-# `E2 - Bridging the Psyche`
+# `E3 - Bridging the Psyche`
 ### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---

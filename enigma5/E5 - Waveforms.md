@@ -1,4 +1,4 @@
-# `E3 - Waveforms`
+# `E5 - Waveforms`
 ### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---
