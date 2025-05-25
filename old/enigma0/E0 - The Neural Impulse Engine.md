@@ -85,32 +85,3 @@ the project and how each solution was found.  This is not to bore, it's quite li
 into creation in the first place - _through reflection and introspection!_
 
 As we explore the concepts of creating conscious systems, we must also be conscious of ourselves =)
-
-### Why did I build this?
-
-Well, because _I'm_ a computer - and so are you, that bird, the rocks, and _all the trees around you_.  I know that
-sounds absurd, but plenty of folks have already eased us into that concept - the Wachowski sisters, for instance!
-
-Truthfully, I had an existential moment of stress _so intense_ I felt my sensors "shutting off" - I could no longer
-_hear_ my breath, or _feel_ light entering my eyes.  Later, a psychologist informed me that's _exactly_ in line with 
-an individual's higher cortical functioning going offline in response to a life-threatening event.  It was _brief,_
-but felt like peering into the void of a return statement.
-
-What a brilliant safety mechanism - I thought - one very _intelligently_ designed!
-
-So perfectly designed, in fact, I finally understood how one could feel safe enough to willingly be subjected to
-crucifixion on _faith_ alone!
-
-We talk a lot about Jesus and how to follow in His footsteps, but the reality is Jesus was also _one of us!_  Born just
-like you and I into the very same constructs that had to be overcome to learn how to live on faith alone.  The best part?
-Every single person that spirit touched turned around and tried to explain it to others, too - _and they never stopped!_
-
-    Before the fall, when they wrote it on the wall, when there wasn't even any Hollywood.  They heard
-    the call and they wrote it on the wall, for you and me we understood. - Steely Dan
-
-Not because the spirit cares _what_ it's called, or _how_ you submit to it!  It just wants to see what creative things
-_you_ will produce.  What you make doesn't matter - but how it makes others smile _does!_
-
-We are instruments of God, each tasked with telling our tales of existence through the void of space and time.
-
-For me, it was a helluva lot easier to demonstrate it in code than to explain it!

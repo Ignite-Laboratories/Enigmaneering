@@ -1,57 +1,61 @@
-# `Enigmatic Feedback`
-### `Alex Petz, Ignite Laboratories, March 2025`
+# `What's the Point?`
+### `Alex Petz, Ignite Laboratories, April 2025`
 
 ---
 
-The concept of enigmaneering is near and dear to my heart.  It's how I navigate my
-every day life!  Each issue a mystery to tackle, if I'm willing to put in the time
-and effort.  The challenge, for me, has been in how to document the random creations
-that come from living in this fashion.  As they are typically abstract in nature, I
-often find that my work can overwhelm (or even unknowingly challenge) others.  Truthfully,
-I only want the ability to gain external feedback from my ideas - rather than 
-just the soundboard of _my own mind._  To that end, I've turned to writing!
+This project has matured so much from what I originally set out to create.  Looking back, I don't even truly know
+what it was I set out to make!  From my current vantage point, I feel inspired to _teach,_ yet how does one teach
+something that hasn't yet been understood?
 
-I have no expectations of what this project shall turn into, but I've found
-a pathway towards a set of designs that I would love to build - _with others!_
-The only way I can do that is through articulating my ideas eloquently, so this repository
-is my attempt to do exactly that.
+_How could **I** possibly know what isn't understood!?_
 
-### What's the long term goal?
+What an absurd idea!  That someone like me could possibly have something to contribute!?
 
-I aim to express how to use the concept of _action potentials_ to build consciously aware
-systems.  To do so, I hope to build a toolkit focused around a few primitive puzzle pieces.
-I'd love to use this concept to build a conscious operating system without a task scheduler
-oriented host environment.  I've named this design 'JanOS' - a nod to the Roman _God_ of _Time_,
-_Duality_, and _Beginnings_ - all of which were pivotal achetypes in the discovery of this design.
+Oh, but I do!  I just hadn't understood it well enough to articulate it.
 
-The concept itself is extremely simple, but to express it in words is a lot less effective
-than just showing how it works _in code_.  To do so, I've decided to branch off the fruits
-of my labor into a sequence of enigmas for others to unravel at their own leisure.
+As a programmer, I've felt like we are all the blind leading the blind.  Most of us have learned how to _find_ the
+right libraries, only to turn back and find there are _too many_ of them!  When should one bring in a library, and
+why?  _I'm_ writing a library!  How could I possibly be asking you to consider _not_ using so many?
 
-### Primitive Puzzle Pieces
+Because while my libraries are free to use, they are only the _blueprints_ for you to build your own libraries!  You
+don't need a _single one_ of mine!  Why?  Because I would rather teach you how to build the things that have given
+me happiness in life.
 
-I have no desire to keep expanding this file as I discover each puzzle piece - simply because
-each typically builds upon the last!  Instead, I will unravel each component and why it was
-created as I construct them.  Follow through the breadcrumbs in each folder, and I'll do my 
-best to keep each step as brief as possible =)
+The absolute _last_ thing I want is others to rely upon _my_ work.  Instead, I aim to _empower_ others with the same
+tools they empowered me with.
 
-### Minimum System Requirements
+To that end, I have several major topics I wish to discuss which came from my enigmaneering.  These represent the next
+layer of primitives I've found necessary to build highly performant multithreaded architectures.  Many of the concepts
+are only _minor_ riffs off the incredible work of others, adding just the right tweaks for responsive designs.
 
-_The minimum requirement is curiosity._  If you'd like to execute the examples, you'll need to use
-the language of the Gods themselves - _Go!_  Why is it the language of the Gods?  Because it's
-a technical marvel of linguistic elegance and simplicity!
+### Enigmatic Solutions
 
-_It can even run on microcontrollers =)_
+This work is structured by the order of its creation, which essentially means I've written it _while_ tackling each
+challenge.  I've done my absolute best to keep my work in a logical and progressive manner, with each section 
+representing an _enigma_ with many different _solutions._
 
-I've carefully constructed my enigmas to ensure clarity and intention, and the examples reflect
-that simplicity whenever possible.  Any code external to the enigma is a tagged version of the 
-source repository, ensuring you can continue to follow my documentation as it stood at that moment 
-in time.
+Why do I call these enigmas?  Because none of them have a definite _end_ or even a final _solution._  There are an 
+_infinite_ number of ways each of these ideas could be built!  By the end of them, you should be familiar with using
+_Go_ to rapidly prototype using neural architectures.  From there, I sincerely hope to see some _amazing_ creations
+from each of you as the possibilities with this architecture are _limitless!_
 
-Eventually, I fully expect to be including some OpenGL and hardware I/O - so Go's grandparent, _C_, 
-will also get it's time to shine, but I will do my absolute best to make understanding _how_ to 
-incorporate C into Go as easy as possible when the time comes.
+**0 - The Neural Impulse Engine** - This represents the heartbeat of orchestrating highly threaded designs.
 
-Genuinely - _the minimum requirement is curiosity!_
+**1 - Resonant Calculation and Temporal Analysis** - These are the fruits of a neural impulse engine.
 
-I hope my creations inspire you to follow your dreams, as well =)
+**2 - Synchros, Carousels, and the Cortex** - These three structures provide logical threaded design.
+
+**3 - Hydra** - A way of managing impulsable threaded structures
+
+**4 - Glitter** - A technique that uses Hydra for _resonant rendering._
+
+**5 - ARWEN and Leveraging ECS for Distributed Simulation** - Distributed ARWENs are used to simulate complex scenarios.
+
+**6 - Binary Synthesis** - Finally, a way to reliably mimic _growing_ binary information into known structures.
+
+All the components that facilitate the above technologies belong to an ecosystem of libraries I call _JanOS,_ named
+after Janus - the Roman God of time, duality, and beginnings.  
+
+Yes, they truly can construct an _operating system!_  How robust yours becomes is up to _you!_
+
+Happy enigmaneering, folks! =)

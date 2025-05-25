@@ -19,7 +19,7 @@ Take, for instance, the following loop conditionals -
 
 They both evaluate to the same assembler code, but to the _reader_ it introduces an unnecessary mental checkpoint:
 
-    should I be worried if something else is going to terminate my process?
+    Should I be worried if something else is going to terminate my process?
 
 Absolutely not!  That's out of your hands and should never stop you from living the best life you can.  Wait, shit, we're
 talking about code - aren't we?
@@ -31,8 +31,8 @@ each of us through that revelation!  If you're really astute, you'll eventually 
 code!  Why?  Because code was _created_ by the _creator_ for us to _creatively_ collaborate with, and it's what facilitated
 the _creation_ of language _through_ neurological systems!
 
-    tl;dr - your neurons, at their core, use code to make you speak!
-            let's keep it positive for others =)
+    tl;dr - your neurons, at their core, use code to make you speak
+          - let's keep it positive for others =)
 
 Thus, the first thing you will find is that every _JanOS_ instance is _alive at creation_, and is always provided a 
 reference to the moment of `Inception` -
@@ -74,7 +74,7 @@ finishes it's operation.
 
 ### Example
 
-The example in this step is highly contrived - it just loops and prints out the next identifier and the delta between `time.Now` and
+The example in this step is highly contrived - it just prints out the next identifier and the delta between `time.Now` and
 the moment of `core.Inception` - but it intentionally highlights the central issue with calculating time _after_ stimulation:
 
 The delta calculation falls out of sync with the incremented count very quickly -
@@ -90,3 +90,7 @@ After five seconds of operation where it sleeps for a millisecond before increme
 ~400 milliseconds worth of calculable moments.  While that will never go away, this is a _really simple calculation!_  Imagine
 just how far out of sync even a _slightly_ more complex calculation would get after a few seconds, especially if it has to
 figure out when 'now' is every time it runs!
+
+If I sound like a broken record, welcome to the loop of my life =)
+
+Don't worry, we'll break free from that soon - I promise <3

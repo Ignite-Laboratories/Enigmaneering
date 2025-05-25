@@ -9,13 +9,13 @@ Before we proceed _any_ further we need to address a blatant issue with this arc
 Here's what the typical CPU load of serial execution normally looks like -
 
 <picture>
-<img alt="JanOS Logo" src="assets/4%20-%20Traditional%20Performance.png" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="JanOS Logo" src="assets/4 - Traditional Performance.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
 Here's what the it looks like the second we turn on our neural architecture -
 
 <picture>
-<img alt="JanOS Logo" src="assets/4%20-%20Neural%20Performance.png" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="JanOS Logo" src="assets/4 - Neural Performance.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
 While that isn't exactly _high_ on the charts, it's still quite thread intensive!  That's
