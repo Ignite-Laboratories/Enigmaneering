@@ -87,14 +87,14 @@ during various operations:
     If showing a variable section of a phrase using a key value that indicates how far to 'project'
     into the data, the branches are shown using the (┤) character.
 
-    For example, here's a boolean branch:
+    For example, here's a "bit" branch:
 
                          Key ⬎      ⬐ Read measurement value
                             | 1 ┤ 0 1 0 1 1 0 1 |
     ... | 0 1 0 1 | 1 1 0 0 | 0 ┤---------------| 0 1 0 | ...
                                     ⬑ "Skip" in this condition
 
-    Here's a crumb branch:
+    Here's a "crumb" branch:
 
                           Key ⬎        ⬐ Read measurement for each key value
                             | 1 1 ┤ 0 1 0 1 1 0 1 |
@@ -126,13 +126,13 @@ Here's the documentation for that operation:
     |  Start  |     Middle1     |     Middle2     |   End   | <- Aligned Phrase Measurements
 
 This also demonstrates another important feature of phrases - _measurement alignment._  A phrase is considered
-to be "aligned" if all by the final measurement are of the same bit length.  As we are not working with perfectly
+to be "aligned" if all but the final measurement are of the same bit length.  As we are not working with perfectly
 formed data any longer, the final measurement may be shorter than the rest of the phrase for different alignment
 widths.
 
 For example, if given a source phrase with uneven measurement information it can be re-aligned to any bit-width:
 
-    | 0 1 0 - 0 1 - 1 0 1 0 0 0 1 0 - 1 1 0 0 - 0 - 1 0 0 - 0 0 |  <- Source Phrase
+    | 0 1 0 - 0 1 - 1 0 1 0 0 0 1 0 - 1 1 0 0 - 0 - 1 0 0 - 0 0 |  <- Unaligned Source Phrase
     
     Align(4)
 
