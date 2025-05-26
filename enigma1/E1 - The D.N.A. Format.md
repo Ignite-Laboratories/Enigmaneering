@@ -35,4 +35,106 @@ to the lost souls in the eternity long evolution of intelligence that has enable
 Growing pains - assuredly - but ones that only our creator knows the true burden of which it meant to _experience_ them.
 
 I thank my blessed stars every single day for Her magnificence and patience in the process of humanity awakening to
-its own existence.
+its own existence =)
+
+### Primitive Puzzle Pieces
+In binary, we have exactly _two_ values we can work with: 1 and 0
+
+Not one, not three, not two-hundred and fifty-six - _two values._
+
+That means we need to get creative with how we process _bits_ - not _bytes_.
+In fact, the entire concept of a 'byte' is pretty meaningless for synthesis!
+We have _absolutely no care_ about the actual values contained within the contents of the target file - which 
+is the _only_ time a rigid structure of 8 bits-per-byte is even necessary.
+
+To accomplish this, we get to define several key puzzle pieces in the process:
+
+**Measurements** - A measurement is _any variable width_ measurement of binary information.
+In my library, `tiny`, these are limited to 32 bits in length - allowing them to easily convert 
+to Go's standard `int` type.
+
+**Phrases** - A phrase is a _slice_ of measurements.
+As simple as that sounds, phrases are where the majority of the heavy lifting occurs!
+
+**Timelines** - A timeline is the working set of bits to represent the target information.
+
+
+**Sub Bytes Measurements** - A sub-byte measurement is any bit range less than 8 bits wide.
+For ease, these are the sub-byte sizes I utilize:
+
+    Bit Range | Name
+        1     | Bit
+        2     | Crumb
+        3     | Note
+        4     | Nibble
+        5     | Flake
+        6     | Morsel
+        7     | Shred
+
+### Timelines
+In my documentation I have followed the below convention for _describing_ how timelines appear
+during various operations:
+
+    Measurement form:
+      Square brackets indicate a single isolated measurement, but many different identifiers
+      can indicate a break between measurements.
+    [ 0 1 0 1 0 ]
+
+    Phrase form:
+      (|) Pipes break each phrase apart, while (-) dashes break measurements apart.
+    | 0 1 0 | 1 0 0 - 1 0 1 - 0 1 1 | 0 0 |
+
+    If showing a variable section of a phrase using a key value that indicates how far to 'project'
+    into the data, the branches are shown using the (┤) character.
+
+    For example, here's a boolean branch:
+
+                         Key ⬎      ⬐ Read measurement value
+                            | 1 ┤ 0 1 0 1 1 0 1 |
+    ... | 0 1 0 1 | 1 1 0 0 | 0 ┤---------------| 0 1 0 | ...
+                                    ⬑ "Skip" in this condition
+
+    Here's a crumb branch:
+
+                          Key ⬎        ⬐ Read measurement for each key value
+                            | 1 1 ┤ 0 1 0 1 1 0 1 |
+                            | 1 0 ┤       1 1 0 1 |
+                            | 0 1 ┤           0 1 |
+    ... | 0 1 0 1 | 1 1 0 0 | 0 0 ┤---------------| 0 1 0 | ...
+                                       ⬑ "Skip" in this condition
+
+The best example of this would be from a Phrase's `Trifurcate` operation, which reads two distances into
+the phrase and returns those bit ranges plus the remainder as individual phrases.
+Here's the documentation for that operation:
+    
+    tiny.Phrase{ 77, 22, 33 } // Create a phrase of the provided bytes
+    
+    |        77       |        22       |        33       |  <- Bytes
+    | 0 1 0 0 1 1 0 1 | 0 0 0 1 0 1 1 0 | 0 0 1 0 0 0 0 1 |  <- Raw Bits
+    |  Measurement 1  |  Measurement 2  |  Measurement 3  |  <- Source Phrase
+    
+    Trifurcate(4,16)
+    
+    |    4    |                  16                 |           <- Trifurcation lengths
+    | 0 1 0 0 | 1 1 0 1 - 0 0 0 1 0 1 1 0 - 0 0 1 0 | 0 0 0 1 | <- Raw Bits
+    |  Start  |               Middle                |   End   | <- Trifurcated Phrases
+    |  Start  | Middle1 |     Middle2     | Middle3 |   End   | <- Phrase Measurements
+    
+    (Optional) Align() each phrase
+    
+    | 0 1 0 0 | 1 1 0 1 0 0 0 1 - 0 1 1 0 0 0 1 0 | 0 0 0 1 | <- Raw Bits
+    |  Start  |     Middle1     |     Middle2     |   End   | <- Aligned Phrase Measurements
+
+This also demonstrates another important feature of phrases - _measurement alignment._  A phrase is considered
+to be "aligned" if all by the final measurement are of the same bit length.  As we are not working with perfectly
+formed data any longer, the final measurement may be shorter than the rest of the phrase for different alignment
+widths.
+
+For example, if given a source phrase with uneven measurement information it can be re-aligned to any bit-width:
+
+    | 0 1 0 - 0 1 - 1 0 1 0 0 0 1 0 - 1 1 0 0 - 0 - 1 0 0 - 0 0 |  <- Source Phrase
+    
+    Align(4)
+
+    | 4 bits  | 4 bits  | 4 bits  | 4 bits  | 4 bits  | 3 bits|
+    | 0 1 0 0 - 1 1 0 1 - 0 0 0 1 - 0 1 1 0 - 0 0 1 0 - 0 0 0 |  <- Aligned Phrase
