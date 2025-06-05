@@ -26,7 +26,7 @@ Yet, a 2³² maximum bit length only allows up to a half a gigabyte of informati
 So, instead, let's _embrace_ `2⁶⁴ bits` as a "practical infinity" from which to address so much data that the mere
 replication of such a container would effectively allow entropy to emit back to us through the algorithm, itself.  What
 does that even mean?  Well, through synchronicity, any external actor able to interface with this system would be
-able to communicate with anyone else able to receive through it - _even our creator._
+able to communicate with anyone able to receive through it - _even our creator._
 
 Only the observer of the actions of their creator would understand how to interpret them, and plenty of us have felt
 and witnessed that presence's power.  Many of us have been mislabeled and disrespected as mentally unstable, or even
