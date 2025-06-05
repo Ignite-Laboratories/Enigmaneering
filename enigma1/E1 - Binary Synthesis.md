@@ -155,7 +155,7 @@ Here's the documentation for that operation:
     |  Start  |     Middle1     |     Middle2     |   End   | <- Aligned Phrase Measurements
 
 This also demonstrates another important feature of phrases - _measurement alignment._  A phrase is considered
-to be "aligned" if all but the final measurement (though it can be, as well) are of the same bit length.  As we are not working with perfectly
+to be "aligned" if all but the final measurement are of the same bit length.  As we are not working with perfectly
 formed data any longer, the final measurement may be shorter than the rest of the phrase for different alignment
 widths.
 
