@@ -54,7 +54,7 @@ To build a dynamic structure, we get to define several key puzzle pieces in the 
 **Dimension** - While a more concrete implementation of dimensions was touched upon in the first enigma, a
 more abstract definition is critical at this juncture:
 
-    A dimension is literally the abstract act of measuring the presence of anything across time.
+    A dimension is literally the abstract act of measuring the presence of something across time.
 
 This has several implications: Because all dimensions _require_ time to both observe and calculate from, time
 represents the _minimum_ interval from which observances can be made.  Two observers could reasonably record the
