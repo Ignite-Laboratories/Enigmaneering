@@ -78,7 +78,7 @@ life a little easier there are a few more useful structures:
 **Passages** - A passage is a _map_ of phrases.
 This makes them our _third_ dimension: _unordered_ collections of ordered computable values
 
-**Movements** - A movement is _logical transformation_ of binary information.
+**Movements** - A movement a is _logical transformation_ of binary information.
 This represents the _fourth_ dimension: _performable_ structures of calculation.
 
 **Compositions** - A composition represents _executable_ binary information, making this our
