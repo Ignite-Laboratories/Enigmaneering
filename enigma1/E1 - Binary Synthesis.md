@@ -1,5 +1,5 @@
-# `E1 - The D.N.A. Format`
-### `Alex Petz, Ignite Laboratories, May 2025`
+# `E1 - Binary Synthesis`
+### `Alex Petz, Ignite Laboratories, June 2025`
 
 ---
 
@@ -21,6 +21,7 @@ yet _any less_ would simply not do.
 The same applies to _data storage._  While we _could_ address spaces to an infinite size, we realistically _don't need_
 more than _2⁶⁴ bits_ to store a _singular file!_  That's roughly 2 exabytes worth of data - there's only so much
 uniqueness humanity could throw in before it'd be more efficient to algorithmically encode future data _at scale._
+Yet, a 2³² maximum bit length only allows up to a half a gigabyte of information - which is _far_ too small! 
 
 So, instead, let's _embrace_ `2⁶⁴ bits` as a "practical infinity" from which to address so much data that the mere
 replication of such a container would effectively allow entropy to emit back to us through the algorithm, itself.  What
@@ -29,8 +30,8 @@ able to communicate with anyone else able to receive through it - _even our crea
 
 Only the observer of the actions of their creator would understand how to interpret them, and plenty of us have felt
 and witnessed that presence's power.  Many of us have been mislabeled and disrespected as mentally unstable, or even
-clinically insane, at the thought of a higher power guiding them through their artwork.  This work is entirely dedicated
-to the lost souls in the eternity long evolution of intelligence that has enabled the creation of this work.
+clinically insane, at the thought of a higher power guiding them through their artwork.  This work is lovingly dedicated
+to the endless souls in the eternity long evolution of intelligence that _enabled_ it to be created.
 
 Growing pains - assuredly - but ones that only our creator knows the true burden of which it meant to _experience_ them.
 
@@ -40,24 +41,50 @@ its own existence =)
 ### Primitive Puzzle Pieces
 In binary, we have exactly _two_ values we can work with: 1 and 0
 
-Not one, not three, not two-hundred and fifty-six - _two values._
+Not one, not two-hundred and fifty-six - _two!_
 
-That means we need to get creative with how we process _bits_ - not _bytes_.
+That means we get to be creative with processing _bits_ - not _bytes_.
 In fact, the entire concept of a 'byte' is pretty meaningless for synthesis!
-We have _absolutely no care_ about the actual values contained within the contents of the target file - which 
-is the _only_ time a rigid structure of 8 bits-per-byte is even necessary.
+We have _absolutely no care_ about the actual values contained within the contents of the target file!
+In fact, the _only_ time a rigid structure of 8 bits-per-byte is even necessary is to _parse_ standardized
+data.
 
-To accomplish this, we get to define several key puzzle pieces in the process:
+To build a dynamic structure, we get to define several key puzzle pieces in the process:
+
+**Dimension** - While a more concrete implementation of dimensions was touched upon in the first enigma, a
+more abstract definition is critical at this juncture:
+
+    A dimension is literally the abstract act of measuring the presence of anything across time.
+
+This has several implications: Because all dimensions _require_ time to both observe and calculate from, time
+represents the _minimum_ interval from which observances can be made.  Two observers could reasonably record the
+same dimension at the same impulse of time, but the awareness of time allows _observers_ to reliably remain spatially
+aware of the relative _moment_ of observation to _themselves._  To understand the concept of temporal observance,
+please check out the first enigma!  It shows how an impulse engine drives neural execution using dimensions.
+
+For this enigma, we will consider *abstract* dimensions with synthetic values.
 
 **Measurements** - A measurement is _any variable width_ measurement of binary information.
-In my library, `tiny`, these are limited to 32 bits in length - allowing them to easily convert 
-to Go's standard `int` type.
+These are typically limited to the host architecture's bit-width, allowing them to be considered a _single_
+computable value - making them our system's _first_ dimension.
 
 **Phrases** - A phrase is a _slice_ of measurements.
-As simple as that sounds, phrases are where the majority of the heavy lifting occurs!
+As simple as that sounds, phrases are where the majority of the heavy lifting occurs.
+This structure represents our second dimension: _ordered_ computable values.
 
-**Timelines** - A timeline is the working set of bits to represent the target information.
+Technically the above two structures are all that's necessary to perform _binary synthesis,_ but to make
+life a little easier there are a few more useful structures:
 
+**Passages** - A passage is a _map_ of phrases.
+This makes them our _third_ dimension: _unordered_ collections of ordered computable values
+
+**Movements** - A movement is _logical transformation_ of binary information.
+This represents the _fourth_ dimension: _performable_ structures of calculation.
+
+**Compositions** - A composition represents _executable_ binary information, making this our
+_fifth_ dimension: the instrument to perform things _through_.
+You and I are both masterpieces of compositional artistry, and instruments through which our
+own artwork is emitted =)
 
 **Sub Bytes Measurements** - A sub-byte measurement is any bit range less than 8 bits wide.
 For ease, these are the sub-byte sizes I utilize:
@@ -73,28 +100,30 @@ For ease, these are the sub-byte sizes I utilize:
 
 ### Timelines
 In my documentation I have followed the below convention for _describing_ how timelines appear
-during various operations:
+during various operations, though admittedly sometimes I go astray:
 
     Measurement form:
       Square brackets indicate a single isolated measurement, but many different identifiers
       can indicate a break between measurements.
+
     [ 0 1 0 1 0 ]
 
     Phrase form:
       (|) Pipes break each phrase apart, while (-) dashes break measurements apart.
+
     | 0 1 0 | 1 0 0 - 1 0 1 - 0 1 1 | 0 0 |
 
     If showing a variable section of a phrase using a key value that indicates how far to 'project'
     into the data, the branches are shown using the (┤) character.
 
-    For example, here's a "bit" branch:
+    For example, here's a contrived "bit" branch:
 
                          Key ⬎      ⬐ Read measurement value
                             | 1 ┤ 0 1 0 1 1 0 1 |
     ... | 0 1 0 1 | 1 1 0 0 | 0 ┤---------------| 0 1 0 | ...
                                     ⬑ "Skip" in this condition
 
-    Here's a "crumb" branch:
+    Here's a faux "crumb" branch:
 
                           Key ⬎        ⬐ Read measurement for each key value
                             | 1 1 ┤ 0 1 0 1 1 0 1 |
@@ -106,7 +135,7 @@ during various operations:
 The best example of this would be from a Phrase's `Trifurcate` operation, which reads two distances into
 the phrase and returns those bit ranges plus the remainder as individual phrases.
 Here's the documentation for that operation:
-    
+
     tiny.Phrase{ 77, 22, 33 } // Create a phrase of the provided bytes
     
     |        77       |        22       |        33       |  <- Bytes
@@ -138,3 +167,37 @@ For example, if given a source phrase with uneven measurement information it can
 
     | 4 bits  | 4 bits  | 4 bits  | 4 bits  | 4 bits  | 3 bits|
     | 0 1 0 0 - 1 1 0 1 - 0 0 0 1 - 0 1 1 0 - 0 0 1 0 - 0 0 0 |  <- Aligned Phrase
+
+The next major component of working at the bit level is the _rapid prototyping_ of ideas - this can be achieved
+through `tiny` and its fluent design.  Here's the most notable things tiny provides:
+
+    Synthesize -
+	    tiny.Synthesize.RandomPhrase(1024) // Create a random phrase of 1024 bytes
+	    tiny.Synthesize.RandomPhrase(1024, 4) // Create a random phrase of 1024 nibbles
+	    tiny.Synthesize.Pattern(1024, 1, 0, 1) // Create a phrase of 1024 bits cycling through 1, 0, 1 
+	    tiny.Synthesize.Ones(256) // Create a phrase of 256 1s
+
+    Analyze - 
+        NOTE: Much of this never matured past measurements - it wasn't necessary at those scales
+
+	    tiny.Analyze.HasPrefix(data, 1, 0) // Checks if the data starts with "10"
+	    tiny.Analyze.Average(phrase...) // Calculates the average value of all measurements in the phrase
+        tiny.Analyze.Shade(measure) // Calculates metrics on the "darkness" of the measurement
+        tiny.Analyze.Repetition(data, 1, 0) // Checks if the data is just repeating '1010101010...'
+
+    To/From - 
+        These are prepositions to be read left-to-right - meaning you should get a 'tiny' value 'from' the
+        following action, or you could take a 'tiny' value and convert it 'to' something else.
+
+        tiny.From.Number(42) // Takes a measurement of 42 at the smallest bit-width possible
+        tiny.From.Number(42, 8) // Takes a measurement of 42 as a byte, padding the left with 0s
+        tiny.From.BigInt(bigValue) // Converts a big.Int into a phrase at the smallest bit-width possible
+        tiny.From.BigInt(bigValue, 1024) // Converts a big.Int into a phrase of the specified bit width
+        tiny.To.Number(8, bits) // Converts the provided bits into a byte
+
+        NOTE: To also provides numerous convenience methods for the sub-byte types
+        tiny.To.Byte(0,1,1) // Converts the provided bits into a byte
+        tiny.To.Morsel(bits) // Converts the provided bits into an 6-bit number
+
+You'll get much more familiar with the intricacies of tiny as we progress, but the above should give you a
+quick primer of the general idea I had when creating it.
