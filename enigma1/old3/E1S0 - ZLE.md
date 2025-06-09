@@ -34,8 +34,8 @@ a key value.  There's a lot of things Fuzzy provides, but ZLE is chief of it's l
           1 | 4
         0 1 | 8
       0 0 1 | 16
-    0 0 0 0 | 32
-    0 0 0 1 | 64
+    0 0 0 1 | 32
+    0 0 0 0 | 64
 
 This has a few notable qualities - first, it's _bounded,_ which means that you read up to a fixed width of bits (in
 this case, 4) before interpreting a projection value.  Second, it limits out at 2⁶⁴ - making it fit within our 
@@ -54,8 +54,8 @@ _nearly_ identical to a six bit measurement.
           1 |     1      | 0 - 1  |  0 - 1
         0 1 |     2      | 0 - 3  |  2 - 5
       0 0 1 |     3      | 0 - 7  |  6 - 13
-    0 0 0 0 |     4      | 0 - 15 | 14 - 29
-    0 0 0 1 |     5      | 0 - 31 | 30 - 61
+    0 0 0 1 |     4      | 0 - 15 | 14 - 29
+    0 0 0 0 |     5      | 0 - 31 | 30 - 61
 
 #### `The Fuzzy.Power Map`
 
@@ -63,11 +63,11 @@ This map can be interpreted against a power of two to give a futher projection r
 allowing more granular bit lengths to be addressed than 16, then 32, then 64.
 
          Key | Projection | Value Range | Power Interpretation
-           1 |      2     |   1 - 4     |   0-2ⁿ
-         0 1 |      3     |   1 - 8     |   0-2ⁿ
-       0 0 1 |      4     |   1 - 16    |   0-2ⁿ
-     0 0 0 0 |      5     |   1 - 32    |   0-2ⁿ
-     0 0 0 1 |      6     |   1 - 64    |   0-2ⁿ
+           1 |      2     |   1 - 4     |      2ⁿ - 1
+         0 1 |      3     |   1 - 8     |      2ⁿ - 1
+       0 0 1 |      4     |   1 - 16    |      2ⁿ - 1
+     0 0 0 1 |      5     |   1 - 32    |      2ⁿ - 1
+     0 0 0 0 |      6     |   1 - 64    |      2ⁿ - 1
 
 #### `The Unbounded Fuzzy.ZLE Map`
 
@@ -75,7 +75,7 @@ This is the standard _unbounded_ ZLE map.  It walks the bit range _as a power of
 It's utility is, well, minimal at this point - but it still deserves a formal definition.
 
     NOTE: This will overflow if you let it read too far =)
-
+    
             Key | Projection
               1 | 1 [2⁰]
             0 1 | 2 [2¹]

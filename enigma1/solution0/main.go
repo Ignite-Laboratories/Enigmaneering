@@ -2,23 +2,31 @@ package main
 
 import (
 	"fmt"
-	"github.com/ignite-laboratories/core"
-	"time"
+	"github.com/ignite-laboratories/tiny"
 )
 
+/**
+E1S0 - The Index Printer
+
+This simply prints an entire index worth of bits using the provided bit width.
+
+Side Quest: Set the bit width to something large and witness the behavior of binary counting in real time.
+*/
+
+var bitWidth = 4
+
 func main() {
-	// Run for 5 seconds
-	go core.Shutdown(time.Second * 5)
+	maxValue := (1 << bitWidth) - 1
+	for i := maxValue; i >= 0; i-- {
+		bits := tiny.From.Number(i, bitWidth)
 
-	// While alive...
-	for core.Alive {
-		// Get the time since JanOS was initialized
-		delta := time.Since(core.Inception)
-
-		// Print out the result
-		fmt.Printf("%d: %v\n", core.NextID(), delta)
-
-		// Sleep for a millisecond
-		time.Sleep(time.Millisecond)
+		switch {
+		case i == 0:
+			fmt.Printf("%v <- Light Side\n", bits)
+		case i == maxValue:
+			fmt.Printf("%v <- Dark Side\n", bits)
+		default:
+			fmt.Printf("%v\n", bits)
+		}
 	}
 }
