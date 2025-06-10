@@ -1,4 +1,4 @@
-# `E1S2 - ZLE`
+# `E1S2 - Zero Length Encoding`
 ### `Alex Petz, Ignite Laboratories, June 2025`
 
 ---
