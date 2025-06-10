@@ -6,7 +6,7 @@ import (
 )
 
 /**
-E1S1 - The Triangle Waveform Printer
+E1S1 - The Sawtooth Waveform Printer
 
 This simply prints an entire index worth of bits in their numerical form.
 

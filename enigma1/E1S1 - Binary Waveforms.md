@@ -1,4 +1,4 @@
-# `E1S1 - Reflection Waveforms`
+# `E1S1 - Binary Waveforms`
 ### `Alex Petz, Ignite Laboratories, June 2025`
 
 ---
@@ -56,5 +56,10 @@ In my experience, it's easiest to work with 2ⁿ and simply subtract one _whenev
 
 Feel free to experiment with the input values and witness the output waveforms change - genuinely, understanding
 how binary digits grow and shrink is _critical_ to understanding binary synthesis.  For instance, the first thing
-you'll likely notice is that they shrink in bit-width _exponentially._
+you'll likely notice is that they grow in bit-width _exponentially._
+
+The next thing you'll notice is that the waveform is a sawtooth which plateaus at the midpoint of each sub-index,
+meaning that only half of each sub-index can even shrink it's bit length when counting from the bottom.
+
+We'll tackle that issue in the next solution.
 
