@@ -62,7 +62,7 @@ vertical number line - meaning zero is at the bottom, and larger values are plac
          Light Side
 
 At larger scales it gets far too excessive to print out every single value, so the data is often represented truncated
-to highly only the most important qualities of the index you wish you express.  For example, this is a way to respresent
+to highlight only the most important qualities of the index you wish you express.  For example, this is a way to respresent
 a truncated index of any bit width:
 
     An Abstract Index:
