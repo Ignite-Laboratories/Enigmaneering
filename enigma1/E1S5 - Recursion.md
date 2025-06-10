@@ -43,8 +43,8 @@ The first phrase is the _key,_ while the second is the _value_ and holds the act
 Now, the one major point you've probably got in your mind is this: by prepending the data with bits, it will
 sometimes grow _larger_ than the target bit width! And you'd be right!  However, it would only happen
 when the value to encode is just the right distance from the boundary point - which diminishes in likelihood significantly
-_at scale._  That being said, even if it _did_ grow during the distillation process it would then move it into a
-new value position that is not sympathetic to the failure point - thus, it wouldn't _loop_ and you'd likely never
+_at scale._  That being said, even if it _did_ grow during the distillation process it would then move into a
+new value that isn't sympathetic to the failure point - thus, it wouldn't _loop_ and you'd likely never
 even notice when it occurs.
 
 _Unless it would?_
