@@ -26,7 +26,7 @@ will do several very important things.
 - The key information will always be on the _left_
 - Each transformation round will be considered a 'movement' of binary information
 - The very first bit of any movement is the 'terminus' bit, which always holds a value of '1'
-- A 'recycle' bit in the key should indicate if the process synthesis should continue after this round completes
+- A 'recycle' bit in the key should indicate if the synthesis process should continue after this round completes
 - The process of shrinking binary information is 'distilling'
 - The process of growing binary information is 'synthesizing'
 
