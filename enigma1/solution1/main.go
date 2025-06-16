@@ -1,0 +1,37 @@
+package main
+
+import (
+	"fmt"
+	"github.com/ignite-laboratories/tiny"
+	"math/big"
+)
+
+/**
+E1S1 - The Index Subdivision Printer
+
+This prints the binary pattern subdivisions of a requested index
+
+The output columns are:
+
+ Subdivision Pattern     Synthesized Pattern       Value     Delta From Last Value
+     (1)     [0 0 1]  [00100100 10010010 010010]  (599186)    Δ 599186
+*/
+
+var patternWidth = 6
+var indexWidth = 44
+
+func main() {
+	maxValue := 1 << patternWidth
+
+	last := big.NewInt(0)
+	for i := 0; i < maxValue; i++ {
+		patternBits := tiny.From.Number(i, patternWidth)                   // Get the pattern's bits
+		synthesized := tiny.Synthesize.Pattern(indexWidth, patternBits...) // Synthesize a full-width pattern
+		value := synthesized.AsBigInt()                                    // Convert it to a big.Int for arithmetic operations
+		delta := new(big.Int).Sub(value, last)                             // Calculate the delta from the last synthetic value
+
+		// Print the result and store the created value for the next iteration
+		fmt.Printf("(%d)%v%v(%v) Δ %d\n", i, patternBits, synthesized, value, delta)
+		last = value
+	}
+}
