@@ -3,28 +3,35 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/tiny"
+	"math/big"
 )
 
 /**
-E1S1 - The Sawtooth Waveform Printer
+E1S1 - The Index Subdivision Printer
 
-This simply prints an entire index worth of bits in their numerical form.
+This prints the binary pattern subdivisions of a requested index
 
-You can subdivide the index in order to visualize the ramping waveform pattern it creates.
+The output columns are:
+
+ Subdivision Pattern     Synthesized Pattern       Value     Delta From Last Value
+     (1)     [0 0 1]  [00100100 10010010 010010]  (599186)    Δ 599186
 */
 
-var bitWidth = 8
-var subdivisions = 3
+var patternWidth = 6
+var indexWidth = 44
 
 func main() {
-	oversizeValue := 1 << bitWidth
-	subdivisionMax := oversizeValue / (subdivisions + 1)
+	maxValue := 1 << patternWidth
 
-	for i := subdivisions; i >= 0; i-- {
-		for ii := subdivisionMax - 1; ii >= 0; ii-- {
-			bits := tiny.From.Number(ii)
-			value := ii + (subdivisionMax * i)
-			fmt.Printf("[%6d][%6d:%d]%v\n", value, ii, i, bits)
-		}
+	last := big.NewInt(0)
+	for i := 0; i < maxValue; i++ {
+		patternBits := tiny.From.Number(i, patternWidth)                   // Get the pattern's bits
+		synthesized := tiny.Synthesize.Pattern(indexWidth, patternBits...) // Synthesize a full-width pattern
+		value := synthesized.AsBigInt()                                    // Convert it to a big.Int for arithmetic operations
+		delta := new(big.Int).Sub(value, last)                             // Calculate the delta from the last synthetic value
+
+		// Print the result and store the created value for the next iteration
+		fmt.Printf("(%d)%v%v(%v) Δ %d\n", i, patternBits, synthesized, value, delta)
+		last = value
 	}
 }

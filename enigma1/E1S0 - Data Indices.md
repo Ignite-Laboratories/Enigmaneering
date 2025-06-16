@@ -104,9 +104,6 @@ nibble index again:
         [ 0 0 0 0 ]
          Light Side
 
-What's most wonderful about an 'index' is it naturally recurses in on itself.  We will soon be talking about
-"focusing in on the _____ index" - which yields it's own sub-index of defined data.
-
 This solution is quite simple - it merely prints out the entirety of whatever index of data you wish you visualize.
-Note that this also represents a primitive _timer_ that uses bit width to create longer and shorter intervals of
+Note that this also represents a primitive _timer_ which uses bit width to create longer and shorter intervals of
 time - meaning you wouldn't ever get this to finish printing out a 64 bit wide request.  So, keep it short =) 

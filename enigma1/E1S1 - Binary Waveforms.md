@@ -5,61 +5,77 @@
 
 ### Getting Intimate With Binary
 The next part to recognize is the difference between numerical and logical binary data.  For synthesis, we work
-with the numerical representation of the data while logically managing the leading zeros.  That will make a lot
+with the numerical representation of data while logically managing the leading zeros.  That will make a lot
 more sense as we proceed forward - for now, just know that numeric equivalence does _not_ imply logical equivalence.
 A single missing zero could entirely destroy the logical structure of data - fun! =)
 
-    [ 0 0 1 0 1 0 1 0 ] [42] <- Logical form
-        [ 1 0 1 0 1 0 ] [42] <- Numeric form
+      ⬐ Full bit width   ⬐ Equivalent numeric value
+    [ 0 0 1 0 1 0 1 0 ] (42) <- Logical form
+        [ 1 0 1 0 1 0 ] (42) <- Numeric form
+              ⬑ Truncated bit width
 
-However, we're going to _exploit_ that for our purposes.  This solution is quite simple, it prints the numerical binary
-values of indices by subdividing the bit range.  This allows you to visualize how binary information follows a ramping
-linear wave pattern as you step through indices which plateaus at the midpoint of each sub-index - we aim to smooth this 
-progression into a _rectified sine wave_ to maximize compression.
+Now, to approximate a value we need to be able to _logarithmically_ subdivide any index of data reliably and with ease.
+Luckily there's a binary trick we get to exploit to accomplish this:
 
-This presents the next colloquial term: the _subdivision._  This represents a point that actively subdivides the address
-space.  These are calculated as (2ⁿ/sub-indices) - meaning 0 subdivisions yields one sub index while 3 subdivisions yields
-four sub-indices.  Think of a subdivision as the actual splitting point between two binary values, rather than a specific
-numeric value - for example:
+**Pattern Subdivision** - Using a repeating binary pattern to subdivide an index of data.
 
-    A nibble index subdivided three times:
+It's a LOT easier to demonstrate this concept than it is to explain, so let's start by subdividing a morsel (6-bit)
+index of data using a note (3-bit) pattern:
 
-         Dark Side
-        [ 1 1 1 1 ] 
-        [ 1 1 1 0 ]
-             ├-----
-        [ 1 1 0 1 ]
-        [ 1 1 0 0 ]
-           ├------- <- The upper quarter-point
-        [ 1 0 1 1 ]
-        [ 1 0 1 0 ]
-             ├----- <- Eighth-points
-        [ 1 0 0 1 ]
-        [ 1 0 0 0 ]
-         ├--------- <- The mid-point
-        [ 0 1 1 1 ]
-        [ 0 1 1 0 ]
-             ├-----
-        [ 0 1 0 1 ]
-        [ 0 1 0 0 ]
-           ├------- <- The lower quarter-point
-        [ 0 0 1 1 ]
-        [ 0 0 1 0 ]
-             ├----- <- Eighth-points
-        [ 0 0 0 1 ]
-        [ 0 0 0 0 ]
-         Light Side
+    Note Subdivision of a Morsel Index:
 
-While the subdivision _point_ is known, how to mathematically consider its value depends on the context of your 
-algorithm - for example, do you treat the mid point of 2⁸ as 127 or 128 as, technically, 8 bits can only hold (2⁸)-1?
-In my experience, it's easiest to work with 2ⁿ and simply subtract one _whenever necessary._
+    Value ⬎   Pattern    Synthesized   Value    ⬐ Delta   
+          (0)[ 0 0 0 ] [ 0 0 0 - 0 0 ] (  0 ) + 4
+          (1)[ 0 0 1 ] [ 0 0 1 - 0 0 ] (  4 ) + 5
+          (2)[ 0 1 0 ] [ 0 1 0 - 0 1 ] (  9 ) + 4
+          (3)[ 0 1 1 ] [ 0 1 1 - 0 1 ] ( 13 ) + 5
+          (4)[ 1 0 0 ] [ 1 0 0 - 1 0 ] ( 18 ) + 4
+          (5)[ 1 0 1 ] [ 1 0 1 - 1 0 ] ( 22 ) + 5
+          (6)[ 1 1 0 ] [ 1 1 0 - 1 1 ] ( 27 ) + 4
+          (7)[ 1 1 1 ] [ 1 1 1 - 1 1 ] ( 31 )
 
-Feel free to experiment with the input values and witness the output waveforms change - genuinely, understanding
-how binary digits grow and shrink is _critical_ to understanding binary synthesis.  For instance, the first thing
-you'll likely notice is that they grow in bit-width _exponentially._
+The delta value fluctuates because a logarithmic subdivision of this address space is a _non-integer value._
+Since binary does not support floating point numbers without encoding schemes, the value naturally fluctuates
+around the true logarithmic step size.
+I also chose the bit widths I did intentionally as the synthetic value's bit width does _not_ have to be an even
+multiple of the pattern's bit width!
+Because of the way binary values grow, this kind of logarithmic subdivision works for literally _any bit 
+width_ - without fail!  
 
-The next thing you'll notice is that the waveform is a sawtooth which plateaus at the midpoint of each sub-index,
-meaning that only half of each sub-index can even shrink it's bit length when counting from the bottom.
+    Note Subdivision of a 22 bit Index:
 
-We'll tackle that issue in the next solution.
+        Pattern                         Synthesized                               Value       Delta   
+    (0)[ 0 0 0 ] [ 0 0 0 - 0 0 0 - 0 0 0 - 0 0 0 - 0 0 0 - 0 0 0 - 0 0 0 - 0 ] (    0    ) + 599186
+    (1)[ 0 0 1 ] [ 0 0 1 - 0 0 1 - 0 0 1 - 0 0 1 - 0 0 1 - 0 0 1 - 0 0 1 - 0 ] (  599186 ) + 599186
+    (2)[ 0 1 0 ] [ 0 1 0 - 0 1 0 - 0 1 0 - 0 1 0 - 0 1 0 - 0 1 0 - 0 1 0 - 0 ] ( 1198372 ) + 599186
+    (3)[ 0 1 1 ] [ 0 1 1 - 0 1 1 - 0 1 1 - 0 1 1 - 0 1 1 - 0 1 1 - 0 1 1 - 0 ] ( 1797558 ) + 599187
+    (4)[ 1 0 0 ] [ 1 0 0 - 1 0 0 - 1 0 0 - 1 0 0 - 1 0 0 - 1 0 0 - 1 0 0 - 1 ] ( 2396745 ) + 599186
+    (5)[ 1 0 1 ] [ 1 0 1 - 1 0 1 - 1 0 1 - 1 0 1 - 1 0 1 - 1 0 1 - 1 0 1 - 1 ] ( 2995931 ) + 599186
+    (6)[ 1 1 0 ] [ 1 1 0 - 1 1 0 - 1 1 0 - 1 1 0 - 1 1 0 - 1 1 0 - 1 1 0 - 1 ] ( 3595117 ) + 599186
+    (7)[ 1 1 1 ] [ 1 1 1 - 1 1 1 - 1 1 1 - 1 1 1 - 1 1 1 - 1 1 1 - 1 1 1 - 1 ] ( 4194303 )
 
+You can also use _any pattern width,_ as long as its shorter than the target's bit width - which coincidentally
+yields more subdivision values for the index, directly tied to the bit-width of the pattern.
+
+    Nibble Subdivision of an 11 bit Index:
+
+        Pattern               Synthesized          Value    Delta   
+     (0)[ 0 0 0 0 ] [ 0 0 0 0 - 0 0 0 0 - 0 0 0 ] (   0  ) + 136
+     (1)[ 0 0 0 1 ] [ 0 0 0 1 - 0 0 0 1 - 0 0 0 ] (  136 ) + 137
+     (2)[ 0 0 1 0 ] [ 0 0 1 0 - 0 0 1 0 - 0 0 1 ] (  273 ) + 136
+     (3)[ 0 0 1 1 ] [ 0 0 1 1 - 0 0 1 1 - 0 0 1 ] (  409 ) + 137
+     (4)[ 0 1 0 0 ] [ 0 1 0 0 - 0 1 0 0 - 0 1 0 ] (  546 ) + 136
+     (5)[ 0 1 0 1 ] [ 0 1 0 1 - 0 1 0 1 - 0 1 0 ] (  682 ) + 137
+     (6)[ 0 1 1 0 ] [ 0 1 1 0 - 0 1 1 0 - 0 1 1 ] (  819 ) + 136
+     (7)[ 0 1 1 1 ] [ 0 1 1 1 - 0 1 1 1 - 0 1 1 ] (  955 ) + 137
+     (8)[ 1 0 0 0 ] [ 1 0 0 0 - 1 0 0 0 - 1 0 0 ] ( 1092 ) + 136
+     (9)[ 1 0 0 1 ] [ 1 0 0 1 - 1 0 0 1 - 1 0 0 ] ( 1228 ) + 137
+    (10)[ 1 0 1 0 ] [ 1 0 1 0 - 1 0 1 0 - 1 0 1 ] ( 1365 ) + 136
+    (11)[ 1 0 1 1 ] [ 1 0 1 1 - 1 0 1 1 - 1 0 1 ] ( 1501 ) + 137
+    (12)[ 1 1 0 0 ] [ 1 1 0 0 - 1 1 0 0 - 1 1 0 ] ( 1638 ) + 136
+    (13)[ 1 1 0 1 ] [ 1 1 0 1 - 1 1 0 1 - 1 1 0 ] ( 1774 ) + 137
+    (14)[ 1 1 1 0 ] [ 1 1 1 0 - 1 1 1 0 - 1 1 1 ] ( 1911 ) + 136
+    (15)[ 1 1 1 1 ] [ 1 1 1 1 - 1 1 1 1 - 1 1 1 ] ( 2047 )
+
+This solution is an index subdivision printer - it will synthesize the subdivision values for any bit width and
+output the deltas as I've shown above =)
