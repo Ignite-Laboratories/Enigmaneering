@@ -13,7 +13,7 @@ This simply prints an entire index worth of bits using the provided bit width.
 Side Quest: Set the bit width to something large and witness the behavior of binary counting in real time.
 */
 
-var bitWidth = 4
+var bitWidth = 12
 
 func main() {
 	maxValue := (1 << bitWidth) - 1
