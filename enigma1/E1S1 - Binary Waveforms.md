@@ -14,13 +14,16 @@ A single missing zero could entirely destroy the logical structure of data - fun
         [ 1 0 1 0 1 0 ] (42) <- Numeric form
               ⬑ Truncated bit width
 
+Here, the logical form is a _byte_ - but that's not a hard requirement, just the most commonly utilized logical size.
+
 Now, to approximate a value we need to be able to _logarithmically_ subdivide any index of data reliably and with ease.
 Luckily there's a binary trick we get to exploit to accomplish this:
 
 **Pattern Subdivision** - Using a repeating binary pattern to subdivide an index of data.
 
-It's a LOT easier to demonstrate this concept than it is to explain, so let's start by subdividing a morsel (6-bit)
-index of data using a note (3-bit) pattern:
+It's a LOT easier to demonstrate this concept than it is to explain, so let's start by subdividing a flake (5-bit)
+index of data using a note (3-bit) pattern.  Each pattern value is simply repeated across the five bits, while
+stepping incrementally up all of the pattern's values.
 
     Note Subdivision of a Morsel Index:
 
@@ -35,7 +38,7 @@ index of data using a note (3-bit) pattern:
           (7)[ 1 1 1 ] [ 1 1 1 - 1 1 ] ( 31 )
 
 The delta value fluctuates because a logarithmic subdivision of this address space is a _non-integer value._
-Since binary does not support floating point numbers without encoding schemes, the value naturally fluctuates
+Since binary does not support floating point numbers without encoding schemes, the value _naturally_ fluctuates
 around the true logarithmic step size.
 I also chose the bit widths I did intentionally as the synthetic value's bit width does _not_ have to be an even
 multiple of the pattern's bit width!
@@ -55,7 +58,7 @@ width_ - without fail!
     (7)[ 1 1 1 ] [ 1 1 1 - 1 1 1 - 1 1 1 - 1 1 1 - 1 1 1 - 1 1 1 - 1 1 1 - 1 ] ( 4194303 )
 
 You can also use _any pattern width,_ as long as its shorter than the target's bit width - which coincidentally
-yields more subdivision values for the index, directly tied to the bit-width of the pattern.
+yields more subdivision values for the index, directly tied to the bit-width of the pattern:
 
     Nibble Subdivision of an 11 bit Index:
 

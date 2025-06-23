@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/tiny"
+	"math"
 	"math/big"
 )
 
@@ -17,7 +18,7 @@ The output columns are:
      (1)     [0 0 1]  [00100100 10010010 010010]  (599186)    Δ 599186
 */
 
-var patternWidth = 6
+var patternWidth = 12
 var indexWidth = 44
 
 func main() {
@@ -31,7 +32,8 @@ func main() {
 		delta := new(big.Int).Sub(value, last)                             // Calculate the delta from the last synthetic value
 
 		// Print the result and store the created value for the next iteration
-		fmt.Printf("(%d)%v%v(%v) Δ %d\n", i, patternBits, synthesized, value, delta)
+		maxDigits := int(math.Floor(math.Log10(float64(maxValue)))) + 1 // Align the binary patterns with proper padding
+		fmt.Printf("(%*d) %v %v (%v) Δ %d\n", maxDigits, i, patternBits, synthesized, value, delta)
 		last = value
 	}
 }

@@ -13,8 +13,8 @@ is the 'Index' standard of visualizing binary data.
 
 First, let's examine the two states binary can remain in:
 
-    0 <- Light
     1 <- Dark
+    0 <- Light
 
 This applies to _any length_ of binary information, and does _not_ imbue any value or size to the discussion:
 
@@ -27,9 +27,13 @@ This applies to _any length_ of binary information, and does _not_ imbue any val
     [ 1 1 1 ... 1 1 1 ] <- "Dark" data
     [ 0 0 0 ... 0 0 0 ] <- "Light" data
 
-This is the most important quality - the next is that an _index_ of data represents all of the
-possible states it could hold at a known bit length.  Indices are represented just as they would on a
-vertical number line - meaning zero is at the bottom, and larger values are placed above:
+At scale, binary also can be considered "grey" - meaning it contains a mixture of 1s and 0s:
+
+    [ 1 0 1 1 0 0 1 0 ] <- "Grey" data
+
+These are the most important qualities - the next is that an _index_ of data represents all possible binary 
+states a known bit-width could hold.  Indexes are represented just as they would on a vertical number 
+line - meaning zero is at the bottom, larger values are placed above, and each value is well-ordered:
 
     A Crumb Index:
 
@@ -62,8 +66,8 @@ vertical number line - meaning zero is at the bottom, and larger values are plac
          Light Side
 
 At larger scales it gets far too excessive to print out every single value, so the data is often represented truncated
-to highly only the most important qualities of the index you wish you express.  For example, this is a way to respresent
-a truncated index of any bit width:
+to highlight only the most important qualities of the index.  For example, this is a way to respresent a truncated 
+index of any bit width:
 
     An Abstract Index:
 
@@ -78,7 +82,8 @@ a truncated index of any bit width:
               Light Side
 
 There is another feature an index visualization affords us: highlighting binary's _symmetry._  Let's look at the
-nibble index again:
+nibble index again, but this time mark the mid and quarter reflection points.  These represent points between
+values where the data above and below is a perfect mirror of each other, until the next major reflection point.
 
     Reflection Points of a Nibble Index:
 
