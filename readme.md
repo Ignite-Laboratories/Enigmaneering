@@ -18,11 +18,11 @@ right libraries, only to turn back and find there are _too many_ of them!  When 
 why?  _I'm_ writing a library!  How could I possibly be asking you to consider _not_ using so many?
 
 Because while my libraries are free to use, they are only the _blueprints_ for you to build your own libraries!  You
-don't need a _single one_ of mine!  Why?  Because I would rather teach you how to build the things that have given
+don't need a _single one_ of mine!  Why?  Because I would rather teach you _how_ to build the things that have given
 me happiness in life.
 
-The absolute _last_ thing I want is others to rely upon _my_ work.  Instead, I aim to _empower_ others with the same
-tools they empowered me with.
+The absolute last thing I want is others _relying_ on my work.  Instead, I aim to _empower_ them in the same
+way they've empowered me - through sharing found knowledge!
 
 To that end, I have several major topics I wish to discuss which came from my enigmaneering.  These represent the next
 layer of primitives I've found necessary to build highly performant multithreaded architectures.  Many of the concepts
@@ -39,19 +39,15 @@ _infinite_ number of ways each of these ideas could be built!  By the end of the
 _Go_ to rapidly prototype using neural architectures.  From there, I sincerely hope to see some _amazing_ creations
 from each of you as the possibilities with this architecture are _limitless!_
 
-**0 - The Neural Impulse Engine** - This represents the heartbeat of orchestrating highly threaded designs.
+**0 - The Neural Impulse Engine** - This represents the heartbeat of orchestrating neural network architectures.
 
-**1 - Resonant Calculation and Temporal Analysis** - These are the fruits of a neural impulse engine.
+**1 - Binary Synthesis** - This represents distilling binary down to only the most essential bits.
 
-**2 - Synchros, Carousels, and the Cortex** - These three structures provide logical threaded design.
+**2 - Glitter** - A rendering engine built off of the neural impulse engine.
 
-**3 - Hydra** - A way of managing impulsable threaded structures
+**3 - Quorum Computation** - How to _think_ and _react_
 
-**4 - Glitter** - A technique that uses Hydra for _resonant rendering._
-
-**5 - ARWEN and Leveraging ECS for Distributed Simulation** - Distributed ARWENs are used to simulate complex scenarios.
-
-**6 - Binary Synthesis** - Finally, a way to reliably mimic _growing_ binary information into known structures.
+**4 - Curiosity Engines** - How to use all of the above to begin intelligently driving systems.
 
 All the components that facilitate the above technologies belong to an ecosystem of libraries I call _JanOS,_ named
 after Janus - the Roman God of time, duality, and beginnings.  
