@@ -9,25 +9,25 @@ some standardized terminology so we can speak a similar language!  There isn't a
 what I've already defined, but the most important definition I would like to propose we collectively adopt
 is the 'Index' standard of visualizing binary data.
 
-First, let's examine the two states binary can remain in:
+First, let's examine the three states binary can remain in:
 
-    1 🡨 Dark
-    0 🡨 Light
+     1  🡨 Dark
+    ⁰⁄₁ 🡨 Grey
+     0  🡨 Light
 
 This applies to _any length_ of binary information, and _does not_ imbue any value or size to the discussion:
 
     [ 1 1 1 1 1 1 1 1 ] 🡨 A "dark" byte
+    [ 0 1 1 0 1 0 0 1 ] 🡨 A "grey" byte
     [ 0 0 0 0 0 0 0 0 ] 🡨 A "light" byte
 
     [ 1 1 ] 🡨 A "dark" crumb
+    [ 1 0 ] 🡨 A "grey" crumb
     [ 0 0 ] 🡨 A "light" crumb
 
     [ 1 1 1 ... 1 1 1 ] 🡨 "Dark" data
+    [ 0 1 1 ... 0 0 1 ] 🡨 "Grey" data
     [ 0 0 0 ... 0 0 0 ] 🡨 "Light" data
-
-At scale, binary also can be considered "grey" - meaning it contains a mixture of 1s and 0s:
-
-    [ 1 0 1 1 0 0 1 0 ] 🡨 "Grey" data
 
 Because of this, it's common to consider that a value is 'close to the dark side', for instance - which
 is very easy to mentally conceptualize if you can bound in the target on a kind of number line called
