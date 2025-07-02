@@ -29,11 +29,12 @@ Finally, you keep the _signed_ result:
         [ 0 0 0 0 0 0 ] (0)   🡨 Light Boundary
 
 Immediately, we have gained a _single_ bit of reduction!  Of course, we'd need to _implicitly_ know
-the width of the data to synthesize a midpoint value from, but we'll get to that shortly.  For now I'm
-happy to tell you that this particular operation will yield one bit of reduction for _all_ 
-sizes of binary information _on average!_  Or, to put it more formally:
+the width of the data to synthesize a midpoint value from, but we'll get to that shortly.  Since we don't
+yet have a mechanism for managing the sign, we consider that it is a *transient* component and represent
+it by a negative sign.  This particular operation will yield one bit of reduction for _all_ sizes of binary 
+information _on average!_  Or, to put it more formally:
 
-    "The Binary Midpoint Priciple"
+    "The Binary Midpointing Priciple"
 
         Binary information can be rewritten as a delta from the midpoint of its 
         containing index in an average of one bit less than counting from 0.
