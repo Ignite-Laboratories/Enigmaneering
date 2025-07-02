@@ -6,8 +6,8 @@
 ### The Index Printer
 Before we proceed any further, I get to briefly touch on how I talk about binary - and hopefully define
 some standardized terminology so we can speak a similar language!  There isn't a lot of oddness beyond
-what I've already defined, but the most important definition I would like to propose we collectively adopt
-is the 'Index' standard of visualizing binary data.
+what I've already defined, but I'd like to touch on the _quality_ of binary information and then on what 
+an _index_ of data is.
 
 First, let's examine the three states binary can remain in:
 
