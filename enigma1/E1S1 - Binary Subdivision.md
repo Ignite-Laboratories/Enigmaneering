@@ -28,7 +28,6 @@ this even _further_ by synthesizing repeating _**patterns**_ of bits across the 
 
 Let's take an 11-bit index and subdivide it into eight regions using a note (3-bit) pattern:
 
-
     Note Subdivision of an 11 bit Index:
  
          Pattern        Synthesized          Value    Delta   
@@ -52,4 +51,8 @@ Subdivision, by itself, isn't anything special - in fact, we don't use it at all
 it provides a way to visualize counting to a number from a _synthetic point._  For the synthesis process
 we will specifically be counting from the _midpoint,_ rather than _0._
 
-The solution here is a primitive demo to prove that binary follows these subdivision rules for any index width. 
+The solution here is a primitive demonstration to prove that binary follows these subdivision rules for any index width.
+
+    "The Law of Binary Subdivision"
+
+        Any index of binary information can be evenly subdivided by repeating a pattern across it. 
