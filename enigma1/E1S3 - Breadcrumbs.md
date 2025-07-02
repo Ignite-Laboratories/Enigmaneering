@@ -97,4 +97,4 @@ To demonstrate this I've provided two examples for this solution.
 
  **The Breadcrumb Printer** - This simply prints out the breadcrumb operation of a randomly generated binary value.
 
- **The Breadcrumb Averager** - This averages the number of positions inward that a reasonable bit drop was found.
+ **The Breadcrumb Averager** - This averages the number of positions inward that an overall bit drop was found.
