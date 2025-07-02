@@ -31,10 +31,10 @@ func main() {
 		patternBits := tiny.From.Number(i, patternWidth)                   // Get the pattern's bits
 		synthesized := tiny.Synthesize.Pattern(indexWidth, patternBits...) // Synthesize a point value from a pattern
 		value := synthesized.AsBigInt()                                    // Convert it to a big.Int for arithmetic operations
-		delta := new(big.Int).Sub(value, last)                             // Calculate the delta from the last synthetic value
+		delta := new(big.Int).Sub(value, last)                             // Calculate the delta from the synthetic value
 
 		// Print the result and store the created value for the next iteration
-		maxDigits := int(math.Floor(math.Log10(float64(patternMax)))) + 1 // This just calculates how much to pad the value
+		maxDigits := int(math.Floor(math.Log10(float64(patternMax)))) + 1 // This just inline calculates how much to pad the value for printing
 		fmt.Printf("(%*d) %v %v (%v) Δ %d\n", maxDigits, i, patternBits, synthesized, value, delta)
 		last = value
 	}

@@ -9,7 +9,8 @@ import (
 /**
 E1S2 - The Midpoint Averager
 
-This synthesizes random data and takes the average of how many bits it drops
+This synthesizes random data and takes the average of how many bits it drops relative to
+the midpoint of its containing index.
 
 // TODO: Remove the dependency on big
 */
@@ -27,5 +28,5 @@ func main() {
 		average += bitLength - len(delta.Text(2))
 	}
 	average /= iterations
-	fmt.Printf("Average: %d\n", average)
+	fmt.Printf("Average Bit Drop: %d\n", average)
 }

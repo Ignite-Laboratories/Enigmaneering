@@ -10,16 +10,16 @@ more sense as we proceed forward - for now, just know that numeric equivalence d
 A single missing zero could entirely destroy the logical structure of data - fun! =)
 
       ⬐ Full bit width   ⬐ Equivalent numeric value
-    [ 0 0 1 0 1 0 1 0 ] (42) <- Logical form
-        [ 1 0 1 0 1 0 ] (42) <- Numeric form
+    [ 0 0 1 0 1 0 1 0 ] (42)  Logical form
+        [ 1 0 1 0 1 0 ] (42)  Numeric form
               ⬑ Truncated bit width
 
 Here, the logical form is a _byte_ - but that's not a hard requirement, just the universal standard.
 
-This is what we will ultimately be exploiting to facilitate binary synthesis!  Some values can be stored in
+This is what we ultimately wil be exploiting to facilitate binary synthesis!  Some values can be stored in
 _far less bits_ than they're logically stored at, and the quality of that is what this solution highlights.
 As you walk down an index and print out the binary values the bit length shrinks in an exponential decay.  To
-highlight this, there is a unique quality of binary that we can demonstrate - pattern subdivision.
+highlight this, one can use a pattern to subdivide an index.
 
 Let's take an 11-bit index and subdivide it into eight regions using a note (3-bit) pattern:
 
@@ -27,18 +27,18 @@ Let's take an 11-bit index and subdivide it into eight regions using a note (3-b
     Note Subdivision of an 11 bit Index:
  
          Pattern        Synthesized          Value    Delta   
-     (0)[ 0 0 0 ] [ 0 0 0 0 0 0 0 0 0 0 0 ] (   0  ) + 292
-     (1)[ 0 0 1 ] [ 0 0 1 0 0 1 0 0 1 0 0 ] (  292 ) + 293
-     (2)[ 0 1 0 ] [ 0 1 0 0 1 0 0 1 0 0 1 ] (  585 ) + 292
-     (3)[ 0 1 1 ] [ 0 1 1 0 1 1 0 1 1 0 1 ] (  877 ) + 293
-     (4)[ 1 0 0 ] [ 1 0 0 1 0 0 1 0 0 1 0 ] ( 1170 ) + 292
-     (5)[ 1 0 1 ] [ 1 0 1 1 0 1 1 0 1 1 0 ] ( 1462 ) + 293
-     (6)[ 1 1 0 ] [ 1 1 0 1 1 0 1 1 0 1 1 ] ( 1755 ) + 292
-     (7)[ 1 1 1 ] [ 1 1 1 1 1 1 1 1 1 1 1 ] ( 2047 )
+     (0) [ 0 0 0 ] [ 0 0 0 0 0 0 0 0 0 0 0 ] (   0  ) + 292
+     (1) [ 0 0 1 ] [ 0 0 1 0 0 1 0 0 1 0 0 ] (  292 ) + 293
+     (2) [ 0 1 0 ] [ 0 1 0 0 1 0 0 1 0 0 1 ] (  585 ) + 292
+     (3) [ 0 1 1 ] [ 0 1 1 0 1 1 0 1 1 0 1 ] (  877 ) + 293
+     (4) [ 1 0 0 ] [ 1 0 0 1 0 0 1 0 0 1 0 ] ( 1170 ) + 292
+     (5) [ 1 0 1 ] [ 1 0 1 1 0 1 1 0 1 1 0 ] ( 1462 ) + 293
+     (6) [ 1 1 0 ] [ 1 1 0 1 1 0 1 1 0 1 1 ] ( 1755 ) + 292
+     (7) [ 1 1 1 ] [ 1 1 1 1 1 1 1 1 1 1 1 ] ( 2047 )
 
 Literally any width index can be evenly subdivided by the bit width of your pattern simply by repeating
 the pattern across that bit width.  If the value that point represents is a floating point number, binary
-naturally truncates it to the closest whole number _automatically._  
+truncates it to the closest whole number _naturally._  
 
 It truly is the most beautiful counting system in existence =)
 
@@ -46,3 +46,5 @@ It truly is the most beautiful counting system in existence =)
 Subdivision, by itself, isn't anything special - in fact, we don't use it at all in the process!  However,
 it provides a way to visualize counting to a number from a _synthetic point._  For the synthesis process
 we will specifically be counting from the _midpoint,_ rather than _0._
+
+The solution here is a primitive demo to prove that binary follows these subdivision rules for any index width. 

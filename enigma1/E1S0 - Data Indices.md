@@ -6,67 +6,81 @@
 ### The Index Printer
 Before we proceed any further, I get to briefly touch on how I talk about binary - and hopefully define
 some standardized terminology so we can speak a similar language!  There isn't a lot of oddness beyond
-what I've already defined - `tiny` also gives a few terms for longer stretches of binary data, but they're
-honestly _highly_ contrived and don't provide any direct _utility._  _Describing_ binary information's qualities,
-however, has _great_ utility!  So, the most important definition I would like to propose we collectively adopt
+what I've already defined, but the most important definition I would like to propose we collectively adopt
 is the 'Index' standard of visualizing binary data.
 
 First, let's examine the two states binary can remain in:
 
-    1 <- Dark
-    0 <- Light
+    1 🡨 Dark
+    0 🡨 Light
 
-This applies to _any length_ of binary information, and does _not_ imbue any value or size to the discussion:
+This applies to _any length_ of binary information, and _does not_ imbue any value or size to the discussion:
 
-    [ 1 1 1 1 1 1 1 1 ] <- A "dark" byte
-    [ 0 0 0 0 0 0 0 0 ] <- A "light" byte
+    [ 1 1 1 1 1 1 1 1 ] 🡨 A "dark" byte
+    [ 0 0 0 0 0 0 0 0 ] 🡨 A "light" byte
 
-    [ 1 1 ] <- A "dark" crumb
-    [ 0 0 ] <- A "light" crumb
+    [ 1 1 ] 🡨 A "dark" crumb
+    [ 0 0 ] 🡨 A "light" crumb
 
-    [ 1 1 1 ... 1 1 1 ] <- "Dark" data
-    [ 0 0 0 ... 0 0 0 ] <- "Light" data
+    [ 1 1 1 ... 1 1 1 ] 🡨 "Dark" data
+    [ 0 0 0 ... 0 0 0 ] 🡨 "Light" data
 
 At scale, binary also can be considered "grey" - meaning it contains a mixture of 1s and 0s:
 
-    [ 1 0 1 1 0 0 1 0 ] <- "Grey" data
+    [ 1 0 1 1 0 0 1 0 ] 🡨 "Grey" data
 
-These are the most important qualities - the next is that an _index_ of data represents all possible binary 
-states a known bit-width could hold.  Indexes are represented just as they would on a vertical number 
-line - meaning zero is at the bottom, larger values are placed above, and each value is well-ordered:
+Because of this, it's common to consider that a value is 'close to the dark side', for instance - which
+is very easy to mentally conceptualize if you can bound in the target on a kind of number line called
+an 'index.'  
+
+    "The Index"
+
+        An Index represents all possible binary states a known bit-width could hold.
+
+Since it makes the math _infinitely_ eaiser, the upper _**limit**_ of an index is considered to be 2ⁿ (where 𝑛 
+represents the bit length of the index) while the upper maximum **_value_** of an index is (2ⁿ)-1.  This has a
+_very specific purpose_ as it makes the midpoint of an index equivalent to 1 followed by all zeros and a single 
+division of 2 from the limit.
+
+    [ 1 1 1 1 1 1 1 1 ] (255) | (2⁸)-1 🡨 The maximum value of the index
+    [ 1 0 0 0 0 0 0 0 ] (128) | (2⁸)/2 🡨 The midpoint of the index
+    [ 0 0 0 0 0 0 0 0 ] (0)   | 0      🡨 The minimum value of the index
+
+Indexes are represented just as they would on a vertical number line - meaning zero is at the bottom, larger 
+values are placed above, and each value is well-ordered:
 
     A Crumb Index:
 
         Dark Side
-         [ 1 1 ]
-         [ 1 0 ]
-         [ 0 1 ]
-         [ 0 0 ]
+         [ 1 1 ] (3)
+         [ 1 0 ] (2)
+         [ 0 1 ] (1)
+         [ 0 0 ] (0)
         Light Side
 
     A Nibble Index:
 
          Dark Side
-        [ 1 1 1 1 ] 
-        [ 1 1 1 0 ]
-        [ 1 1 0 1 ]
-        [ 1 1 0 0 ]
-        [ 1 0 1 1 ]
-        [ 1 0 1 0 ]
-        [ 1 0 0 1 ]
-        [ 1 0 0 0 ]
-        [ 0 1 1 1 ]
-        [ 0 1 1 0 ]
-        [ 0 1 0 1 ]
-        [ 0 1 0 0 ]
-        [ 0 0 1 1 ]
-        [ 0 0 1 0 ]
-        [ 0 0 0 1 ]
-        [ 0 0 0 0 ]
+        [ 1 1 1 1 ] (15)
+        [ 1 1 1 0 ] (14)
+        [ 1 1 0 1 ] (13)
+        [ 1 1 0 0 ] (12)
+        [ 1 0 1 1 ] (11)
+        [ 1 0 1 0 ] (10)
+        [ 1 0 0 1 ] (9)
+        [ 1 0 0 0 ] (8)
+        [ 0 1 1 1 ] (7)
+        [ 0 1 1 0 ] (6)
+        [ 0 1 0 1 ] (5)
+        [ 0 1 0 0 ] (4)
+        [ 0 0 1 1 ] (3)
+        [ 0 0 1 0 ] (2)
+        [ 0 0 0 1 ] (1)
+        [ 0 0 0 0 ] (0)
          Light Side
 
-At larger scales it gets far too excessive to print out every single value, so the data is often represented truncated
-to highlight only the most important qualities of the index.  For example, this is a way to respresent a truncated 
+At larger scales it gets far too excessive to print out every single value, so the index is often represented 
+truncated to highlight only its most important qualities.  For example, this is a way to respresent a truncated 
 index of any bit width:
 
     An Abstract Index:
@@ -92,17 +106,17 @@ values where the data above and below is a perfect mirror of each other, until t
         [ 1 1 1 0 ]
         [ 1 1 0 1 ]
         [ 1 1 0 0 ]
-           ├─────── The upper quarter-point
+           ├─────── The upper quarter reflection point
         [ 1 0 1 1 ]
         [ 1 0 1 0 ]
         [ 1 0 0 1 ]
         [ 1 0 0 0 ]
-         ├───────── The mid-point
+         ├───────── The central reflection point
         [ 0 1 1 1 ]
         [ 0 1 1 0 ]
         [ 0 1 0 1 ]
         [ 0 1 0 0 ]
-           ├─────── The lower quarter-point
+           ├─────── The lower quarter reflection point
         [ 0 0 1 1 ]
         [ 0 0 1 0 ]
         [ 0 0 0 1 ]
