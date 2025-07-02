@@ -41,8 +41,8 @@ Let's take an 11-bit index and subdivide it into eight regions using a note (3-b
      (6) [ 1 1 0 ] [ 1 1 0 1 1 0 1 1 0 1 1 ] ( 1755 ) + 292
      (7) [ 1 1 1 ] [ 1 1 1 1 1 1 1 1 1 1 1 ] ( 2047 )
 
-Literally any width index can be evenly subdivided by the bit width of your pattern simply by repeating
-the pattern across that bit width.  If the value that point represents is a floating point number, binary
+Literally any width target index can be evenly subdivided by the limit of the pattern's index simply by 
+repeating the pattern across it.  If the value that point represents is a floating point number, binary
 truncates it to the closest whole number _naturally._  
 
 It truly is the most beautiful counting system in existence =)
