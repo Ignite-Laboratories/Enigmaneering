@@ -86,8 +86,7 @@ drop in a couple of steps, the bit length often yields an overall reduction when
 More importantly, it achieves an overall reduction in bit length _three midpoint operations from the end!_  From my
 experience, I posit that this occurs *on average* for **any** size index - but there's a catch: in larger indexes the 
 data can sometimes _stall._  I have a solution for this condition, but it does so by modulating the data in transit - 
-which one could argue negates my point.  I'll leave that for you to decide, for now I provide my conjecture:
-
+which one could argue negates my point.  I'll leave that for you to decide, but this is my understanding:
 
     "The Binary Midpoint Recursion Conjecture"
 
