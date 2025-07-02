@@ -55,4 +55,4 @@ The solution here is a primitive demonstration to prove that binary follows thes
 
     "The Law of Binary Subdivision"
 
-        Any index of binary information can be evenly subdivided by repeating a pattern across it. 
+        Any index of binary information can be evenly subdivided by repeating a bit pattern across it. 
