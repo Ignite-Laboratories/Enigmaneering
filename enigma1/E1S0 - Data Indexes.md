@@ -29,7 +29,7 @@ This applies to _any length_ of binary information, and _does not_ imbue any val
     [ 0 1 1 ... 0 0 1 ] 🡨 "Grey" data
     [ 0 0 0 ... 0 0 0 ] 🡨 "Light" data
 
-Because of this, it's common to consider that a value is 'close to the dark side', for instance - which
+Because of this it's common to consider that a value is 'close to the dark side', for instance - which
 is very easy to mentally conceptualize if you can bound in the target on a kind of number line called
 an 'index.'  
 
