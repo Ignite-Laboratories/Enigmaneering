@@ -70,9 +70,9 @@ Now, this is what we are left with:
     [ 1 0 1 1 1 1 0 ] [ 0 ]
 
 This value will _always_ be the same bit length as the original information if you take it _all the way across the
-index._ In reality, many values reach a '0' delta value long before the end!  We'll circle back to that in a second,
-for now please take notice of the behavior of the delta value's _bit length_.  Not only does the value _dramatically_ 
-drop in a couple of steps, the bit length often yields an overall reduction when you include the pathway's bits.
+index._ In reality, many values reach a '0' delta value long before the end!  For now please take notice of the 
+behavior of the delta value's _bit length_.  Not only does the value _dramatically_ drop in a couple of steps, the 
+bit length often yields an overall reduction when you include the pathway's bits.
 
     Detla Value | Bit Length | Overall Length
         -86     |     7      |       8
