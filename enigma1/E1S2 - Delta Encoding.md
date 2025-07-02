@@ -41,10 +41,10 @@ information _on average!_  Or, to put it more formally:
 
 This solution provides a simple way to _test_ that the average bit drop is, indeed, one bit for the ranges
 relevant to our purposes.  If you'd like to help me formulate a proper mathematical proof, I'd be thrilled!
-For now, I'm happy to simply _demonstrate_ the techology for others.
+For now, I'm happy to simply _demonstrate_ the techology for others =)
 
 This is _not_ enough information to reconstruct the data, however - how do you _implicitly_ know what sign 
 the resulting delta has?  If only we could consider the sign as an entirely separate _artifact_ and store the
 **_absolute value_** of the delta...
 
-The next solution tackles just that =)
+The next solution tackles just that!
