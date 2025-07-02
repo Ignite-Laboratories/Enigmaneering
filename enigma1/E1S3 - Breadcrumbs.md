@@ -25,7 +25,7 @@ For example, let's encode the number 42 in an 8 bit index:
     Step 0
     [ 1 0 0 0 0 0 0 0 ] (128) 🡨 Midpoint
     [ 0 0 1 0 1 0 1 0 ]  (42) 🡨 Target
-      [ 1 0 1 0 1 1 0 ] (-86) 🡨 Delta
+      [ 1 0 1 0 1 1 0 ]  (86) 🡨 Delta
                   [ 1 ] 🡨────── Pathway
 
     Step 1
@@ -37,25 +37,25 @@ For example, let's encode the number 42 in an 8 bit index:
     Step 2
         [ 1 0 0 0 0 0 ]  (32) 🡨 Midpoint
           [ 1 0 1 1 0 ]  (22) 🡨 Target
-            [ 1 0 1 0 ] (-10) 🡨 Delta
+            [ 1 0 1 0 ]  (10) 🡨 Delta
               [ 1 0 1 ] 🡨────── Pathway
 
     Step 3
           [ 1 0 0 0 0 ]  (16) 🡨 Midpoint
             [ 1 0 1 0 ]  (10) 🡨 Target
-              [ 1 1 0 ]  (-6) 🡨 Delta
+              [ 1 1 0 ]   (6) 🡨 Delta
             [ 1 0 1 1 ] 🡨────── Pathway
 
     Step 4
             [ 1 0 0 0 ]   (8) 🡨 Midpoint
               [ 1 1 0 ]   (6) 🡨 Target
-                [ 1 0 ]  (-2) 🡨 Delta
+                [ 1 0 ]   (2) 🡨 Delta
           [ 1 0 1 1 1 ] 🡨────── Pathway
 
     Step 5
               [ 1 0 0 ]   (4) 🡨 Midpoint
                 [ 1 0 ]   (2) 🡨 Target
-                [ 1 0 ]  (-2) 🡨 Delta
+                [ 1 0 ]   (2) 🡨 Delta
         [ 1 0 1 1 1 1 ] 🡨────── Pathway
 
     Step 6
@@ -75,12 +75,12 @@ behavior of the delta value's _bit length_.  Not only does the value _dramatical
 bit length often yields an overall reduction when you include the pathway's bits.
 
     Detla Value | Bit Length | Overall Length
-        -86     |     7      |       8
+         86     |     7      |       8
          22     |     5      |       7
-        -10     |     4      |       7
-         -6     |     3      |       7
-         -2     |     2      |       7
-         -2     |     2      |       8
+         10     |     4      |       7
+          6     |     3      |       7
+          2     |     2      |       7
+          2     |     2      |       8
           0     |     1      |       8
 
 More importantly, it achieves an overall reduction in bit length _three midpoint operations from the end!_  From my
