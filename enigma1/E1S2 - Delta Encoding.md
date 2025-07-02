@@ -14,7 +14,7 @@ Let's circle back to the _numeric representation_ of a binary value again:
 Alone, this number is _absolutely no different_ from any other binary value!  But if you applied it to
 a different value than _zero_ you'd get an entirely different result.
 
-Let's say you _know_ the data exists in an 6-bit index, as it takes six bits to represent it.  From there
+Let's say you _know_ the data exists in a 6-bit index, as it takes six bits to represent it.  From there
 you synthesize the _midpoint_ of that bit range and take the _delta_ between the target and the midpoint.
 Finally, you keep the _signed_ result:
 
