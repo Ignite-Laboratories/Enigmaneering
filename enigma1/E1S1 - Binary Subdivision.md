@@ -17,10 +17,14 @@ A single missing zero could entirely destroy the logical structure of data - fun
 Here, the logical form is a _byte_ - but that's not a hard requirement, just a universal standard.
 
 This is what we ultimately will be exploiting to facilitate binary synthesis!  Some values can be stored in
-_far less bits_ than they're logically stored at, relative to known points in the index.  For example, if 
-walking down from the dark side the numeric bit length shrinks exponentially.  If one instead counted from 
-a known point in the index, the numeric length changes.  To highlight this, one can _synthesize_ points using 
-a _bit pattern_ repeated across the index.
+_far less bits_ than they're logically stored at, relative to known points in the index.  If one instead counted from 
+a known point in the index, the numeric length can change drastically compared to counting from 0.
+
+But what even _is_ a known point in an index?
+
+Well, it's any point that can be _implicitly_ referenced from contextual information.  The midpoint, for example, 
+is _always_ known to be a one followed by all zeros _up to the index's bit length_.  But you can take this even 
+_further_ by synthesizing repeating _**patterns**_ of bits across the index.
 
 Let's take an 11-bit index and subdivide it into eight regions using a note (3-bit) pattern:
 
