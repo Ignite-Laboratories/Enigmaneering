@@ -80,9 +80,9 @@ values are placed above, and each value is well-ordered:
         [ 0 0 0 0 ] (0)
          Light Side
 
-At larger scales it gets far too excessive to print out every single value, so the index is often represented 
-truncated to highlight only its most important qualities.  For example, this is a way to respresent a truncated 
-index of any bit width:
+At larger scales it gets far too excessive to print out every single value, so the index is often truncated 
+to highlight only its most important qualities.  For example, this is a way to respresent a truncated index 
+of any bit width:
 
     An Abstract Index:
 
