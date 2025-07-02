@@ -18,7 +18,7 @@ Here, the logical form is a _byte_ - but that's not a hard requirement, just a u
 
 This is what we ultimately will be exploiting to facilitate binary synthesis!  Some values can be stored in
 _far less bits_ than they're logically stored at, relative to known points in the index.  For example, if 
-counting down from the dark side of an index, the numeric bit length shrinks exponentially.  If one instead 
+walking down from the dark side of an index, the numeric bit length shrinks exponentially.  If one instead 
 counted from a known point in the index, the numeric length changes.  To highlight this, one can _synthesize_ 
 points using a _bit pattern_ repeated across the index.
 
