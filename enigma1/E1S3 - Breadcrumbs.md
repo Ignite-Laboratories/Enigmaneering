@@ -95,6 +95,6 @@ which one could argue negates my point.  I'll leave that for you to decide, but 
 
 To demonstrate this I've provided two examples for this solution.
 
- **The Breadcrumb Printer** - This simply prints out the breadcrumb operation of a randomly generated binary value.
+ **The Breadcrumb Printer** - This simply prints out the breadcrumb path data of a randomly generated binary value.
 
  **The Breadcrumb Averager** - This averages the number of positions inward that an overall bit drop was found.
