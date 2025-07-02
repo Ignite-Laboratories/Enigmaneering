@@ -14,7 +14,7 @@ A single missing zero could entirely destroy the logical structure of data - fun
         [ 1 0 1 0 1 0 ] (42)  Numeric form
               ⬑ Truncated bit width
 
-Here, the logical form is a _byte_ - but that's not a hard requirement, just the universal standard.
+Here, the logical form is a _byte_ - but that's not a hard requirement, just a universal standard.
 
 This is what we ultimately will be exploiting to facilitate binary synthesis!  Some values can be stored in
 _far less bits_ than they're logically stored at, and the quality of that is what this solution highlights.
