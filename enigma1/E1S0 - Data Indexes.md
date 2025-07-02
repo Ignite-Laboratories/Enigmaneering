@@ -1,4 +1,4 @@
-# `E1S0 - Data Indices`
+# `E1S0 - Data Indexes`
 ### `Alex Petz, Ignite Laboratories, June 2025`
 
 ---
