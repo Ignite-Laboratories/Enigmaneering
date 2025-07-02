@@ -23,8 +23,8 @@ a known point in the index, rather than 0, the numeric length can change _dramat
 But what even _is_ a known point in an index?
 
 Well, it's any point that can be _implicitly_ referenced from contextual information.  The midpoint, for example, 
-is _always_ known to be a one followed by all zeros _up to the index's bit length_.  But you can take this even 
-_further_ by synthesizing repeating _**patterns**_ of bits across the index.
+is _always_ known to _implicitly_ be a one followed by all zeros _up to the index's bit length_.  But you can take 
+this even _further_ by synthesizing repeating _**patterns**_ of bits across the index.
 
 Let's take an 11-bit index and subdivide it into eight regions using a note (3-bit) pattern:
 
