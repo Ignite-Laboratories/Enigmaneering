@@ -45,6 +45,6 @@ For now, I'm happy to simply _demonstrate_ the techology for others.
 
 This is _not_ enough information to reconstruct the data, however - how do you _implicitly_ know what sign 
 the resulting delta has?  If only we could consider the sign as an entirely separate _artifact_ and store the
-**_absolute value_** of the delta, then we'd _technically_ be achieving an average bit drop of _'2'..._
+**_absolute value_** of the delta...
 
 The next solution tackles just that =)
