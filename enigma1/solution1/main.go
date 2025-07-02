@@ -32,8 +32,7 @@ func main() {
 		delta := new(big.Int).Sub(value, last)                             // Calculate the delta from the synthetic value
 
 		// Print the result and store the created value for the next iteration
-		maxDigits := int(math.Floor(math.Log10(float64(patternMax)))) + 1 // This just inline calculates how much to pad the value for printing
-		fmt.Printf("(%*d) %v %v (%v) Δ %d\n", maxDigits, i, patternBits, synthesized, value, delta)
+		fmt.Printf("(%*d) %v %v (%v) Δ %d\n", int(math.Floor(math.Log10(float64(patternMax))))+1, i, patternBits, synthesized, value, delta)
 		last = value
 	}
 }
