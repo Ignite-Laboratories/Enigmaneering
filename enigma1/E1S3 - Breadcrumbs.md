@@ -18,7 +18,7 @@ Well, let's first consider that we have the _entire width_ of the initial index 
 target value - and the faster we do so, the smaller the data gets with each cycle.  That means we can leave
 behind notes to ourselves of what we did to affect the value, and in this case we can leave behind a single
 bit representing the sign at each step!  This means the delta is _always_ stored as a positive integer which 
-fluctuates in length _variably_ while the pathway grows _linearly._
+_fluctuates_ in length while the pathway's length grows _linearly._
 
 For example, let's encode the number 42 in an 8 bit index:
 
