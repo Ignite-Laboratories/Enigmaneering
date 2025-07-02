@@ -16,7 +16,7 @@ A single missing zero could entirely destroy the logical structure of data - fun
 
 Here, the logical form is a _byte_ - but that's not a hard requirement, just the universal standard.
 
-This is what we ultimately wil be exploiting to facilitate binary synthesis!  Some values can be stored in
+This is what we ultimately will be exploiting to facilitate binary synthesis!  Some values can be stored in
 _far less bits_ than they're logically stored at, and the quality of that is what this solution highlights.
 As you walk down an index and print out the binary values the bit length shrinks in an exponential decay.  To
 highlight this, one can use a pattern to subdivide an index.
