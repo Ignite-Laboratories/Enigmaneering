@@ -92,17 +92,17 @@ values where the data above and below is a perfect mirror of each other, until t
         [ 1 1 1 0 ]
         [ 1 1 0 1 ]
         [ 1 1 0 0 ]
-           ├------- <- The upper quarter-point
+           ├─────── The upper quarter-point
         [ 1 0 1 1 ]
         [ 1 0 1 0 ]
         [ 1 0 0 1 ]
         [ 1 0 0 0 ]
-         ├--------- <- The mid-point
+         ├───────── The mid-point
         [ 0 1 1 1 ]
         [ 0 1 1 0 ]
         [ 0 1 0 1 ]
         [ 0 1 0 0 ]
-           ├------- <- The lower quarter-point
+           ├─────── The lower quarter-point
         [ 0 0 1 1 ]
         [ 0 0 1 0 ]
         [ 0 0 0 1 ]

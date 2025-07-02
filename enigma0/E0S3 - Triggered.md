@@ -21,7 +21,7 @@ In this example, the data from `stdin` becomes the trigger for stimulating a rea
             _, _ = fmt.Scanln()
 
             // Trigger a stimulation
-            core.Impulse.Trigger(PrintParity, condition.Always, true)
+            core.Impulse.Trigger(PrintParity, when.Always, true)
         }
     }
     
