@@ -38,8 +38,9 @@ an 'index.'
         An Index represents all possible binary states a known bit-width could hold.
 
 Since it makes the math _infinitely_ eaiser, the upper _**limit**_ of an index is considered to be 2ⁿ (where 𝑛 
-represents the bit length of the index) while the upper maximum **_value_** of an index is (2ⁿ)-1.  This has a
-_very specific purpose_ as it makes the midpoint of an index equivalent to 1 followed by all zeros and a single 
+represents the bit length of the index) while the upper maximum **_value_** of an index is (2ⁿ)-1.  This means
+that we consider an 8-bit index to be a "256" index, even though it can never address the value "256".  This has 
+a _very specific purpose_ as it makes the midpoint of an index equivalent to 1 followed by all zeros and a single 
 division of 2 from the limit.
 
     [ 1 1 1 1 1 1 1 1 ] (255) | (2⁸)-1 🡨 The maximum value of the index
