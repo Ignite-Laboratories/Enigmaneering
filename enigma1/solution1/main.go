@@ -16,8 +16,6 @@ The output columns are:
 
  Subdivision Pattern     Synthesized Point         Value     Delta From Last Point
      (1)     [0 0 1]  [00100100 10010010 010010]  (599186)    Δ 599186
-
-// TODO: Remove the dependency on big
 */
 
 var patternWidth = 8
