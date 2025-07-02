@@ -88,7 +88,7 @@ experience, I posit that this occurs *on average* for **any** size index - but t
 data can sometimes _stall._  I have a solution for this condition, but it does so by modulating the data in transit - 
 which one could argue negates my point.  I'll leave that for you to decide, but this is my understanding:
 
-    "The Binary Midpointing Recursion Conjecture"
+    "The Recursive Binary Midpointing Conjecture"
 
         Recursively midpointing a binary value will yield a reduction of bits
         on average three positions from the end of its containing index.
