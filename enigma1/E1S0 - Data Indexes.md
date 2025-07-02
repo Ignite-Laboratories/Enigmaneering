@@ -35,7 +35,7 @@ an 'index.'
 
     "The Index"
 
-        An Index represents all possible binary states a known bit-width could hold.
+        An Index represents all possible binary states a known bit-width can address.
 
 Since it makes the everything _infinitely_ eaiser, the upper _**limit**_ of an index is considered to be 2ⁿ (𝑛 
 being the bit length of the index), whereas the upper **_value_** of an index is (2ⁿ)-1.  This means that we 
