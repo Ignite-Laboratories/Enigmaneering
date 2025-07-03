@@ -9,8 +9,7 @@ import (
 /**
 E2S3E1 - The 1-Bit Averager
 
-This calculates the average distance in from the end that yields
-an overall bit drop after many recursive midpointing operations.
+This calculates the average distance in from the end that yields a 1-bit delta after recursive midpointing.
 */
 
 var bitLength = 128
