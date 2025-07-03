@@ -19,7 +19,7 @@ func main() {
 	data := tiny.Synthesize.RandomPhrase(bitLength / 8)
 	dataStr := data.StringBinary()
 
-	fmt.Printf("%*s 🡨 Data\n", 3+paddedBitWidth+len(dataStr), dataStr)
+	fmt.Printf("%*s ← Data\n", 3+paddedBitWidth+len(dataStr), dataStr)
 
 	path := tiny.NewPhrase()
 	delta := data.AsBigInt()

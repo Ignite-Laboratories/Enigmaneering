@@ -4,51 +4,50 @@
 ---
 
 ### The Index Printer
-Before we proceed any further, I get to briefly touch on how I talk about binary - and hopefully define
-some standardized terminology so we can speak a similar language!  There isn't a lot of oddness beyond
-what I've already defined, but I'd like to touch on the _quality_ of binary information and then on what 
-an _index_ of data is.
+Before we proceed any further, I get to hopefully define some standardized terminology so we can speak a similar 
+language!  There isn't a lot of oddness beyond what I've already defined, but I'd like to touch on the _quality_ 
+of binary information and then on what an _index_ of data is.
 
 First, let's examine the three states binary can remain in:
 
-     1  🡨 Dark
-    ⁰⁄₁ 🡨 Grey
-     0  🡨 Light
+     1  ← Dark
+    ⁰⁄₁ ← Grey
+     0  ← Light
 
 This applies to _any length_ of binary information, and _does not_ imbue any value or size to the discussion:
 
-    [ 1 1 1 1 1 1 1 1 ] 🡨 A "dark" byte
-    [ 0 1 1 0 1 0 0 1 ] 🡨 A "grey" byte
-    [ 0 0 0 0 0 0 0 0 ] 🡨 A "light" byte
+    [ 1 1 1 1 1 1 1 1 ] ← A "dark" byte
+    [ 0 1 1 0 1 0 0 1 ] ← A "grey" byte
+    [ 0 0 0 0 0 0 0 0 ] ← A "light" byte
 
-    [ 1 1 ] 🡨 A "dark" crumb
-    [ 1 0 ] 🡨 A "grey" crumb
-    [ 0 0 ] 🡨 A "light" crumb
+    [ 1 1 ] ← A "dark" crumb
+    [ 1 0 ] ← A "grey" crumb
+    [ 0 0 ] ← A "light" crumb
 
-    [ 1 1 1 ... 1 1 1 ] 🡨 "Dark" data
-    [ 0 1 1 ... 0 0 1 ] 🡨 "Grey" data
-    [ 0 0 0 ... 0 0 0 ] 🡨 "Light" data
+    [ 1 1 1 ... 1 1 1 ] ← "Dark" data
+    [ 0 1 1 ... 0 0 1 ] ← "Grey" data
+    [ 0 0 0 ... 0 0 0 ] ← "Light" data
 
-Because of this it's common to consider that a value is 'close to the dark side', for instance - which
-is very easy to mentally conceptualize if you can bound in the target on a kind of number line called
-an 'index.'  
+Because of this it's common to consider that a value is 'closer to the dark or light side', for instance.  It's
+a lot easier to visualize if you can mentally bound in the target on what I call an 'index' - essentially a
+new kind of vertical number line.
 
     "The Index"
 
         An Index represents all possible binary states a known bit-width can address.
 
-Since it makes the everything _infinitely_ eaiser, the upper _**limit**_ of an index is considered to be 2ⁿ (𝑛 
-being the bit length of the index), whereas the upper **_value_** of an index is (2ⁿ)-1.  This means that we 
-consider 8 bits to be a "256" index, even though it can never address the value "256".  This has a _very specific 
-purpose:_ it makes the midpoint of an index equivalent to 1 followed by all 0s, as well as a whole division of 2 
-from the limit.
+An index is defined by it's bit-width, 𝑛.  Since it makes everything _infinitely_ eaiser the upper _**limit**_ of 
+an index is considered to be 2ⁿ, whereas the upper **_value_** of an index is (2ⁿ)-1.  This means that we consider 
+8 bits to be a "256" index, even though it can never address the value "256."  This has a _very specific purpose:_ 
+it makes the midpoint of an index equivalent to 1 followed by all 0s, as well as a whole division of 2 from the 
+limit.  For example, given an 8-bit index, these are the three major boundary points -
 
-    [ 1 1 1 1 1 1 1 1 ] (255) | (2⁸)-1 🡨 The maximum value of the index
-    [ 1 0 0 0 0 0 0 0 ] (128) | (2⁸)/2 🡨 The midpoint of the index
-    [ 0 0 0 0 0 0 0 0 ] (0)   | 0      🡨 The minimum value of the index
+    [ 1 1 1 1 1 1 1 1 ] (255) | (2⁸)-1 ← The maximum addressable value of the index
+    [ 1 0 0 0 0 0 0 0 ] (128) | (2⁸)/2 ← The midpoint of the index
+    [ 0 0 0 0 0 0 0 0 ] (0)   | 0      ← The minimum addressable value of the index
 
 Indexes are represented just as they would on a vertical number line - meaning zero is at the bottom, larger 
-values are placed above, and each value is well-ordered:
+values are placed above, and each value is well-ordered -
 
     A Crumb Index:
 
@@ -81,8 +80,8 @@ values are placed above, and each value is well-ordered:
          Light Side
 
 At larger scales it gets far too excessive to print out every single value, so the index is often truncated 
-to highlight only its most important qualities.  For example, this is a way to respresent a truncated index 
-of any bit width:
+to highlight only its most important qualities or (as shown above) known _points_.  Thus, this is the most
+abstract representation of an index -
 
     An Abstract Index:
 
@@ -98,7 +97,7 @@ of any bit width:
 
 There is another feature an index visualization affords us: highlighting binary's _symmetry._  Let's look at the
 nibble index again, but this time mark the mid and quarter reflection points.  These represent points _between_
-values where the data above and below is a perfect mirror of each other, until the next major reflection point.
+values where the data above and below is a perfect mirror of each other, until the next larger reflection point -
 
     Reflection Points of a Nibble Index:
 
@@ -126,4 +125,6 @@ values where the data above and below is a perfect mirror of each other, until t
 
 This solution is quite simple - it merely prints out the entirety of whatever index of data you wish you visualize.
 Note that this also represents a primitive _timer_ which uses bit width to create longer and shorter intervals of
-time - meaning you wouldn't ever get this to finish printing out a 64 bit wide request.  So, keep it short =) 
+time - meaning you wouldn't ever get this to finish printing out a 64 bit wide request.  So, keep it short!
+
+The next couple of solutions will take you through some of the pleasures of working within the confines of an index =)

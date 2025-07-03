@@ -22,11 +22,11 @@ func main() {
 
 		switch {
 		case i == 0:
-			fmt.Printf("%v 🡨 Light Side\n", bits)
+			fmt.Printf("%v ← Light Side\n", bits)
 		case i == (1<<bitWidth)/2:
-			fmt.Printf("%v 🡨 Midpoint\n", bits)
+			fmt.Printf("%v ← Midpoint\n", bits)
 		case i == maxValue:
-			fmt.Printf("%v 🡨 Dark Side\n", bits)
+			fmt.Printf("%v ← Dark Side\n", bits)
 		default:
 			fmt.Printf("%v\n", bits)
 		}

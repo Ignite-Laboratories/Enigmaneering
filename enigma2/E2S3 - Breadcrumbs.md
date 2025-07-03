@@ -23,46 +23,46 @@ _fluctuates_ in length while the pathway's length grows _linearly_ with each sto
 For example, let's encode the number 42 in an 8 bit index:
 
     Step 0
-    [ 1 0 0 0 0 0 0 0 ] (128) 🡨 Midpoint
-    [ 0 0 1 0 1 0 1 0 ]  (42) 🡨 Target
-      [ 1 0 1 0 1 1 0 ]  (86) 🡨 Delta
+    [ 1 0 0 0 0 0 0 0 ] (128) ← Midpoint
+    [ 0 0 1 0 1 0 1 0 ]  (42) ← Target
+      [ 1 0 1 0 1 1 0 ]  (86) ← Delta
                   [ 1 ] ⟵────── Pathway
 
     Step 1
-      [ 1 0 0 0 0 0 0 ]  (64) 🡨 Midpoint➔
-      [ 1 0 1 0 1 1 0 ]  (86) 🡨 Target
-          [ 1 0 1 1 0 ]  (22) 🡨 Delta
-                [ 1 0 ] 🡨────── Pathway
+      [ 1 0 0 0 0 0 0 ]  (64) ← Midpoint➔
+      [ 1 0 1 0 1 1 0 ]  (86) ← Target
+          [ 1 0 1 1 0 ]  (22) ← Delta
+                [ 1 0 ] ←────── Pathway
 
     Step 2
-        [ 1 0 0 0 0 0 ]  (32) 🡨 Midpoint
-          [ 1 0 1 1 0 ]  (22) 🡨 Target
-            [ 1 0 1 0 ]  (10) 🡨 Delta
-              [ 1 0 1 ] 🡨────── Pathway
+        [ 1 0 0 0 0 0 ]  (32) ← Midpoint
+          [ 1 0 1 1 0 ]  (22) ← Target
+            [ 1 0 1 0 ]  (10) ← Delta
+              [ 1 0 1 ] ←────── Pathway
 
     Step 3
-          [ 1 0 0 0 0 ]  (16) 🡨 Midpoint
-            [ 1 0 1 0 ]  (10) 🡨 Target
-              [ 1 1 0 ]   (6) 🡨 Delta
-            [ 1 0 1 1 ] 🡨────── Pathway
+          [ 1 0 0 0 0 ]  (16) ← Midpoint
+            [ 1 0 1 0 ]  (10) ← Target
+              [ 1 1 0 ]   (6) ← Delta
+            [ 1 0 1 1 ] ←────── Pathway
 
     Step 4
-            [ 1 0 0 0 ]   (8) 🡨 Midpoint
-              [ 1 1 0 ]   (6) 🡨 Target
-                [ 1 0 ]   (2) 🡨 Delta
-          [ 1 0 1 1 1 ] 🡨────── Pathway
+            [ 1 0 0 0 ]   (8) ← Midpoint
+              [ 1 1 0 ]   (6) ← Target
+                [ 1 0 ]   (2) ← Delta
+          [ 1 0 1 1 1 ] ←────── Pathway
 
     Step 5
-              [ 1 0 0 ]   (4) 🡨 Midpoint
-                [ 1 0 ]   (2) 🡨 Target
-                [ 1 0 ]   (2) 🡨 Delta
-        [ 1 0 1 1 1 1 ] 🡨────── Pathway
+              [ 1 0 0 ]   (4) ← Midpoint
+                [ 1 0 ]   (2) ← Target
+                [ 1 0 ]   (2) ← Delta
+        [ 1 0 1 1 1 1 ] ←────── Pathway
 
     Step 6
-                [ 1 0 ]   (2) 🡨 Midpoint
-                [ 1 0 ]   (2) 🡨 Target
-                  [ 0 ]   (0) 🡨 Delta
-      [ 1 0 1 1 1 1 0 ] 🡨────── Pathway
+                [ 1 0 ]   (2) ← Midpoint
+                [ 1 0 ]   (2) ← Target
+                  [ 0 ]   (0) ← Delta
+      [ 1 0 1 1 1 1 0 ] ←────── Pathway
 
 Now, this is what we are left with:
 

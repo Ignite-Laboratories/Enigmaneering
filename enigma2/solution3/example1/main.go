@@ -12,7 +12,7 @@ E2S3E1 - The 1-Bit Averager
 This calculates the average distance in from the end that yields a 1-bit delta after recursive midpointing.
 */
 
-var bitLength = 128
+var bitLength = 4096
 var cycles = 1 << 12
 
 func main() {

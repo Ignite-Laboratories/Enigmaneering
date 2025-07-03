@@ -3,12 +3,12 @@
 
 ---
 
-### The Beginnings of "Middle-Out Compression"
+### "Middle-Out Compression"
 Let's circle back to the _numeric representation_ of a binary value again:
 
       ⬐ Full bit width   ⬐ Equivalent numeric value
-    [ 0 0 1 0 1 0 1 0 ] (42) 🡨 Logical form
-        [ 1 0 1 0 1 0 ] (42) 🡨 Numeric form
+    [ 0 0 1 0 1 0 1 0 ] (42) ← Logical form
+        [ 1 0 1 0 1 0 ] (42) ← Numeric form
               ⬑ Truncated bit width
 
 Alone, this number is _absolutely no different_ from any other binary value!  But if you applied it to
@@ -20,13 +20,13 @@ Finally, you keep the _signed_ result:
 
     "The Midpoint Operation"
 
-        [ 1 1 1 1 1 1 ] (63)  🡨 Dark Boundary
-        [ 1 0 1 0 1 0 ] (42)  🡨 Target Value
-        [ 1 0 0 0 0 0 ] (32)  🡨 Midpoint
+        [ 1 1 1 1 1 1 ] (63)  ← Dark Boundary
+        [ 1 0 1 0 1 0 ] (42)  ← Target Value
+        [ 1 0 0 0 0 0 ] (32)  ← Midpoint
     
-          [ - 1 0 1 0 ] (-10) 🡨 Delta
+          [ - 1 0 1 0 ] (-10) ← Delta
     
-        [ 0 0 0 0 0 0 ] (0)   🡨 Light Boundary
+        [ 0 0 0 0 0 0 ] (0)   ← Light Boundary
 
 Immediately, we have gained a _single_ bit of reduction!  Of course, we'd need to _implicitly_ know
 the width of the data to synthesize a midpoint value from, but we'll get to that shortly.  Since we don't
