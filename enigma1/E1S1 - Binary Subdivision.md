@@ -3,7 +3,7 @@
 
 ---
 
-### Getting Intimate With Binary
+### Diminishing an Index
 The next part to recognize is the difference between numerical and logical binary data.  For synthesis, we work
 with the numerical representation of data while logically managing the leading zeros.  That will make a lot
 more sense as we proceed forward - for now, just know that numeric equivalence does _not_ imply logical equivalence.
