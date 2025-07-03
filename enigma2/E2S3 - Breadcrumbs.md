@@ -26,10 +26,10 @@ For example, let's encode the number 42 in an 8 bit index:
     [ 1 0 0 0 0 0 0 0 ] (128) ← Midpoint
     [ 0 0 1 0 1 0 1 0 ]  (42) ← Target
       [ 1 0 1 0 1 1 0 ]  (86) ← Delta
-                  [ 1 ] ⟵────── Pathway
+                  [ 1 ] ←────── Pathway
 
     Step 1
-      [ 1 0 0 0 0 0 0 ]  (64) ← Midpoint➔
+      [ 1 0 0 0 0 0 0 ]  (64) ← Midpoint
       [ 1 0 1 0 1 1 0 ]  (86) ← Target
           [ 1 0 1 1 0 ]  (22) ← Delta
                 [ 1 0 ] ←────── Pathway
