@@ -6,7 +6,7 @@ import (
 )
 
 /**
-E1S0 - The Index Printer
+E2S0 - The Index Printer
 
 This simply prints an entire index worth of bits using the provided bit width.
 

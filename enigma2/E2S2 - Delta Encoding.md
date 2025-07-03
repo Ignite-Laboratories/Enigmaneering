@@ -1,4 +1,4 @@
-# `E1S2 - Delta Encoding`
+# `E2S2 - Delta Encoding`
 ### `Alex Petz, Ignite Laboratories, July 2025`
 
 ---

@@ -7,7 +7,7 @@ import (
 )
 
 /**
-E1S2 - The Midpoint Averager
+E2S2 - The Midpoint Averager
 
 This synthesizes random data and takes the average of how many bits it drops relative to
 the midpoint of its containing index.

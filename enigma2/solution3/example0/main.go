@@ -8,7 +8,7 @@ import (
 )
 
 /**
-E1S3E0 - The Breadcrumb Printer
+E2S3E0 - The Breadcrumb Printer
 
 This prints out the breadcrumb data from recursively midpointing a randomly generated value.
 */

@@ -1,4 +1,4 @@
-# `E1S1 - Binary Subdivision`
+# `E2S1 - Binary Subdivision`
 ### `Alex Petz, Ignite Laboratories, July 2025`
 
 ---

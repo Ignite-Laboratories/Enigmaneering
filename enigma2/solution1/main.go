@@ -8,7 +8,7 @@ import (
 )
 
 /**
-E1S1 - The Index Subdivision Printer
+E2S1 - The Index Subdivision Printer
 
 This prints the binary pattern subdivisions of a requested index
 
