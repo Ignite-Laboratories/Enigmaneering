@@ -35,10 +35,10 @@ For example, let's encode the number 42 in an 8 bit index:
                 [ 1 0 ] 🡨────── Pathway
 
     Step 2
-        [ 1 0 0 0 0 0 ]  (32) 🡨 Midpoint
-          [ 1 0 1 1 0 ]  (22) 🡨 Target
-            [ 1 0 1 0 ]  (10) 🡨 Delta
-              [ 1 0 1 ] 🡨────── Pathway
+        [ 1 0 0 0 0 0 ]  (32) 🠔 Midpoint
+          [ 1 0 1 1 0 ]  (22) 🠔 Target
+            [ 1 0 1 0 ]  (10) 🠔 Delta
+              [ 1 0 1 ] 🠔────── Pathway
 
     Step 3
           [ 1 0 0 0 0 ]  (16) 🡨 Midpoint
