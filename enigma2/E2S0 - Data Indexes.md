@@ -143,7 +143,7 @@ values where the data above and below is a perfect mirror of each other until th
 Great question!  Why would I intentionally use such a massively _broad_ term!? Well, there's a _wonderful_ reason behind 
 it: _everything_ in existence is just a number in a larger index that identifies it! The act of observing the presence 
 of a value in a larger index is what facilitates _logic._  When you _smell_ a pretty flower, your neurons access the 
-index value of what that smell should synthesize as from the DNA blueprint seeded into _your_ specific existence's 
+index value of what that smell should synthesize like from the DNA blueprint seeded into _your_ specific existence's 
 _identified_ cells.  Additionally, thanks to the powers of two, a nearly infinite number of universes can be 
 _identified_ by an index just **_one bit_** larger than the densest stable universe the system can address.  A 
 universe of all ones would never execute, thus finding _stable_ arrangements is paramount to synthesis!  The act of 
