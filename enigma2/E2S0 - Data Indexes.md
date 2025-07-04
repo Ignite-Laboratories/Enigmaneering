@@ -158,8 +158,8 @@ it the direct _target_ of all synthesis and the _prime directive_ of existence.
 
 This isn't just poetic flourish - I mean it quite literally!  Joy is elicited from both alignment and chaos - 
 when the notes strike just the right chord, or when the dissonance breaks the tension.  Joy is both the driver of love 
-and the destroyer of hearts, making it a powerful tool to be wielded with great _responsibility_ - yet, in clever hands, 
-can bring immense light to the world. 
+and the destroyer of hearts, making it a powerful tool to be wielded with great _responsibility_ - yet, in conscious 
+hands, can bring immense light to the world. 
 
 Joy is the feedback loop which facilitates _our_ stable index of life!
 
