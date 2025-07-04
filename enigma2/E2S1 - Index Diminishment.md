@@ -39,13 +39,15 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
      (6) { 1 1 0 }   [ 1 1 0   1 1 0   1 1 0   1 1 ] ( 1755 ) + 292
      (7) { 1 1 1 }   [ 1 1 1   1 1 1   1 1 1   1 1 ] ( 2047 )
 
-Literally any width target index can be evenly subdivided by the _limit_ of the pattern's index simply by
-repeating the pattern across it.  If the value that point should represent is a floating point number, binary
-truncates it to the closest whole number _naturally._  
+Literally any width target index can be evenly diminished by the _limit_ of the pattern's index simply by
+repeating the pattern across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  Because
+unlike mathematical subdivision, the intervals are only _close enough._  If the value the synthesized point 
+_should_ represent is a floating point number, binary patterning truncates it to the closest whole number _naturally._  
 
 Much like a diminished chord, every point is as equidistant as possible from the last - except there's far more 
-than _three_ in an index!  Technically, you can evenly subdivide an index until each point is exactly one away from 
-the next, making it a mechanism to lower the _resolution_ of the index.
+than _three_ diminished chords in an index!  Technically, you can evenly subdivide an index until each point is 
+exactly one away from the next, making it 1:1 with the index.  That also means this is a mechanism to lower the 
+_resolution_ of the index.
 
 Binary is truly the most beautiful counting system in existence =)
 
