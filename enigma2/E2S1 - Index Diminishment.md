@@ -66,7 +66,7 @@ index.  All of this has led me to posit a fundamental law -
 
 ### Prove It
 That's a lot easier than one might think!  But you must work from the _left_ side of the binary information
-rightwards.  First, let's take a look at the abstract halving points of any index longer than a single bit -
+rightwards.  First, let's take a look at the abstract halving points of an arbitrary index -
 
                 ⬐ Everything to the right is a single repeated bit
         [ 1 1 1   1 1 1 1 1 1 1 ] (1023) ← The index's dark boundary
