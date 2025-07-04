@@ -76,9 +76,9 @@ rightwards.  First, let's take a look at the abstract halving points of a 10-bit
         [ 0 0 1   0 0 0 0 0 0 0 ]  (128) ← The index's eighth point
            ⬑ Zeros are introduced proportionally with each halving
 
-This is pretty obvious - we are simply halving the target index's limit by one power of two less at each interval.
-That being said, if you consider the first three bits to be a _pattern_ and the remaining bits to be zero, a
-formula arises - 
+This is pretty obvious - we are simply halving the target index's limit by one power of two less with each 
+iteration.  That being said, if you consider the first three bits to be a _pattern_ and the remaining bits 
+to be zero, a formula arises - 
 
     𝑛 = The target bit width
     ℓ = The pattern index's limit
