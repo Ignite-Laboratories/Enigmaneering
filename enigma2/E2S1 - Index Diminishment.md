@@ -124,7 +124,7 @@ reach zero bits -
                     [ 1 ]   (1) = (2¹/8) * 7
                              ⬑ NOTE: These naturally floor to the nearest whole integer
 
-So, let's put that all together and find the 4ᵗʰ interval of an 3 bit diminishment of an 11 bit index -
+So, let's put that all together and find the 4ᵗʰ interval of a 3 bit diminishment of an 11 bit index -
 
     The starting conditions -
 
