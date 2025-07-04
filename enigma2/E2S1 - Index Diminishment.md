@@ -147,13 +147,13 @@ So, let's put that all together and find the 4ᵗʰ interval of a 3 bit diminish
 
 In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values together,
 simply as a _byproduct_ of using an index to reference the data.  Ultimately, that can be wrapped up into a very
-simple little formula -
+simple little formula to calculate a desired diminishment point -
 
 <picture>
-<img alt="Index Diminishment Formula" src="assets/diminishment.png" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="Index Diminishment Formula" src="assets/diminishmentPoint.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
 I'm not sure how much more proof one would need - this is a fundamental _law_ of binary indexes =)
 
-But, and _far_ more importantly, we just implemented the standard formula of synthesis: using _starting conditions_
+But, and _far_ more importantly, we just executed the standard process of synthesis: using _starting conditions_
 and an _algorithm_ to create a _target!_

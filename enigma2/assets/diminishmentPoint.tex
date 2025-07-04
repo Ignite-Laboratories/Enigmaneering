@@ -1,0 +1,15 @@
+\large
+''\text{ The Index Diminishment Point Formula }'' \\\\
+\small
+\begin{array}{rcl}
+    𝑛 & = & \text{The target bit width} \\
+    ℓ & = & \text{The pattern index limit} \\
+    p & = & \text{The pattern bit width} \\
+    𝑣 & = & \text{The pattern value}
+\end{array}
+\qquad
+\qquad
+\normalsize
+k = \left\lfloor \frac{𝑛}{p} \right\rfloor \\\\
+\sum_{i=0}^{k}
+\left\lfloor\left(\dfrac{2^{n-i*p}}{ℓ}\right)*v \right\rfloor
