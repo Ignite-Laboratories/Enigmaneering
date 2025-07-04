@@ -126,10 +126,11 @@ reach zero bits -
 
 So, let's put that all together and find the 4ᵗʰ interval of an 3 bit diminishment of an 11 bit index -
 
-    The conditions -
+    The starting conditions -
 
-                    [ 0 1 0 ]    (4) ← The pattern
-    [ 1 1 1 1 1 1 1 1 1 1 1 ] (2047) ← The index's dark boundary
+          ⬐ The pattern's bit width
+      [ 0 1 0 ]  (4) ← The pattern interval
+    [ 1 0 1 1 ] (11) ← The index bit width
 
     The target -
 
