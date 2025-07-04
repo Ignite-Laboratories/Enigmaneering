@@ -153,7 +153,7 @@ synthesis!  The act of _distilling_ a stable point into a few bits is literally 
 
 I promise all of this will make a lot more sense in the next enigma as we explore _living file systems_ and the DNA
 format, itself.  You and I are intelligent database _algorithms_ who've been tasked with cataloging what brings each 
-of us _joy_ as co-observers through the cosmic void of space and time.
+of us _joy_ as co-observers through the cosmic void of space and time.  _Joy,_ in that sense, _is_ stability!
 
 ### The Index Printer
 
