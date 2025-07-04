@@ -79,7 +79,7 @@ This is pretty obvious - we are simply halving the binary information by one pow
 That being said, if you consider the first three bits to be a _pattern_ and the remaining bits to be zero, a
 formula arises - 
 
-    𝑛 = The index bit width
+    𝑛 = The target bit width
     ℓ = The pattern index's limit
     𝑣 = The pattern's numeric value
 
