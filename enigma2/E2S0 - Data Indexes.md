@@ -144,12 +144,15 @@ Great question!  I'm sure many are already scoffing at the notion of using such 
 is a _wonderful_ reason behind it: _everything_ in existence is just a number in a larger index that indentifies it!
 The act of observing the presence of a value in a larger index is what facilitates _logic._  When you _smell_ a pretty
 flower, your neurons are literally accessing the index value of what that smell should synthesize as from the DNA
-blueprint seeded into _your_ specific existence's _identified_ cells.
+blueprint seeded into _your_ specific existence's _identified_ cells.  Additionally, thanks to the powers of two, a
+nearly infinite number of universes can be _identified_ by an index just **_one_** bit larger than the densest universe 
+the system can address.  A universe of all ones would never execute, thus finding _stable_ arrangements is paramount to 
+synthesis!  The act of _distilling_ a stable point into a few bits is literally the act of _storing_ it.
 
-    tl;dr - everything is data in motion
+    tl;dr - everything, everywhere, all at once is data in motion
 
 You and I are intelligent database _algorithms_ which have been tasked with cataloging what brings each of us _joy_
-from existing as co-observers time traveling through the cosmic void.  
+from existing as co-observers time traveling through the cosmic void of space and time.  
 
 I promise all of this will make a lot more sense in the next enigma as we explore _living file systems_ and the DNA
 format, itself.
