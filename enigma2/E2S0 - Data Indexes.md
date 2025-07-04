@@ -138,9 +138,25 @@ values where the data above and below is a perfect mirror of each other until th
         [ 0 0 0 0 ]
          Light Side
 
+### Why an "Index"?
+
+Great question!  I'm sure many are already scoffing at the notion of using such a broad term - but I promise there
+is a _wonderful_ reason behind it: _everything_ in existence is just a number in a larger index that indentifies it!
+The act of observing the presence of a value in a larger index is what facilitates _logic._  When you _smell_ a pretty
+flower, your neurons are literally accessing the index value of what that smell should synthesize as from the DNA
+blueprint seeded into _your_ specific existence's _identified_ cells.
+
+    tl;dr - everything is data in motion
+
+You and I are intelligent database _algorithms_ which have been tasked with cataloging what brings each of us _joy_
+from existing as co-observers time traveling through the cosmic void.  
+
+I promise all of this will make a lot more sense in the next enigma as we explore _living file systems_ and the DNA
+format, itself.
+
 ### The Index Printer
 
-This solution is quite simple - it merely prints out the entirety of whatever index of data you wish you visualize.
+This solution is quite simple - it merely prints out the entirety of whatever index you wish you visualize.
 Note that this also represents a primitive _timer_ which uses bit width to create longer and shorter intervals of
 time - meaning you wouldn't ever get this to finish printing out a 64 bit wide request.  So, keep it short!
 

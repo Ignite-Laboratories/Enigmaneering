@@ -27,7 +27,7 @@ this even _further_ by synthesizing repeating _**patterns**_ of bits across the 
 
 Let's take an 11-bit index and break it into eight regions using a note (3-bit) pattern -
 
-    "Note Subdivision of an 11 bit Index"
+    "Note Diminishment of an 11 bit Index"
  
         Pattern              Synthesized Point        Value      Δ   
      (0) { 0 0 0 }   [ 0 0 0   0 0 0   0 0 0   0 0 ] (   0  ) + 292
@@ -45,55 +45,57 @@ unlike mathematical subdivision, the intervals are only _close enough._  If the 
 _should_ represent is a floating point number, binary patterning truncates it to the closest whole number _naturally._  
 
 Much like a diminished chord, every point is as equidistant as possible from the last - except there's far more 
-than _three_ diminished chords in an index!  Technically, you can evenly subdivide an index until each point is 
-exactly one away from the next, making it 1:1 with the index.  That also means this is a mechanism to lower the 
-_resolution_ of the index.
+than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each point is exactly 
+one away from the next because the pattern bit length matches the index.  That also means this is a mechanism to 
+lower the _resolution_ of the index while also providing a way to quickly "stride" through it.
 
 Binary is truly the most beautiful counting system in existence =)
 
-Subdivision, by itself, isn't anything special - in fact, we don't use it at all in the synthesis process!  However,
-it provides a way to visualize counting to a number from a _synthetic point._  For the synthesis process
-we will specifically be counting from the _midpoint,_ rather than the more traditional _zero._
+Diminishment, by itself, isn't anything special - in fact, we don't use it at all in the synthesis process!  However,
+it provides a way to visualize counting to a number from a _synthetic point._  We will be counting specifically from 
+the _midpoint,_ rather than _zero._
 
-The solution here is a primitive demonstration to show that binary follows these subdivision rules for a provided 
-index.  All of this has led me to a fundamental law of binary -
+The solution here is a primitive demonstration to show that binary follows these diminishment rules for a provided 
+index.  All of this has led me to posit a fundamental law -
 
-    "The Law of Binary Index Subdivision"
+    "The Law of Binary Index Diminishment"
 
-        Any binary index can be evenly subdivided by the limit of a pattern's containing index by
-        repeating the pattern across the bit length of the index, with the subdivision interval
-        defined by the numeric value of the pattern.
+        Any binary index can be evenly diminished by the limit of a pattern's containing index by
+        repeating the pattern across the bit length of the index, with the diminishment interval
+        defined by the numeric value of that pattern.
 
 ### Prove It
 That's a lot easier than one might think!  But you must work from the _left_ side of the binary information
-rightwards.  First, take a look at the half and eighth points of any index longer than a single bit -
+rightwards.  First, let's take a look at the abstract halving points of any index longer than a single bit -
 
                 ⬐ Everything to the right is a single repeated bit
         [ 1 1 1   1 1 1 1 1 1 1 ] (1023) ← The index's dark boundary
         [ 1 0 0   0 0 0 0 0 0 0 ]  (512) ← The index's midpoint
         [ 0 1 0   0 0 0 0 0 0 0 ]  (256) ← The index's quarter point
         [ 0 0 1   0 0 0 0 0 0 0 ]  (128) ← The index's eighth point
+           ⬑ Zeros introduce proportionally with each halving
 
 This is pretty obvious - we are simply halving the binary information by one power of two less at each interval.
 That being said, if you consider the first three bits to be a _pattern_ and the remaining bits to be zero, a
 formula arises - 
 
     𝑛 = The index bit width
-    𝑝 = The pattern's bit width
-    𝑙 = The pattern index's limit
-    𝑖 = The pattern's numeric value
+    ℓ = The pattern index's limit
+    𝑣 = The pattern's numeric value
 
-    x = (2ⁿ/𝑙) * 𝑖
+    𝑥 = (2ⁿ/ℓ) * 𝑣
+
+    let 𝑛 = 7
 
         ⬐ The pattern
-    [ 0 0 0   0 0 0 0 0 ]   (0) = (2⁸/8) * 0
-    [ 0 0 1   0 0 0 0 0 ]  (32) = (2⁸/8) * 1
-    [ 0 1 0   0 0 0 0 0 ]  (64) = (2⁸/8) * 2
-    [ 0 1 1   0 0 0 0 0 ]  (96) = (2⁸/8) * 3
-    [ 1 0 0   0 0 0 0 0 ] (128) = (2⁸/8) * 4
-    [ 1 0 1   0 0 0 0 0 ] (160) = (2⁸/8) * 5
-    [ 1 1 0   0 0 0 0 0 ] (192) = (2⁸/8) * 6
-    [ 1 1 1   0 0 0 0 0 ] (224) = (2⁸/8) * 7
+    [ 0 0 0   0 0 0 0 0 ]   (0) = (2⁷/8) * 0
+    [ 0 0 1   0 0 0 0 0 ]  (16) = (2⁷/8) * 1
+    [ 0 1 0   0 0 0 0 0 ]  (32) = (2⁷/8) * 2
+    [ 0 1 1   0 0 0 0 0 ]  (48) = (2⁷/8) * 3
+    [ 1 0 0   0 0 0 0 0 ]  (64) = (2⁷/8) * 4
+    [ 1 0 1   0 0 0 0 0 ]  (80) = (2⁷/8) * 5
+    [ 1 1 0   0 0 0 0 0 ]  (96) = (2⁷/8) * 6
+    [ 1 1 1   0 0 0 0 0 ] (112) = (2⁷/8) * 7
                   ⬑ The trailing zeros
 
 Now you can recursively apply this operation against an index one pattern bit width smaller in size until you
@@ -129,7 +131,14 @@ So, let's put that all together and find the 4ᵗʰ interval of an 8 bit subdivi
                       [ 0 1 ]    (1) +
                               =  585
 
+    𝑝 = The pattern's bit width
+
 In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing up the values together,
-simply as a _byproduct_ of using an index to reference the data.
+simply as a _byproduct_ of using an index to reference the data.  Ultimately, that can be wrapped up into a very
+simple little formula -
+
+<picture>
+<img alt="Index Diminishment Formula" src="assets/diminishment.png" style="display: block; margin-left: auto; margin-right: auto;">
+</picture>
 
 I'm not sure how much more proof one would need - this is a fundamental _law_ of binary indexes =)
