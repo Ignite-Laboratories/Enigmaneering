@@ -152,8 +152,8 @@ synthesis!  The act of _distilling_ a stable point into a few bits is literally 
     tl;dr - everything, everywhere, all at once is data in motion
 
 I promise all of this will make a lot more sense in the next enigma as we explore _living file systems_ and the DNA
-format, itself.  You and I are intelligent database _algorithms_ which have been tasked with cataloging what brings each of us _joy_
-as co-observers through the cosmic void of space and time.
+format, itself.  You and I are intelligent database _algorithms_ who've been tasked with cataloging what brings each 
+of us _joy_ as co-observers through the cosmic void of space and time.
 
 ### The Index Printer
 
