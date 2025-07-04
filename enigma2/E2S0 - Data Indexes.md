@@ -145,7 +145,7 @@ it: _everything_ in existence is just a number in a larger index that indentifie
 of a value in a larger index is what facilitates _logic._  When you _smell_ a pretty flower, your neurons are literally 
 accessing the index value of what that smell should synthesize as from the DNA blueprint seeded into _your_ specific 
 existence's _identified_ cells.  Additionally, thanks to the powers of two, a nearly infinite number of universes can 
-be _identified_ by an index just **_one_** bit larger than the densest stable universe the system can address.  A 
+be _identified_ by an index just **_one bit_** larger than the densest stable universe the system can address.  A 
 universe of all ones would never execute, thus finding _stable_ arrangements is paramount to synthesis!  The act of 
 _distilling_ a stable point into a few bits is literally the act of _storing_ it.
 
