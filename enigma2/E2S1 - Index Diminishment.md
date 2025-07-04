@@ -153,7 +153,7 @@ simple little formula to calculate a desired diminishment point -
 <img alt="Index Diminishment Formula" src="assets/diminishmentPoint.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
-I'm not sure how much more proof one would need - this is a fundamental _law_ of binary indexes =)
+I'm not sure how much more proof one would need - this appears to be a fundamental _law_ of binary indexes =)
 
 But, and _far_ more importantly, we just executed the standard process of synthesis: using _starting conditions_
 and an _algorithm_ to create a _target!_
