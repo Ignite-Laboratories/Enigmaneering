@@ -66,7 +66,7 @@ index.  All of this has led me to posit a fundamental law -
 
 ### Prove It
 That's a lot easier than one might think!  But you must work from the _left_ side of the binary information
-rightwards.  First, let's take a look at the abstract halving points of an arbitrary index -
+rightwards.  First, let's take a look at the abstract halving points of a 10-bit index -
 
         2¹⁰ = 1024
 
