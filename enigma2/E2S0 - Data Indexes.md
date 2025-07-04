@@ -163,7 +163,8 @@ hands, can bring immense light to the world.
 
 Joy is the feedback loop which facilitates _our_ stable index of life!
 
-_Thank you_ for everything _**you**_ have already catalogged for reality to *en*joy!  It is so very appreciated =)
+_Thank you_ for the stable arrangements of art _**you**_ have already created for reality to *en*joy!  It is so very 
+appreciated =)
 
 ### The Index Printer
 
