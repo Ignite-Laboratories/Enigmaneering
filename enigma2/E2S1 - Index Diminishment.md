@@ -136,7 +136,7 @@ So, let's put that all together and find the 4ᵗʰ interval of an 3 bit diminis
                       [ 0 1 ]    (1) +
                               =  585
 
-In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing up the values together,
+In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values together,
 simply as a _byproduct_ of using an index to reference the data.  Ultimately, that can be wrapped up into a very
 simple little formula -
 
