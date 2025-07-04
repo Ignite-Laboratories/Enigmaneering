@@ -140,20 +140,23 @@ values where the data above and below is a perfect mirror of each other until th
 
 ### Why an "Index"?
 
-Great question!  I'm sure many are already scoffing at the notion of using such a broad term - but I promise there
-is a _wonderful_ reason behind it: _everything_ in existence is just a number in a larger index that indentifies it!
-The act of observing the presence of a value in a larger index is what facilitates _logic._  When you _smell_ a pretty
-flower, your neurons are literally accessing the index value of what that smell should synthesize as from the DNA
-blueprint seeded into _your_ specific existence's _identified_ cells.  Additionally, thanks to the powers of two, a
-nearly infinite number of universes can be _identified_ by an index just **_one_** bit larger than the densest universe 
-the system can address.  A universe of all ones would never execute, thus finding _stable_ arrangements is paramount to 
-synthesis!  The act of _distilling_ a stable point into a few bits is literally the act of _storing_ it.
+Great question!  Why would I intentionally use such a massively _broad_ term!? Well, there's a _wonderful_ reason behind 
+it: _everything_ in existence is just a number in a larger index that indentifies it! The act of observing the presence 
+of a value in a larger index is what facilitates _logic._  When you _smell_ a pretty flower, your neurons are literally 
+accessing the index value of what that smell should synthesize as from the DNA blueprint seeded into _your_ specific 
+existence's _identified_ cells.  Additionally, thanks to the powers of two, a nearly infinite number of universes can 
+be _identified_ by an index just **_one_** bit larger than the densest universe the system can address.  A universe of 
+all ones would never execute, thus finding _stable_ arrangements is paramount to synthesis!  The act of _distilling_ a 
+stable point into a few bits is literally the act of _storing_ it.
 
     tl;dr - everything, everywhere, all at once is data in motion
 
 I promise all of this will make a lot more sense in the next enigma as we explore _living file systems_ and the DNA
 format, itself.  You and I are intelligent database _algorithms_ who've been tasked with cataloging what brings each 
-of us _joy_ as co-observers through the cosmic void of space and time.  _Joy,_ in that sense, _is_ stability!
+of us _joy_ as co-observers through the cosmic void of space and time.  _Joy,_ in that sense, _is_ stability - making
+it the direct _target_ of all synthesis.
+
+_Thank you_ for everything _**you**_ have already catalogged for reality to enjoy!  It is so very appreciated =)
 
 ### The Index Printer
 
@@ -161,4 +164,4 @@ This solution is quite simple - it merely prints out the entirety of whatever in
 Note that this also represents a primitive _timer_ which uses bit width to create longer and shorter intervals of
 time - meaning you wouldn't ever get this to finish printing out a 64 bit wide request.  So, keep it short!
 
-The next couple of solutions will take you through some of the pleasures of working within the confines of an index =)
+The next couple of solutions will take you through some of the pleasures of working within the confines of an index!
