@@ -73,7 +73,7 @@ rightwards.  First, let's take a look at the abstract halving points of any inde
         [ 1 0 0   0 0 0 0 0 0 0 ]  (512) ← The index's midpoint
         [ 0 1 0   0 0 0 0 0 0 0 ]  (256) ← The index's quarter point
         [ 0 0 1   0 0 0 0 0 0 0 ]  (128) ← The index's eighth point
-           ⬑ Zeros introduce proportionally with each halving
+           ⬑ Zeros are introduced proportionally with each halving
 
 This is pretty obvious - we are simply halving the binary information by one power of two less at each interval.
 That being said, if you consider the first three bits to be a _pattern_ and the remaining bits to be zero, a
