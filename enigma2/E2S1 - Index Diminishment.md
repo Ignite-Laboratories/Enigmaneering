@@ -60,9 +60,9 @@ index.  All of this has led me to posit a fundamental law -
 
     "The Law of Binary Index Diminishment"
 
-        A target index can be evenly diminished by the limit of a pattern's containing index by
-        repeating the pattern across the bit length of target index, with the diminishment interval
-        defined by the numeric value of the pattern.
+        An index can be evenly diminished by the limit of a bit pattern's containing index from
+        repeating the bits across the target, with the diminishment interval defined by the 
+        numeric value of the pattern.
 
 ### Prove It
 That's a lot easier than one might think!  But you must work from the _left_ side of the binary information
@@ -82,9 +82,9 @@ to be zero, a formula arises -
 
     𝑛 = The target bit width
     ℓ = The pattern index's limit
-    𝑣 = The pattern's numeric value
+    𝑖 = The pattern interval value
 
-    𝑥 = ⌊(2ⁿ/ℓ) * 𝑣⌋
+    𝑥 = ⌊(2ⁿ/ℓ) * 𝑖⌋
 
     let 𝑛 = 7
 
