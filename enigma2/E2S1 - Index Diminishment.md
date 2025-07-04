@@ -42,7 +42,7 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
 Literally any width target index can be evenly diminished by the _limit_ of the pattern's index simply by
 repeating the pattern across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  Because
 unlike mathematical subdivision, the intervals are only _close enough._  If the value the synthesized point 
-_should_ represent is a floating point number, binary patterning truncates it to the closest whole number _naturally._  
+_should_ represent is a floating point number, binary patterning floors it to a whole number _naturally._  
 
 Much like a diminished chord, every point is as equidistant as possible from the last - except there's far more 
 than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each point is exactly 
@@ -60,15 +60,15 @@ index.  All of this has led me to posit a fundamental law -
 
     "The Law of Binary Index Diminishment"
 
-        A target index can be evenly diminished by the limit of a pattern's containing index by
-        repeating the pattern across the bit length of target index, with the diminishment interval
-        defined by the numeric value of the pattern.
+        An index can be evenly diminished by the limit of a bit pattern's containing index from
+        repeating the bits across the target, with the diminishment interval defined by the 
+        numeric value of the pattern.
 
 ### Prove It
 That's a lot easier than one might think!  But you must work from the _left_ side of the binary information
-rightwards.  First, let's take a look at the abstract halving points of a 10-bit index -
+rightwards.  First, let's cricle back to the halving points of an index again -
 
-        2¹⁰ = 1024
+        Index 2¹⁰ (1024)
 
                 ⬐ Everything to the right is a single repeated bit
         [ 1 0 0   0 0 0 0 0 0 0 ]  (512) ← The index's midpoint
@@ -82,9 +82,9 @@ to be zero, a formula arises -
 
     𝑛 = The target bit width
     ℓ = The pattern index's limit
-    𝑣 = The pattern's numeric value
+    𝑖 = The pattern interval value
 
-    𝑥 = ⌊(2ⁿ/ℓ) * 𝑣⌋
+    𝑥 = ⌊(2ⁿ/ℓ) * 𝑖⌋
 
     let 𝑛 = 7
 
