@@ -27,7 +27,7 @@ this even _further_ by synthesizing repeating _**patterns**_ of bits across the 
 
 Let's take an 11-bit index and break it into eight regions using a note (3-bit) pattern -
 
-    Note Subdivision of an 11 bit Index:
+    "Note Subdivision of an 11 bit Index"
  
         Pattern              Synthesized Point        Value      Δ   
      (0) { 0 0 0 }   [ 0 0 0   0 0 0   0 0 0   0 0 ] (   0  ) + 292
