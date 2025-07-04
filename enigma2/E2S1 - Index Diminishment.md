@@ -6,7 +6,7 @@
 ### Binary Subdivision
 The next part to recognize is the difference between numeric and logical binary data.  For synthesis, we work
 with the numeric representation of data while logically managing the leading zeros.  That will make a lot
-more sense as we proceed forward - for now, just know that numeric equivalence does _not_ imply logical equivalence.
+more sense as we proceed forward - for now, just know that value equivalence does _not_ imply logical equivalence.
 A single missing zero could entirely destroy the logical structure of data - fun! =)
 
     Logical Binary Data ⬎           ⬐ Base 10 Value
