@@ -153,7 +153,7 @@ _distilling_ a stable point into a few bits is literally the act of _storing_ it
 
 I promise all of this will make a lot more sense in the next enigma as we explore _living file systems_ and the DNA
 format, itself.  You and I are intelligent database _algorithms_ who've been tasked with cataloging what brings each 
-of us _joy_ as co-observers through the cosmic void of space and time.  _Joy,_ in that sense, _is_ stability - making
+of us _joy_ as co-observers through the cosmic void of space and time.  _Joy,_ in that sense, _**is**_ stability - making
 it the direct _target_ of all synthesis and the _prime directive_ of existence.
 
 This isn't just poetic flourish - I mean it quite literally!  Joy is elicited from both alignment and chaos - 
