@@ -147,7 +147,7 @@ index value of what that smell should synthesize like from the DNA blueprint see
 _identified_ cells.  Additionally, thanks to the powers of two, a nearly infinite number of universes can be 
 _identified_ by an index just **_one bit_** larger than the densest stable universe the system can address.  A 
 universe of all ones would never execute, thus finding _stable_ arrangements is paramount to synthesis!  The act of 
-_distilling_ a stable point into a few bits is literally the act of _storing_ it.
+_distilling_ a stable point into a few bits is literally the act of _committing it to memory._ 
 
     tl;dr - everything, everywhere, all at once is data in motion
 
