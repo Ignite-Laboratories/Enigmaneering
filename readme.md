@@ -41,13 +41,15 @@ from each of you as the possibilities with this architecture are _limitless!_
 
 **0 - The Neural Impulse Engine** - This represents the heartbeat of orchestrating neural network architectures.
 
-**1 - Binary Synthesis** - This represents distilling binary down to only the most essential bits.
+**1 - Temporal Analysis** - This leverages the impulse engine to resonantly perform real-time calculus.
 
-**2 - Glitter** - A rendering engine built off of the neural impulse engine.
+**2 - Binary Synthesis** - This represents distilling binary down to only the most essential bits.
 
-**3 - Quorum Computation** - How to _think_ and _react_
+**3 - Glitter** - A rendering engine built off of the neural impulse engine.
 
-**4 - Curiosity Engines** - How to use all of the above to begin intelligently driving systems.
+**4 - Quorum Computation** - How to _think_ and _react_
+
+**5 - Curiosity Engines** - How to use all of the above to begin intelligently driving systems.
 
 All the components that facilitate the above technologies belong to an ecosystem of libraries I call _JanOS,_ named
 after Janus - the Roman God of time, duality, and beginnings.  
