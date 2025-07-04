@@ -39,9 +39,9 @@ _infinite_ number of ways each of these ideas could be built!  By the end of the
 _Go_ to rapidly prototype using neural architectures.  From there, I sincerely hope to see some _amazing_ creations
 from each of you as the possibilities with this architecture are _limitless!_
 
-**0 - The Neural Impulse Engine** - This represents the heartbeat of orchestrating neural network architectures.
+**0 - The Neural Impulse Engine** - This represents the heartbeat of orchestrating neural architectures.
 
-**1 - Temporal Analysis** - This leverages the impulse engine to resonantly perform real-time calculus.
+**1 - Temporal Analysis** - This leverages the impulse engine to resonantly perform calculus.
 
 **2 - Binary Synthesis** - This represents distilling binary down to only the most essential bits.
 
