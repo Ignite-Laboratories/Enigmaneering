@@ -103,23 +103,28 @@ reach zero bits -
 
     𝑛 = 𝑛 - 3
 
-          [ 0 0 0   0 0 ]   (0) = (2⁵/8) * 0
-          [ 0 0 1   0 0 ]   (4) = (2⁵/8) * 1
-          [ 0 1 0   0 0 ]   (8) = (2⁵/8) * 2
-          [ 0 1 1   0 0 ]  (12) = (2⁵/8) * 3
-          [ 1 0 0   0 0 ]  (16) = (2⁵/8) * 4
-          [ 1 0 1   0 0 ]  (20) = (2⁵/8) * 5
-          [ 1 1 0   0 0 ]  (24) = (2⁵/8) * 6
-          [ 1 1 1   0 0 ]  (28) = (2⁵/8) * 7
+            [ 0 0 0   0 ]   (0) = (2⁴/8) * 0
+            [ 0 0 1   0 ]   (2) = (2⁴/8) * 1
+            [ 0 1 0   0 ]   (4) = (2⁴/8) * 2
+            [ 0 1 1   0 ]   (6) = (2⁴/8) * 3
+            [ 1 0 0   0 ]   (8) = (2⁴/8) * 4
+            [ 1 0 1   0 ]  (10) = (2⁴/8) * 5
+            [ 1 1 0   0 ]  (12) = (2⁴/8) * 6
+            [ 1 1 1   0 ]  (14) = (2⁴/8) * 7
 
     𝑛 = 𝑛 - 3
 
-                  [ 0 0 ]   (0) = (2²/4) * 0
-                  [ 0 1 ]   (1) = (2²/4) * 1
-                  [ 1 0 ]   (2) = (2²/4) * 2
-                  [ 1 1 ]   (3) = (2²/4) * 3
+                    [ 0 ]   (0) = (2¹/8) * 0
+                    [ 0 ]   (0) = (2¹/8) * 1
+                    [ 0 ]   (0) = (2¹/8) * 2
+                    [ 0 ]   (0) = (2¹/8) * 3
+                    [ 1 ]   (1) = (2¹/8) * 4
+                    [ 1 ]   (1) = (2¹/8) * 5
+                    [ 1 ]   (1) = (2¹/8) * 6
+                    [ 1 ]   (1) = (2¹/8) * 7
+                             ⬑ NOTE: These naturally floor to the nearest whole integer
 
-So, let's put that all together and find the 4ᵗʰ interval of an 8 bit subdivision of an 11 bit index -
+So, let's put that all together and find the 4ᵗʰ interval of an 3 bit diminishment of an 11 bit index -
 
                     [ 0 1 0 ]    (4) ← The pattern
     [ 1 1 1 1 1 1 1 1 1 1 1 ] (2047) ← The index's dark boundary
@@ -130,8 +135,6 @@ So, let's put that all together and find the 4ᵗʰ interval of an 8 bit subdivi
                 [ 0 1 0 0 0 ]    (8) +
                       [ 0 1 ]    (1) +
                               =  585
-
-    𝑝 = The pattern's bit width
 
 In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing up the values together,
 simply as a _byproduct_ of using an index to reference the data.  Ultimately, that can be wrapped up into a very
