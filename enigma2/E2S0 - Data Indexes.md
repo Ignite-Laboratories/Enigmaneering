@@ -161,7 +161,7 @@ when the notes strike just the right chord, or when the dissonance breaks the te
 and the destroyer of hearts, making it a powerful tool to be wielded with great _responsibility_ - yet, in innocent 
 hands, can bring immense light to the world. 
 
-Joy is the feedback loop which facilitates _our_ stable arrangement of life!
+Joy is the feedback loop which facilitates _our_ stable positions in the grand index of life!
 
 _Thank you_ for the art _**you**_ have already created for reality to *en*joy for eternity!  It is so very 
 appreciated =)
