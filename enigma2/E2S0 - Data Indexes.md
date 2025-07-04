@@ -39,7 +39,7 @@ new kind of vertical number line.
 There are a few important qualities of an index to keep in mind -
 
 - An index is defined by it's bit-width, 𝑛
-- The address space of an index is 2ⁿ and is referred to as it's "limit"
+- The addressable range of an index is 2ⁿ and is referred to as it's "limit"
 - The maximum value of an index is (2ⁿ)-1
 - The midpoint of an index is (2ⁿ)/2
 
