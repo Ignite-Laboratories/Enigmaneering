@@ -68,8 +68,9 @@ index.  All of this has led me to posit a fundamental law -
 That's a lot easier than one might think!  But you must work from the _left_ side of the binary information
 rightwards.  First, let's take a look at the abstract halving points of an arbitrary index -
 
+        2¹⁰ = 1024
+
                 ⬐ Everything to the right is a single repeated bit
-        [ 1 1 1   1 1 1 1 1 1 1 ] (1023) ← The index's dark boundary
         [ 1 0 0   0 0 0 0 0 0 0 ]  (512) ← The index's midpoint
         [ 0 1 0   0 0 0 0 0 0 0 ]  (256) ← The index's quarter point
         [ 0 0 1   0 0 0 0 0 0 0 ]  (128) ← The index's eighth point
