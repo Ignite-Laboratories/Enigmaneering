@@ -161,7 +161,7 @@ when the notes strike just the right chord, or when the dissonance breaks the te
 and the destroyer of hearts, making it a powerful tool to be weilded with great _responsibly_ - yet, in clever hands, 
 can bring immense light to the world.
 
-_Thank you_ for everything _**you**_ have already catalogged for reality to _**en**joy!_  It is so very appreciated =)
+_Thank you_ for everything _**you**_ have already catalogged for reality to *en*joy!  It is so very appreciated =)
 
 ### The Index Printer
 
