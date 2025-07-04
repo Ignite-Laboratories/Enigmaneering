@@ -126,9 +126,16 @@ reach zero bits -
 
 So, let's put that all together and find the 4ᵗʰ interval of an 3 bit diminishment of an 11 bit index -
 
+    The conditions -
+
                     [ 0 1 0 ]    (4) ← The pattern
     [ 1 1 1 1 1 1 1 1 1 1 1 ] (2047) ← The index's dark boundary
+
+    The target -
+
     [ 0 1 0 0 1 0 0 1 0 0 1 ]  (585) ← 0 1 0 repeated across the index
+
+    The algorithm -
 
     [ 0 1 0 0 0 0 0 0 0 0 0 ]  (512)
           [ 0 1 0 0 0 0 0 0 ]   (64) +
@@ -145,3 +152,6 @@ simple little formula -
 </picture>
 
 I'm not sure how much more proof one would need - this is a fundamental _law_ of binary indexes =)
+
+But, and _far_ more importantly, we just implemented the standard formula of synthesis: using _starting conditions_
+and an _algorithm_ to create a _target!_
