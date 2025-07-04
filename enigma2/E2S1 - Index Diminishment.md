@@ -123,7 +123,7 @@ reach zero bits -
                   [ 1 ]   (1) = ⌊(2¹/8) * 5⌋
                   [ 1 ]   (1) = ⌊(2¹/8) * 6⌋
                   [ 1 ]   (1) = ⌊(2¹/8) * 7⌋
-                             ⬑ NOTE: This is floored
+                           ⬑ NOTE: This is floored
 
 So, let's put that all together and find the 4ᵗʰ interval of a 3 bit diminishment of an 11 bit index -
 
