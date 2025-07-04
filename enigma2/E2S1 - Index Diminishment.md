@@ -9,16 +9,15 @@ with the numeric representation of data while logically managing the leading zer
 more sense as we proceed forward - for now, just know that numeric equivalence does _not_ imply logical equivalence.
 A single missing zero could entirely destroy the logical structure of data - fun! =)
 
-      ⬐ Full binary value   ⬐ Equivalent numeric value
-    [ 0 0 1 0 1 0 1 0 ] (42)  Logical form
-        [ 1 0 1 0 1 0 ] (42)  Numeric form
-              ⬑ Truncated bit width
+    Logical Binary Data ⬎           ⬐ Base 10 Value
+               [ 0 0 1 0 1 0 1 0 ] (42)  
+                   [ 1 0 1 0 1 0 ] (42)  
+                         ⬑ Numeric Binary Data
 
 Here, the logical form is a _byte_ - but that's not a hard requirement, just a universal standard.
 
 This is what we ultimately will be exploiting to facilitate binary synthesis!  Some values can be stored in
-_far less bits_ than they're logically stored at, relative to known points in the index.  If one counted from 
-a known point in the index, rather than 0, the numeric length can change _dramatically!_
+_far less bits_ than they're logically stored at, relative to known points in the index.  
 
 But what even _is_ a known "point" in an index?
 
@@ -26,19 +25,19 @@ Well, it's any point that can be _implicitly_ referenced from contextual informa
 is _always_ known to _implicitly_ be a one followed by all zeros _up to the index's bit length_.  But you can take 
 this even _further_ by synthesizing repeating _**patterns**_ of bits across the index!  
 
-Let's take an 11-bit index and subdivide it into eight regions using a note (3-bit) pattern -
+Let's take an 11-bit index and break it into eight regions using a note (3-bit) pattern -
 
     Note Subdivision of an 11 bit Index:
  
-         Pattern        Synthesized          Value    Delta   
-     (0) [ 0 0 0 ] [ 0 0 0 0 0 0 0 0 0 0 0 ] (   0  ) + 292
-     (1) [ 0 0 1 ] [ 0 0 1 0 0 1 0 0 1 0 0 ] (  292 ) + 293
-     (2) [ 0 1 0 ] [ 0 1 0 0 1 0 0 1 0 0 1 ] (  585 ) + 292
-     (3) [ 0 1 1 ] [ 0 1 1 0 1 1 0 1 1 0 1 ] (  877 ) + 293
-     (4) [ 1 0 0 ] [ 1 0 0 1 0 0 1 0 0 1 0 ] ( 1170 ) + 292
-     (5) [ 1 0 1 ] [ 1 0 1 1 0 1 1 0 1 1 0 ] ( 1462 ) + 293
-     (6) [ 1 1 0 ] [ 1 1 0 1 1 0 1 1 0 1 1 ] ( 1755 ) + 292
-     (7) [ 1 1 1 ] [ 1 1 1 1 1 1 1 1 1 1 1 ] ( 2047 )
+        Pattern              Synthesized Point        Value      Δ   
+     (0) { 0 0 0 }   [ 0 0 0   0 0 0   0 0 0   0 0 ] (   0  ) + 292
+     (1) { 0 0 1 }   [ 0 0 1   0 0 1   0 0 1   0 0 ] (  292 ) + 293
+     (2) { 0 1 0 }   [ 0 1 0   0 1 0   0 1 0   0 1 ] (  585 ) + 292
+     (3) { 0 1 1 }   [ 0 1 1   0 1 1   0 1 1   0 1 ] (  877 ) + 293
+     (4) { 1 0 0 }   [ 1 0 0   1 0 0   1 0 0   1 0 ] ( 1170 ) + 292
+     (5) { 1 0 1 }   [ 1 0 1   1 0 1   1 0 1   1 0 ] ( 1462 ) + 293
+     (6) { 1 1 0 }   [ 1 1 0   1 1 0   1 1 0   1 1 ] ( 1755 ) + 292
+     (7) { 1 1 1 }   [ 1 1 1   1 1 1   1 1 1   1 1 ] ( 2047 )
 
 Literally any width target index can be evenly subdivided by the _limit_ of the pattern's index simply by
 repeating the pattern across it.  If the value that point should represent is a floating point number, binary

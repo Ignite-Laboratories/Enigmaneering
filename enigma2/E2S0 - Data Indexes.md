@@ -3,7 +3,7 @@
 
 ---
 
-### The Index Printer
+### Getting Intimate With Binary
 Before we proceed any further, I get to hopefully define some standardized terminology so we can speak a similar 
 language!  There isn't a lot of oddness beyond what I've already defined, but I'd like to touch on the _quality_ 
 of binary information and then on what an _index_ of data is.
@@ -36,20 +36,35 @@ new kind of vertical number line.
 
         An Index represents all possible binary states a known bit-width can address.
 
-An index is defined by it's bit-width, 𝑛.  Since it makes everything _infinitely_ eaiser the upper _**limit**_ of 
-an index is considered to be 2ⁿ, whereas the upper **_value_** of an index is (2ⁿ)-1.  This means that we consider 
-8 bits to be a "256" index, even though it can never address the value "256."  This has a _very specific purpose:_ 
-it makes the midpoint of an index equivalent to 1 followed by all 0s, as well as a whole division of 2 from the 
-limit.  For example, given an 8-bit index, these are the three major boundary points -
+There are a few important qualities of an index to keep in mind -
 
-    [ 1 1 1 1 1 1 1 1 ] (255) | (2⁸)-1 ← The maximum addressable value of the index
-    [ 1 0 0 0 0 0 0 0 ] (128) | (2⁸)/2 ← The midpoint of the index
-    [ 0 0 0 0 0 0 0 0 ] (0)   | 0      ← The minimum addressable value of the index
+- An index is defined by it's bit-width, 𝑛.
+- The address space of an index is 2ⁿ
+- The maximum value of an index is (2ⁿ)-1
+- The midpoint of an index is (2ⁿ)/2
 
-Indexes are represented just as they would on a vertical number line - meaning zero is at the bottom, larger 
-values are placed above, and each value is well-ordered -
+The last point is the absolute most _crucial_ one in the synthesis process, as it can implicitly be generated 
+with a single one followed by 𝑛-1 zeros -
 
-    A Crumb Index:
+    [ 1 1 1 1 1 1 1 1 ] (255) = 2⁸ - 1 ← The maximum addressable value of the index
+    [ 1 0 0 0 0 0 0 0 ] (128) = 2⁸ / 2 ← The midpoint of the index
+    [ 0 0 0 0 0 0 0 0 ] ( 0 ) = 0      ← The minimum addressable value of the index
+
+In fact, the zero length (plus one) before the first one represents the number of times to halve the data,
+making each point _very_ easy to implicitly synthesize -
+
+    [ 1 1 1 1 1 1 1 1 ] (255) = 2⁸ - 1 
+    [ 1 0 0 0 0 0 0 0 ] (128) = 2⁸ / (2*1) ← The midpoint of the index
+    [ 0 1 0 0 0 0 0 0 ] ( 64) = 2⁸ / (2*2) ← The quarter point of the index
+    [ 0 0 1 0 0 0 0 0 ] ( 32) = 2⁸ / (2*3) ← The eighth point of the index
+    [ 0 0 0 1 0 0 0 0 ] ( 16) = 2⁸ / (2*4) ← The sixteenth point of the index
+
+Indexes should always be represented just as they would on a vertical number line - meaning zero is at the 
+bottom, larger values are placed above, and each value is well-ordered.  This is because it makes _logical
+mental sense_ when the reader takes it in!  We must maintain standards of how we present data to ensure
+clarity in communication -
+
+    "A Crumb Index"
 
         Dark Side
          [ 1 1 ] (3)
@@ -58,7 +73,7 @@ values are placed above, and each value is well-ordered -
          [ 0 0 ] (0)
         Light Side
 
-    A Nibble Index:
+    "A Nibble Index"
 
          Dark Side
         [ 1 1 1 1 ] (15)
@@ -67,23 +82,23 @@ values are placed above, and each value is well-ordered -
         [ 1 1 0 0 ] (12)
         [ 1 0 1 1 ] (11)
         [ 1 0 1 0 ] (10)
-        [ 1 0 0 1 ] (9)
-        [ 1 0 0 0 ] (8)
-        [ 0 1 1 1 ] (7)
-        [ 0 1 1 0 ] (6)
-        [ 0 1 0 1 ] (5)
-        [ 0 1 0 0 ] (4)
-        [ 0 0 1 1 ] (3)
-        [ 0 0 1 0 ] (2)
-        [ 0 0 0 1 ] (1)
-        [ 0 0 0 0 ] (0)
+        [ 1 0 0 1 ]  (9)
+        [ 1 0 0 0 ]  (8)
+        [ 0 1 1 1 ]  (7)
+        [ 0 1 1 0 ]  (6)
+        [ 0 1 0 1 ]  (5)
+        [ 0 1 0 0 ]  (4)
+        [ 0 0 1 1 ]  (3)
+        [ 0 0 1 0 ]  (2)
+        [ 0 0 0 1 ]  (1)
+        [ 0 0 0 0 ]  (0)
          Light Side
 
 At larger scales it gets far too excessive to print out every single value, so the index is often truncated 
-to highlight only its most important qualities or (as shown above) known _points_.  Thus, this is the most
-abstract representation of an index -
+to highlight only its most important qualities or (as shown above) relevant known _points_.  Thus, this is 
+the most abstract representation of an index -
 
-    An Abstract Index:
+    "An Abstract Index"
 
                Dark Side
         [ 1 1 1 1 ... 1 1 1 1 ] 
@@ -97,7 +112,7 @@ abstract representation of an index -
 
 There is another feature an index visualization affords us: highlighting binary's _symmetry._  Let's look at the
 nibble index again, but this time mark the mid and quarter reflection points.  These represent points _between_
-values where the data above and below is a perfect mirror of each other, until the next larger reflection point -
+values where the data above and below is a perfect mirror of each other until the next larger reflection point -
 
     Reflection Points of a Nibble Index:
 
@@ -122,6 +137,8 @@ values where the data above and below is a perfect mirror of each other, until t
         [ 0 0 0 1 ]
         [ 0 0 0 0 ]
          Light Side
+
+### The Index Printer
 
 This solution is quite simple - it merely prints out the entirety of whatever index of data you wish you visualize.
 Note that this also represents a primitive _timer_ which uses bit width to create longer and shorter intervals of
