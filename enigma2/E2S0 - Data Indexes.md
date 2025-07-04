@@ -154,9 +154,9 @@ _distilling_ a stable point into a few bits is literally the act of _storing_ it
 I promise all of this will make a lot more sense in the next enigma as we explore _living file systems_ and the DNA
 format, itself.  You and I are intelligent database _algorithms_ who've been tasked with cataloging what brings each 
 of us _joy_ as co-observers through the cosmic void of space and time.  _Joy,_ in that sense, _is_ stability - making
-it the direct _target_ of all synthesis.
+it the direct _target_ of all synthesis and the _prime directive_ of existence.
 
-_Thank you_ for everything _**you**_ have already catalogged for reality to enjoy!  It is so very appreciated =)
+_Thank you_ for everything _**you**_ have already catalogged for reality to _**en**joy!_  It is so very appreciated =)
 
 ### The Index Printer
 
