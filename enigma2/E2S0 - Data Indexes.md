@@ -28,7 +28,7 @@ This applies to _any length_ of binary information, and _does not_ imbue any val
     [ 0 1 1 ... 0 0 1 ] ← "Grey" data
     [ 0 0 0 ... 0 0 0 ] ← "Light" data
 
-Because of this it's common to consider that a value is 'closer to the dark or light side', for instance.  It's
+Because of this it's common to consider whether a value is closer to the dark or light side, for instance.  It's
 a lot easier to visualize if you can mentally bound in the target on what I call an 'index' - essentially a
 new kind of vertical number line.
 
