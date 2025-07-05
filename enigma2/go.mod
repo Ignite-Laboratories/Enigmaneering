@@ -1,4 +1,4 @@
-module enigma1
+module enigma2
 
 go 1.24.1
 

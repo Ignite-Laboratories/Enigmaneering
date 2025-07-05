@@ -29,7 +29,7 @@ Finally, you keep the _signed_ result:
         [ 0 0 0 0 0 0 ] (0)   ← Light Boundary
 
 Immediately, we have gained a _single_ bit of reduction!  Of course, we'd need to _implicitly_ know
-the width of the data to synthesize a midpoint value from, but we'll get to that shortly.  Since we don't
+the original index width to recreate the target value, but we'll get to that shortly.  Since we don't
 yet have a mechanism for managing the sign, we consider that it is a *transient* component and represent
 it by a negative sign.  This particular operation will yield one bit of reduction for _all_ sizes of binary 
 information _on average!_  Or, to put it more formally:
@@ -40,7 +40,15 @@ information _on average!_  Or, to put it more formally:
         containing index in an average of one bit less than counting from 0.
 
 This solution provides a simple way to _test_ that the average bit drop is, indeed, one bit for the ranges
-relevant to our purposes.  If you'd like to help me formulate a proper mathematical proof, I'd be thrilled!
+relevant to our purposes.
+
+### Proof
+My words mean absolutely nothing unless I can _prove_ that statement!  This one is easy to both explain visually
+_and_ to prove mathematically -
+
+
+
+If you'd like to help me formulate a proper mathematical proof, I'd be thrilled!
 For now, I'm happy to simply _demonstrate_ the techology for others =)
 
 This is _not_ enough information to reconstruct the data, however - how do you _implicitly_ know what sign 
