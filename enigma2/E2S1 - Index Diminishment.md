@@ -19,7 +19,7 @@ Here, the logical form is a _byte_ - but that's not a hard requirement, just a u
 This is what we ultimately will be exploiting to facilitate binary synthesis!  Some values can be stored in
 _far less bits_ than they're logically stored at, relative to known points in the index.  
 
-But what even _is_ a known "point" in an index?
+But what even _is_ a known index _point?_
 
 Well, it's any point that can be _implicitly_ referenced from contextual information.  The index midpoint, for example, 
 is _always_ known to _implicitly_ be a one followed by all zeros.  But you can take this even _further_ by synthesizing 
@@ -41,7 +41,7 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
 
 Literally any width index can be evenly diminished by the _limit_ of the pattern's index simply by repeating the 
 pattern across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  Because unlike mathematical 
-subdivision, the intervals are only _close enough._  If the value the pattern interval represents is a floating point 
+subdivision, the intervals are only _close enough._  If the range the pattern interval represents is a floating point 
 number, binary patterning "snaps" it to the closest whole integer _naturally._  
 
 Much like a diminished chord, every point is as equidistant _as possible_ from the last - except there's far more 
