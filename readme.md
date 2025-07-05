@@ -53,7 +53,7 @@ from each of you as the possibilities with this architecture are _limitless!_
 
 **5 - Curiosity Engines** - How to use all of the above to begin intelligently driving systems.
 
-All the components that facilitate the above technologies belong to an ecosystem of libraries I call _JanOS,_ named
+All the components that facilitate the above technologies belong to an ecosystem of libraries I call _[JanOS](https://github.com/Ignite-Laboratories/JanOS),_ named
 after Janus - the Roman God of time, duality, and beginnings.  
 
 Yes, they truly can construct an _operating system!_  How robust yours becomes is up to _you!_
