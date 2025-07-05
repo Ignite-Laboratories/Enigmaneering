@@ -13,17 +13,17 @@ This synthesizes random data and takes the average of how many bits it drops rel
 the midpoint of its containing index.
 */
 
-var bitLength = 1024
+var bitWidth = 1024
 var iterations = 1 << 12
 
 func main() {
 	average := 0
 	for i := 0; i < iterations; i++ {
-		data := tiny.Synthesize.RandomPhrase(bitLength / 8)
-		midpoint := tiny.Synthesize.Midpoint(bitLength)
+		data := tiny.Synthesize.RandomPhrase(bitWidth / 8)
+		midpoint := tiny.Synthesize.Midpoint(bitWidth)
 		delta := new(big.Int).Sub(data.AsBigInt(), midpoint.AsBigInt())
 
-		average += bitLength - len(delta.Text(2))
+		average += bitWidth - len(delta.Text(2))
 	}
 	average /= iterations
 	fmt.Printf("Average Bit Drop: %d\n", average)

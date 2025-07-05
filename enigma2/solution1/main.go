@@ -10,11 +10,11 @@ import (
 /**
 E2S1 - The Index Subdivision Printer
 
-This prints the binary pattern subdivisions of a requested index
+This prints the binary pattern subdivisions of a requested index.
 
 The output columns are:
 
- Subdivision Pattern     Synthesized Point         Value     Delta From Last Point
+ Subdivision Pattern     Synthesized Point         Value     Point Distance
      (1)     [0 0 1]  [00100100 10010010 010010]  (599186)    Δ 599186
 */
 

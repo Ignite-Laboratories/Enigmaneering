@@ -155,5 +155,5 @@ Ultimately, that can be wrapped up into a very simple little formula to calculat
 
 I'm not sure how much more proof one would need - this appears to be a fundamental _law_ of binary indexes =)
 
-But, and _far_ more importantly, we just executed the standard process of synthesis: using _starting conditions_
+_Far_ more importantly, however, we just executed the standard process of synthesis: using _starting conditions_
 and an _algorithm_ to create a _target!_
