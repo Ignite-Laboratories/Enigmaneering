@@ -45,7 +45,7 @@ from each of you as the possibilities with this architecture are _limitless!_
 
 **2 - Binary Synthesis** - This represents distilling binary down to only the most essential bits.
 
-**3 - Living File Systems** - A deep dive into how to use binary synthesis for adaptive and intuitive files.
+**3 - Living File Systems** - A deep dive into how to use binary synthesis as adaptive and intuitive _seeds._
 
 **3 - Glitter** - A rendering engine built off of the neural impulse engine.
 
