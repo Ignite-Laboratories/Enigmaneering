@@ -21,15 +21,15 @@ _far less bits_ than they're logically stored at, relative to known points in th
 
 But what even _is_ a known "point" in an index?
 
-Well, it's any point that can be _implicitly_ referenced from contextual information.  The midpoint, for example, 
-is _always_ known to _implicitly_ be a one followed by all zeros _up to the index's bit length_.  But you can take 
-this even _further_ by synthesizing repeating _**patterns**_ of bits across the index!  
+Well, it's any point that can be _implicitly_ referenced from contextual information.  The index midpoint, for example, 
+is _always_ known to _implicitly_ be a one followed by all zeros.  But you can take this even _further_ by synthesizing 
+repeating _**patterns**_ of bits across the index!  
 
 Let's take an 11-bit index and break it into eight regions using a note (3-bit) pattern -
 
     "Note Diminishment of an 11 bit Index"
  
-        Pattern              Synthesized Point        Value      Δ   
+        Pattern              Synthesized Point        Value   Interval   
      (0) { 0 0 0 }   [ 0 0 0   0 0 0   0 0 0   0 0 ] (   0  ) + 292
      (1) { 0 0 1 }   [ 0 0 1   0 0 1   0 0 1   0 0 ] (  292 ) + 293
      (2) { 0 1 0 }   [ 0 1 0   0 1 0   0 1 0   0 1 ] (  585 ) + 292
@@ -39,21 +39,21 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
      (6) { 1 1 0 }   [ 1 1 0   1 1 0   1 1 0   1 1 ] ( 1755 ) + 292
      (7) { 1 1 1 }   [ 1 1 1   1 1 1   1 1 1   1 1 ] ( 2047 )
 
-Literally any width target index can be evenly diminished by the _limit_ of the pattern's index simply by
-repeating the pattern across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  Because
-unlike mathematical subdivision, the intervals are only _close enough._  If the value the synthesized point 
-_should_ represent is a floating point number, binary patterning floors it to a whole number _naturally._  
+Literally any width index can be evenly diminished by the _limit_ of the pattern's index simply by repeating the 
+pattern across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  Because unlike mathematical 
+subdivision, the intervals are only _close enough._  If the value the pattern interval represents is a floating point 
+number, binary patterning "snaps" it to the closest whole integer _naturally._  
 
-Much like a diminished chord, every point is as equidistant as possible from the last - except there's far more 
+Much like a diminished chord, every point is as equidistant _as possible_ from the last - except there's far more 
 than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each point is exactly 
-one away from the next because the pattern bit length matches the index.  That also means this is a mechanism to 
-lower the _resolution_ of the index while also providing a way to quickly "stride" through it.
+one away from the next because the pattern's bit length matches the index.  That also means this is a mechanism to 
+lower the _resolution_ of the index and provides a way to quickly "stride" through it.  A single leading pattern 
+can _also_ be used to implicitly reference a sub-index on demand - but we'll get to those operations in the next 
+enigma.
 
 Binary is truly the most beautiful counting system in existence =)
 
-Diminishment, by itself, isn't anything special - in fact, we don't use it at all in the synthesis process!  However,
-it provides a way to visualize counting to a number from a _synthetic point._  We will be counting specifically from 
-the _midpoint,_ rather than _zero._
+The utility of diminishment will come later on, but it's a wonderful primer on working with an index.
 
 The solution here is a primitive demonstration to show that binary follows these diminishment rules for a provided 
 index.  All of this has led me to posit a fundamental law -
@@ -61,12 +61,12 @@ index.  All of this has led me to posit a fundamental law -
     "The Law of Binary Index Diminishment"
 
         An index can be evenly diminished by the limit of a bit pattern's containing index from
-        repeating the bits across the target, with the diminishment interval defined by the 
+        repeating the pattern across the target, with the diminishment interval defined by the 
         numeric value of the pattern.
 
 ### Prove It
-That's a lot easier than one might think!  But you must work from the _left_ side of the binary information
-rightwards.  First, let's cricle back to the halving points of an index again -
+That's a lot easier than one might think!  First, it's a lot easier to work from the _left_ side of the index
+rightwards.  Let's circle back to the halving points of an index again -
 
         Index 2¹⁰ (1024)
 
@@ -88,7 +88,7 @@ to be zero, a formula arises -
 
     let 𝑛 = 7
 
-        ⬐ The pattern
+        ⬐ The pattern   𝑥 ⬎        ⬐ The formula
     [ 0 0 0   0 0 0 0 ]   (0) = ⌊(2⁷/8) * 0⌋
     [ 0 0 1   0 0 0 0 ]  (16) = ⌊(2⁷/8) * 1⌋
     [ 0 1 0   0 0 0 0 ]  (32) = ⌊(2⁷/8) * 2⌋
@@ -125,7 +125,8 @@ reach zero bits -
                   [ 1 ]   (1) = ⌊(2¹/8) * 7⌋
                            ⬑ NOTE: This is floored
 
-So, let's put that all together and find the 4ᵗʰ interval of a 3 bit diminishment of an 11 bit index -
+So, let's put that all together and validate that the 4ᵗʰ interval of a 3 bit diminishment across an 11 bit index 
+indeed matches our synthesized bit pattern's value -
 
     The starting conditions -
 
@@ -145,9 +146,8 @@ So, let's put that all together and find the 4ᵗʰ interval of a 3 bit diminish
                       [ 0 1 ]    (1) +
                               =  585
 
-In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values together,
-simply as a _byproduct_ of using an index to reference the data.  Ultimately, that can be wrapped up into a very
-simple little formula to calculate a desired diminishment point -
+In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values together.  
+Ultimately, that can be wrapped up into a very simple little formula to calculate each desired diminishment _point_ -
 
 <picture>
 <img alt="Index Diminishment Formula" src="assets/diminishmentPoint.png" style="display: block; margin-left: auto; margin-right: auto;">

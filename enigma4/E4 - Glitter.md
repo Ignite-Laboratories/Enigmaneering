@@ -1,4 +1,4 @@
-# `E3.0 - Glitter`
+# `E4 - Glitter`
 ### `Alex Petz, Ignite Laboratories, June 2025`
 
 ---

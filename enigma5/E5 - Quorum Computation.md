@@ -1,4 +1,4 @@
-# `E4.0 - Quorum Computation`
+# `E5 - Quorum Computation`
 ### `Alex Petz, Ignite Laboratories, June 2025`
 
 ---

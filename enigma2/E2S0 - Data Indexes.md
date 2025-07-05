@@ -6,7 +6,7 @@
 ### Getting Intimate With Binary
 Before we proceed any further, I get to hopefully define some standardized terminology so we can speak a similar 
 language!  There isn't a lot of oddness beyond what I've already defined, but I'd like to touch on the _quality_ 
-of binary information and then on what an _index_ of data is.
+of binary information and then expand much further on what an _index_ of data is.
 
 First, let's examine the three states binary can remain in:
 
@@ -30,7 +30,7 @@ This applies to _any length_ of binary information, and _does not_ imbue any val
 
 Because of this it's common to consider whether a value is closer to the dark or light side, for instance.  It's
 a lot easier to visualize if you can mentally bound in the target on what I call an 'index' - essentially a
-new kind of vertical number line.
+kind of vertical number line.
 
     "The Index"
 
@@ -38,10 +38,10 @@ new kind of vertical number line.
 
 There are a few important qualities of an index to keep in mind -
 
-- An index is defined by it's bit-width, 𝑛
-- The addressable range of an index is 2ⁿ and is referred to as it's "limit"
-- The maximum value of an index is (2ⁿ)-1
-- The midpoint of an index is (2ⁿ)/2
+- An index is defined by it's bit-width, `𝑛`
+- The addressable range of an index is `2ⁿ` and is referred to as its `limit`
+- The maximum value of an index is `2ⁿ - 1`
+- The midpoint of an index is `2ⁿ / 2`
 
 The last point is the absolute most _crucial_ one in the synthesis process, as it can implicitly be generated 
 with a single one followed by 𝑛-1 zeros -
@@ -159,9 +159,9 @@ it the direct _target_ of all synthesis and the _prime directive_ of existence.
 This isn't just poetic flourish - I mean it quite literally!  Joy is elicited from both alignment and chaos - 
 when the notes strike just the right chord, or when the dissonance breaks the tension.  Joy is both the driver of love 
 and the destroyer of hearts, making it a powerful tool to be wielded with great _responsibility_ - yet, in innocent 
-hands, can bring immense light to the world. 
+hands, can bring _immense_ light to this world! 
 
-Joy is the feedback loop which facilitates _our_ stable positions in the grand index of life!
+_Joy is the feedback loop which facilitates our stable positions in the grand index of life._
 
 _Thank you_ for the art _**you**_ have already created for reality to _reference_ and _enjoy_ for eternity!  It is so 
 very appreciated =)

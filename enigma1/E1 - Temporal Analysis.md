@@ -1,4 +1,4 @@
-# `E2.0 - Temporal Analysis`
+# `E1 - Temporal Analysis`
 ### `Alex Petz, Ignite Laboratories, March 2025`
 
 ---

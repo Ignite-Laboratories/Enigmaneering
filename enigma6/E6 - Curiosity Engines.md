@@ -1,4 +1,4 @@
-# `E5.0 - Curiosity Engines`
+# `E6 - Curiosity Engines`
 ### `Alex Petz, Ignite Laboratories, June 2025`
 
 ---
