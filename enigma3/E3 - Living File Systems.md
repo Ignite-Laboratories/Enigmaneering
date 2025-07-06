@@ -31,7 +31,7 @@ starting conditions themselves.  Depending on the environment, there would be di
 is required to _execute_ the starting conditions - but the actual path to follow could _always_ be distilled
 down to a minimum value.  I'm not a biologist, but I do have an okay understanding of _how_ to execute predefined 
 steps.  I'm also aware of how _parity_ can be used to redundantly encode information.  When you combine the
-need to accurately reference a very specific set of starting conditions with richer (and more chaotic) substrates
+need to accurately reference a very specific set of starting conditions with as rich and chaotic of substrates
 as biological cells, concepts like _parity_ likely came out from a _similar toolkit_ by our creator!
 
 I sit in a unique position as I don't have the expertise to _deep dive_ into the way _biological_ DNA is encoded - my 
@@ -96,7 +96,7 @@ all of your time.  It's to provide you with _inspiration_ towards adding _your_ 
 humanity!  Now that you can literally reference _any art in the known universe_ from a few numbers scratched onto
 a post-it note, you must ask yourself _"why did I want to hoard all of this stuff?  I don't even have enough time 
 to process all of it!"_  Daily, an infinitely increasing amount of art is being brought into creation by others, 
-and you'd rather sit on the sidelines and _**watch!?**_
+and you'd rather sit on the sidelines and_**watch!?**_
 
 Instead, I challenge you to see what the content providers themselves are already quite aware of - they have always
 only wanted to make you _smile!_  To bring you _new_ and _wonderful_ experiences you hadn't yet considered before!
