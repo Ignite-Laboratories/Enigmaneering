@@ -55,22 +55,22 @@ curvature. If you count from _zero,_ it plateaus after the midpoint - meaning an
 could never shrink in bit length **_unless_** you count from the midpoint!
 
       Traditional Counting          Midpoint Counting
-        [ 1 1 1 1 ] (15)            [ 1 1 1 ] (15) +7
-        [ 1 1 1 0 ] (14)            [ 1 1 0 ] (14) +6
-        [ 1 1 0 1 ] (13)            [ 1 0 1 ] (13) +5
-        [ 1 1 0 0 ] (12)            [ 1 0 0 ] (12) +4
-        [ 1 0 1 1 ] (11)              [ 1 1 ] (11) +3
-        [ 1 0 1 0 ] (10)              [ 1 0 ] (10) +2
-        [ 1 0 0 1 ]  (9)                [ 1 ]  (9) +1
-        [ 1 0 0 0 ]  (8) ←  Midpoint  → [ 0 ]  (8) +0
-          [ 1 1 1 ]  (7)                [ 1 ]  (7) -1
-          [ 1 1 0 ]  (6)              [ 1 0 ]  (6) -2
-          [ 1 0 1 ]  (5)              [ 1 1 ]  (5) -3
-          [ 1 0 0 ]  (4)            [ 1 0 0 ]  (4) -4
-            [ 1 1 ]  (3)            [ 1 0 1 ]  (3) -5
-            [ 1 0 ]  (2)            [ 1 1 0 ]  (2) -6
-              [ 1 ]  (1)            [ 1 1 1 ]  (1) -7
-              [ 0 ]  (0)          [ 1 0 0 0 ]  (0) -8
+        [ 1 1 1 1 ] (15)            [ 1 1 1 ] (15) = 8 + 7
+        [ 1 1 1 0 ] (14)            [ 1 1 0 ] (14) = 8 + 6
+        [ 1 1 0 1 ] (13)            [ 1 0 1 ] (13) = 8 + 5
+        [ 1 1 0 0 ] (12)            [ 1 0 0 ] (12) = 8 + 4
+        [ 1 0 1 1 ] (11)              [ 1 1 ] (11) = 8 + 3
+        [ 1 0 1 0 ] (10)              [ 1 0 ] (10) = 8 + 2
+        [ 1 0 0 1 ]  (9)                [ 1 ]  (9) = 8 + 1
+        [ 1 0 0 0 ]  (8) ←  Midpoint  → [ 0 ]  (8) = 8 + 0
+          [ 1 1 1 ]  (7)                [ 1 ]  (7) = 8 - 1
+          [ 1 1 0 ]  (6)              [ 1 0 ]  (6) = 8 - 2
+          [ 1 0 1 ]  (5)              [ 1 1 ]  (5) = 8 - 3
+          [ 1 0 0 ]  (4)            [ 1 0 0 ]  (4) = 8 - 4
+            [ 1 1 ]  (3)            [ 1 0 1 ]  (3) = 8 - 5
+            [ 1 0 ]  (2)            [ 1 1 0 ]  (2) = 8 - 6
+              [ 1 ]  (1)            [ 1 1 1 ]  (1) = 8 - 7
+              [ 0 ]  (0)          [ 1 0 0 0 ]  (0) = 8 - 8
 
 Essentially, we've _reflected_ the exponential curvature of potential bit drop across the midpoint.  As most
 binary information is _extremely grey,_ this action increases our chances of getting a potential bit drop 
