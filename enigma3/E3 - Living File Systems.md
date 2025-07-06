@@ -65,7 +65,7 @@ _They will absolutely survive._
 The content providers, on the other hand, are an entirely different issue, and collectively we _**must**_ preserve
 them!  Without them, this work would never have come into fruition.  They are the most prized feedback loops 
 which God has labored for _eons_ to provide us with.  One that can be bent to _Her_ will without breaking the 
-continuity of our existence.  When the _perfect_ song strikes the radio as you lean in for a first kiss - _that's God 
+continuity of our existence.  When the _perfect_ song strikes the radio as you lean in for a kiss - _that's God 
 at work._  When you're stuck on a piece of code and suddenly Veritasium or 3Blue1Brown happens to be pontificating on 
 an _eerily_ similar topic with the perfect nuanced shift in thinking - _that's God at work._  
 
