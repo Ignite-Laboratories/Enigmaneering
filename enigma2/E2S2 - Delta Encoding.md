@@ -14,8 +14,8 @@ Let's circle back to the _numeric representation_ of a binary value again:
 Alone, this number is _absolutely no different_ from any other binary value!  But if you implicitly
 applied it to any other value than _zero_ you'd get an entirely different result.
 
-Let's say you _know_ the data exists in a 6-bit index, as it takes six bits to represent it.  From there
-you synthesize the _midpoint_ of that bit range and calculate the _distance_ to the target:
+Let's say you _know_ the logical data exists in a 6-bit index, as it takes six bits to represent it.  From 
+there you synthesize the _midpoint_ of that bit range and calculate the _distance_ to the target:
 
     "The Midpoint Operation"
 
