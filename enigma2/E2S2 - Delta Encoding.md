@@ -38,20 +38,64 @@ information _on average!_  Or, to put it more formally:
         Binary information can be rewritten as a delta from the midpoint of its 
         containing index in an average of one bit less than counting from 0.
 
-This solution provides a simple way to _test_ that the average bit drop is, indeed, one bit for the ranges
-relevant to our purposes.
+### Why?
+Well, because binary is literally repeating the same values twice before growing by one bit -
 
-### Proof
-My words mean absolutely nothing unless I can _prove_ that statement!  This one is easy to both explain visually
-_and_ to prove mathematically -
+    |←     8 Bits    →|
+    [ 1 1 1 1 1 1 1 1 ] (255) ← The dark side
+    [ 1 0 0 0 0 0 0 0 ] (128) ← The midpoint
+      [ 1 1 1 1 1 1 1 ] (127) ← A dark 7-bit point
+    [ 0 0 0 0 0 0 0 0 ]   (0) ← The light side
 
+      0 + 127 = 128 ← The lower address range
+    128 + 127 = 255 ← The upper address range
 
+Now, when one takes the _numeric form_ of a binary value, the growth rate of bits follows an _exponential_
+curvature. If you count from _zero,_ it plateaus after the midpoint - meaning any _**high** address_ information 
+could never shrink in bit length **_unless_** you count from the midpoint!
 
-If you'd like to help me formulate a proper mathematical proof, I'd be thrilled!
-For now, I'm happy to simply _demonstrate_ the techology for others =)
+      Traditional Counting          Midpoint Counting
+        [ 1 1 1 1 ] (15)            [ 1 1 1 ] (15) +7
+        [ 1 1 1 0 ] (14)            [ 1 1 0 ] (14) +6
+        [ 1 1 0 1 ] (13)            [ 1 0 1 ] (13) +5
+        [ 1 1 0 0 ] (12)            [ 1 0 0 ] (12) +4
+        [ 1 0 1 1 ] (11)              [ 1 1 ] (11) +3
+        [ 1 0 1 0 ] (10)              [ 1 0 ] (10) +2
+        [ 1 0 0 1 ]  (9)                [ 1 ]  (9) +1
+        [ 1 0 0 0 ]  (8) ←  Midpoint  → [ 0 ]  (8) +0
+          [ 1 1 1 ]  (7)                [ 1 ]  (7) -1
+          [ 1 1 0 ]  (6)              [ 1 0 ]  (6) -2
+          [ 1 0 1 ]  (5)              [ 1 1 ]  (5) -3
+          [ 1 0 0 ]  (4)            [ 1 0 0 ]  (4) -4
+            [ 1 1 ]  (3)            [ 1 0 1 ]  (3) -5
+            [ 1 0 ]  (2)            [ 1 1 0 ]  (2) -6
+              [ 1 ]  (1)            [ 1 1 1 ]  (1) -7
+              [ 0 ]  (0)          [ 1 0 0 0 ]  (0) -8
 
-This is _not_ enough information to reconstruct the data, however - how do you _implicitly_ know what sign 
-the resulting delta has?  If only we could consider the sign as an entirely separate _artifact_ and store the
-**_absolute value_** of the delta...
+Essentially, we've _reflected_ the exponential curvature of potential bit drop across the midpoint.  As most
+binary information is _extremely grey,_ this action increases our chances of getting a potential bit drop 
+from representing the value in it's numeric form _dramatically!_  The midpoint formula is very simple, but
+intentionally yields the _inverse_ of the above midpoint counting scheme.  I promise that will make _absolute_
+sense in the next solution -
 
-The next solution tackles just that!
+    "The Midpoint Delta Operation"
+    
+    𝑚 = The index midpoint
+    𝑡 = The target value to encode
+
+    Δ = 𝑚 - 𝑡 
+
+Let's say you wish to encode the value `5` in a nibble index using delta encoding -
+
+    [ 1 0 0 0 ] (8) ← The midpoint
+    [ 0 1 0 1 ] (5) ← The value to encode
+
+    Δ = 8 - 5 = 3
+
+        [ 1 1 ] (3) ← The absolute delta
+
+While this is the entire gist of _delta encoding,_ this is _not_ enough information to reconstruct the original
+data!  How do you _implicitly_ know what sign the resulting delta has? If only we could consider the sign as an 
+entirely separate _artifact_ and just store the **_absolute value_** of the delta...
+
+We'll tackle that in the next solution =)
