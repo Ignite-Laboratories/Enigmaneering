@@ -36,7 +36,7 @@ information _on average!_  Or, to put it more formally:
     "The Binary Midpointing Priciple"
 
         Binary information can be rewritten as a delta from the midpoint of its 
-        containing index in an average of one bit less than counting from 0.
+        containing index in an average of at least one bit less than counting from 0.
 
 ### Why?
 Well, because binary is literally repeating the same values twice before growing by one bit -
