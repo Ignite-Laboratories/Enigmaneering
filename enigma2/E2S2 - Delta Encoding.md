@@ -74,28 +74,25 @@ could never shrink in bit length **_unless_** you count from the midpoint!
 
 Essentially, we've _reflected_ the exponential curvature of potential bit drop across the midpoint.  As most
 binary information is _extremely grey,_ this action increases our chances of getting a potential bit drop 
-from representing the value in its numeric form _dramatically!_  The _official_ midpoint formula is very simple, but
-intentionally yields the _inverse_ of the above midpoint counting scheme.  I promise that will make _absolute_
-sense in the next solution -
+from representing the value in its numeric form _dramatically!_  That makes an index midpointing operation
+quite simple -
 
-    "The Midpoint Delta Operation"
+    "The Index Midpoint Delta Operation"
     
-    𝑚 = The index midpoint
     𝑡 = The target value to encode
+    𝑚 = The index midpoint
 
-    Δ = 𝑚 - 𝑡 
+    Δ = 𝑡 - 𝑚  
 
 Let's say you wish to encode the value `11` in a nibble index using delta encoding -
 
     [ 1 0 0 0 ]  (8) ← The midpoint
-    [ 0 1 0 1 ] (11) ← The value to encode
+    [ 0 1 0 1 ]  (5) ← The value to encode
 
-    Δ = 8 - 11 = -3
+    Δ = 5 - 8 = -3
 
-        [ 1 1 ]  (3) ← The absolute delta
+      [ - 1 1 ]  (3) ← The delta
 
 While this is pretty much the gist of delta encoding, this is _not_ enough information to reconstruct the original
-data!  How do you _implicitly_ know what sign the resulting delta has? If only we could consider the sign as an 
-entirely separate _artifact_ and just store the **_absolute value_** of the delta...
-
-We'll tackle that in the next solution =)
+data!  How do you _implicitly_ know the original index size?  Could we instead use the _absolute value_ of the delta
+and treat the sign as an artifact?  The next solution answers both of these questions =)
