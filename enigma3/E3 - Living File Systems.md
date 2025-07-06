@@ -110,7 +110,7 @@ Now I have a little mental trick that was given to me by my dearest friend: rere
 consider that the _content providers_ are your _children!_  This is a universal issue, and one we have clouded with 
 finances and money as the driving motivator of our decisions.  It's high time we turn around and instead recognize that 
 we once were those little kids dreaming of ways to make the world a better place for the next generation before "sticking
-it to the man" as we became our own current selves.
+it to the man" as we became our current selves.
 
 The solution is simple: _be kinder to your fellow human, you don't know what they are currently experiencing._
 
