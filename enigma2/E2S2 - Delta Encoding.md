@@ -74,7 +74,7 @@ could never shrink in bit length **_unless_** you count from the midpoint!
 
 Essentially, we've _reflected_ the exponential curvature of potential bit drop across the midpoint.  As most
 binary information is _extremely grey,_ this action increases our chances of getting a potential bit drop 
-from representing the value in it's numeric form _dramatically!_  The _official_ midpoint formula is very simple, but
+from representing the value in its numeric form _dramatically!_  The _official_ midpoint formula is very simple, but
 intentionally yields the _inverse_ of the above midpoint counting scheme.  I promise that will make _absolute_
 sense in the next solution -
 
