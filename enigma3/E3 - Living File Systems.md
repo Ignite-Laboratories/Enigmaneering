@@ -52,7 +52,7 @@ I posit that the world currently has two major competing desires:
 
 This project _directly circumvents_ the second point, but the first still remains!
 
-Additionally, our current digital transmission infrastructure is currently built around _charging you by
+Additionally, our digital transmission infrastructure is currently built around _charging you by
 the bit._  The cost of _maintaining_ and _owning_ the infrastructure necessary to facilitate the transmission
 of bits is immense, and they are due our collective support in the **_daily effort_** it takes to keep it 
 operational - but their _throughput,_ and thus a notable portion of their income stream, is about to 
