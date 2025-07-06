@@ -15,7 +15,7 @@ Alone, this number is _absolutely no different_ from any other binary value!  Bu
 applied it to any other value than _zero_ you'd get an entirely different result.
 
 Let's say you _know_ the data exists in a 6-bit index, as it takes six bits to represent it.  From there
-you synthesize the _midpoint_ of that bit range and calculate the _delta_ to the target:
+you synthesize the _midpoint_ of that bit range and calculate the _distance_ to the target:
 
     "The Midpoint Operation"
 
@@ -23,7 +23,7 @@ you synthesize the _midpoint_ of that bit range and calculate the _delta_ to the
         [ 1 0 1 0 1 0 ] (42)  ← Target Value
         [ 1 0 0 0 0 0 ] (32)  ← Midpoint
     
-          [ - 1 0 1 0 ] (-10) ← Delta
+          [ - 1 0 1 0 ] (-10) ← Distance
 
 Immediately, we have gained a _single_ bit of reduction!  Of course, we'd need to _implicitly_ know
 the original index width to recreate the target value, but we'll get to that shortly.  Since we don't
