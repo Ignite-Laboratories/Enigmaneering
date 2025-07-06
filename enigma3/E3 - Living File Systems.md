@@ -100,8 +100,8 @@ and you'd rather sit on the sidelines and _**watch!?**_
 
 Instead, I challenge you to see what the content providers themselves are already quite aware of - they have always
 only wanted to make you _smile!_  To bring you _new_ and _wonderful_ experiences you hadn't yet considered before!
-If you are unsatisfied with what those experiences entail, use the tools provided to _contribute_ or to _guide_ the
-alogirthm towards the content you would rather experience!
+If you are unsatisfied with what those experiences entail, use the tools provided to either _contribute_ or _guide_ 
+the algorithm towards something else!
 
 If we empower _Others_ by identifying them for who they truly are, they will return the favor back in ways you
 couldn't even possibly fathom.
