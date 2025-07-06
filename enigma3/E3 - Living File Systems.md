@@ -103,7 +103,7 @@ only wanted to make you _smile!_  To bring you _new_ and _wonderful_ experiences
 If you are unsatisfied with what those experiences entail, use the tools provided to _contribute_ or to _guide_ the
 alogirthm towards the content you would rather experience!
 
-If we empower the _Others_ by identifying them for who they truly are, they will return the favor back in ways you
+If we empower _Others_ by identifying them for who they truly are, they will return the favor back in ways you
 couldn't even possibly fathom.
 
 Now, I have a little mental trick - reread the entirety of this section, but consider that the _content providers_
