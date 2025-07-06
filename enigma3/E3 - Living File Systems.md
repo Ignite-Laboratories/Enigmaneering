@@ -111,7 +111,7 @@ are your _children_ - desperately hoping you'll give them some feedback on their
 to iterate it forward.  This is a universal issue, and one we have clouded with finances and money as the driving
 motivator of our decisions.  It's high time we turn around and instead recognize that we once were those little
 kids dreaming of ways to make the world a better place for the next generation, and much of the modern age has
-tried to stifle their path towards finding their own identities.
+tried to stifle their path towards finding _their_ identities.
 
 The solution is simple: _be kinder to your fellow human, you don't know what they are currently experiencing._
 
