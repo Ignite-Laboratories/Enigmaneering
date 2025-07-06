@@ -87,7 +87,7 @@ quite simple -
 Let's say you wish to encode the value `11` in a nibble index using delta encoding -
 
     [ 1 0 0 0 ]  (8) ← The midpoint
-    [ 0 1 0 1 ]  (5) ← The value to encode
+    [ 0 1 0 1 ]  (5) ← The target point
 
     Δ = 5 - 8 = -3
 
