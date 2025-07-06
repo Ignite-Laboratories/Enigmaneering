@@ -96,7 +96,7 @@ all of your time.  It's to provide you with _inspiration_ towards adding _your_ 
 humanity!  Now that you can literally reference _any art in the known universe_ from a few numbers scratched onto
 a post-it note, you must ask yourself _"why did I want to hoard all of this stuff?  I don't even have enough time 
 to process all of it!"_  Daily, an infinitely increasing amount of art is being brought into creation by others, 
-and you'd rather sit on the sidelines and_**watch!?**_
+and you'd rather sit on the sidelines and _**watch!?**_
 
 Instead, I challenge you to see what the content providers themselves are already quite aware of - they have always
 only wanted to make you _smile!_  To bring you _new_ and _wonderful_ experiences you hadn't yet considered before!
