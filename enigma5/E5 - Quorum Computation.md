@@ -7,9 +7,9 @@
 Yes, you just read that right - dialectic behavioral therapy _for computers._  As bizarre as that sounds, I promise
 it will make sense as we continue, for now let's start with the most _basic_ connection between therapeutic practices
 and effective computed actions: the _what_ skills!  These typically are considered as three distinct steps performed
-in a loop called ODP.  First, you must _Observe_ what is happening - then _Describe_ (or identify) it - and finally 
-_Participate_.  Observe, describe, participate, repeat - four distinct steps that I hope to prove are the foundation 
-of _all_ forms of intelligence.   
+in a loop called ODP.  First, you must _Observe_ what is happening - then _Describe_ what it is - and finally decide
+what you should do to _participate_.  Observe, describe, participate, repeat - four distinct steps that I hope to prove 
+are the foundation of _all_ forms of intelligence.   
 
 What I'd like you to understand the most is that your mind must _let_ time pass in order to build enough 
 _context_ for it to describe its own observations before formulating a participatory reaction, and then looping.  If 

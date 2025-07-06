@@ -73,9 +73,10 @@ could never shrink in bit length **_unless_** you count from the midpoint!
               [ 0 ]  (0)          [ 1 0 0 0 ]  (0) = 8 - 8
 
 Essentially, we've _reflected_ the exponential curvature of potential bit drop across the midpoint.  As most
-binary information is _extremely grey,_ this action increases our chances of getting a potential bit drop 
-from representing the value in its numeric form _dramatically!_  That makes an index midpointing operation
-quite simple -
+binary information is _extremely grey,_ meaning it's often in the middle of the index, this action dramatically
+increases our chances of getting a bit drop from representing the value in its numeric form!  
+
+Let's formalize this particular step, as it's the lynch pin that holds everything together -
 
     "The Index Midpoint Delta Operation"
     
@@ -84,7 +85,7 @@ quite simple -
 
     Δ = 𝑡 - 𝑚  
 
-Let's say you wish to encode the value `11` in a nibble index using delta encoding -
+Let's say you wish to encode the logical point `0101` in a nibble index using delta encoding -
 
     [ 1 0 0 0 ]  (8) ← The midpoint
     [ 0 1 0 1 ]  (5) ← The target point
@@ -94,5 +95,7 @@ Let's say you wish to encode the value `11` in a nibble index using delta encodi
       [ - 1 1 ]  (3) ← The delta
 
 While this is pretty much the gist of delta encoding, this is _not_ enough information to reconstruct the original
-data!  How do you _implicitly_ know the original index size?  Could we instead use the _absolute value_ of the delta
-and treat the sign as an artifact?  The next solution answers both of these questions =)
+data!  Most importantly - what do you do with the sign!?  The next solution tackles that through implicit recursion =)
+
+### The Midpoint Averager
+This particular solution calculates the _average_ bit drop of many cycles of midpointing grey data.
