@@ -94,7 +94,7 @@ Let's say you wish to encode the value `5` in a nibble index using delta encodin
 
         [ 1 1 ] (3) ← The absolute delta
 
-While this is pretty much the gist of _delta encoding,_ this is _not_ enough information to reconstruct the original
+While this is pretty much the gist of delta encoding, this is _not_ enough information to reconstruct the original
 data!  How do you _implicitly_ know what sign the resulting delta has? If only we could consider the sign as an 
 entirely separate _artifact_ and just store the **_absolute value_** of the delta...
 
