@@ -20,8 +20,8 @@ you synthesize the _midpoint_ of that bit range and calculate the _distance_ to 
     "The Midpoint Operation"
 
         |←   6 Bits  →|
-        [ 1 0 1 0 1 0 ] (42)  ← Target Value
         [ 1 0 0 0 0 0 ] (32)  ← Midpoint
+           [ 1 0 1 1 0 ] (22)  ← Target Value
     
           [ - 1 0 1 0 ] (-10) ← Distance
 
