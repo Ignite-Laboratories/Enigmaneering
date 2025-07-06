@@ -87,12 +87,12 @@ sense in the next solution -
 
 Let's say you wish to encode the value `11` in a nibble index using delta encoding -
 
-    [ 1 0 0 0 ] (8) ← The midpoint
-    [ 0 1 0 1 ] (5) ← The value to encode
+    [ 1 0 0 0 ]  (8) ← The midpoint
+    [ 0 1 0 1 ] (11) ← The value to encode
 
     Δ = 8 - 11 = -3
 
-        [ 1 1 ] (3) ← The absolute delta
+        [ 1 1 ]  (3) ← The absolute delta
 
 While this is pretty much the gist of delta encoding, this is _not_ enough information to reconstruct the original
 data!  How do you _implicitly_ know what sign the resulting delta has? If only we could consider the sign as an 
