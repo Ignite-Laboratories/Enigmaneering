@@ -35,7 +35,7 @@ Or, to put it more formally:
 
     "The Binary Midpointing Priciple"
 
-        A binary value can be rewritten as the distance from the midpoint of its 
+        A binary point can be rewritten as the distance from the midpoint of its 
         containing index in an average of at least one bit less than counting from 0.
 
 ### Why?
