@@ -28,7 +28,7 @@ you synthesize the _midpoint_ of that bit range and calculate the _distance_ to 
 Immediately, we have gained a _single_ bit of reduction!  Of course, we'd need to _implicitly_ know
 the original index width to recreate the target value, but we'll get to that shortly.  Since we don't
 yet have a mechanism for managing the sign, we consider that it is a *transient* component and represent
-it by a negative sign.  This particular operation will yield one bit of reduction for _all indexes_ 
+it by a negative sign.  This particular operation will yield one bit of reduction for all indexes
 _at minimum!_  (Assuming its wide enough to be midpointed)
 
 Or, to put it more formally:
