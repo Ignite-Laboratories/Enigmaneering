@@ -20,7 +20,7 @@ The design is _very simple_ - but the possibilities are **_infinite!_**
 Things only get cooler from here =)
 
 ### Substrates
-The concept of DNA has intrigued me - why would it need to contain so damn much information if our creator had 
+The concept of DNA has always intrigued me - why would it need to contain so damn much data if our creator had 
 figured out how to distill information down to its starting conditions?  That's when I began to perceive it as 
 a _created container._  In an infinitely compressible system, even the densest evolutionary mechanism provided 
 by Mother Nature would have been _**created!**_  To argue that this world was only _created_ and didn't also
