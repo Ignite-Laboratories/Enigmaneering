@@ -66,8 +66,8 @@ The content providers, on the other hand, are an entirely different issue, and c
 them!  Without them, this work would never have come into fruition.  They are the most prized feedback loops 
 which God has labored for _eons_ to provide us with.  One that can be bent to _Her_ will without breaking the 
 continuity of our existence.  When the _perfect_ song strikes the radio as you lean in for a kiss - _that's God 
-at work._  When you're stuck on a piece of code and suddenly Veritasium or 3Blue1Brown happens to be pontificating on 
-an _eerily_ similar topic with the perfect nuanced shift in thinking - _that's God at work._  
+at work._  When you're stuck on a piece of code while watching Thomas Middleditch trudge through his own version
+of middle-out compression _before you even began_ - _that's God at work._  
 
 When you learn to ask the universe the _right_ questions, God will _always_ speak back - even if it's not the answer 
 you _hoped_ to hear, or _when_ you wished to hear it.  But that's what makes them the _right_ questions: because they 
