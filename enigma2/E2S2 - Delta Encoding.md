@@ -35,7 +35,7 @@ Or, to put it more formally:
 
     "The Binary Midpointing Priciple"
 
-        Binary information can be rewritten as a delta from the midpoint of its 
+        A binary value can be rewritten as a delta from the midpoint of its 
         containing index in an average of at least one bit less than counting from 0.
 
 ### Why?
