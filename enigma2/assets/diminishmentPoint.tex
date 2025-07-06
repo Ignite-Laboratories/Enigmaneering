@@ -3,13 +3,13 @@
 \small
 \begin{array}{rcl}
     n & = & \text{The target bit width} \\
-    ℓ & = & \text{The pattern index limit} \\
-    p & = & \text{The pattern bit width} \\
-    i & = & \text{The pattern interval value}
+    ℓ & = & \text{The diminishment index limit} \\
+    w & = & \text{The diminishment bit width} \\
+    i & = & \text{The diminishment interval}
 \end{array}
 \qquad
 \qquad
 \normalsize
-k = \left\lfloor \frac{𝑛}{p} \right\rfloor \\\\
+k = \left\lfloor \frac{𝑛}{w} \right\rfloor \\\\
 \sum_{j=0}^{k}
-\left\lfloor\left(\dfrac{2^{n-j*p}}{ℓ}\right)*i \right\rfloor
+\left\lfloor\left(\dfrac{2^{n-j*w}}{ℓ}\right)*i \right\rfloor

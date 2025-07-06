@@ -76,15 +76,15 @@ rightwards.  Let's circle back to the halving points of an index again -
         [ 0 0 1   0 0 0 0 0 0 0 ]  (128) ← The index's eighth point
            ⬑ Zeros are introduced proportionally with each halving
 
-This is pretty obvious - we are simply halving the target index's limit by one power of two less with each 
-iteration.  That being said, if you consider the first three bits to be a _pattern_ and the remaining bits 
-to be zero, a formula arises - 
+This is pretty obvious - we are simply halving the target index to the next smaller power of two with each 
+iteration. That being said, if you consider the first three bits to be a diminishment _bit pattern_ and the 
+remaining bits to be zero, a summable formula arises - 
 
     𝑛 = The target bit width
-    ℓ = The pattern index's limit
-    𝑖 = The pattern interval value
+    ℓ = The diminishment pattern index's limit
+    𝑖 = The diminishment interval
 
-    𝑥 = ⌊(2ⁿ/ℓ) * 𝑖⌋
+    𝑥 = ⌊ ( 2ⁿ / ℓ ) * 𝑖 ⌋
 
     let 𝑛 = 7
 
@@ -99,8 +99,9 @@ to be zero, a formula arises -
     [ 1 1 1   0 0 0 0 ] (112) = ⌊(2⁷/8) * 7⌋
                   ⬑ The trailing zeros
 
-Now you can recursively apply this operation against an index one pattern bit width smaller in size until you
-reach zero bits -
+Here the _diminishment_ is considered to be the abstract bit pattern to use, while the value of the pattern is
+considered to be the _interval._  Now you can recursively apply this operation against an index one pattern bit 
+width smaller until you reach the end of the target index -
 
     𝑛 = 𝑛 - 3
 
@@ -130,12 +131,13 @@ indeed matches our synthesized bit pattern's value -
 
     The starting conditions -
 
-                        ⬐ The pattern's bit width
-                    [ 0 1 0 ]  (4) ← The pattern interval
-                  [ 1 0 1 1 ] (11) ← The index bit width
+                           |←      7 Bits     →|
+                       (4) [ 0 1 0 ] [ 1 0 1 1 ] (11)
+    The diminishment interval ⬏           ⬑ The target bit width
 
     The target -
 
+    |←       11 Bits       →|
     [ 0 1 0 0 1 0 0 1 0 0 1 ]  (585) ← 0 1 0 repeated across the index
 
     The algorithm -
@@ -146,8 +148,9 @@ indeed matches our synthesized bit pattern's value -
                       [ 0 1 ]    (1) +
                               =  585
 
-In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values together.  
-Ultimately, that can be wrapped up into a very simple little formula to calculate each desired diminishment _point_ -
+In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values 
+together.  Ultimately, that can be wrapped up into a very simple little formula to calculate each desired 
+diminishment _point_ -
 
 <picture>
 <img alt="Index Diminishment Formula" src="assets/diminishmentPoint.png" style="display: block; margin-left: auto; margin-right: auto;">
