@@ -37,7 +37,7 @@ as a biological cell, concepts like _parity_ likely came out from a _similar too
 I sit in a unique position as I don't have the expertise to _deep dive_ into the way _biological_ DNA is encoded - my 
 scores in biology and chemistry have _always_ been quite lacking.  However, in my cursory research there is _immense_
 evidence that those with more knowledge than I have also found lots of _repetition_ in DNA.  While this doesn't
-allow me to jump to any conclusions, I wanted to highlight this particular connection before we proceeded forward!  I 
+allow me to jump to any conclusions, I wanted to highlight this particular connection before we proceed forward!  I 
 hope this can inspire some other brilliant enigmaneers to explore these bridges.
 
 ### Implications
