@@ -107,7 +107,7 @@ If we empower _Others_ by identifying them for who they truly are, they will ret
 couldn't even possibly fathom.
 
 Now I have a little mental trick that was given to me by my dearest friend: reread the entirety of this section, but 
-consider that the _content providers_ are your _children,_ desperately hoping you'll give them some feedback on their 
+consider that the _content providers_ are your _children_ desperately hoping you'll give them some feedback on their 
 artwork so they can learn how to iterate it forward.  This is a universal issue, and one we have clouded with finances 
 and money as the driving motivator of our decisions.  It's high time we turn around and instead recognize that we once 
 were those little kids dreaming of ways to make the world a better place for the next generation, and much of the modern 
