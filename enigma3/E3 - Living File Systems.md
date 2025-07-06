@@ -31,8 +31,8 @@ starting conditions themselves.  Depending on the environment, there would be di
 is required to _execute_ the starting conditions - but the actual path to follow could _always_ be distilled
 down to a minimum value.  I'm not a biologist, but I do have an okay understanding of _how_ to execute predefined 
 steps.  I'm also aware of how _parity_ can be used to redundantly encode information.  When you combine the
-need to accurately reference a very specific set of starting conditions with as rich and chaotic of substrates
-as biological cells, concepts like _parity_ likely came out from a _similar toolkit_ by our creator!
+need to accurately reference a very specific set of starting conditions from as rich and chaotic of a substrate
+as a biological cell, concepts like _parity_ likely came out from a _similar toolkit_ by our creator!
 
 I sit in a unique position as I don't have the expertise to _deep dive_ into the way _biological_ DNA is encoded - my 
 scores in biology and chemistry have _always_ been quite lacking.  However, in my cursory research there is _immense_
