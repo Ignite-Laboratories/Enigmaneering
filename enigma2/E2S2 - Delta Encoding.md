@@ -47,7 +47,7 @@ Well, because binary is literally repeating the same values twice before growing
       [ 1 1 1 1 1 1 1 ] (127) ← A next smaller dark side
     [ 0 0 0 0 0 0 0 0 ]   (0) ← The light side
 
-      0 + 127 = 128 ← The lower address range
+      0 + 127 = 127 ← The lower address range
     128 + 127 = 255 ← The upper address range
 
 Now, when one takes the _numeric form_ of a binary value, the growth rate of bits follows an _exponential_
