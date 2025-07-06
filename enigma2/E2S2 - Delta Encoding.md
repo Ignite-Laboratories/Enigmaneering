@@ -85,12 +85,12 @@ sense in the next solution -
 
     Δ = 𝑚 - 𝑡 
 
-Let's say you wish to encode the value `5` in a nibble index using delta encoding -
+Let's say you wish to encode the value `11` in a nibble index using delta encoding -
 
     [ 1 0 0 0 ] (8) ← The midpoint
     [ 0 1 0 1 ] (5) ← The value to encode
 
-    Δ = 8 - 5 = 3
+    Δ = 8 - 11 = -3
 
         [ 1 1 ] (3) ← The absolute delta
 
