@@ -33,10 +33,10 @@ _at minimum!_  (Assuming its wide enough to be midpointed)
 
 Or, to put it more formally:
 
-    "The Binary Midpointing Priciple"
+    "The Index Midpointing Priciple"
 
-        A binary point can be rewritten as the distance from the midpoint of its 
-        containing index in an average of at least one bit less than counting from 0.
+        A logical index point can be rewritten as the distance from the midpoint of its 
+        containing index in at least one bit less than counting from 0.
 
 ### Why?
 Well, because binary is literally repeating the same values twice before growing by one bit -
