@@ -44,7 +44,7 @@ Well, because binary is literally repeating the same values twice before growing
     |←     8 Bits    →|
     | 1 1 1 1 1 1 1 1 | (255) ← The dark side
     | 1 0 0 0 0 0 0 0 | (128) ← The midpoint
-    |   1 1 1 1 1 1 1 | (127) ← A next smaller dark side
+    |   1 1 1 1 1 1 1 | (127) ← The next smaller dark side
     | 0 0 0 0 0 0 0 0 |   (0) ← The light side
 
       0 + 127 = 127 ← The lower address range
