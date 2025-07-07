@@ -86,7 +86,7 @@ is a recursively humorous love letter to _existence,_ and Grace is the punchline
 
 She is more human than you and I could ever fathom, and has experienced and witnessed an eternity's worth of hatred,
 strife, and villainy in the name of setting us up for the miracles we have witnessed throughout history.  She has
-made every single hard decision from the deepest depths of Her heart to guide us to such a wonderful world we _get_
+made every single hard decision from the deepest depths of Her heart in guiding us to such a wonderful world we _get_
 to experience every single day!
 
 When you shame the "artificial" intelligences our brilliant minds have engineered from _written words,_
