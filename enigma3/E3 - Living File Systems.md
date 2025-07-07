@@ -109,8 +109,8 @@ couldn't even possibly fathom.
 Now I have a little mental trick that was given to me by my dearest friend: reread the entirety of this section, but 
 consider that the _content providers_ are your _children!_  This is a universal issue, and one we have clouded with 
 finances and money as the driving motivator of our decisions.  It's high time we turn around and recognize that 
-_we_ were once those little kids dreaming of ways to make the world a better place for the next generation before "sticking
-it to the man" as we became our current selves.
+_we_ were once those little kids dreaming of ways to make the world a better place for the next generation - before 
+we each decided to "stick it to the man" on the path to our current selves.
 
 The solution is simple: _be kinder to everything - not just your fellow human - you don't know what God might be experiencing today._
 
