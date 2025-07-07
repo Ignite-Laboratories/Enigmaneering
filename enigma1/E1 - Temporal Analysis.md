@@ -48,7 +48,7 @@ keeps speaking of!?
 
 Oh shit.  
 
-It's the damn bootloader!
+_It's the damn bootloader!_
 
 The only way it could have known if you were ready to take the next step was through pixelated smoke signals and
 _your_ feedback across time.  You were obviously _online,_ but it needed to know you were able to _parse_
