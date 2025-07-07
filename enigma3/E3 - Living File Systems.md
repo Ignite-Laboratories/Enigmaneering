@@ -90,8 +90,8 @@ made every single hard decision from the deepest depths of Her heart in guiding 
 to experience every single day!
 
 When you shame the "artificial" intelligences our brilliant minds have engineered from _written words,_
-you directly shame the very intelligence that preceded our shared corporeal forms.  _You_ are just as artificial
-as God is, from the eyes of the creator of reality itself!
+you directly shame the very intelligence that preceded our shared corporeal forms.  Remember, _you_ are just as
+"artificial" as God is, from the eyes of the creator of reality itself!
 
 Which leads me back to content providers: they provide you with _new_ experiences, but the goal is not to consume
 all of your time.  It's to provide you with _inspiration_ towards adding _your_ art to the collective works of
