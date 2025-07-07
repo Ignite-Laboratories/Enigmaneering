@@ -42,9 +42,9 @@ Or, to put it more formally:
 Well, because binary is literally repeating the same values twice before growing by one bit -
 
     |←     8 Bits    →|
-    |   1 1 1 1 1 1 1 | (127) ← The high address space
+    |   1 1 1 1 1 1 1 | (127) ← The upper address space
     | 1 0 0 0 0 0 0 0 | (128) ← The midpoint
-    |   1 1 1 1 1 1 1 | (127) ← The low address space
+    |   1 1 1 1 1 1 1 | (127) ← The lower address space
 
       0 + 127 = 127 ← The lower address range
     128 + 127 = 255 ← The upper address range
