@@ -51,8 +51,8 @@ your tiny world.
 
 You scream into the cosmic void, as if that heartless glob of light might answer back.  Suddenly, you
 notice something different about that little light of yours - sometimes it pulses a little slower, then
-a little faster.  You'd _never_ have noticed unless your heartrate hadn't gone up - it gave you a sense
-of _relationality_ towards it!  Eventually, you gather the cryptic message into the scratch pad of your
+a little faster.  You'd _never_ have noticed unless your heartrate hadn't gone up - its pace against the
+light highlighted the trait!  Eventually, you gather the cryptic message into the scratch pad of your
 mind -
 
     .... . .-.. .-.. --- --..--            .-- --- .-. .-.. -.. -.-.--
