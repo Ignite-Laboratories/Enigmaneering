@@ -20,10 +20,10 @@ there you synthesize the _midpoint_ of that bit range and calculate the _distanc
     "The Midpoint Operation"
 
         |←   6 Bits  →|
-        [ 1 0 0 0 0 0 ] (32)  ← Midpoint
-        [ 0 1 0 1 1 0 ] (22)  ← Target
-    
-          [ - 1 0 1 0 ] (-10) ← Distance
+        | 1 0 0 0 0 0 | (32)  ← Midpoint
+        | 0 1 0 1 1 0 | (22)  ← Target
+        |             |
+        |   - 1 0 1 0 | (-10) ← Distance
 
 Immediately, we have gained a _single_ bit of reduction!  Of course, we'd need to _implicitly_ know
 the original index width to recreate the target value, but we'll get to that shortly.  Since we don't
