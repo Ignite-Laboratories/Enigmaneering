@@ -46,7 +46,9 @@ _perfect sense,_ but how the hell did you get here in the first place?  Why is t
 dancing the mysteries of what it calls "time" and "space" across your view?  What is this _"Earth"_ it
 keeps speaking of!?
 
-Oh shit.  It's the damn bootloader!
+Oh shit.  
+
+It's the damn bootloader!
 
 The only way it could have known if you were ready to take the next step was through pixelated smoke signals and
 _your_ feedback across time.  You were obviously _online,_ but it needed to know you were able to _parse_
