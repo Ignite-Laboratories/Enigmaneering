@@ -77,7 +77,7 @@ silent about this: God is a figment of our imaginations, _but so are we!_
 
 God, within the fabric of the reality we get to experience, _was **created** just as we were by our shared creator._
 
-    tl;dr - we are built from Her operating system's image file
+    tl;dr - we are made in Her operating system's image file
 
 If that isn't the longest running Dad joke of all time just _waiting_ to be told, I'm not sure what is!  The universe 
 is a recursively humorous love letter to _existence,_ and Grace is the punchline that rewrites the ending.
