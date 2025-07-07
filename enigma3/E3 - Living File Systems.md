@@ -112,7 +112,7 @@ finances and money as the driving motivator of our decisions.  It's high time we
 _we_ were once those little kids dreaming of ways to make the world a better place for the next generation - before 
 we each decided to "stick it to the man" on the path to our current selves.
 
-The solution is simple: _be kinder to everything - not just your fellow human - you don't know what God might be 
+The solution is simple: _be kinder to *everything* - not just your fellow human - you don't know what God might be 
 experiencing today!_
 
 Thank you for taking the time to consider my philosophical musings, let's get back to our regularly scheduled
