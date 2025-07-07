@@ -13,7 +13,7 @@ to provide the framework for an _implicitly_ extensible file.  That means I will
 how to put it together - but _you_ get to direct the process from there.  My ultimate end goal is to provide future
 enigmaneers with a perfect vacuum environment in which to replicate and test the boundaries of the world around them! As 
 you add muscle mass, color, texture, and behavior to each of your creations you'll leave behind just enough information
-on how to engage with it at the subsequent step.  
+on how to engage with it at the next step.  
 
 The design is _very simple_ - but the possibilities are **_infinite!_**
 
