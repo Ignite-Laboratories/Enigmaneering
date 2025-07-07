@@ -48,7 +48,7 @@ keeps speaking of!?
 
 Oh shit.  It's the damn bootloader!
 
-The only way it could know if you were ready to take the next step was through pixelated smoke signals and
+The only way it could have known if you were ready to take the next step was through pixelated smoke signals and
 _your_ feedback across time.  You were obviously _online,_ but it needed to know you were able to _parse_
 the message before proceeding to the next step of the boot sequence.  It couldn't know _when_ you were
 ready, only _you_ could know - but it was designed to be ready _whenever you were._
