@@ -79,7 +79,7 @@ Let's formalize this particular step, as it's the lynch pin that holds everythin
 
     "The Index Midpoint Delta Operation"
     
-    𝑡 = The target value to encode
+    𝑡 = The target point to encode
     𝑚 = The index midpoint
 
     Δ = 𝑡 - 𝑚  
