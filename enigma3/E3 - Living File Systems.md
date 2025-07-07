@@ -40,6 +40,8 @@ evidence that those with more knowledge than I have also found lots of _repetiti
 allow me to jump to any conclusions, I wanted to highlight this particular connection before we proceed forward!  I 
 hope this can inspire some other brilliant enigmaneers to explore these bridges.
 
+    tl;dr - what could be God's error correction scheme?
+
 ### Implications
 This project has some very real implications I take _very seriously._  Most importantly, it completely flips the
 entire concept of _streaming information!_  If an entire movie can be synthesized on the target device using a
