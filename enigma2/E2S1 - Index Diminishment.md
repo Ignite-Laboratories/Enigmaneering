@@ -30,14 +30,15 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
     "Note Diminishment of an 11 bit Index"
  
         Pattern              Synthesized Point        Value   Interval   
-     (0) { 0 0 0 }   [ 0 0 0   0 0 0   0 0 0   0 0 ] (   0  ) + 292
-     (1) { 0 0 1 }   [ 0 0 1   0 0 1   0 0 1   0 0 ] (  292 ) + 293
-     (2) { 0 1 0 }   [ 0 1 0   0 1 0   0 1 0   0 1 ] (  585 ) + 292
-     (3) { 0 1 1 }   [ 0 1 1   0 1 1   0 1 1   0 1 ] (  877 ) + 293
-     (4) { 1 0 0 }   [ 1 0 0   1 0 0   1 0 0   1 0 ] ( 1170 ) + 292
-     (5) { 1 0 1 }   [ 1 0 1   1 0 1   1 0 1   1 0 ] ( 1462 ) + 293
-     (6) { 1 1 0 }   [ 1 1 0   1 1 0   1 1 0   1 1 ] ( 1755 ) + 292
-     (7) { 1 1 1 }   [ 1 1 1   1 1 1   1 1 1   1 1 ] ( 2047 )
+     (0) | 0 0 0 |   | 0 0 0   0 0 0   0 0 0   0 0 | (   0  ) + 292
+     (1) | 0 0 1 |   | 0 0 1   0 0 1   0 0 1   0 0 | (  292 ) + 293
+     (2) | 0 1 0 |   | 0 1 0   0 1 0   0 1 0   0 1 | (  585 ) + 292
+     (3) | 0 1 1 |   | 0 1 1   0 1 1   0 1 1   0 1 | (  877 ) + 293
+     (4) | 1 0 0 |   | 1 0 0   1 0 0   1 0 0   1 0 | ( 1170 ) + 292
+     (5) | 1 0 1 |   | 1 0 1   1 0 1   1 0 1   1 0 | ( 1462 ) + 293
+     (6) | 1 1 0 |   | 1 1 0   1 1 0   1 1 0   1 1 | ( 1755 ) + 292
+     (7) | 1 1 1 |   | 1 1 1   1 1 1   1 1 1   1 1 | ( 2047 )
+         |←  3  →|   |←          11 Bits          →|
 
 Literally any width index can be evenly diminished by the _limit_ of the pattern's index simply by repeating the 
 pattern across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  Because unlike mathematical 
@@ -71,9 +72,9 @@ rightwards.  Let's circle back to the halving points of an index again -
         Index 2¹⁰ (1024)
 
                 ⬐ Everything to the right is a single repeated bit
-        [ 1 0 0   0 0 0 0 0 0 0 ]  (512) ← The index's midpoint
-        [ 0 1 0   0 0 0 0 0 0 0 ]  (256) ← The index's quarter point
-        [ 0 0 1   0 0 0 0 0 0 0 ]  (128) ← The index's eighth point
+        | 1 0 0   0 0 0 0 0 0 0 |  (512) ← The index's midpoint
+        | 0 1 0   0 0 0 0 0 0 0 |  (256) ← The index's quarter point
+        | 0 0 1   0 0 0 0 0 0 0 |  (128) ← The index's eighth point
            ⬑ Zeros are introduced proportionally with each halving
 
 This is pretty obvious - we are simply halving the target index to the next smaller power of two with each 
@@ -89,14 +90,14 @@ remaining bits to be zero, a summable formula arises -
     let 𝑛 = 7
 
         ⬐ The pattern   𝑥 ⬎        ⬐ The formula
-    [ 0 0 0   0 0 0 0 ]   (0) = ⌊(2⁷/8) * 0⌋
-    [ 0 0 1   0 0 0 0 ]  (16) = ⌊(2⁷/8) * 1⌋
-    [ 0 1 0   0 0 0 0 ]  (32) = ⌊(2⁷/8) * 2⌋
-    [ 0 1 1   0 0 0 0 ]  (48) = ⌊(2⁷/8) * 3⌋
-    [ 1 0 0   0 0 0 0 ]  (64) = ⌊(2⁷/8) * 4⌋
-    [ 1 0 1   0 0 0 0 ]  (80) = ⌊(2⁷/8) * 5⌋
-    [ 1 1 0   0 0 0 0 ]  (96) = ⌊(2⁷/8) * 6⌋
-    [ 1 1 1   0 0 0 0 ] (112) = ⌊(2⁷/8) * 7⌋
+    | 0 0 0   0 0 0 0 |   (0) = ⌊(2⁷/8) * 0⌋
+    | 0 0 1   0 0 0 0 |  (16) = ⌊(2⁷/8) * 1⌋
+    | 0 1 0   0 0 0 0 |  (32) = ⌊(2⁷/8) * 2⌋
+    | 0 1 1   0 0 0 0 |  (48) = ⌊(2⁷/8) * 3⌋
+    | 1 0 0   0 0 0 0 |  (64) = ⌊(2⁷/8) * 4⌋
+    | 1 0 1   0 0 0 0 |  (80) = ⌊(2⁷/8) * 5⌋
+    | 1 1 0   0 0 0 0 |  (96) = ⌊(2⁷/8) * 6⌋
+    | 1 1 1   0 0 0 0 | (112) = ⌊(2⁷/8) * 7⌋
                   ⬑ The trailing zeros
 
 Here the _diminishment_ is considered to be the abstract bit pattern to use, while the value of the pattern is
@@ -105,25 +106,25 @@ width smaller until you reach the end of the target index -
 
     𝑛 = 𝑛 - 3
 
-          [ 0 0 0   0 ]   (0) = ⌊(2⁴/8) * 0⌋
-          [ 0 0 1   0 ]   (2) = ⌊(2⁴/8) * 1⌋
-          [ 0 1 0   0 ]   (4) = ⌊(2⁴/8) * 2⌋
-          [ 0 1 1   0 ]   (6) = ⌊(2⁴/8) * 3⌋
-          [ 1 0 0   0 ]   (8) = ⌊(2⁴/8) * 4⌋
-          [ 1 0 1   0 ]  (10) = ⌊(2⁴/8) * 5⌋
-          [ 1 1 0   0 ]  (12) = ⌊(2⁴/8) * 6⌋
-          [ 1 1 1   0 ]  (14) = ⌊(2⁴/8) * 7⌋
+          | 0 0 0   0 |   (0) = ⌊(2⁴/8) * 0⌋
+          | 0 0 1   0 |   (2) = ⌊(2⁴/8) * 1⌋
+          | 0 1 0   0 |   (4) = ⌊(2⁴/8) * 2⌋
+          | 0 1 1   0 |   (6) = ⌊(2⁴/8) * 3⌋
+          | 1 0 0   0 |   (8) = ⌊(2⁴/8) * 4⌋
+          | 1 0 1   0 |  (10) = ⌊(2⁴/8) * 5⌋
+          | 1 1 0   0 |  (12) = ⌊(2⁴/8) * 6⌋
+          | 1 1 1   0 |  (14) = ⌊(2⁴/8) * 7⌋
 
     𝑛 = 𝑛 - 3
 
-                  [ 0 ]   (0) = ⌊(2¹/8) * 0⌋
-                  [ 0 ]   (0) = ⌊(2¹/8) * 1⌋
-                  [ 0 ]   (0) = ⌊(2¹/8) * 2⌋
-                  [ 0 ]   (0) = ⌊(2¹/8) * 3⌋
-                  [ 1 ]   (1) = ⌊(2¹/8) * 4⌋
-                  [ 1 ]   (1) = ⌊(2¹/8) * 5⌋
-                  [ 1 ]   (1) = ⌊(2¹/8) * 6⌋
-                  [ 1 ]   (1) = ⌊(2¹/8) * 7⌋
+                  | 0 |   (0) = ⌊(2¹/8) * 0⌋
+                  | 0 |   (0) = ⌊(2¹/8) * 1⌋
+                  | 0 |   (0) = ⌊(2¹/8) * 2⌋
+                  | 0 |   (0) = ⌊(2¹/8) * 3⌋
+                  | 1 |   (1) = ⌊(2¹/8) * 4⌋
+                  | 1 |   (1) = ⌊(2¹/8) * 5⌋
+                  | 1 |   (1) = ⌊(2¹/8) * 6⌋
+                  | 1 |   (1) = ⌊(2¹/8) * 7⌋
                            ⬑ NOTE: This is floored
 
 So, let's put that all together and validate that the 4ᵗʰ interval of a 3 bit diminishment across an 11 bit index 
@@ -138,14 +139,15 @@ indeed matches our synthesized bit pattern's value -
     The target -
 
     |←       11 Bits       →|
-    [ 0 1 0 0 1 0 0 1 0 0 1 ]  (585) ← 0 1 0 repeated across the index
+    | 0 1 0 0 1 0 0 1 0 0 1 |  (585) ← 0 1 0 repeated across the index
 
     The algorithm -
 
-    [ 0 1 0 0 0 0 0 0 0 0 0 ]  (512)
-          [ 0 1 0 0 0 0 0 0 ]   (64) +
-                [ 0 1 0 0 0 ]    (8) +
-                      [ 0 1 ]    (1) +
+    |←       11 Bits       →|
+    | 0 1 0 0 0 0 0 0 0 0 0 |  (512)
+    |       0 1 0 0 0 0 0 0 |   (64) +
+    |             0 1 0 0 0 |    (8) +
+    |                   0 1 |    (1) +
                               =  585
 
 In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values 

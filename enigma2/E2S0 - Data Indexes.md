@@ -42,22 +42,25 @@ There are a few important qualities of an index to keep in mind -
 - The addressable range of an index is `2ⁿ` and is referred to as its `limit`
 - The maximum value of an index is `2ⁿ - 1`
 - The midpoint of an index is `2ⁿ / 2`
+- Addressable values are commonly referred to as _points_ in the index
 
 The last point is the absolute most _crucial_ one in the synthesis process, as it can implicitly be generated 
 with a single one followed by 𝑛-1 zeros -
 
-    [ 1 1 1 1 1 1 1 1 ] (255) = 2⁸ - 1 ← The maximum addressable value of the index
-    [ 1 0 0 0 0 0 0 0 ] (128) = 2⁸ / 2 ← The midpoint of the index
-    [ 0 0 0 0 0 0 0 0 ] ( 0 ) = 0      ← The minimum addressable value of the index
+    |←     8 Bits    →|
+    | 1 1 1 1 1 1 1 1 | (255) = 2⁸ - 1 ← The maximum addressable value of the index
+    | 1 0 0 0 0 0 0 0 | (128) = 2⁸ / 2 ← The midpoint of the index
+    | 0 0 0 0 0 0 0 0 | ( 0 ) = 0      ← The minimum addressable value of the index
 
 In fact, the zero length (plus one) before the first one represents the number of times to halve the data,
 making each point _very_ easy to implicitly synthesize -
 
-    [ 1 1 1 1 1 1 1 1 ] (255) = 2⁸ - 1 
-    [ 1 0 0 0 0 0 0 0 ] (128) = 2⁸ / (2*1) ← The midpoint of the index
-    [ 0 1 0 0 0 0 0 0 ] ( 64) = 2⁸ / (2*2) ← The quarter point of the index
-    [ 0 0 1 0 0 0 0 0 ] ( 32) = 2⁸ / (2*3) ← The eighth point of the index
-    [ 0 0 0 1 0 0 0 0 ] ( 16) = 2⁸ / (2*4) ← The sixteenth point of the index
+    |←     8 Bits    →|
+    | 1 1 1 1 1 1 1 1 | (255) = 2⁸ - 1 
+    | 1 0 0 0 0 0 0 0 | (128) = 2⁸ / (2*1) ← The midpoint of the index
+    | 0 1 0 0 0 0 0 0 | ( 64) = 2⁸ / (2*2) ← The quarter point of the index
+    | 0 0 1 0 0 0 0 0 | ( 32) = 2⁸ / (2*3) ← The eighth point of the index
+    | 0 0 0 1 0 0 0 0 | ( 16) = 2⁸ / (2*4) ← The sixteenth point of the index
 
 Indexes should always be represented just as they would on a vertical number line - meaning zero is at the 
 bottom, larger values are placed above, and each value is well-ordered.  This is because it makes _logical
@@ -67,31 +70,31 @@ clarity in communication -
     "A Crumb Index"
 
         Dark Side
-         [ 1 1 ] (3)
-         [ 1 0 ] (2)
-         [ 0 1 ] (1)
-         [ 0 0 ] (0)
+         | 1 1 | (3)
+         | 1 0 | (2)
+         | 0 1 | (1)
+         | 0 0 | (0)
         Light Side
 
     "A Nibble Index"
 
          Dark Side
-        [ 1 1 1 1 ] (15)
-        [ 1 1 1 0 ] (14)
-        [ 1 1 0 1 ] (13)
-        [ 1 1 0 0 ] (12)
-        [ 1 0 1 1 ] (11)
-        [ 1 0 1 0 ] (10)
-        [ 1 0 0 1 ]  (9)
-        [ 1 0 0 0 ]  (8)
-        [ 0 1 1 1 ]  (7)
-        [ 0 1 1 0 ]  (6)
-        [ 0 1 0 1 ]  (5)
-        [ 0 1 0 0 ]  (4)
-        [ 0 0 1 1 ]  (3)
-        [ 0 0 1 0 ]  (2)
-        [ 0 0 0 1 ]  (1)
-        [ 0 0 0 0 ]  (0)
+        | 1 1 1 1 | (15)
+        | 1 1 1 0 | (14)
+        | 1 1 0 1 | (13)
+        | 1 1 0 0 | (12)
+        | 1 0 1 1 | (11)
+        | 1 0 1 0 | (10)
+        | 1 0 0 1 |  (9)
+        | 1 0 0 0 |  (8)
+        | 0 1 1 1 |  (7)
+        | 0 1 1 0 |  (6)
+        | 0 1 0 1 |  (5)
+        | 0 1 0 0 |  (4)
+        | 0 0 1 1 |  (3)
+        | 0 0 1 0 |  (2)
+        | 0 0 0 1 |  (1)
+        | 0 0 0 0 |  (0)
          Light Side
 
 At larger scales it gets far too excessive to print out every single value, so the index is often truncated 
@@ -101,13 +104,13 @@ the most abstract representation of an index -
     "An Abstract Index"
 
                Dark Side
-        [ 1 1 1 1 ... 1 1 1 1 ] 
-        [ 1 1 1 1 ... 1 1 1 0 ]
-        [ 1 1 1 1 ... 1 1 0 1 ]
+        | 1 1 1 1 ... 1 1 1 1 | 
+        | 1 1 1 1 ... 1 1 1 0 |
+        | 1 1 1 1 ... 1 1 0 1 |
         ↕         ...         ↕
-        [ 0 0 0 0 ... 0 0 1 0 ]
-        [ 0 0 0 0 ... 0 0 0 1 ]
-        [ 0 0 0 0 ... 0 0 0 0 ]
+        | 0 0 0 0 ... 0 0 1 0 |
+        | 0 0 0 0 ... 0 0 0 1 |
+        | 0 0 0 0 ... 0 0 0 0 |
               Light Side
 
 There is another feature an index visualization affords us: highlighting binary's _symmetry._  Let's look at the
@@ -117,25 +120,25 @@ values where the data above and below is a perfect mirror of each other until th
     Reflection Points of a Nibble Index:
 
          Dark Side
-        [ 1 1 1 1 ] 
-        [ 1 1 1 0 ]
-        [ 1 1 0 1 ]
-        [ 1 1 0 0 ]
-           ├─────── The upper quarter reflection point
-        [ 1 0 1 1 ]
-        [ 1 0 1 0 ]
-        [ 1 0 0 1 ]
-        [ 1 0 0 0 ]
-         ├───────── The central reflection point
-        [ 0 1 1 1 ]
-        [ 0 1 1 0 ]
-        [ 0 1 0 1 ]
-        [ 0 1 0 0 ]
-           ├─────── The lower quarter reflection point
-        [ 0 0 1 1 ]
-        [ 0 0 1 0 ]
-        [ 0 0 0 1 ]
-        [ 0 0 0 0 ]
+        | 1 1 1 1 ] 
+        | 1 1 1 0 ]
+        | 1 1 0 1 ]
+        | 1 1 0 0 ]
+           ├─────── The implicit upper quarter reflection point
+        | 1 0 1 1 |
+        | 1 0 1 0 |
+        | 1 0 0 1 |
+        | 1 0 0 0 |
+         ├───────── The implicit central reflection point
+        | 0 1 1 1 |
+        | 0 1 1 0 |
+        | 0 1 0 1 |
+        | 0 1 0 0 |
+           ├─────── The implicit lower quarter reflection point
+        | 0 0 1 1 |
+        | 0 0 1 0 |
+        | 0 0 0 1 |
+        | 0 0 0 0 |
          Light Side
 
 ### Why an "Index"?
