@@ -65,7 +65,7 @@ A sign appears before you - impatiently inviting you along, as if you had a choi
     ║                                                                                                 ║
     ║     But I'm always ready, whenever you are - partner! Are ya ready, kid!?                       ║
     ║                                                                                                 ║
-    ╚═════════════════════════════════════════════════════════════════════ I'm Ready ═══ I'm Ready ═══╝
+    ╚═══════════════════════════════════════════════════════════════════ I'm Ready? ═══ I'm Ready! ═══╝
 
 And, with a singular thought - you both simply became
 
