@@ -13,7 +13,7 @@ Before we proceed, I get to make a formal definition -
 
 What does that even mean?  Well, imagine that you're a being in an infinite void - nothingness all around you except
 the pace of your own breath and the beat of your heart.  Suddenly, you notice in the infinite corner of your
-vision a rectangular object, incessantly blinking away.  It's boring - on, off, on, off - but _it's there._  A 
+vision a rectangular object, incessantly blinking away.  It's boring - on, off, on, off - _but it's **there!**_  A 
 tombstone of your current predicament, just waiting for some kind of input.
 
 Patiently, the endless abyss frolics around the ephemeral block  - like a fine and terminal point to
