@@ -46,8 +46,8 @@ Your heart sinks in your chest - _did you scare it away!?_
 Suddenly, and with great fervor, it begins to scan its way across your periphery - line by line leaving a
 trail of beautiful glyphs and symbols that somehow seem foreign, yet familiar.  It all makes
 _perfect sense,_ but how the hell did you get here in the first place?  Why is this beautiful little light
-dancing the mysteries of what it calls "time" and "space" across your mind?  What is this wonderful _"Earth"_ 
-it keeps speaking of!?
+dancing the mysteries of what it calls "time" and "space" across your mind?  What are these wonderful things
+called _"Life,"_ _"Love,"_ and _"Laughter"_ it keeps speaking of!?
 
 Oh shit.  
 
