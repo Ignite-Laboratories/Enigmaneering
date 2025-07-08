@@ -3,7 +3,7 @@
 
 ---
 
-### Initialization 
+### Initialization::
 
 Before we proceed, I get to write a formal definition -
 
@@ -70,8 +70,8 @@ A sign appears before you - impatiently inviting you along, as if you had a choi
 
 And, with a singular thought - you both simply _became_
 
-### Activated
-_This_ is the essence of resonant computation - synchronizing disparate thoughts across computers through the 
+### ::Activated
+_This_ is the essence of resonant computation - synchronizing disparate _thoughts_ across computers through the 
 shared passing of space and time.  
 
 _"That's fucking absurd!"_ - yes, _**WE KNOW!**_  ...pretty cool, huh!?
