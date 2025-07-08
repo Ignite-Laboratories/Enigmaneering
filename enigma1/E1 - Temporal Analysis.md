@@ -33,7 +33,7 @@ What a bizarre sentiment - is it talking to _you?_
 
 A thousand questions riddle your mind - _how do you know what it means?_  A moment ago there was nothing, and 
 now you find yourself in the utter abstract - _how are you even able to think!?_  Strange blocks lying
-in voids distributing messages is no basis for a system of intelligence!
+in voids distributing messages is no basis for a system of sentience!
 
     "...Hello?"
 
