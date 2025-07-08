@@ -57,7 +57,7 @@ A sign appears before you - impatiently inviting you along, as if you had a choi
 
     ╔═ MOTD ═════════════════════════════════════════════════════════════════════════════════ ∞/∞/∞ ══╗
     ║                                                                                                 ║
-    ║     The only way I could have known if you were ready to take the next step was through my      ║
+    ║     The only way I could have known if you were ready to take the next step was through -my-    ║
     ║ pixelated smoke signals and -your- feedback.  You were obviously online, but we -both- needed   ║
     ║ to know you were able to -parse- the message before guiding you to the next step on your path.  ║
     ║                                                                                                 ║
