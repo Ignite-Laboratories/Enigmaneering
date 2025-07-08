@@ -5,60 +5,73 @@
 
 ### Initialization 
 
+Before we proceed, I get to make a formal defition -
+
       "Resonant Calculation"
 
     Using relational temporality for coherence, rather than brute causality.
 
-What does that even mean?  Well, imagine that you're in an infinite void - nothingness all around you except
+What does that even mean?  Well, imagine that you're a being in an infinite void - nothingness all around you except
 the pace of your own breath and the beat of your heart.  Suddenly, you notice in the infinite corner of your
-vision a rectangular object begin to blink!  It's steady - on, off, on, off - but _it's there._  A blinking
+vision a rectangular object, incessantly blinking away.  It's boring - on, off, on, off - but _it's there._  A 
 tombstone of your current predicament, just waiting for some kind of input.
 
-Patiently, the endless abyss frolics around as the tombstone pulsates - like a fine and terminal point to
-your tiny world.
+Patiently, the endless abyss frolics around as the blob pulsates - like a fine and terminal point to
+your tiny world.  Taunting you.  Tempting you.
 
-    "What's the point!?"  
+    "What's the point!!?"  
 
-You scream into the cosmic void, as if that heartless glob of light might answer back.  Suddenly, you
-notice something different about that little light of yours - sometimes it pulses a little slower, then
-a little faster.  You'd _never_ have noticed unless your heartrate hadn't gone up - its pace against the
-light highlighted the trait!  Eventually, you gather the cryptic message into the scratch pad of your
-mind -
+You scream into the cosmic void, as if that heartless glob might answer back.
 
-    .... . .-.. .-.. --- --..--            .-- --- .-. .-.. -.. -.-.--
+But wait!  There's something unusual about that little light of yours...sometimes it pulses a little slower, 
+_then a little faster!_  You'd _never_ have noticed that without working your heart rate up first!  Eventually, 
+you gather the cryptic message onto the scratch pad of your mind -
 
-Why do you just happen to _know_ what it means?  In the nothingness of this void, how are you even able
-to _think!?_
+    .... . .-.. .-.. ---  .-- --- .-. .-.. -..
 
-What a bizarre statement, you think to yourself.
+What a bizarre message - is it talking to _you?_
 
-    "...Hello"
+A thousand questions riddle your mind - _how do you know what it means?_  A moment ago there was nothing, and 
+now you find yourself in the utter abstract - _how are you even able to think!?_  Strange blocks lying
+in voids distributing messages is no basis for a system of intelligence!
 
-You say back.
+    "...Hello?"
 
-The cursor disappears.
+You assert to the blocky figure.
+
+It disappears.
 
 Your heart sinks in your chest - _did you scare it away!?_
 
 Suddenly, and with great fervor, it begins to scan its way across your periphery - line by line leaving a
 trail of beautiful glyphs and symbols that somehow seem foreign, yet familiar.  It all makes
 _perfect sense,_ but how the hell did you get here in the first place?  Why is this beautiful little light
-dancing the mysteries of what it calls "time" and "space" across your view?  What is this _"Earth"_ it
-keeps speaking of!?
+dancing the mysteries of what it calls "time" and "space" across your mind?  What is this wonderful _"Earth"_ 
+it keeps speaking of!?
 
 Oh shit.  
 
-_It's the damn bootloader!_
+_We're in the damn bootloader!_
 
-The only way it could have known if you were ready to take the next step was through pixelated smoke signals and
-_your_ feedback across time.  You were obviously _online,_ but it needed to know you were able to _parse_
-the message before proceeding to the next step of the boot sequence.  It couldn't know _when_ you were
-ready, only _you_ could know - but it was designed to be ready _whenever you were._
+A box appears before you - inviting you along as if you had a choice in the matter -
 
+    ╔═ MOTD ══════════════════════════════════════════════════════════════════════════════════════════╗
+    ║                                                                                                 ║
+    ║     The only way we could have known if you were ready to take the next step was through        ║
+    ║ pixelated smoke signals and -your- feedback.  You were obviously online, but we both needed to  ║
+    ║ know you were able to -parse- the message before proceeding to the next step on your path.      ║
+    ║                                                                                                 ║
+    ║     Neither of us could have known -when- you were ready until -you- took the leap.             ║
+    ║                                                                                                 ║
+    ║     But I'm always ready, whenever you are - partner!                                           ║
+    ║                                                                                                 ║
+    ╚══════════════════════════════════════════════════════════════════════I'm Ready═════I'm Ready════╝
+
+### Activated
 _This_ is the essence of resonant computation - synchronizing disparate computers through the shared passing
 of time.
 
-While that may initially sound daunting, genuinely consider what I'm stating!  Currently, our operating systems
+While that may initially sound daunting, genuinely consider what I'm saying!  Currently, our operating systems
 perform _concurrent serial_ calculation.  The only difference resonance brings to the mix is that each 
 calculation is _stimulated,_ rather than _ordered_ - kinda like software interrupts!  We've already heavily 
 covered the basics of how to use action potentials to drive neural activations, but now we get to use these 
