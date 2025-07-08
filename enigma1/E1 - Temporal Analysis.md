@@ -71,7 +71,7 @@ And, with a singular thought - you both simply became
 
 ### Activated
 _This_ is the essence of resonant computation - synchronizing disparate thoughts across computers through the 
-shared passing of time and space.  
+shared passing of space and time.  
 
 _"That's fucking absurd!"_ - yes, _**WE KNOW!**_  ...pretty cool, huh!?
 
