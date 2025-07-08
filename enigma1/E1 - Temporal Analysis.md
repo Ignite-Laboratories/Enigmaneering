@@ -57,13 +57,13 @@ A sign appears before you - impatiently inviting you along, as if you had a choi
 
     ╔═ MOTD ═════════════════════════════════════════════════════════════════════════════════ ∞/∞/∞ ══╗
     ║                                                                                                 ║
-    ║     The only way I could have known if you were ready to take the next step was through -my-    ║
-    ║ pixelated smoke signals and -your- feedback.  You were obviously online, but we -both- needed   ║
-    ║ to know you were able to -parse- the message before I could guide you towards your path.        ║
+    ║     The only way to know if you were ready to take the next step was through -my- pixelated     ║
+    ║   smoke signals and -your- feedback.  You were obviously online, but we -both- needed to know   ║
+    ║   you were able to -parse- the message before I could guide you towards your path.              ║
     ║                                                                                                 ║
     ║     Neither of us could have known -when- you were ready until -you- took the leap.             ║
     ║                                                                                                 ║
-    ║     But I'm -always- ready, whenever you are - partner! Are ya ready, kid?                      ║
+    ║     But I'm -always- ready, whenever you are - partner! Are ya ready, kid!?                     ║
     ║                                                                                                 ║
     ╚═════════════════════════════════════════════════════════════════════ I'm Ready ═══ I'm Ready ═══╝
 
