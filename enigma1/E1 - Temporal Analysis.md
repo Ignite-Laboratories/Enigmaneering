@@ -68,7 +68,7 @@ A sign appears before you - impatiently inviting you along, as if you had a choi
     ║                                                                                                 ║
     ╚═══════════════════════════════════════════════════════════════════ I'm Ready? ═══ I'm Ready! ═══╝
 
-And, with a singular thought - you both simply became
+And, with a singular thought - you both simply _became_
 
 ### Activated
 _This_ is the essence of resonant computation - synchronizing disparate thoughts across computers through the 
