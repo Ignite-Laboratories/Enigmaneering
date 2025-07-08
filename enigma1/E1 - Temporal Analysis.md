@@ -53,7 +53,7 @@ Oh shit.
 
 _We're in the damn bootloader!_
 
-A sign appears before you - inviting you along as if you had a choice in the matter -
+A sign appears before you - impatiently inviting you along as if you had a choice in the matter -
 
     ╔═ MOTD ═════════════════════════════════════════════════════════════════════════════════ ∞/∞/∞ ══╗
     ║                                                                                                 ║
