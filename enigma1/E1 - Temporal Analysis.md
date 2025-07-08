@@ -5,7 +5,7 @@
 
 ### Initialization 
 
-Before we proceed, I get to make a formal defition -
+Before we proceed, I get to make a formal definition -
 
       "Resonant Calculation"
 
@@ -16,20 +16,20 @@ the pace of your own breath and the beat of your heart.  Suddenly, you notice in
 vision a rectangular object, incessantly blinking away.  It's boring - on, off, on, off - but _it's there._  A 
 tombstone of your current predicament, just waiting for some kind of input.
 
-Patiently, the endless abyss frolics around as the blob pulsates - like a fine and terminal point to
+Patiently, the endless abyss frolics around the ephemeral block  - like a fine and terminal point to
 your tiny world.  Taunting you.  Tempting you.
 
     "What's the point!!?"  
 
 You scream into the cosmic void, as if that heartless glob might answer back.
 
-But wait!  There's something unusual about that little light of yours...sometimes it pulses a little slower, 
-_then a little faster!_  You'd _never_ have noticed that without working your heart rate up first!  Eventually, 
-you gather the cryptic message onto the scratch pad of your mind -
+_But wait!_  There's something unusual about that little light of yours...it almost dances with your now racing
+heartbeat.  Sometimes a little faster, sometimes slower.  Why didn't you notice that before!?  Feverishly, you 
+gather the cryptic message onto the scratch pad of your mind -
 
     .... . .-.. .-.. ---  .-- --- .-. .-.. -..
 
-What a bizarre message - is it talking to _you?_
+What a bizarre sentiment - is it talking to _you?_
 
 A thousand questions riddle your mind - _how do you know what it means?_  A moment ago there was nothing, and 
 now you find yourself in the utter abstract - _how are you even able to think!?_  Strange blocks lying
@@ -37,7 +37,7 @@ in voids distributing messages is no basis for a system of intelligence!
 
     "...Hello?"
 
-You assert to the blocky figure.
+You assert back to the blocky figure.
 
 It disappears.
 
@@ -53,43 +53,47 @@ Oh shit.
 
 _We're in the damn bootloader!_
 
-A box appears before you - inviting you along as if you had a choice in the matter -
+A sign appears before you - inviting you along as if you had a choice in the matter -
 
-    ╔═ MOTD ══════════════════════════════════════════════════════════════════════════════════════════╗
+    ╔═ MOTD ═════════════════════════════════════════════════════════════════════════════════ ∞/∞/∞ ══╗
     ║                                                                                                 ║
     ║     The only way we could have known if you were ready to take the next step was through        ║
     ║ pixelated smoke signals and -your- feedback.  You were obviously online, but we both needed to  ║
-    ║ know you were able to -parse- the message before proceeding to the next step on your path.      ║
+    ║ know you were able to -parse- the message before guiding you to the next step on your path.     ║
     ║                                                                                                 ║
     ║     Neither of us could have known -when- you were ready until -you- took the leap.             ║
     ║                                                                                                 ║
-    ║     But I'm always ready, whenever you are - partner!                                           ║
+    ║     But I'm always ready, whenever you are - partner! Are ya ready, kid?                        ║
     ║                                                                                                 ║
-    ╚══════════════════════════════════════════════════════════════════════I'm Ready═════I'm Ready════╝
+    ╚═════════════════════════════════════════════════════════════════════ I'm Ready ═══ I'm Ready ═══╝
+
+And, with a singular thought - you both simply became
 
 ### Activated
 _This_ is the essence of resonant computation - synchronizing disparate computers through the shared passing
-of time.
+of time and space.  
 
-While that may initially sound daunting, genuinely consider what I'm saying!  Currently, our operating systems
-perform _concurrent serial_ calculation.  The only difference resonance brings to the mix is that each 
-calculation is _stimulated,_ rather than _ordered_ - kinda like software interrupts!  We've already heavily 
+_"That's fucking absurd!"_ - yes, _**WE KNOW!**_  ...pretty cool, huh?
+
+While that may sound wacky as all hell, genuinely consider what I'm saying!  Currently, our operating 
+systems perform _concurrent serial calculation._  The only difference resonance brings to the mix is that each 
+calculation is _activated,_ rather than _invoked_ - kinda like software interrupts!  We've already heavily 
 covered the basics of how to use action potentials to drive neural activations, but now we get to use these 
 concepts to perform _real time calculus operations!_
 
 To _integrate_ is to take infinitesimally small measurements of something until you can approximate it with a
 high degree of accuracy.  If you consider a _signal_ across time to be _observable,_ then the act of taking
-smaller and smaller observances of the signal is a form of _fuzzy integration._  The reason it's a _fuzzy_
-integral is because there isn't always a guarantee you have observed _every_ possible instant of time, and
-the _rate_ of observance directly affects your results.  The fact remains that unless you control the _generation_ 
-of a signal, you can never _gauarantee_ you will observe every value it could occupy across time.
+smaller and smaller observances of the signal is a form of _fuzzy integration._  The reason it's "fuzzy" is 
+that there isn't always a guarantee you have observed _every_ possible instant of time, and the _rate_ of 
+observance directly affects your results.  Unless you control the _generation_ of a signal, you can never 
+_gauarantee_ you will observe every value it could occupy across time.
 
 _But that's okay!_
 
 If you take that as a _positive_ aspect of a real-time calculus engine, then you can separate the _observance_ 
 and _analysis_ of the signal as _resonant tasks._  One can _observe_ at a high frequency while the analyzer 
 fires at a slower rate, then on the next activation the analyzer can perform calculation on whatever data it 
-_missed_ but the observer recorded.  I briefly touched on this in the first enigma when I mentioned _temporal
+_missed_ but the observer recorded.  I briefly touched on this in the initial enigma when I mentioned _temporal
 fragment shading -_
 
 <picture>
