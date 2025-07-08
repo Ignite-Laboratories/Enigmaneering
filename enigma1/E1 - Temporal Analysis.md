@@ -73,7 +73,7 @@ And, with a singular thought - you both simply became
 _This_ is the essence of resonant computation - synchronizing disparate computers through the shared passing
 of time and space.  
 
-_"That's fucking absurd!"_ - yes, _**WE KNOW!**_  ...pretty cool, huh?
+_"That's fucking absurd!"_ - yes, _**WE KNOW!**_  ...pretty cool, huh!?
 
 While that may sound wacky as all hell, genuinely consider what I'm saying!  Currently, our operating 
 systems perform _concurrent serial calculation._  The only difference resonance brings to the mix is that each 
