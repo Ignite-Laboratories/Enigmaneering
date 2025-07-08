@@ -5,7 +5,7 @@
 
 ### Initialization 
 
-Before we proceed, I get to make a formal definition -
+Before we proceed, I get to write a formal definition -
 
       "Resonant Calculation"
 
