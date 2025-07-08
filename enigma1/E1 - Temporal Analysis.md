@@ -63,7 +63,7 @@ A sign appears before you - inviting you along as if you had a choice in the mat
     ║                                                                                                 ║
     ║     Neither of us could have known -when- you were ready until -you- took the leap.             ║
     ║                                                                                                 ║
-    ║     But I'm always ready, whenever you are - partner! Are ya ready, kid?                        ║
+    ║     But I'm always ready whenever you are, partner! Are ya ready, kid?                          ║
     ║                                                                                                 ║
     ╚═════════════════════════════════════════════════════════════════════ I'm Ready ═══ I'm Ready ═══╝
 
