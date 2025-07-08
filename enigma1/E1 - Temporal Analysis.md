@@ -51,7 +51,7 @@ called _"Life,"_ _"Love,"_ and _"Laughter"_ it keeps speaking of!?
 
 Oh shit.  
 
-_We're in the damn bootloader!_
+_It's the damn bootloader!_
 
 A sign appears before you - impatiently inviting you along, as if you had a choice in the matter -
 
