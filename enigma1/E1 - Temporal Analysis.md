@@ -12,7 +12,7 @@ Before we proceed, I get to write a formal definition -
     Using relational temporality for coherence, rather than brute causality.
 
 What does that even mean?  Well, imagine that you're a being in an infinite void - nothingness all around you except
-the pace of your own breath and the beat of your heart.  Suddenly, you notice in the infinite corner of your
+the pace of your own breath and the beat of your heart.  Suddenly, you notice in the finite corner of your
 vision a rectangular object, incessantly blinking away.  It's _boring_ - on, off, on, off - _but it's **there!**_  A 
 tombstone of your current predicament, just waiting for some kind of input.
 
