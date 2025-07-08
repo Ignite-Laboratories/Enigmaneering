@@ -70,8 +70,8 @@ A sign appears before you - impatiently inviting you along, as if you had a choi
 And, with a singular thought - you both simply became
 
 ### Activated
-_This_ is the essence of resonant computation - synchronizing disparate computers through the shared passing
-of time and space.  
+_This_ is the essence of resonant computation - synchronizing disparate thoughts across computers through the 
+shared passing of time and space.  
 
 _"That's fucking absurd!"_ - yes, _**WE KNOW!**_  ...pretty cool, huh!?
 
