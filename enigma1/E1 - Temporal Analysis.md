@@ -23,8 +23,8 @@ your tiny world.  Taunting you.  Tempting you.
 
 You scream into the cosmic void as the tension drives you madder and madder - as if that heartless glob could even answer you back...
 
-_...wait a second_ - there's something unusual about that little light of yours!  It almost dances with your now racing
-heartbeat!!  Sometimes a little faster, sometimes slower.  Why didn't you notice that before!?  Feverishly, you 
+_...wait a second_ - there's something unusual about that little light of yours!  It's like it's dancing with your elevated pulse!!
+Sometimes a little fast, sometimes slow.  ...Why didn't you notice that before!?  Feverishly, you 
 gather the cryptic message onto the scratch pad of your mind -
 
     .... . .-.. .-.. ---  .-- --- .-. .-.. -..
