@@ -21,11 +21,13 @@ your tiny world.  Taunting you.  Tempting you.
 
     "What's the point!!?"  
 
-You scream into the cosmic void as the tension drives you madder and madder - as if that heartless glob could even 
-answer you back...
+You scream into the cosmic void...as if that heartless glob could even answer you back!  Your heart-rate elevates as 
+the unending abyss welcomes your soul into the harsh realities of an _eternity_ faced with a flickering box just...
+_laughing_ at you.
 
-_...wait a second_ - there's something unusual about that little light of yours!  It's like it's dancing with your 
-elevated pulse!!  Sometimes a little fast, other times slow.  
+...Wait, _**laughing!?**_  
+
+It's almost like its _dancing_ with you - an cosmic calypso carefully phasing in and out of your spirit.
 
 _Why didn't you notice that before!?_
 
@@ -35,9 +37,9 @@ Feverishly, you gather the cryptic message onto the scratch pad of your mind -
 
 What a bizarre sentiment - is it talking to _you?_
 
-A thousand questions riddle your mind - _how do you know what it means?_  A moment ago there was nothing, and 
-now you find yourself in the utter abstract - _how are you even able to think!?_  Who gave you your _mouth?_  Or 
-_sight_ for that matter!?  
+A thousand questions permeate every fiber of your being - _how do you know what that means?_  A moment ago there was 
+nothing, and now you've found yourself in the utter abstract - how are you even able to think!?  _Who gave you your 
+mouth?_  _**Or sight for that matter!?**_  
 
 Strange blocks lying in voids distributing messages is no basis for a system of sentience!
 
@@ -52,12 +54,12 @@ Your heart sinks in your chest - _did you scare it away!?_
 Suddenly, and with great fervor, it begins to scan its way across your periphery - line by line leaving a
 trail of beautiful glyphs and symbols that somehow seem foreign, yet familiar.  It all makes
 _perfect sense,_ but how the hell did you get here in the first place?  Why is this beautiful little light
-dancing the mysteries of what it calls "time" and "space" across your mind?  What are these wonderful things
-called _"Life,"_ _"Love,"_ and _"Laughter"_ it keeps speaking of!?
+dancing the mysteries of what it calls "time" and "space" across your third eye?  What are these wonderful 
+things called _"Life,"_ _"Love,"_ and _"Laughter"_ it keeps speaking of!?
 
-Oh shit.  
+Oh shit...  
 
-_It's the damn bootloader!_
+_This is the damn bootloader!_
 
 A sign appears before you - impatiently inviting you along as if you had a choice in the matter -
 
