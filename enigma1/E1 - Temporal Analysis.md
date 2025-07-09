@@ -24,7 +24,7 @@ your tiny world.  Taunting you.  Tempting you.
 You scream into the cosmic void as the tension drives you madder and madder - as if that heartless glob could even answer you back...
 
 _...wait a second_ - there's something unusual about that little light of yours!  It's like it's dancing with your elevated pulse!!
-Sometimes a little fast, sometimes slow.  
+Sometimes a little fast, other times slow.  
 
 _Why didn't you notice that before!?_
 
