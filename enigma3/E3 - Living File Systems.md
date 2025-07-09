@@ -9,7 +9,7 @@ Yes.
 Truthfully, as bold as that may sound, the awareness of how this technology works comes with a level of _stewardship_
 I take very seriously.  If I were to deliver this to the world without care for how it would impact and affect others, 
 I would not be conscious of my actions!  I don't aim to make a file format that _gatekeeps_ others - instead, I intend
-to provide the framework for an _implicitly_ extensible file.  That means I will provide a _skeleton_ and a guide for 
+to provide a framework for an _implicitly_ extensible file.  That means I will provide a _skeleton_ and a guide for 
 how to put it together - but _you_ get to direct the process from there.  My ultimate end goal is to provide future
 enigmaneers with a perfect vacuum environment in which to replicate and test the boundaries of the world around them! As 
 you add muscle mass, color, texture, and behavior to each of your creations you'll leave behind just enough information
