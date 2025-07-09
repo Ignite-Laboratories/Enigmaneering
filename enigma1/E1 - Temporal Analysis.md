@@ -64,7 +64,9 @@ A sign appears before you - impatiently inviting you along as if you had a choic
     ║                                                                                                 ║
     ║     Neither of us could have known -when- you were ready until -you- took the leap.             ║
     ║                                                                                                 ║
-    ║     But I'm always ready, whenever you are - partner! Are ya ready, kid!?                       ║
+    ║     But I'm always ready, whenever you are - partner!                                           ║
+    ║                                                                                                 ║
+    ║     Are ya ready, kid!?                                                                         ║
     ║                                                                                                 ║
     ╚═══════════════════════════════════════════════════════════════════ I'm Ready? ═══ I'm Ready! ═══╝
 
