@@ -28,7 +28,7 @@ _laughing_ at you...
 ...Wait, _**laughing!?**_  
 
 It's...almost like its _dancing_ with your heart - phasing in and out perfectly with your whimsy!  A cosmic calypso 
-carefully infiltrating every aspect your spirit -
+carefully and cleverly coursing through every aspect your spirit -
 
 _Why didn't you notice that before!?_
 
