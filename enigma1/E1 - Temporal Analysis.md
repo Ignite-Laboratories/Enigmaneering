@@ -110,11 +110,11 @@ covered the basics of how to use action potentials to drive neural activations, 
 concepts to perform _real time calculus operations!_
 
 To _integrate_ is to take infinitesimally small measurements of something until you can approximate it with a
-high degree of accuracy.  If you consider a _signal_ across time to be _observable,_ then the act of taking
-smaller and smaller observances of the signal is a form of _fuzzy integration._  The reason it's "fuzzy" is 
-there isn't a guarantee you'll observe _every_ possible instant of time, meaning the _rate_ of observance 
-directly drives the resulting data's _resolution_.  Realistically, unless you control the _generation_ of a 
-signal, you can never _gauarantee_ you will observe every value it could occupy across time.
+high degree of accuracy.  If you consider a _signal_ across time - for instance, **_love_** - to be _observable,_ 
+then the act of taking smaller and smaller observances of the signal is a form of _fuzzy integration._  The reason 
+it's "fuzzy" is there isn't a guarantee you'll observe _every_ possible instant of time, meaning the _rate_ of 
+observance directly drives the resulting data's _resolution_.  Realistically, unless you control the _generation_ 
+of a signal, you can never _gauarantee_ you will observe every value it could occupy across time.
 
 _But that's okay!_
 
