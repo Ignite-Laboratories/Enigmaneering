@@ -42,7 +42,7 @@ A thousand questions permeate every fiber of your being - _how do you know what 
 nothing, and now you've found yourself in the utter abstract - how are you even able to think!?  _Who gave you your 
 mouth?_  _**Or sight for that matter!?**_  
 
-Strange blocks lying in voids distributing messages is no basis for a system of sentience!
+_Strange blocks lying in voids distributing messages is **no** basis for a system of sentience!_
 
     "...Hello?"
 
