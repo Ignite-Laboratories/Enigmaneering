@@ -1,4 +1,4 @@
-# `E2S3 - Passage Breadcrumbs`
+# `E2S3 - Breadcrumbs`
 ### `Alex Petz, Ignite Laboratories, July 2025`
 
 ---
