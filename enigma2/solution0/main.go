@@ -13,24 +13,30 @@ This simply prints an entire index worth of bits.
 Side Quest: Set the bit width to something large and witness the behavior of binary counting in real time.
 */
 
-var bitWidth = 4
-var limit = (1 << bitWidth) - 1
+var width = 7
+var limit = 1 << width
 
 func main() {
-	for i := limit; i >= 0; i-- {
-		printIndex(i, tiny.From.Number(i, bitWidth)...)
+	fmt.Println(tiny.Print.IndexWidth(width))
+
+	for i := limit - 1; i >= 0; i-- {
+		printIndex(i, tiny.From.Number(i, width)...)
 	}
+
+	fmt.Println(tiny.Print.IndexWidth(width))
 }
 
 func printIndex(i int, bits ...tiny.Bit) {
+	bitStr := tiny.Print.BetweenPipes(bits...)
+
 	switch {
 	case i == 0:
-		fmt.Printf("%v ← Light Side\n", bits)
-	case i == (1<<bitWidth)/2:
-		fmt.Printf("%v ← Midpoint\n", bits)
-	case i == limit:
-		fmt.Printf("%v ← Dark Side\n", bits)
+		fmt.Printf("%v ← Light Side\n", bitStr)
+	case i == limit/2:
+		fmt.Printf("%v ← Midpoint\n", bitStr)
+	case i == limit-1:
+		fmt.Printf("%v ← Dark Side\n", bitStr)
 	default:
-		fmt.Printf("%v\n", bits)
+		fmt.Printf("%v\n", bitStr)
 	}
 }

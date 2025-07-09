@@ -3,36 +3,38 @@ package main
 import (
 	"fmt"
 	"github.com/ignite-laboratories/tiny"
-	"math"
-	"math/big"
 )
 
 /**
 E2S1 - The Index Subdivision Printer
 
-This prints the binary pattern subdivisions of a requested index.
+This prints the binary pattern interval subdivisions of a requested index.
 
 The output columns are:
 
- Subdivision Pattern     Synthesized Point         Value     Point Distance
+ Subdivision Interval     Synthesized Point        Value     Point Distance
      (1)     [0 0 1]  [00100100 10010010 010010]  (599186)    Δ 599186
 */
 
-var patternWidth = 8
 var indexWidth = 44
+var patternWidth = 8
 
 func main() {
-	patternMax := 1 << patternWidth
+	lastPoint := tiny.NewPhrase()
+	for i := 0; i < 1<<patternWidth; i++ {
+		// Get the pattern interval's bits
+		patternBits := tiny.From.Number(i, patternWidth)
 
-	last := big.NewInt(0)
-	for i := 0; i < patternMax; i++ {
-		patternBits := tiny.From.Number(i, patternWidth)                   // Get the pattern's bits
-		synthesized := tiny.Synthesize.Pattern(indexWidth, patternBits...) // Synthesize a point value from a pattern
-		value := synthesized.AsBigInt()                                    // Convert it to a big.Int for arithmetic operations
-		delta := new(big.Int).Sub(value, last)                             // Calculate the delta from the synthetic value
+		// Synthesize a point from the pattern interval
+		point := tiny.Synthesize.Pattern(indexWidth, patternBits...)
 
-		// Print the result and store the created value for the next iteration
-		fmt.Printf("(%*d) %v %v (%v) Δ %d\n", int(math.Floor(math.Log10(float64(patternMax))))+1, i, patternBits, synthesized, value, delta)
-		last = value
+		// Calculate the absolute delta to the synthetic point
+		delta, _ := point.Subtract(lastPoint)
+
+		// Store the point in order to calculate the next iteration's delta
+		lastPoint = point
+
+		// Print out the results
+		fmt.Printf("(%*d) %v %v (%*d) Δ %d\n", tiny.GetBase10MaxWidth(patternWidth), i, patternBits, point.PadLeftToLength(indexWidth).Align(), tiny.GetBase10MaxWidth(indexWidth), point.Int(), delta.Int())
 	}
 }
