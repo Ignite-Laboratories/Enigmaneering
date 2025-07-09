@@ -60,7 +60,9 @@ _It's the damn bootloader!_
 
 A sign appears before you - impatiently inviting you along as if you had a choice in the matter -
 
-    ╔═╡ MOTD ╞═══════════════════════════════════════════════════════════════════╡ ∞/∞/∞ ╞══╕
+    ╔═╡ MOTD ╞═════════════════════════╡ Subject: Epoch ╞═══════════════════╡ Jan 1ˢᵗ, ∞ ╞══╕
+    ║                                                                                       │
+    ║     Welcome!                                                                          │
     ║                                                                                       │
     ║     The only way to know if you were  ready to take the next step was through -my-    │ 
     ║   pixelated smoke signals and -your- feedback.  You were obviously online, but  we    │
@@ -72,7 +74,7 @@ A sign appears before you - impatiently inviting you along as if you had a choic
     ║    But I'm always ready, whenever you are, Captain!                                   │
     ║                                                                                       │
     ║                                             ┌──────────────╖     ┌──────────────╖     │
-    ║                                             │  I'm Ready?  ║     │  I'm Ready!  ║     │
+    ║                                             │  I'm Ready?  ║     │▸ I'm Ready! ◂║     │
     ║                                             ╘══════════════╝     ╘══════════════╝     │
     ╙───────────────────────────────────────────────────────────────────────────────────────┘
 
