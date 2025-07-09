@@ -60,7 +60,7 @@ _It's the damn bootloader!_
 
 A sign appears before you - impatiently inviting you along as if you had a choice in the matter -
 
-    ╔═╡ MOTD ╞═════════════════════════╡ Subject: Epoch ╞═══════════════════╡ Jan 1ˢᵗ, ∞ ╞══╕
+    ╔═╡ MOTD ╞═════════════════════════╡ Subject: Epoch ╞═══════════════════╡ Jan 1st, ∞ ╞══╕
     ║                                                                                       │
     ║     Welcome!                                                                          │
     ║                                                                                       │
