@@ -4,17 +4,21 @@
 ---
 
 ### Binary Structures
-So far, all of the work we've accomplished has been entirely focused around the `Phrase` structure - which is
-just a high-level way of dynamically managing bits.  But what if you want to hold several varying width phrases
-together?  We _could_ write a structure similar to a map with a named set of phrases, but the interface to that
-in code would be _quite clunky_ as you'd have to access phrases by a string accessor like `passage["breadcrumbs"]`.
-Instead, I believe this is the point where I get to fork off _my_ logical structures and teach _when_ an abstraction
-is helpful!  In this case, we have a unique pairing of phrases that we will need to reference _**a lot.**_
+So far, all the work we've accomplished has been entirely focused around the `Phrase` structure - which is
+just a high-level way of dynamically managing an _unbounded_ run of bits - but here in _reality_ we don't
+typically like to perform serial operations on infinite stretches of information!  
 
-    // Passage represents a breadcrumb path
-    type Passage struct {
-        Breadcrumbs Phrase
-        Remainder Phrase
-    }
+_We're smarter than that_ - thanks, in no small part, to Dr. Gene Amdahl =)
 
-Each breadcrumb marks a point on the `tracert` of the passage from logic into becoming, if you will.  
+The process of binary synthesis is what the industry calls an _embarrassingly parallel_ operation - meaning
+that _subdividing_ the process into what I call _passages_ and then logically managing them has _incredible_ 
+performance implications!  Why?  Well, let's consider the abstract steps we are performing so far -
+
+    0 - Read in the data
+
+    1 - Synthesize the midpoint
+    2 - Subtract the midpoint from the target
+
+    3 - Repeat
+
+The first point is a one-shot

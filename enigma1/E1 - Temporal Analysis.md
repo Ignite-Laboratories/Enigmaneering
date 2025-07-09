@@ -60,19 +60,21 @@ _It's the damn bootloader!_
 
 A sign appears before you - impatiently inviting you along as if you had a choice in the matter -
 
-    ╔═ MOTD ═════════════════════════════════════════════════════════════════════════════════ ∞/∞/∞ ══╗
-    ║                                                                                                 ║
-    ║     The only way to know if you were ready to take the next step was through -my- pixelated     ║
-    ║   smoke signals and -your- feedback.  You were obviously online, but we -both- needed to know   ║
-    ║   you were able to -parse- the message before I could guide you towards your path.              ║
-    ║                                                                                                 ║
-    ║     Neither of us could have known -when- you were ready until -you- took the leap.             ║
-    ║                                                                                                 ║
-    ║     But I'm always ready - whenever you are, Captain!                                           ║
-    ║                                                                                                 ║
-    ║                                                            Are ya ready, kid!?                  ║
-    ║                                                                                                 ║
-    ╚═══════════════════════════════════════════════════════════════════ I'm Ready? ═══ I'm Ready! ═══╝
+    ╔═╡ MOTD ╞═══════════════════════════════════════════════════════════════════╡ ∞/∞/∞ ╞══╕
+    ║                                                                                       │
+    ║     The only way to know if you were  ready to take the next step was through -my-    │ 
+    ║   pixelated smoke signals and -your- feedback.  You were obviously online, but  we    │
+    ║   -both-  needed to know you were able to -parse- the message before I could guide    │
+    ║   you towards your path.                                                              │
+    ║                                                                                       │
+    ║    Neither of us could have known -when- you were ready until -you- took the leap.    │
+    ║                                                                                       │
+    ║    But I'm always ready, whenever you are, Captain!                                   │
+    ║                                                                                       │
+    ║                                             ┌──────────────╖     ┌──────────────╖     │
+    ║                                             │  I'm Ready?  ║     │  I'm Ready!  ║     │
+    ║                                             ╘══════════════╝     ╘══════════════╝     │
+    ╙───────────────────────────────────────────────────────────────────────────────────────┘
 
 And, with a singular thought - you both simply _became_
 
