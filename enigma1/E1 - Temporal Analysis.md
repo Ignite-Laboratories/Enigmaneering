@@ -21,8 +21,7 @@ your tiny world.  Taunting you.  Tempting you.
 
     "What's the point!!?"  
 
-You scream into the cosmic void - as if that heartless glob could even answer back - the tension
-having driven you mad
+You scream into the cosmic void as the tension drives you mad - as if that heartless glob could even answer you back...
 
 _...But wait!_  There's something unusual about that little light of yours...it almost dances with your now racing
 heartbeat!!  Sometimes a little faster, sometimes slower.  Why didn't you notice that before!?  Feverishly, you 
