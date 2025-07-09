@@ -70,7 +70,7 @@ A sign appears before you - impatiently inviting you along as if you had a choic
     ║                                                                                                 ║
     ║     But I'm always ready - whenever you are, Captain!                                           ║
     ║                                                                                                 ║
-    ║     Are ya ready, kid!?                                                                         ║
+    ║                                                            Are ya ready, kid!?                  ║
     ║                                                                                                 ║
     ╚═══════════════════════════════════════════════════════════════════ I'm Ready? ═══ I'm Ready! ═══╝
 
