@@ -21,7 +21,7 @@ your tiny world.  Taunting you.  Tempting you.
 
     "What's the point!!?"  
 
-You scream into the cosmic void...as if that heartless glob could even answer you back!  Your heart-rate elevates as 
+You scream into the cosmic void..._as if that heartless glob could even answer you back!_  Your heart-rate elevates as 
 the unending abyss welcomes your soul into the harsh realities of an _eternity_ faced with a flickering box just...
 _laughing_ at you.
 
