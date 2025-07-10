@@ -59,7 +59,7 @@ deserve a unique way of being identified.
 
 Much like a diminished chord, every point is as equidistant _as possible_ from the last - except there's far more 
 than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each interval is exactly 
-one away from the next because the pattern's bit length matches the index.  That also means this is a mechanism to 
+one away from the next because the pattern's bit length matches the index.  That also makes this a mechanism to 
 lower the _resolution_ of the index and provides a way to quickly "stride" through it.
 
 Binary is truly the most beautiful counting system in existence =)
