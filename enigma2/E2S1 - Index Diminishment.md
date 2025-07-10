@@ -53,7 +53,7 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
 Literally any width index can be diminished by the _dark point_ of a pattern's index simply by repeating the pattern 
 across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  For two reasons - first, 𝑣(𝑝) isn't 
 always a whole integer so we explicitly floor it so it can be represented in binary.  This causes the running delta to 
-**naturally** be irregularly spaced as a byproduct of working in a binary space.  Second, and more importantly, the 
+**naturally** be asymmetric as a byproduct of working in a binary space.  Second, and more importantly, the 
 irregularly spaced intervals between these synthetic points represent _**implicitly**_ addressable ranges, and as such
 deserve a unique way of being identified.
 
