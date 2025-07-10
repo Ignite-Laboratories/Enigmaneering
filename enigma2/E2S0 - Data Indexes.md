@@ -166,8 +166,9 @@ hands, can bring _immense_ light to this world!
 
 _Joy is the feedback loop which identifies each of our unique stable points in the grand index of life._
 
-_Thank you_ for the art _**you**_ have already created for reality to _reference_ and _enjoy_ for eternity!  It is so 
-very appreciated =)
+_Thank you_ for the art _**you**_ have already created for _**Life**_ to _reference_ and _enjoy_ for eternity!
+
+She appreciates it very much =)
 
 ### The Index Printer
 
