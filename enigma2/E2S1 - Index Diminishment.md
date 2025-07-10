@@ -33,7 +33,7 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
     let 𝑛 = The index width
     let 𝑤 = The pattern width
     let 𝑝 = The pattern value
-    let 𝑣(𝑝) ↦ ⌊(2ⁿ / (2ʷ - 1)) * 𝑝⌋
+    let  𝑣(𝑝) ↦ ⌊(2ⁿ / (2ʷ - 1)) * 𝑝⌋
     let 𝑑𝑣(𝑝) ↦ 𝑣(𝑝) - 𝑣(𝑚𝑎𝑥(𝑝 - 1, 0))
     where 𝑚𝑎𝑥(𝑎, 𝑏) returns the larger of 𝑎 and 𝑏 
  
