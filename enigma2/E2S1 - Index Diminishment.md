@@ -105,7 +105,7 @@ index.  All of this has led me to posit a fundamental law -
         the pattern across the target, with the diminishment interval defined by the numeric value of 
         the pattern.
 
-### Prove It
+### Prove It!
 Technically, the formula is already written above - but I get to prove to you that _repeating the bit pattern_
 across the index is equivalent to the more formalized `𝑣(𝑝)` formula.  That's a lot easier than one might think! First, 
 it's a lot easier to work from the _left_ side of the index rightwards.  Let's circle back to the halving 
