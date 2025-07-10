@@ -52,9 +52,10 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
 
 Literally any width index can be diminished by the _dark point_ of a pattern's index simply by repeating the pattern 
 across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  For two reasons - first, 𝑣(𝑝) isn't 
-always a whole number, so binary patterning truncates off the precision - _causing the running delta to **naturally** 
-be irregularly spaced._  Second, and more importantly, the irregularly spaced intervals between these synthetic points
-represent _addressable ranges_ - but we will talk a _lot_ more on that in the next enigma.
+always a whole integer so we explicitly floor it so it can be represented in binary.  This causes the running delta to 
+**naturally** be irregularly spaced as a byproduct of working in a binary space.  Second, and more importantly, the 
+irregularly spaced intervals between these synthetic points represent _**implicitly**_ addressable ranges, and as such
+deserve a unique way of being identified.
 
 Much like a diminished chord, every point is as equidistant _as possible_ from the last - except there's far more 
 than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each interval is exactly 
