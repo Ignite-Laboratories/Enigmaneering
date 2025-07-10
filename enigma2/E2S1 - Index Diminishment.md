@@ -29,8 +29,16 @@ the index!
 Let's take an 11-bit index and break it into eight regions using a note (3-bit) pattern -
 
     "Note Diminishment of an 11 bit Index"
+
+    let 𝑛 = The index width
+    let 𝑤 = The pattern width
+    let 𝑝 = The pattern value
+    let 𝑣(𝑝) ⥱ ⌊(2ⁿ / (2ʷ - 1)) * 𝑝⌋
+    let 𝑑𝑣(𝑝) ⥱ 𝑣(𝑝) - 𝑣(𝑚𝑎𝑥(𝑝 - 1, 0))
+    where 𝑚𝑎𝑥(𝑎, 𝑏) returns the larger of 𝑎 and 𝑏 
  
-    Pattern Interval          Synthesized Point        Value      Δ  
+                                      ⬐ "Synthesized Point"
+              𝑝                      𝑣(𝑝)                         ⬐𝑑𝑣(𝑝)  
       (0) | 0 0 0 |   | 0 0 0   0 0 0   0 0 0   0 0 | (   0  ) + 292
       (1) | 0 0 1 |   | 0 0 1   0 0 1   0 0 1   0 0 | (  292 ) + 293
       (2) | 0 1 0 |   | 0 1 0   0 1 0   0 1 0   0 1 | (  585 ) + 292
@@ -39,12 +47,14 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
       (5) | 1 0 1 |   | 1 0 1   1 0 1   1 0 1   1 0 | ( 1462 ) + 293
       (6) | 1 1 0 |   | 1 1 0   1 1 0   1 1 0   1 1 | ( 1755 ) + 292
       (7) | 1 1 1 |   | 1 1 1   1 1 1   1 1 1   1 1 | ( 2047 )
-          |←  3  →|   |←          11 Bits          →|
+          |←  𝑤  →|   |←              𝑛            →|
+              ⬑ 3                 11 ⬏
 
-Literally any width index can be evenly diminished by the _limit_ of the pattern's index simply by repeating the 
-pattern across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  Because unlike mathematical 
-subdivision, the intervals are only _close enough._  If the range the pattern interval represents is a floating point 
-number, binary patterning "snaps" it to the closest whole integer _naturally._  
+Literally any width index can be diminished by the _dark point_ of a pattern's index simply by repeating the pattern 
+across it.  Why do I keep calling this 'diminishment' instead of 'subdivision'?  For two reasons - first, 𝑣(𝑝) isn't 
+always a whole number, so binary patterning truncates off the precision - _causing the running delta to **naturally** 
+be irregularly spaced._  Second, and more importantly, the irregularly spaced intervals between these synthetic points
+represent _addressable ranges_ - but we will talk a _lot_ more on that in the next enigma.
 
 Much like a diminished chord, every point is as equidistant _as possible_ from the last - except there's far more 
 than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each interval is exactly 
@@ -56,20 +66,21 @@ Binary is truly the most beautiful counting system in existence =)
 A single leading pattern, can _also_ be used to implicitly reference a sub-index on demand.  Let's briefly look at the 
 midpoint on an index again -
 
-                |←    𝑛 Bits   →|
+                |←      𝑛      →|
                 | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
     Terminus Bit ⬏        ⬑ 𝑛 - 1 Trailing Zeros
 
 The terminus bit, plus the trailing zeros, open _dual_ regions of implicitly addressable values _if you track
 the sign externally._  Since we have full control over the creation of our binary management structures, that's
 a relatively easy thing to do, but we'll worry about that later.  For now, you can _widen_ the _terminus_ into a 
-_terminal point_ in the index which identifies a sub-index of addressable information -
+_terminal region_ of the index which identifies a sub-index of addressable information -
 
     let t = The Terminal Bit Width
 
-                    |←     𝑛 Bits    →|
+                    |←       𝑛       →|
+                    |←  𝑡  →|←  𝑛-𝑡  →|
                     | 1 0 1 - 0 ... 0 | (𝑛 / 2)  ← Midpoint
-     Terminal Interval ⬏        ⬑ 𝑛 - t Trailing Zeros
+     Terminal Interval ⬏         ⬑ The Addressable Sub-Index
 
 ### Why?
 
@@ -80,87 +91,100 @@ index.  All of this has led me to posit a fundamental law -
 
     "The Law of Binary Index Diminishment"
 
-        An index can be evenly diminished by the limit of a bit pattern's containing index from
-        repeating the pattern across the target, with the diminishment interval defined by the 
-        numeric value of the pattern.
+        An index can be diminished by the dark point of a bit pattern's containing index from repeating 
+        the pattern across the target, with the diminishment interval defined by the numeric value of 
+        the pattern.
 
 ### Prove It
-That's a lot easier than one might think!  First, it's a lot easier to work from the _left_ side of the index
-rightwards.  Let's circle back to the halving points of an index again -
+Technically, the formula is already written above - but I get to prove to you that _repeating the bit pattern_
+across the index is equivalent to the more formalized `𝑣(𝑝)` formula.  That's a lot easier than one might think!  
+First, it's a lot easier to work from the _left_ side of the index rightwards.  Let's circle back to the halving 
+points of an index again -
 
         Index 2¹⁰ (1024)
 
                 ⬐ Everything to the right is a single repeated bit
-        | 1 0 0   0 0 0 0 0 0 0 |  (512) ← The index's midpoint
-        | 0 1 0   0 0 0 0 0 0 0 |  (256) ← The index's quarter point
-        | 0 0 1   0 0 0 0 0 0 0 |  (128) ← The index's eighth point
+        | 1 0 0 - 0 0 0 0 0 0 0 |  (512) ← The index's midpoint
+        | 0 1 0 - 0 0 0 0 0 0 0 |  (256) ← The index's quarter point
+        | 0 0 1 - 0 0 0 0 0 0 0 |  (128) ← The index's eighth point
            ⬑ Zeros are introduced proportionally with each halving
 
 This is pretty obvious - we are simply halving the target index to the next smaller power of two with each 
 iteration. That being said, if you consider the first three bits to be a diminishment _bit pattern_ and the 
 remaining bits to be zero, a summable formula arises - 
 
-    𝑛 = The target bit width
-    ℓ = The diminishment pattern index's limit
-    𝑖 = The diminishment interval
+    let 𝑛 = The target index bit width
+    let 𝑤 = The pattern index bit width
+    let 𝑝 = The pattern value
 
-    𝑥 = ⌊ ( 2ⁿ / ℓ ) * 𝑖 ⌋
+    let 𝑥 = ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
 
+So let's algorithmically sum this operation for each index exactly one pattern width less wide.
+
+                            "Step 0"
     let 𝑛 = 7
+    let 𝑤 = 3
 
-        ⬐ The pattern   𝑥 ⬎        ⬐ The formula
-    | 0 0 0   0 0 0 0 |   (0) = ⌊(2⁷/8) * 0⌋
-    | 0 0 1   0 0 0 0 |  (16) = ⌊(2⁷/8) * 1⌋
-    | 0 1 0   0 0 0 0 |  (32) = ⌊(2⁷/8) * 2⌋
-    | 0 1 1   0 0 0 0 |  (48) = ⌊(2⁷/8) * 3⌋
-    | 1 0 0   0 0 0 0 |  (64) = ⌊(2⁷/8) * 4⌋
-    | 1 0 1   0 0 0 0 |  (80) = ⌊(2⁷/8) * 5⌋
-    | 1 1 0   0 0 0 0 |  (96) = ⌊(2⁷/8) * 6⌋
-    | 1 1 1   0 0 0 0 | (112) = ⌊(2⁷/8) * 7⌋
-                  ⬑ The trailing zeros
+    The pattern ⬎                 𝑥 ⬎        ⬐ The formula
+             | 0 0 0  -  0 0 0 0 |   (0) = ⌊(2⁷/2³) * 0⌋
+             | 0 0 1  -  0 0 0 0 |  (16) = ⌊(2⁷/2³) * 1⌋
+             | 0 1 0  -  0 0 0 0 |  (32) = ⌊(2⁷/2³) * 2⌋
+             | 0 1 1  -  0 0 0 0 |  (48) = ⌊(2⁷/2³) * 3⌋
+             | 1 0 0  -  0 0 0 0 |  (64) = ⌊(2⁷/2³) * 4⌋
+             | 1 0 1  -  0 0 0 0 |  (80) = ⌊(2⁷/2³) * 5⌋
+             | 1 1 0  -  0 0 0 0 |  (96) = ⌊(2⁷/2³) * 6⌋
+             | 1 1 1  -  0 0 0 0 | (112) = ⌊(2⁷/2³) * 7⌋
+             |←        7        →|
+    
+    -----------------------------------------------------------
 
-Here the _diminishment_ is considered to be the abstract bit pattern to use, while the value of the pattern is
-considered to be the _interval._  Now you can recursively apply this operation against an index one pattern bit 
-width smaller until you reach the end of the target index -
-
+                            "Step 1"
     𝑛 = 𝑛 - 3
 
-          | 0 0 0   0 |   (0) = ⌊(2⁴/8) * 0⌋
-          | 0 0 1   0 |   (2) = ⌊(2⁴/8) * 1⌋
-          | 0 1 0   0 |   (4) = ⌊(2⁴/8) * 2⌋
-          | 0 1 1   0 |   (6) = ⌊(2⁴/8) * 3⌋
-          | 1 0 0   0 |   (8) = ⌊(2⁴/8) * 4⌋
-          | 1 0 1   0 |  (10) = ⌊(2⁴/8) * 5⌋
-          | 1 1 0   0 |  (12) = ⌊(2⁴/8) * 6⌋
-          | 1 1 1   0 |  (14) = ⌊(2⁴/8) * 7⌋
+          | 0 0 0 - 0 |   (0) = ⌊(2⁴/2³) * 0⌋
+          | 0 0 1 - 0 |   (2) = ⌊(2⁴/2³) * 1⌋
+          | 0 1 0 - 0 |   (4) = ⌊(2⁴/2³) * 2⌋
+          | 0 1 1 - 0 |   (6) = ⌊(2⁴/2³) * 3⌋
+          | 1 0 0 - 0 |   (8) = ⌊(2⁴/2³) * 4⌋
+          | 1 0 1 - 0 |  (10) = ⌊(2⁴/2³) * 5⌋
+          | 1 1 0 - 0 |  (12) = ⌊(2⁴/2³) * 6⌋
+          | 1 1 1 - 0 |  (14) = ⌊(2⁴/2³) * 7⌋
+          |←    4    →|
 
+    -----------------------------------------------------------
+
+                            "Step 2"
     𝑛 = 𝑛 - 3
 
-                  | 0 |   (0) = ⌊(2¹/8) * 0⌋
-                  | 0 |   (0) = ⌊(2¹/8) * 1⌋
-                  | 0 |   (0) = ⌊(2¹/8) * 2⌋
-                  | 0 |   (0) = ⌊(2¹/8) * 3⌋
-                  | 1 |   (1) = ⌊(2¹/8) * 4⌋
-                  | 1 |   (1) = ⌊(2¹/8) * 5⌋
-                  | 1 |   (1) = ⌊(2¹/8) * 6⌋
-                  | 1 |   (1) = ⌊(2¹/8) * 7⌋
-                           ⬑ NOTE: This is floored
+                  | 0 |   (0) = ⌊(2¹/2³) * 0⌋
+                  | 0 |   (0) = ⌊(2¹/2³) * 1⌋
+                  | 0 |   (0) = ⌊(2¹/2³) * 2⌋
+                  | 0 |   (0) = ⌊(2¹/2³) * 3⌋
+                  | 1 |   (1) = ⌊(2¹/2³) * 4⌋
+                  | 1 |   (1) = ⌊(2¹/2³) * 5⌋
+                  | 1 |   (1) = ⌊(2¹/2³) * 6⌋
+                  | 1 |   (1) = ⌊(2¹/2³) * 7⌋
+                  |←1→|                    
 
 So, let's put that all together and validate that the 4ᵗʰ interval of a 3 bit diminishment across an 11 bit index 
 indeed matches our synthesized bit pattern's value -
 
-    The starting conditions -
-
-                           |←      7 Bits     →|
-                       (4) [ 0 1 0 ] [ 1 0 1 1 ] (11)
-    The diminishment interval ⬏           ⬑ The target bit width
-
-    The target -
+                          "The Target"
 
     |←       11 Bits       →|
     | 0 1 0 0 1 0 0 1 0 0 1 |  (585) ← 0 1 0 repeated across the index
 
-    The algorithm -
+    -----------------------------------------------------------
+
+                  "The Starting Conditions"
+
+                        |←      7 Bits     →|
+                    (4) [ 0 1 0 ] [ 1 0 1 1 ] (11)
+    The diminishment point ⬏           ⬑ The target bit width
+
+    -----------------------------------------------------------
+
+                         "The Algorithm"
 
     |←       11 Bits       →|
     | 0 1 0 0 0 0 0 0 0 0 0 |  (512)
@@ -174,7 +198,14 @@ together.  Ultimately, that can be wrapped up into a very simple little formula 
 diminishment _point_ -
 
 <picture>
-<img alt="Index Diminishment Formula" src="assets/diminishmentPoint.png" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="Index Diminishment Formula" src="assets/diminishment summation.png" style="display: block; margin-left: auto; margin-right: auto;">
+</picture>
+
+But, that's _super clunky_ to work with since you must iteratively build the value - implementing this _in code_
+wouldn't be nearly as efficient as using the formula we already proved earlier -
+
+<picture>
+<img alt="Index Diminishment Formula" src="assets/diminishment point.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
 I'm not sure how much more proof one would need - this appears to be a fundamental _law_ of binary indexes =)

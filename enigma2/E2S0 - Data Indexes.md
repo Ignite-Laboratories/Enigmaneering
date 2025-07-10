@@ -40,7 +40,8 @@ There are a few important qualities of an index to keep in mind -
 
 - An index is defined by it's bit-width, `𝑛`
 - The addressable range of an index is `2ⁿ` and is referred to as its `limit`
-- The maximum value of an index is `2ⁿ - 1`
+- The maximum value of an index is `2ⁿ - 1` and is referred to as its `dark point`
+- The minimum _logical_ value of an index is 𝑛 zeros and is referred to as its `light point`
 - Addressable values are commonly referred to as _points_ in the index
 - The midpoint of an index is `2ⁿ / 2`
 

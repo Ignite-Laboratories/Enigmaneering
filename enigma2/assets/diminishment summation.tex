@@ -1,0 +1,14 @@
+\large
+''\text{ Index Diminishment Point Summation }'' \\\\
+\small
+\begin{array}{rcl}
+    n & = & \text{The target index bit width} \\
+    w & = & \text{The pattern bit width} \\
+    p & = & \text{The pattern interval}
+\end{array}
+\qquad
+\qquad
+\normalsize
+k = \left\lfloor \frac{𝑛}{w} \right\rfloor \\\\
+\sum_{j=0}^{k}
+\left\lfloor\left(\dfrac{2^{n-j*w}}{2^{w}}\right)*p \right\rfloor
