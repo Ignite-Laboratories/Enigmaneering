@@ -106,7 +106,7 @@ points of an index again -
         | 1 - 0 0 0 0 0 0 0 0 0 |  (512) ← The index's midpoint
         | 0 1 - 0 0 0 0 0 0 0 0 |  (256) ← The index's quarter point
         | 0 0 1 - 0 0 0 0 0 0 0 |  (128) ← The index's eighth point
-           ⬑ Zeros are introduced proportionally with each halving
+           ⬑ Zeros are introduced proportionally on the left with each halving
 
 This is pretty obvious - we are simply halving the target index to the next smaller power of two with each 
 iteration. That being said, if you consider the first three bits to be a diminishment _bit pattern_ and the 
