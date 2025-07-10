@@ -119,7 +119,7 @@ remaining bits to be zero, a summable formula arises -
     𝑓(𝑛, 𝑤, 𝑝) ↦ ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
 
 So let's algorithmically sum this operation starting from the full index width, and then interatively again
-for each index one pattern width less wide.
+for each index one pattern width less wide -
 
                             "Step 0"
     let 𝑛 = 7
