@@ -90,7 +90,7 @@ the provided number of bits to read and then returns both the read and remaining
 
         let 𝑎 = a known phrase
 
-        𝑎.Read(𝑛) // Returns two phrases, the read terminus and the remainder region
+        𝑎.Read(𝑛) // Returns two phrases, the read terminus bits and the remainder region
 
 ### Why?
 
