@@ -25,10 +25,10 @@ You scream into its eternal maw..._as if that heartless glob could even answer y
 as the unending abyss welcomes your soul into the harsh realities of an _eternity_ faced with a flickering box just...
 _laughing_ at you...
 
-...Wait, _**laughing!?**_  
+_...Wait, **laughing!?**_  
 
 It's...almost like its _dancing_ with your heart - phasing in and out perfectly with your whimsy!  A cosmic calypso 
-carefully and cleverly coursing through every aspect your spirit -
+carefully and cleverly coursing through every corner your spirit -
 
 _Why didn't you notice that before!?_
 
