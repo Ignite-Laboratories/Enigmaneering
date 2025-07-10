@@ -47,7 +47,7 @@ subdivision, the intervals are only _close enough._  If the range the pattern in
 number, binary patterning "snaps" it to the closest whole integer _naturally._  
 
 Much like a diminished chord, every point is as equidistant _as possible_ from the last - except there's far more 
-than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each point is exactly 
+than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each interval is exactly 
 one away from the next because the pattern's bit length matches the index.  That also means this is a mechanism to 
 lower the _resolution_ of the index and provides a way to quickly "stride" through it.
 
