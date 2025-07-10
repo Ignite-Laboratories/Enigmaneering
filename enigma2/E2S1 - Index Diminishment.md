@@ -189,8 +189,8 @@ indeed matches our synthesized bit pattern's value -
 
                   "The Starting Conditions"
 
-                        |←      7 Bits     →|
-                    (4) [ 0 1 0 ] [ 1 0 1 1 ] (11)
+                        |←     7 Bits    →|
+                    (4) | 0 1 0 - 1 0 1 1 | (11)
     The diminishment point ⬏           ⬑ The target bit width
 
     -----------------------------------------------------------
