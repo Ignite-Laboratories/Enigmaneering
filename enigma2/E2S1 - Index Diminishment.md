@@ -195,7 +195,7 @@ indeed matches our synthesized bit pattern's value -
 
 In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values 
 together.  Ultimately, that can be wrapped up into a very simple little formula to calculate each desired 
-diminishment _point_ -
+diminishment point -
 
 <picture>
 <img alt="Index Diminishment Formula" src="assets/diminishment summation.png" style="display: block; margin-left: auto; margin-right: auto;">
