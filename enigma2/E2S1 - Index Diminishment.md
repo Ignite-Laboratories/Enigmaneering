@@ -66,8 +66,8 @@ Binary is truly the most beautiful counting system in existence =)
 A single leading pattern, can _also_ be used to implicitly reference a sub-index on demand.  Let's briefly look at the 
 midpoint on an index again -
 
-                |←      𝑛      →|
-                | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
+               |←      𝑛      →|
+               | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
     Terminus Bit ⬏        ⬑ 𝑛 - 1 Trailing Zeros
 
 The terminus bit, plus the trailing zeros, open _dual_ regions of implicitly addressable values _if you track
