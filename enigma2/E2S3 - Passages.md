@@ -3,7 +3,7 @@
 
 ---
 
-### Binary Structures
+### This, Too, Shall Parse
 So far, all the work we've accomplished has been entirely focused around the `Phrase` structure - which is
 just a high-level way of dynamically managing an _unbounded_ run of bits - but here in _reality_ we don't
 typically like to perform serial operations on infinite stretches of information!  
