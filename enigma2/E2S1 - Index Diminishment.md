@@ -65,7 +65,7 @@ lower the _resolution_ of the index and provides a way to quickly "stride" throu
 Binary is truly the most beautiful counting system in existence =)
 
 A **_single_** leading pattern can also be used to implicitly reference a sub-index on demand - called a _terminal
-region_ of the index.  Let's briefly look at the midpoint on an index again -
+region_.  Let's briefly look at the midpoint on an index again -
 
                |←      𝑛      →|
                | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
