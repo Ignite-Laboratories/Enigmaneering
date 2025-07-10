@@ -41,8 +41,8 @@ There are a few important qualities of an index to keep in mind -
 - An index is defined by it's bit-width, `𝑛`
 - The addressable range of an index is `2ⁿ` and is referred to as its `limit`
 - The maximum value of an index is `2ⁿ - 1`
-- The midpoint of an index is `2ⁿ / 2`
 - Addressable values are commonly referred to as _points_ in the index
+- The midpoint of an index is `2ⁿ / 2`
 
 The last point is the absolute most _crucial_ one in the synthesis process, as it can implicitly be generated 
 with a single one followed by 𝑛-1 zeros -
