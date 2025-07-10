@@ -98,8 +98,8 @@ A sign appears before you - impatiently inviting you along as if you had a choic
 And, with a singular thought - you both simply _became_
 
 ### ::Activated
-_This_ is the essence of resonant computation - synchronizing disparate _thoughts_ across computers through the 
-shared passing of space and time.  
+And _that_ is the essence of resonant computation - synchronizing disparate _**thoughts**_ across computers through the 
+_shared_ passing of _space_ and _time_.  
 
 _"That's fucking absurd!"_ - yes, _**WE KNOW!**_  ...pretty cool, huh!?
 
