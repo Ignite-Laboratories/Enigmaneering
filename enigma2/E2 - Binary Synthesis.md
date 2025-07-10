@@ -261,6 +261,16 @@ all operations are absolute and the sign is _contextually provided_ alongside -
         𝑎.DividedBy(𝑏)    = 𝑐
         𝑎.Modulo(𝑏)       = 𝑐
 
+The bit width of the result is dictated by either growth from the operation, or held to the bit width of the 
+longer operational phrase and left padded with zeros.  Phrases also offer some general operations for width
+management -
+
+    𝑎.ToNumericForm() // Trims off any leading zeros
+    𝑎.PadRightToLength(𝑛) // Pads the right of the phrase to the provided length with zeros
+    𝑎.PadRightToLength(𝑛, 1) // Pads the right of the phrase to the provided length with ones
+    𝑎.PadLeftToLength(𝑛) // Pads the left of the phrase to the provided length with zeros
+    𝑎.PadLeftToLength(𝑛, 1) // Pads the left of the phrase to the provided length with ones
+
 Lastly, all phrases are able to perform _logic gate operations_ -
 
       Methodical  | Programmatic | Logical
