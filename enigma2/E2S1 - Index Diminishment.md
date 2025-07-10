@@ -116,7 +116,7 @@ remaining bits to be zero, a summable formula arises -
     let 𝑤 = The pattern index bit width
     let 𝑝 = The pattern value
 
-    let 𝑥 = ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
+    𝑓(𝑛, 𝑤, 𝑝) = ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
 
 So let's algorithmically sum this operation for each index exactly one pattern width less wide.
 
