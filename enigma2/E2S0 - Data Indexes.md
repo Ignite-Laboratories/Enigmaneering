@@ -124,17 +124,17 @@ regions in the index where the points above and below are a perfect mirror until
         | 1 1 1 0 ]
         | 1 1 0 1 ]
         | 1 1 0 0 ]
-           ├─────── The implicit upper quarter reflection point
+           ├─────── The implicit upper quarter moment
         | 1 0 1 1 |
         | 1 0 1 0 |
         | 1 0 0 1 |
         | 1 0 0 0 |
-         ├───────── The implicit central reflection point
+         ├───────── The implicit central moment
         | 0 1 1 1 |
         | 0 1 1 0 |
         | 0 1 0 1 |
         | 0 1 0 0 |
-           ├─────── The implicit lower quarter reflection point
+           ├─────── The implicit lower quarter moment
         | 0 0 1 1 |
         | 0 0 1 0 |
         | 0 0 0 1 |
