@@ -102,9 +102,9 @@ points of an index again -
 
         Index 2¹⁰ (1024)
 
-                ⬐ Everything to the right is a single repeated bit
-        | 1 0 0 - 0 0 0 0 0 0 0 |  (512) ← The index's midpoint
-        | 0 1 0 - 0 0 0 0 0 0 0 |  (256) ← The index's quarter point
+            ⬐ Everything to the right is repeated zeros
+        | 1 - 0 0 0 0 0 0 0 0 0 |  (512) ← The index's midpoint
+        | 0 1 - 0 0 0 0 0 0 0 0 |  (256) ← The index's quarter point
         | 0 0 1 - 0 0 0 0 0 0 0 |  (128) ← The index's eighth point
            ⬑ Zeros are introduced proportionally with each halving
 
