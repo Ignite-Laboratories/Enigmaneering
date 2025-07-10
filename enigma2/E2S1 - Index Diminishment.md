@@ -219,6 +219,13 @@ wouldn't be nearly as efficient as using the formula we already proved earlier -
 <img alt="Index Diminishment Formula" src="assets/diminishment point.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
+In `tiny` you can synthesize any diminishment point on the fly by providing a measurement (which implicitly
+provides the pattern interval and width as one variable) -
+
+    let 𝑚 = A pattern measurement
+
+    tiny.Synthesize.Diminishment(𝑚, 𝑛) // Synthesizes diminishment interval 𝑚 across an 𝑛-wide index  
+
 I'm not sure how much more proof one would need - this appears to be a fundamental _law_ of binary indexes =)
 
 _Far_ more importantly, however, we just executed the standard process of synthesis: using _starting conditions_
