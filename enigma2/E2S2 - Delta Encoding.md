@@ -26,26 +26,7 @@ there you synthesize the _midpoint_ of that bit range and calculate the _distanc
         |   - 1 0 1 0 | (-10) ← Distance
 
 Immediately, we have gained a _single_ bit of reduction!  Of course, we'd need to _implicitly_ know
-the original index width to recreate the target value, but we'll get to that shortly.  First, I want
-to touch on _what_ a midpointing operation consists of -
-
-                |←    𝑛 Bits   →|
-                | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
-    Terminus Bit ⬏        ⬑ 𝑛 - 1 Trailing Zeros
-
-The terminus bit, plus the trailing zeros, open _dual_ regions of implicitly addressable values _if you track
-the sign externally._  Since we have full control over the creation of our binary management structures, that's 
-a relatively easy thing to do.  But there are further implications behind the concept of a _terminus bit._ In fact,
-you can even _widen it_ into a _terminal point_ in the index which identifies a sub-region of addressable information - 
-similarly to what index diminishment gave us -
-
-    let t = The Terminal Bit Width
-
-                    |←     𝑛 Bits    →|
-                    | 1 0 1 - 0 ... 0 | (𝑛 / 2)  ← Midpoint
-     Terminal Interval ⬏        ⬑ 𝑛 - t Trailing Zeros
-
-Since we don't
+the original index width to recreate the target value, but we'll get to that shortly.  Since we don't
 yet have a mechanism for managing the sign, we consider that it is a *transient* component and represent
 it by a negative sign.  This particular operation will yield one bit of reduction for all indexes
 _at minimum!_  (Assuming its wide enough to be midpointed)

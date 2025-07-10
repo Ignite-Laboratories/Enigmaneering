@@ -49,11 +49,29 @@ number, binary patterning "snaps" it to the closest whole integer _naturally._
 Much like a diminished chord, every point is as equidistant _as possible_ from the last - except there's far more 
 than _three_ diminished "chords" in an index!  Technically, you can diminish an index until each point is exactly 
 one away from the next because the pattern's bit length matches the index.  That also means this is a mechanism to 
-lower the _resolution_ of the index and provides a way to quickly "stride" through it.  A single leading pattern 
-can _also_ be used to implicitly reference a sub-index on demand - but we'll get to those operations in the next 
-enigma.
+lower the _resolution_ of the index and provides a way to quickly "stride" through it.
 
 Binary is truly the most beautiful counting system in existence =)
+
+A single leading pattern, can _also_ be used to implicitly reference a sub-index on demand.  Let's briefly look at the 
+midpoint on an index again -
+
+                |←    𝑛 Bits   →|
+                | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
+    Terminus Bit ⬏        ⬑ 𝑛 - 1 Trailing Zeros
+
+The terminus bit, plus the trailing zeros, open _dual_ regions of implicitly addressable values _if you track
+the sign externally._  Since we have full control over the creation of our binary management structures, that's
+a relatively easy thing to do, but we'll worry about that later.  For now, you can _widen_ the _terminus_ into a 
+_terminal point_ in the index which identifies a sub-index of addressable information -
+
+    let t = The Terminal Bit Width
+
+                    |←     𝑛 Bits    →|
+                    | 1 0 1 - 0 ... 0 | (𝑛 / 2)  ← Midpoint
+     Terminal Interval ⬏        ⬑ 𝑛 - t Trailing Zeros
+
+### Why?
 
 The utility of diminishment will come later on, but it's a wonderful primer on working with an index.
 
