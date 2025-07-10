@@ -221,10 +221,10 @@ wouldn't be nearly as efficient as using the formula we already proved earlier -
 <img alt="Index Diminishment Formula" src="assets/diminishment point.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
-In `tiny` you can synthesize any diminishment point on the fly by providing a measurement (which implicitly
+In `tiny` you can synthesize any diminishment point on the fly by providing a binary measurement (which implicitly
 provides the pattern interval and width as one variable) -
 
-    let 𝑚 = A pattern measurement
+    let 𝑚 = A known measurement interval
 
     tiny.Synthesize.Diminishment(𝑚, 𝑛) // Synthesizes diminishment interval 𝑚 across an 𝑛-wide index  
 
