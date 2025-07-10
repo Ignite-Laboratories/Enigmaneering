@@ -250,7 +250,7 @@ In addition, `tiny` is a fully-featured _binary calculator!_  While it may not b
 calculator, wherever any functionality is _missing_ `tiny` provides bridges into `math/big` to fill in the gaps.
 That being said, from my current vantage point the below operations _should be_ all that you'd need for pretty
 much any _algorithm_ you could dream up.  Since binary cannot implicitly distinguish the _sign_ from the _value,_ 
-all operations are absolute and the sign is _provided_ with the operational result -
+all operations are absolute and the sign is _contextually provided_ alongside the operation -
 
         let 𝑎 and 𝑏 = Known Phrases
 
