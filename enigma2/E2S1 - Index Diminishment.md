@@ -21,9 +21,10 @@ _far less bits_ than they're logically stored at, relative to known points in th
 
 But what even _is_ a known index _point?_
 
-Well, it's any point that can be _implicitly_ referenced from contextual information.  The index midpoint, for example, 
-is _always_ known to _implicitly_ be a one followed by all zeros.  But you can take this even _further_ by synthesizing 
-repeating _**patterns**_ of bits across the index!  
+Well, it's any point that can be _implicitly_ referenced from contextual information.  A data point can always be
+recalled simply by duplicating it - but the index midpoint, for example, is _always_ known to _implicitly_ be a one 
+followed by all zeros.  But you can take this even _further_ by synthesizing repeating _**patterns**_ of bits across 
+the index!  
 
 Let's take an 11-bit index and break it into eight regions using a note (3-bit) pattern -
 
