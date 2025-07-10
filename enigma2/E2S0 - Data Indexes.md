@@ -117,7 +117,7 @@ There is another feature an index visualization affords us: highlighting binary'
 nibble index again, but this time mark the mid and quarter reflections moments.  These represent implicit addressable
 regions in the index where the points above and below are a perfect mirror until the next larger reflection moment -
 
-    Reflection Points of a Nibble Index:
+    "Reflection Moments of a Nibble Index"
 
          Dark Side
         | 1 1 1 1 ] 
