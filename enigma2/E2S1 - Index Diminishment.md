@@ -78,7 +78,7 @@ _bit_ to an _interval_ which identifies the terminal _region_ of addressable inf
 
                        |←       𝑛       →|
                        |←  𝑡  →|←  𝑛-𝑡   →|
-                       | 1 0 1 - 0 ... 0 | (𝑛 / 2)  ← Midpoint
+                       | 1 0 1 - 0 ... 0 |
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
 ### Why?
