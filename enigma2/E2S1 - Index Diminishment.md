@@ -75,7 +75,7 @@ the sign externally._  Since we have full control over the creation of our binar
 a relatively easy thing to do, but we'll worry about that later.  For now, you can _widen_ the _terminus_ into a 
 _terminal region_ of the index which identifies a sub-index of addressable information -
 
-    let t = The Terminal Bit Width
+    let 𝑡 = The Terminal Bit Width
 
                     |←       𝑛       →|
                     |←  𝑡  →|←  𝑛-𝑡  →|
