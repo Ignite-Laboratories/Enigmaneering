@@ -68,7 +68,7 @@ midpoint on an index again -
 
                |←      𝑛      →|
                | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
-    Terminus Bit ⬏        ⬑ 𝑛 - 1 Trailing Zeros
+    Terminus Bit ⬏       ⬑ 𝑛 - 1 Trailing Zeros
 
 The terminus bit, plus the trailing zeros, open _dual_ regions of implicitly addressable values _if you track
 the sign externally._  Since we have full control over the creation of our binary management structures, that's
