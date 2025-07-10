@@ -198,10 +198,10 @@ indeed matches our synthesized bit pattern's value -
                          "The Algorithm"
 
     |←       11 Bits       →|
-    | 0 1 0 0 0 0 0 0 0 0 0 |  (512)
-    |       0 1 0 0 0 0 0 0 |   (64) +
-    |             0 1 0 0 0 |    (8) +
-    |                   0 1 |    (1) +
+    | 0 1 0 0 0 0 0 0 0 0 0 |  (512) ← ⌊(2¹¹/2³) * 2⌋
+    |       0 1 0 0 0 0 0 0 | + (64) ← ⌊( 2⁸/2³) * 2⌋
+    |             0 1 0 0 0 | +  (8) ← ⌊( 2⁵/2³) * 2⌋
+    |                   0 1 | +  (1) ← ⌊( 2²/2³) * 2⌋
                               =  585
 
 In essence, you are taking the 4ᵗʰ 8ᵗʰ of each subsequently smaller index and then summing the values 
