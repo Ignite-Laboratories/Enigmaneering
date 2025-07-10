@@ -115,8 +115,8 @@ remaining bits to be zero, a summable formula arises -
     let 𝑛 = The target index bit width
     let 𝑤 = The pattern index bit width
     let 𝑝 = The pattern value
-
-    𝑓(𝑛, 𝑤, 𝑝) = ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
+    
+    𝑓(𝑛, 𝑤, 𝑝) ↦ ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
 
 So let's algorithmically sum this operation for each index exactly one pattern width less wide.
 
@@ -124,7 +124,7 @@ So let's algorithmically sum this operation for each index exactly one pattern w
     let 𝑛 = 7
     let 𝑤 = 3
 
-    The pattern ⬎                 𝑥 ⬎        ⬐ The formula
+    The pattern ⬎                    ⬐ 𝑓(𝑛, 𝑤, 𝑝)
              | 0 0 0  -  0 0 0 0 |   (0) = ⌊(2⁷/2³) * 0⌋
              | 0 0 1  -  0 0 0 0 |  (16) = ⌊(2⁷/2³) * 1⌋
              | 0 1 0  -  0 0 0 0 |  (32) = ⌊(2⁷/2³) * 2⌋
