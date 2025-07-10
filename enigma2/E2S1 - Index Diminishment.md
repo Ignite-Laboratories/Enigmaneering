@@ -94,7 +94,7 @@ the provided number of bits to read and then returns both the read and remaining
 
 ### Why?
 
-The utility of diminishment will come later on, but it's a wonderful primer on working with an index.
+The utility of diminishment will come later on, but it's a wonderful primer on working with an index!
 
 The solution here is a primitive demonstration to show that binary follows these diminishment rules for a provided 
 index.  All of this has led me to posit a fundamental law -
