@@ -256,8 +256,8 @@ all operations are absolute and the sign is _provided_ with the operational resu
 
         𝑎.Add(𝑏)          = 𝑐
         𝑎.Minus(𝑏)        = 𝑐, ±
-        𝑎.Times(𝑏)        = 𝑐, ±
-        𝑎.ToThePowerOf(𝑏) = 𝑐, ±
+        𝑎.Times(𝑏)        = 𝑐
+        𝑎.ToThePowerOf(𝑏) = 𝑐
         𝑎.DividedBy(𝑏)    = 𝑐
         𝑎.Modulo(𝑏)       = 𝑐
 
