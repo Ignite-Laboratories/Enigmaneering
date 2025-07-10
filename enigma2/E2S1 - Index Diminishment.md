@@ -71,8 +71,8 @@ region_ of the index.  Let's briefly look at the midpoint on an index again -
                | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
     Terminus Bit ⬏       ⬑ The Terminal Region
 
-You can _widen_ the _terminus_ in order to identify a _terminal region_ in the index - taking it from a
-_bit_ to an _interval_ which identifies the terminal _region_ of addressable information -
+You can _widen_ the _terminus_ in order to identify a smaller region in the index - taking it from a
+_bit_ to an _interval_ identifying the terminal region of addressable information -
 
     let 𝑡 = The Terminal Bit Width
 
@@ -81,7 +81,8 @@ _bit_ to an _interval_ which identifies the terminal _region_ of addressable inf
                        | 1 0 1 - 0 ... 0 |
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
-In `tiny` - you can quickly access the terminal region of any phrase by _reading_ the phrase -
+In `tiny` - you can quickly work with binary terminals simply by _reading_ the phrase.  Read operations consume
+the provided number of bits to read and then returns both the read and remaining bits as separate phrases -
 
         let 𝑎 = a known phrase
 
@@ -124,7 +125,7 @@ remaining bits to be zero, a summable formula arises -
     
     𝑓(𝑛, 𝑤, 𝑝) ↦ ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
 
-So let's algorithmically sum this operation starting from the full index width, and then interatively again
+So let's algorithmically sum this operation starting from the full index width, and then iteratively again
 for each index one pattern width less wide -
 
                             "Step 0"
