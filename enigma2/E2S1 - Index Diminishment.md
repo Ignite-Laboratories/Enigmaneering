@@ -77,7 +77,7 @@ _bit_ to an _interval_ which identifies the terminal _region_ of addressable inf
     let 𝑡 = The Terminal Bit Width
 
                        |←       𝑛       →|
-                       |←  𝑡  →|←  𝑛-𝑡  →|
+                       |←  𝑡  →|←  𝑛-𝑡   →|
                        | 1 0 1 - 0 ... 0 | (𝑛 / 2)  ← Midpoint
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
