@@ -114,8 +114,8 @@ the most abstract representation of an index -
               Light Side
 
 There is another feature an index visualization affords us: highlighting binary's _symmetry._  Let's look at the
-nibble index again, but this time mark the mid and quarter reflection points.  These represent points _between_
-values where the data above and below is a perfect mirror of each other until the next larger reflection point -
+nibble index again, but this time mark the mid and quarter reflections moments.  These represent implicit addressable
+regions in the index where the points above and below are a perfect mirror until the next larger reflection moment -
 
     Reflection Points of a Nibble Index:
 
