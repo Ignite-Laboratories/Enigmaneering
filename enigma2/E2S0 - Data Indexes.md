@@ -48,19 +48,19 @@ The last point is the absolute most _crucial_ one in the synthesis process, as i
 with a single one followed by 𝑛-1 zeros -
 
     |←     8 Bits    →|
-    | 1 1 1 1 1 1 1 1 | (255) = 2⁸ - 1 ← The maximum addressable value of the index
-    | 1 0 0 0 0 0 0 0 | (128) = 2⁸ / 2 ← The midpoint of the index
-    | 0 0 0 0 0 0 0 0 | ( 0 ) = 0      ← The minimum addressable value of the index
+    | 1 1 1 1 1 1 1 1 | (255) = 2⁸ - 1 ← The index's dark point
+    | 1 0 0 0 0 0 0 0 | (128) = 2⁸ / 2 ← The index's midpoint
+    | 0 0 0 0 0 0 0 0 | ( 0 ) = 0      ← The index's light point
 
 In fact, the zero length (plus one) before the first one represents the number of times to halve the data,
 making each point _very_ easy to implicitly synthesize -
 
     |←     8 Bits    →|
     | 1 1 1 1 1 1 1 1 | (255) = 2⁸ - 1 
-    | 1 0 0 0 0 0 0 0 | (128) = 2⁸ / (2*1) ← The midpoint of the index
-    | 0 1 0 0 0 0 0 0 | ( 64) = 2⁸ / (2*2) ← The quarter point of the index
-    | 0 0 1 0 0 0 0 0 | ( 32) = 2⁸ / (2*3) ← The eighth point of the index
-    | 0 0 0 1 0 0 0 0 | ( 16) = 2⁸ / (2*4) ← The sixteenth point of the index
+    | 1 0 0 0 0 0 0 0 | (128) = 2⁸ / (2*1) ← The index's midpoint
+    | 0 1 0 0 0 0 0 0 | ( 64) = 2⁸ / (2*2) ← The index's quarter point
+    | 0 0 1 0 0 0 0 0 | ( 32) = 2⁸ / (2*3) ← The index's eighth point
+    | 0 0 0 1 0 0 0 0 | ( 16) = 2⁸ / (2*4) ← The index's sixteenth point
 
 Indexes should always be represented just as they would on a vertical number line - meaning zero is at the 
 bottom, larger values are placed above, and each value is well-ordered.  This is because it makes _logical
