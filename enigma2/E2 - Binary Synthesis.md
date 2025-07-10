@@ -237,7 +237,8 @@ through tiny's fluent design.  Here's the most notable things it provides:
         tiny.From.Number(𝑛, 8) // Takes a measurement of 𝑛 as a byte, padding the left with 0s
         tiny.From.BigInt(bigValue) // Converts a big.Int into a phrase at the smallest bit-width possible
         tiny.From.BigInt(bigValue, 1024) // Converts a big.Int into a phrase of the specified bit width
-        tiny.To.Number(8, bits) // Converts the provided bits into a byte
+        tiny.To.Number(8, bits...) // Converts the provided bits into a byte
+                               ⬑ Variadics are heavily used throughout the library =)
 
         NOTE: To also provides numerous convenience methods for the sub/super-byte types, though they
               are rarely utilized.
