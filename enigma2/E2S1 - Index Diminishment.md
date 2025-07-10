@@ -64,24 +64,22 @@ lower the _resolution_ of the index and provides a way to quickly "stride" throu
 
 Binary is truly the most beautiful counting system in existence =)
 
-A **_single_** leading pattern can also be used to implicitly reference a sub-index on demand.  Let's briefly look at the 
-midpoint on an index again -
+A **_single_** leading pattern can also be used to implicitly reference a sub-index on demand - called a _terminal
+region_ of the index.  Let's briefly look at the midpoint on an index again -
 
                |←      𝑛      →|
                | 1 - 0  ...  0 | (𝑛 / 2)  ← Midpoint
-    Terminus Bit ⬏       ⬑ 𝑛 - 1 Trailing Zeros
+    Terminus Bit ⬏       ⬑ The Terminal Region
 
-The terminus bit, plus the trailing zeros, open _dual_ regions of implicitly addressable values _if you track
-the sign externally._  Since we have full control over the creation of our binary management structures, that's
-a relatively easy thing to do, but we'll worry about that later.  For now, you can _widen_ the _terminus_ into a 
-_terminal region_ of the index which identifies a sub-index of addressable information -
+You can _widen_ the _terminus_ in order to identify a _terminal region_ in the index - taking it from a
+_bit_ to an _interval_ which identifies the terminal _region_ of addressable information -
 
     let 𝑡 = The Terminal Bit Width
 
-                    |←       𝑛       →|
-                    |←  𝑡  →|←  𝑛-𝑡  →|
-                    | 1 0 1 - 0 ... 0 | (𝑛 / 2)  ← Midpoint
-     Terminal Interval ⬏         ⬑ The Addressable Sub-Index
+                       |←       𝑛       →|
+                       |←  𝑡  →|←  𝑛-𝑡  →|
+                       | 1 0 1 - 0 ... 0 | (𝑛 / 2)  ← Midpoint
+     The Terminus Interval ⬏        ⬑ The Terminal Region
 
 ### Why?
 
