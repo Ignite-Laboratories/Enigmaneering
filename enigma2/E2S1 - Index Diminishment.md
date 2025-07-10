@@ -72,7 +72,7 @@ region_ of the index.  Let's briefly look at the midpoint on an index again -
     Terminus Bit ⬏       ⬑ The Terminal Region
 
 You can _widen_ the _terminus_ in order to identify a smaller region in the index - taking it from a
-_bit_ to an _interval_ identifying the terminal region of addressable information.  An `interval` represents the
+_bit_ to an _interval_ identifying the terminal region of addressable information.  An "interval" represents the
 face value of the bit pattern in use.  Technically, that makes _**all**_ binary information an interval of its
 containing index - but much like intervals in a musical chord, we _implicitly_ refer to them when appropriate.  In
 diminishment, the term _interval_ directly describes the explicit _value_ of the bit pattern -
