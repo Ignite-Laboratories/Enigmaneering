@@ -86,7 +86,7 @@ of the bit pattern itself -
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
 In `tiny` - you can quickly work with binary terminals simply by _reading_ the phrase.  Read operations consume
-the provided number of bits to read and then returns both the read and remaining bits as separate phrases -
+the provided number of bits and then returns both the read and remaining bits as separate phrases -
 
         let 𝑎 = A known phrase
 
