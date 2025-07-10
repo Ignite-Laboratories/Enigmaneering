@@ -212,3 +212,10 @@ I'm not sure how much more proof one would need - this appears to be a fundament
 
 _Far_ more importantly, however, we just executed the standard process of synthesis: using _starting conditions_
 and an _algorithm_ to create a _target!_
+
+In `tiny` - you can quickly access these features off of the `Phrase` type -
+
+        let 𝑎 = a known phrase
+
+        𝑎.TerminalRegion(𝑛) // Returns the terminal region 𝑛 bits from the left  
+        𝑎.DiminishmentPoint(𝑤, 𝑝) // Returns the diminishment point 𝑝 of a 𝑤 wide pattern 
