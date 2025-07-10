@@ -86,11 +86,12 @@ of the bit pattern itself -
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
 In `tiny` - you can quickly work with binary terminals simply by _reading_ the phrase.  Read operations consume
-the provided number of bits and then returns both the read and remaining bits as separate phrases -
+the provided number of bits and returns both the read and remaining bits as separate phrases -
 
         let 𝑎 = A known phrase
 
-        𝑎.Read(𝑛) // Returns two phrases: the read terminus bits and the remainder region
+        𝑎.Read(𝑛) // Reads from the left and returns two phrases: the read terminus bits and the remainder region
+        𝑎.ReadFromEnd(𝑛) // Reads from the right and returns two phrases: the read terminus bits and the remainder region
 
 ### Why?
 
