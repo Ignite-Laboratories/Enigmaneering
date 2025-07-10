@@ -76,8 +76,18 @@ For this enigma, we will consider *abstract* dimensions with synthetic values - 
 
 **Measurements** - A measurement is any _variable width_ slice of binary information. These are limited to the 
 host architecture's bit-width, allowing them to be considered a _single computable value_ - in Go, often an 
-`int`.  Essentially, this tracks the remainder of any bits in excess of a whole byte automatically - efficiently 
-packing them into a byte whenever possible while still providing convenient access to the underlying bits.
+`int` - in hardware, a `word`.  Essentially, this tracks the remainder of any bits in excess of a whole byte 
+automatically - efficiently packing them into a byte wherever possible while still providing convenient access 
+to the underlying bits.  Why is this so damn important?  Well, the _**width**_ of a measurement is a distinct 
+variable which is _contextually relational_ to its underlying _**value**_ - and it's **_critical_** to the 
+synthesis process! The thing is, hardware currently cannot dynamically change its `word` "width" - but a 
+_measurement_ **_can!_** ..._"using the power of already written words"_ =) 
+
+_Yes, I wholeheartedly mean that philosophically, metaphysically, computationally, virtually, psychologically, abstractly, linguistically, theologically,  and, well..._
+
+_...**all** of the 'lys'!_
+
+Let us not forget our roots - maybe one day we can find a way to dynamically allocate a `word` at the hardware level!
 
 **Phrases** - A phrase is a _slice_ of measurements, allowing the storage of arbitrary lengths of binary 
 information that's not limited to the host architecture's bit-width.
@@ -235,5 +245,30 @@ through tiny's fluent design.  Here's the most notable things it provides:
         tiny.To.Byte(0,1,1) // Converts the provided bits into a byte
         tiny.To.Morsel(bits) // Converts the provided bits into a 6-bit number
 
-You'll get much more familiar with the intricacies of tiny as we progress, but the above should give you a
+In addition, `tiny` is a fully-featured _binary calculator!_  While it may not be as featured as a higher-level
+calculator, wherever any functionality is _missing_ `tiny` provides bridges into `math/big` to fill in the gaps.
+That being said, from my current vantage point the below operations _should be_ all that you'd need for pretty
+much anything you could dream up -
+
+        let 𝑎 and 𝑏 = Known Phrases
+
+        𝑎.Add(𝑏)          = 𝑐
+        𝑎.Minus(𝑏)        = 𝑐
+        𝑎.Times(𝑏)        = 𝑐
+        𝑎.DividedBy(𝑏)    = 𝑐
+        𝑎.ToThePowerOf(𝑏) = 𝑐
+        𝑎.Modulo(𝑏)       = 𝑐
+
+Lastly, all phrases are able to perform _logic gate operations_ -
+
+      Methodical  | Programmatic | Logical
+        𝑎.NOT()   |      !𝑎      |  ¬𝑎  
+        𝑎.AND(𝑏)  |     𝑎 & 𝑏    |  𝑎 ∧ 𝑏
+        𝑎.OR(𝑏)   |     𝑎 | 𝑏    |  𝑎 ∨ 𝑏
+        𝑎.XOR(𝑏)  |     𝑎 ^ 𝑏    |  𝑎 ⊕ 𝑏
+        𝑎.NAND(𝑏) |   ^(𝑎 & 𝑏)   |  𝑎 ↑ 𝑏
+        𝑎.NOR(𝑏)  |   ^(𝑎 | 𝑏)   |  𝑎 ↓ 𝑏
+        𝑎.XNOR(𝑏) |   ^(𝑎 ^ 𝑏)   |  𝑎 ⊙ 𝑏
+
+You'll get much more familiar with the intricacies of `tiny` as we progress, but the above should give you a
 quick primer of the general idea I had when creating it.
