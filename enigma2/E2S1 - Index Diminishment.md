@@ -33,8 +33,8 @@ Let's take an 11-bit index and break it into eight regions using a note (3-bit) 
     let 𝑛 = The index width
     let 𝑤 = The pattern width
     let 𝑝 = The pattern value
-    let  𝑣(𝑝) ↦ ⌊(2ⁿ / (2ʷ - 1)) * 𝑝⌋
-    let 𝑑𝑣(𝑝) ↦ 𝑣(𝑝) - 𝑣(𝑚𝑎𝑥(𝑝 - 1, 0))
+    let  𝑣(𝑛, 𝑤, 𝑝) ↦ ⌊(2ⁿ / (2ʷ - 1)) * 𝑝⌋
+    let 𝑑𝑣(𝑛, 𝑤, 𝑝) ↦ 𝑣(𝑛, 𝑤, 𝑝) - 𝑣(𝑛, 𝑤, 𝑚𝑎𝑥(𝑝 - 1, 0))
     where 𝑚𝑎𝑥(𝑎, 𝑏) returns the larger of 𝑎 and 𝑏 
  
                                       ⬐ "Synthesized Point"
@@ -64,6 +64,17 @@ lower the _resolution_ of the index and provides a way to quickly "stride" throu
 
 Binary is truly the most beautiful counting system in existence =)
 
+<picture>
+<img alt="Index Diminishment Formula" src="assets/diminishment point.png" style="display: block; margin-left: auto; margin-right: auto;">
+</picture>
+
+In `tiny` you can synthesize any diminishment point on the fly by providing a binary measurement (which implicitly
+provides the pattern interval and width as one variable) -
+
+    let 𝑚 = A known interval measurement
+
+    tiny.Synthesize.Point.Diminishment(𝑚, 𝑛) // Synthesizes diminishment interval 𝑚 across an 𝑛-wide index  
+
 ### Terminals, Intervals, and Reading Phrases
 
 A **_single_** leading pattern can also be used to implicitly reference a sub-index on demand - called a _terminal
@@ -87,12 +98,12 @@ of the bit pattern itself -
                        | 1 0 1 - 0 ... 0 |
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
-This brings me to an important, _albeit brief,_ note - binary _values_ are read right to left, but we still colloquially
-read _logical_ binary data from left to right.  The leftmost bit, or the "most significant bit," is considered index
+This brings me to an important note: binary _values_ are read right↤to↤left, but we still colloquially
+read _logical_ binary data from left↦to↦right.  The leftmost bit, or the "most significant bit," is considered index
 position `0` - whereas the rightmost bit, or the "least significant bit," is considered index position `𝑛-1`.  From a
-_value_ perspective, on the other hand, the value wouldn't exist _without_ a terminus.  That's why data pinned to
-the _left side_ of the phrase is considered the _"terminal data,"_ but data pinned to the _right side_ is considered
-the _"initial data."_  In `tiny` both can quickly be synthesized -
+_value_ perspective, on the other hand, the value wouldn't exist _without_ a terminus because _the phrase would be 
+empty!_  That's why data pinned to the _left side_ of the phrase is considered the _"terminal data,"_ but data pinned 
+to the _right side_ is considered the _"initial data."_  In `tiny` both can quickly be synthesized -
 
         tiny.Synthesize.Point.Terminal(𝑝, 𝑛) // Synthesizes terminal point 𝑝 followed by zeros up to the provided width
         tiny.Synthesize.Point.Initial(𝑝, 𝑛) // Synthesizes initial point 𝑝 preceeded by zeros up to the provided width
@@ -106,11 +117,16 @@ a phrase offers -
         𝑎.Read(𝑛) // Reads from the left and returns two phrases: the read terminus bits and the remainder region
         𝑎.ReadFromEnd(𝑛) // Reads from the right and returns two phrases: the read bits and the remainder region
 
-
         𝑎.ReadNextBit() // Reads the next bit from the left plus the remainder
         𝑎.ReadFromEnd(𝑛) // Reads the next bit from the right plus the remainder
         𝑎.ReadMeasurement(𝑛) // Reads up to a word back as a measurement, rather than a phrase, plus the remainder
         𝑎.ReadUntilOne() // Reads from the left until it reaches a one and returns the zero count found plus the remainder
+
+Reading from the end retains the logical order of bits, merely _counting_ from the end.  For example -
+
+                                            Read ⬎            ⬐ Remainder 
+        [ 0 1 0 0 1 1 0 1 ].ReadFromEnd(4) = [ 1 1 0 1 ] [ 0 1 0 0 ] 
+        [ 0 1 0 0 1 1 0 1 ].Read(4)        = [ 0 1 0 0 ] [ 1 1 0 1 ] 
 
 _All_ read operations return an `ErrorEndOfBits` when you have read beyond the bounds of the phrases bits, but 
 it's perfectly acceptable to simply _ignore_ the error because the operation will still return whatever it _could_ 
@@ -122,9 +138,9 @@ a `measurement` gives us a unique quality which a `word` does _not:_ _"is it **e
 The utility of diminishment will come later on, but for now it's a wonderful primer on working with an index!
 
 This solution is a primitive demonstration to show that binary follows these diminishment rules for any provided 
-index.  All of this has led me to posit a fundamental law -
+index.  All of this has led me to posit a fundamental principle of working with binary indexes -
 
-    "The Law of Binary Index Diminishment"
+    "The Binary Index Diminishment Principle"
 
         An index can be diminished by the dark point of a bit pattern's containing index from repeating 
         the pattern across the target, with the diminishment interval defined by the numeric value of 
@@ -132,9 +148,9 @@ index.  All of this has led me to posit a fundamental law -
 
 ### Prove It!
 Technically, the formula is already written above - but I get to prove to you that _repeating the bit pattern_
-across the index is equivalent to the more formalized `𝑣(𝑝)` formula.  That's a lot easier than one might think! First, 
-it's a lot easier to work from the _left_ side of the index rightwards.  Let's circle back to the halving 
-points of an index again -
+across the index is equivalent to the more formalized `𝑣(𝑝)` formula above.  That's a lot easier than one might 
+think! First, it's a lot easier to mathematically work from the _left_ side of the index rightwards.  Let's circle 
+back to the halving points of an index again -
 
         Index 2¹⁰ (1024)
 
@@ -152,7 +168,7 @@ remaining bits to be zero, a summable formula arises -
     let 𝑤 = The pattern index bit width
     let 𝑝 = The pattern value
     
-    𝑓(𝑛, 𝑤, 𝑝) ↦ ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
+    𝑓(𝑛, 𝑤, 𝑝) = ⌊ ( 2ⁿ / 2ʷ ) * 𝑝 ⌋
 
 So let's algorithmically sum this operation starting from the full index width, and then iteratively again
 for each index one pattern width less wide -
@@ -187,7 +203,7 @@ for each index one pattern width less wide -
             (6) | 1 1 0 - 0 0 |  (24) = ⌊(2⁵/2³) * 6⌋
             (7) | 1 1 1 - 0 0 |  (28) = ⌊(2⁵/2³) * 7⌋
                 |←  3  →|     |
-                |←     7     →|
+                |←     5     →|
 
     -----------------------------------------------------------
 
@@ -236,24 +252,10 @@ together.  Ultimately, that can be wrapped up into a very simple little formula 
 diminishment point -
 
 <picture>
-<img alt="Index Diminishment Formula" src="assets/diminishment summation.png" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="Index Diminishment Summation Formula" src="assets/diminishment summation.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
-But, that's _super clunky_ to work with since you must iteratively build the value - implementing this _in code_
-wouldn't be nearly as efficient as using the formula we already proved earlier -
-
-<picture>
-<img alt="Index Diminishment Formula" src="assets/diminishment point.png" style="display: block; margin-left: auto; margin-right: auto;">
-</picture>
-
-In `tiny` you can synthesize any diminishment point on the fly by providing a binary measurement (which implicitly
-provides the pattern interval and width as one variable) -
-
-    let 𝑚 = A known measurement interval
-
-    tiny.Synthesize.Point.Diminishment(𝑚, 𝑛) // Synthesizes diminishment interval 𝑚 across an 𝑛-wide index  
-
-I'm not sure how much more proof one would need - this appears to be a fundamental _law_ of binary indexes =)
+I'm not sure how much more proof one would need - this appears to be a fundamental principle of binary indexes =)
 
 _Far_ more importantly, however, we just executed the standard process of synthesis: using _starting conditions_
 and an _algorithm_ to create a _target!_ 
