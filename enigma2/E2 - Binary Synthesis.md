@@ -21,7 +21,7 @@ It's not meant to be treated as the greatest enigma of all existence, though it'
 It represents a _practical limit_ which you can accept as _"reasonably large enough!"_
 
 For instance, in the early days of computing we were restricted to tiny memory spaces - and, as such, some of the
-the original concepts of _epoch_ (January 1st 1970) were restricted to _32 bits._  This meant we would "loop over" 
+the original concepts of the digital realm's _epoch_ (January 1st 1970) were restricted to _32 bits._  This meant we would "loop over" 
 time in 2038 unless we moved to a larger structure.  However, in doing so, we didn't _"prolong"_ the issue - we 
 _solved_ it.  The _next logical size up_ date index  (64 bits) covers 584 _billion_ years from epoch!
 
