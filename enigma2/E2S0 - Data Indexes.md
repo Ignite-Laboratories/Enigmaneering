@@ -45,7 +45,7 @@ There are a few important qualities of an index to keep in mind -
 - The minimum _logical_ value of an index is 𝑛 zeros and is referred to as its `light point`
 - The midpoint of an index is `2ⁿ / 2`
 
-The last point is the absolute most _crucial_ one in the synthesis process, as it can implicitly be generated 
+The last point is the absolute most _crucial_ one in the synthesis process and it can implicitly be generated 
 with a single one followed by 𝑛-1 zeros -
 
     |←     8 Bits    →|
