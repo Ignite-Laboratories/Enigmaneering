@@ -98,42 +98,46 @@ of the bit pattern itself -
                        | 1 0 1 - 0 ... 0 |
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
-This brings me to an important note: binary _values_ are read right↤to↤left, but we still colloquially
-read _logical_ binary data from left↦to↦right.  The leftmost bit, or the "most significant bit," is considered index
-position `0` - whereas the rightmost bit, or the "least significant bit," is considered index position `𝑛-1`.  From a
-_value_ perspective, on the other hand, the value wouldn't exist _without_ a terminus because _the phrase would be 
-empty!_  That's why data pinned to the _left side_ of the phrase is considered the _"terminal data,"_ but data pinned 
-to the _right side_ is considered the _"initial data."_  In `tiny` both can quickly be synthesized -
+This brings me to an important note: numeric values, no batter the base, are _constructed_ right↤to↤left, but we still 
+_read them_ from left↦to↦right.  The same applies to binary - the leftmost, or the "most significant bit," is 
+considered index position `0` - whereas the rightmost, or the "least significant bit," is considered index position 
+`𝑛-1`.  From a _value_ perspective, on the other hand, the value wouldn't _exist_ without a terminus - _the phrase 
+would be empty!_  That's why data pinned to the _left side_ of the phrase is considered the _"terminal data."_  On the
+other hand, data that is pinned to the _right side_ of the phrase is considered the _"genesis data"_ - intentionally
+implying that it _originates_ from there, yet has the least effect on its current form.
 
         tiny.Synthesize.Point.Terminal(𝑝, 𝑛) // Synthesizes terminal point 𝑝 followed by zeros up to the provided width
-        tiny.Synthesize.Point.Initial(𝑝, 𝑛) // Synthesizes initial point 𝑝 preceeded by zeros up to the provided width
+        tiny.Synthesize.Point.Terminal(𝑝, 𝑛, 1) // Synthesizes terminal point 𝑝 followed by ones up to the provided width
+        tiny.Synthesize.Point.Genesis(𝑝, 𝑛) // Synthesizes genesis point 𝑝 preceeded by zeros up to the provided width
+        tiny.Synthesize.Point.Genesis(𝑝, 𝑛, 1) // Synthesizes genesis point 𝑝 preceeded by ones up to the provided width
 
-To _work_ with terminal and initial data you can use the phrase reading methods.  Read operations consume the provided
-number of bits before returning both the read and remaining phrases separately.  Here's a list of the reading operations
-a phrase offers -
+To _work_ with terminal and genesis data you can use the phrase reading methods.  Read operations consume the provided
+number of bits before returning both the read and remaining bits as separate objects.  Here's a list of the reading 
+operations a phrase offers -
 
         let 𝑎 = A known phrase
 
         𝑎.Read(𝑛) // Reads from the left and returns two phrases: the read terminus bits and the remainder region
-        𝑎.ReadFromEnd(𝑛) // Reads from the right and returns two phrases: the read bits and the remainder region
+        𝑎.ReadFromEnd(𝑛) // Reads from the right and returns two phrases: the read initial bits and the remainder region
 
         𝑎.ReadNextBit() // Reads the next bit from the left plus the remainder
         𝑎.ReadFromEnd(𝑛) // Reads the next bit from the right plus the remainder
         𝑎.ReadMeasurement(𝑛) // Reads up to a word back as a measurement, rather than a phrase, plus the remainder
         𝑎.ReadUntilOne() // Reads from the left until it reaches a one and returns the zero count found plus the remainder
 
-Reading from the end retains the logical order of bits, merely _counting_ from the end.  For example -
+Reading from the end still retains the logical order of bits - the read operations merely _count_ in the direction of 
+travel.  For example -
 
                                             Read ⬎            ⬐ Remainder 
-        [ 0 1 0 0 1 1 0 1 ].ReadFromEnd(4) = [ 1 1 0 1 ] [ 0 1 0 0 ] 
-        [ 0 1 0 0 1 1 0 1 ].Read(4)        = [ 0 1 0 0 ] [ 1 1 0 1 ] 
+        [ 0 1 0 0 1 1 0 1 ].ReadFromEnd(5) = [ 0 1 1 0 1 ] [ 0 1 0 ] 
+        [ 0 1 0 0 1 1 0 1 ].Read(5)        = [ 0 1 0 0 1 ] [ 1 0 1 ] 
 
-_All_ read operations return an `ErrorEndOfBits` when you have read beyond the bounds of the phrases bits, but 
+Read operations typically return an `ErrorEndOfBits` when you have read beyond the bounds of the phrases bits, but 
 it's perfectly acceptable to simply _ignore_ the error because the operation will still return whatever it _could_ 
 find.  For example - it's far more efficient to just read a smaller-than-𝑛 value by calling `𝑎.Read(𝑛)` 
 than it is to first calculate the exact number of bits you have available to read.  `tiny` will gracefully stop 
 reading when no more bits are left, but will provide you with some extra information _if you care._ Remember, 
-a `measurement` gives us a unique quality which a `word` does _not:_ _"is it **empty?**"_
+a `measurement` gives us a unique quality which a `word` doesn't: _"is the data **empty?**"_
 
 The utility of diminishment will come later on, but for now it's a wonderful primer on working with an index!
 
@@ -142,9 +146,8 @@ index.  All of this has led me to posit a fundamental principle of working with 
 
     "The Binary Index Diminishment Principle"
 
-        An index can be diminished by the dark point of a bit pattern's containing index from repeating 
-        the pattern across the target, with the diminishment interval defined by the numeric value of 
-        the pattern.
+            An index can be diminished by the dark point of a bit pattern's containing index by repeating the 
+        pattern across the target, with the diminishment interval defined by the numeric value of the pattern.
 
 ### Prove It!
 Technically, the formula is already written above - but I get to prove to you that _repeating the bit pattern_
@@ -257,5 +260,5 @@ diminishment point -
 
 I'm not sure how much more proof one would need - this appears to be a fundamental principle of binary indexes =)
 
-_Far_ more importantly, however, we just executed the standard process of synthesis: using _starting conditions_
-and an _algorithm_ to create a _target!_ 
+_Far_ more importantly, however, we just inadvertently executed the standard process of synthesis: using _starting 
+conditions_ and an _algorithm_ to create a _target!_ 
