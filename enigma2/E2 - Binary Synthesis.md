@@ -155,7 +155,7 @@ you,_ from the bottom of my heart.
 
 Because of the absurdity of that process, I've adopted some quirks in how I document binary programming - I'd like 
 to briefly touch on their general gist before we continue.  It's not _complex,_ but you should get familiar with the
-concept of a _measurement_ vs a _phrase._  The first is a **single** calculable measurement of a binary dimension, 
+concept of a _measurement_ vs a _phrase._  The first is a **single** calculable measurement of binary data, 
 while the later is a **collection** of measurements.  Most of the operations we'll be performing persist _across_ 
 measurements, but there is still a very funadmental _utility_ in referencing variable width regions of data: we can 
 _**implicitly**_ know where each calculation starts and ends.
