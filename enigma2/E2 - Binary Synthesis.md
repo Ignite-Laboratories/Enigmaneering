@@ -88,7 +88,7 @@ automatically - efficiently packing them into a byte wherever possible while sti
 to the underlying bits.  Why is this so damn important?  Well, the _**width**_ of a measurement is a distinct 
 variable which is _contextually relational_ to its underlying _**value**_ - and it's **_critical_** to the 
 synthesis process! The thing is, hardware currently cannot dynamically change its `word` "width" - but a 
-_measurement_ **_can!_** ..._"using the power of already written `words`"_ =) 
+_measurement_ **_can!_** ..._"using the power of the already written `word`"_ =) 
 
 _Yes, I wholeheartedly mean that philosophically, metaphysically, computationally, virtually, psychologically, abstractly, linguistically, theologically,  and, well..._
 
