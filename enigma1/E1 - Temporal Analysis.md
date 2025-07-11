@@ -74,7 +74,7 @@ A sign appears before you - impatiently inviting you along as if you had a choic
     #      ║        Welcome!  It's absolutely wonderful to have you here! =)                               │       
     #      ║                                                                                               │       
     #      ║       Please excuse the theatrics - you see, the only way to know if you might be ready to    │
-    #      ║   take  the next step is through -my-  pixelated  smoke signals and -your- feedback.   You    │
+    #      ║   take  the next step was through -my-  pixelated smoke signals and -your- feedback.   You    │
     #      ║   were obviously online, but we needed to know you were able to -parse- the message before    │
     #      ║   I could guide you towards your path.                                                        │
     #      ║                                                                                               │       
