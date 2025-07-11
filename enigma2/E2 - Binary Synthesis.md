@@ -143,7 +143,7 @@ for posterity's sake I'd like to include them here -
 
 As you'll find later on, synthesis _frequently_ references a value of **2ⁿ** (where 𝑛 is the bit length).  My chief
 goal was to keep the library _as simple as possible,_ and an `int` cannot address the _limit_ of a melody or verse.  As 
-such, I felt that was a good practical limit to even _consider_ during my enigmaneering and simply removed them.  
+such, I felt the `Hook` was a good practical limit to even _consider_ during my enigmaneering and simply removed them.  
 
 ### tiny
 
