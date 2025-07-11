@@ -210,11 +210,12 @@ widths.
 
 For example:
 
+    |←  3  →|← 2 →|←       8       →|←   4   →|←1→|←  3  →|← 2 →| ← Measurement Bit Widths
     | 0 1 0 - 0 1 - 1 0 1 0 0 0 1 0 - 1 1 0 0 - 0 - 1 0 0 - 0 0 | ← Unaligned Source Phrase
     
     Align(4)
 
-    | 4 bits  | 4 bits  | 4 bits  | 4 bits  | 4 bits  | 3 bits|
+    |←   4   →|←   4   →|←   4   →|←   4   →|←   4   →|←  3  →|
     | 0 1 0 0 - 1 1 0 1 - 0 0 0 1 - 0 1 1 0 - 0 0 1 0 - 0 0 0 | ← Aligned Phrase
 
 The next major component of working at the bit level is the _rapid prototyping_ of ideas - this can be achieved
@@ -224,16 +225,24 @@ through tiny's fluent design.  Here's the most notable things it provides:
 	    tiny.Synthesize.Random(𝑛) // Create a slice of 𝑛 random bits
 	    tiny.Synthesize.RandomPhrase(𝑛) // Create a phrase of 𝑛 random bytes
 	    tiny.Synthesize.RandomPhrase(𝑛, 4) // Create a phrase of 𝑛 random nibbles
-	    tiny.Synthesize.Pattern(𝑛, 1, 0, 1) // Create a phrase of 𝑛 bits that cycle through 1, 0, 1 
-	    tiny.Synthesize.Ones(𝑛) // Create a phrase of 𝑛 1s
-        tiny.Synthesize.Midpoint(𝑛) // Create a phrase of a single one followed by zeros up to the provided width
+	    tiny.Synthesize.Pattern(𝑛, 1, 0, 1) // Create a phrase of 𝑛 bits that cycle through 1, 0, 1
+	    tiny.Synthesize.Repeating(𝑥, 1, 0, 1) // Create a phrase of 1, 0, 1 repeated 𝑥 times 
+
+    Synthesize.Point -
+
+        tiny.Synthesize.Point.Light(𝑛) // Create a phrase of a single one followed by zeros up to the provided width
+        tiny.Synthesize.Point.Mid(𝑛) // Create a phrase of a single one followed by zeros up to the provided width
+        tiny.Synthesize.Point.Dark(𝑛) // Create a phrase of a single one followed by zeros up to the provided width
+        tiny.Synthesize.Point.Diminishment(𝑚, 𝑛) // Synthesizes diminishment interval 𝑚 across an 𝑛-wide index  
+        tiny.Synthesize.Point.Terminal(𝑝, 𝑛) // Synthesizes terminal point 𝑝 followed by zeros up to the provided width
+        tiny.Synthesize.Point.Initial(𝑝, 𝑛) // Synthesizes initial point 𝑝 preceeded by zeros up to the provided width
 
     Analyze - 
         NOTE: Much of this never matured past measurements as it wasn't necessary at those scales
 
 	    tiny.Analyze.HasPrefix(data, 1, 0) // Checks if the data starts with "10"
-	    tiny.Analyze.Average(phrase...) // Calculates the average value of all measurements in the phrase
-        tiny.Analyze.Shade(measure) // Calculates metrics on the "darkness" of the measurement
+	    tiny.Analyze.Average(measurements...) // Calculates the average value of the provided measurements
+        tiny.Analyze.Shade(measurement) // Calculates metrics on the "darkness" of the measurement
         tiny.Analyze.Repetition(data, 1, 0) // Checks if the data is just repeating '1010101010...'
 
     To/From - 

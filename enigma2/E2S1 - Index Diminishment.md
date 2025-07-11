@@ -87,18 +87,25 @@ of the bit pattern itself -
                        | 1 0 1 - 0 ... 0 |
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
-In `tiny` - you can quickly work with binary terminals simply by _reading_ the phrase.  Read operations consume
-the provided number of bits and returns both the read and remaining bits as separate phrases -
+This brings me to an important, _albeit brief,_ note - binary _values_ are read right to left, but we still colloquially
+read _logical_ binary data from left to right.  The leftmost bit, or the "most significant bit," is considered index
+position `0` - whereas the rightmost bit, or the "least significant bit," is considered index position `𝑛-1`.  From a
+_value_ perspective, on the other hand, the value wouldn't exist _without_ a terminus.  That's why data pinned to
+the _left side_ of the phrase is considered the _"terminal data,"_ but data pinned to the _right side_ is considered
+the _"initial data."_  In `tiny` both can quickly be synthesized -
+
+        tiny.Synthesize.Point.Terminal(𝑝, 𝑛) // Synthesizes terminal point 𝑝 followed by zeros up to the provided width
+        tiny.Synthesize.Point.Initial(𝑝, 𝑛) // Synthesizes initial point 𝑝 preceeded by zeros up to the provided width
+
+To _work_ with terminal and initial data you can use the phrase reading methods.  Read operations consume the provided
+number of bits before returning both the read and remaining phrases separately.  Here's a list of the reading operations
+a phrase offers -
 
         let 𝑎 = A known phrase
 
         𝑎.Read(𝑛) // Reads from the left and returns two phrases: the read terminus bits and the remainder region
         𝑎.ReadFromEnd(𝑛) // Reads from the right and returns two phrases: the read bits and the remainder region
 
-This brings me to an important, _albeit brief,_ note - binary _values_ are read right to left, but we still colloquially
-read _logical_ binary data from left to right.  The leftmost bit, or the "most significant bit," is considered index
-position `0` - whereas the rightmost bit, or the "least significant bit," is considered index position `𝑛-1`.  Here's the
-rest of the reading operations a phrase offers -
 
         𝑎.ReadNextBit() // Reads the next bit from the left plus the remainder
         𝑎.ReadFromEnd(𝑛) // Reads the next bit from the right plus the remainder
@@ -109,14 +116,12 @@ _All_ read operations return an `ErrorEndOfBits` when you have read beyond the b
 it's perfectly acceptable to simply _ignore_ the error because the operation will still return whatever it _could_ 
 find.  For example - it's far more efficient to just read a smaller-than-𝑛 value by calling `𝑎.Read(𝑛)` 
 than it is to first calculate the exact number of bits you have available to read.  `tiny` will gracefully stop 
-reading when no more bits are left.  This provides a unique _testable_ byproduct of working with measurements instead 
-of words: _"is it **empty?**"_
+reading when no more bits are left, but will provide you with some extra information _if you care._ Remember, 
+a `measurement` gives us a unique quality which a `word` does _not:_ _"is it **empty?**"_
 
-### Why?
+The utility of diminishment will come later on, but for now it's a wonderful primer on working with an index!
 
-The utility of diminishment will come later on, but it's a wonderful primer on working with an index!
-
-The solution here is a primitive demonstration to show that binary follows these diminishment rules for a provided 
+This solution is a primitive demonstration to show that binary follows these diminishment rules for any provided 
 index.  All of this has led me to posit a fundamental law -
 
     "The Law of Binary Index Diminishment"
@@ -246,7 +251,7 @@ provides the pattern interval and width as one variable) -
 
     let 𝑚 = A known measurement interval
 
-    tiny.Synthesize.Diminishment(𝑚, 𝑛) // Synthesizes diminishment interval 𝑚 across an 𝑛-wide index  
+    tiny.Synthesize.Point.Diminishment(𝑚, 𝑛) // Synthesizes diminishment interval 𝑚 across an 𝑛-wide index  
 
 I'm not sure how much more proof one would need - this appears to be a fundamental _law_ of binary indexes =)
 
