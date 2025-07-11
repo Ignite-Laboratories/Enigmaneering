@@ -94,7 +94,7 @@ _Yes, I wholeheartedly mean that philosophically, metaphysically, computationall
 
 _...**all** of the 'lys'!_
 
-Let us not forget our roots - maybe one day we can find a way to dynamically allocate a `word` at the hardware level!
+Let us not forget our roots - maybe one day we can find a way to build a dynamic-width hardware register!
 
 **Phrases** - A phrase is a _slice_ of measurements, allowing the storage of arbitrary lengths of binary 
 information that's not limited to the host architecture's bit-width.
