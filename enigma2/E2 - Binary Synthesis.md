@@ -65,7 +65,7 @@ more abstract definition is critical at this juncture:
 
     A dimension is the abstract act of measuring the presence of something across time.
 
-Time, however, is often _implied_ - the ability to record a value comes as a byproduct of the passing of time - 
+Time, however, is often _implied_ - the ability to record a value comes as a byproduct of its _passing_ - 
 without _time,_ there would be no dimensionality because presence cannot be distinguished without change, even if
 the changing component _is_ the passing of _*time!*_
 
