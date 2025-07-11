@@ -68,6 +68,8 @@ more abstract definition is critical at this juncture:
 Time, however, is often _implied_ - the ability to record a value comes as a byproduct of the passing of time - 
 without _time,_ there would be no dimensionality because presence cannot be distinguished without change.
 
+    tl;dr - "stay very still, its vision is based on movement"
+
 This has several implications: Because all dimensions _require_ time to both observe and calculate from, time
 represents the _minimum_ interval from which observances can be made.  Due to entropy, two observers can only 
 _roughly_ record the same dimension at the same impulse of time. In fact, their awareness of _**relative time**_ 
