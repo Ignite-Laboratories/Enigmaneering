@@ -72,7 +72,7 @@ the changing component _is_ the passing of _*time!*_
     tl;dr - "stay very still, its vision is based on movement"
 
 This has several implications: Because all dimensions _require_ time to both observe and calculate from, time
-represents the _minimum_ interval from which observances can be made.  Due to entropy, two observers can only 
+represents the _minimum_ interval from which a signle entity can experience reality.  Due to entropy, two observers can only 
 _roughly_ record the same dimension at the same impulse of time. In fact, their awareness of _**relative time**_ 
 is what allows consciousness in the present _moment._  To understand the concept of temporal observance, please 
 check out the initial enigmas!  They show how to use an impulse engine to drive neural execution, and then how
