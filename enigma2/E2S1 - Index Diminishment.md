@@ -64,6 +64,8 @@ lower the _resolution_ of the index and provides a way to quickly "stride" throu
 
 Binary is truly the most beautiful counting system in existence =)
 
+### Terminals, Intervals, and Reading Phrases
+
 A **_single_** leading pattern can also be used to implicitly reference a sub-index on demand - called a _terminal
 region._  Let's briefly look at the midpoint on an index again -
 
@@ -75,7 +77,7 @@ You can _widen_ the _terminus_ in order to identify a smaller region in the inde
 _bit_ to an _interval_ identifying the terminal region of addressable information.  An "interval" represents the
 face value of the bit pattern in use.  Technically, that makes _**all**_ binary information an interval of its
 containing index - but much like intervals in a musical chord, they are contextually implicit until you explicitly 
-need to _describe_ their magnitude.  In diminishment, the term _interval_ directly describes the explicit _value_ 
+need to _describe_ their quality.  In diminishment, the term _interval_ directly describes the explicit _value_ 
 of the bit pattern itself -
 
     let 𝑡 = The Terminal Bit Width
@@ -91,7 +93,24 @@ the provided number of bits and returns both the read and remaining bits as sepa
         let 𝑎 = A known phrase
 
         𝑎.Read(𝑛) // Reads from the left and returns two phrases: the read terminus bits and the remainder region
-        𝑎.ReadFromEnd(𝑛) // Reads from the right and returns two phrases: the read terminus bits and the remainder region
+        𝑎.ReadFromEnd(𝑛) // Reads from the right and returns two phrases: the read bits and the remainder region
+
+This brings me to an important, _albeit brief,_ note - binary _values_ are read right to left, but we still colloquially
+read _logical_ binary data from left to right.  The leftmost bit, or the "most significant bit," is considered index
+position `0` - whereas the rightmost bit, or the "least significant bit," is considered index position `𝑛-1`.  Here's the
+rest of the reading operations a phrase offers -
+
+        𝑎.ReadNextBit() // Reads the next bit from the left plus the remainder
+        𝑎.ReadFromEnd(𝑛) // Reads the next bit from the right plus the remainder
+        𝑎.ReadMeasurement(𝑛) // Reads up to a word back as a measurement, rather than a phrase, plus the remainder
+        𝑎.ReadUntilOne() // Reads from the left until it reaches a one and returns the zero count found plus the remainder
+
+_All_ read operations return an `ErrorEndOfBits` when you have read beyond the bounds of the phrases bits, but 
+it's perfectly acceptable to simply _ignore_ the error because the operation will still return whatever it _could_ 
+find.  For example - it's far more efficient to just read a smaller-than-𝑛 value by calling `𝑎.Read(𝑛)` 
+than it is to first calculate the exact number of bits you have available to read.  `tiny` will gracefully stop 
+reading when no more bits are left.  This provides a unique _testable_ byproduct of working with measurements instead 
+of words: _"is it **empty?**"_
 
 ### Why?
 
