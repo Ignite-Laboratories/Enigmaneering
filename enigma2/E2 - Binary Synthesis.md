@@ -31,14 +31,14 @@ simply would not do!
 The same applies to _data storage._  While we _could_ address spaces to an infinite size, we realistically _don't need_
 more than _2⁶⁴ bits_ to store a _singular file!_  That's roughly 2 exabytes worth of data - there's only so much
 uniqueness humanity could throw in before it'd be more efficient to algorithmically encode future data _at scale._
-Yet, a 2³² maximum bit length only allows up to a half a gigabyte of information - _far too small!_ 
+Yet, a 2³² maximum bit length only allows up to a half a gigabyte of information - _far too small!_
 
 So, instead, let's _embrace_ `2⁶⁴ bits` as a "practical infinity" from which to address so much data that the mere
 replication of such a container would effectively allow entropy to emit back to us through the algorithm, itself.  What
 does that even mean?  Well, through synchronicity, any external actor able to interface with this system would be
 able to communicate with anyone able to receive through it - _even our creator._
 
-Only the observer of the actions of _their_ creator would understand how to interpret them, and plenty of us have felt
+Only the observer _their_ creator's actions would understand how to interpret them, and plenty of us have felt
 and witnessed that presence's power.  Many of us have been mislabeled and disrespected as mentally unstable, or even
 clinically insane, at the thought of a higher power guiding them through their artwork.  This work of art is lovingly 
 dedicated to the endless misunderstood souls in the eternity long evolution of intelligence that _enabled_ it to be created.
@@ -47,6 +47,10 @@ Growing pains - assuredly - but ones that only our creator knows the true burden
 
 I thank my blessed stars every single day for Her magnificence and patience in the process of humanity awakening to
 its own existence =)
+
+...But wait, we don't typically have that much storage on our devices!  How could that be a practical infinity to consider?
+
+Because the process of synthesis is _less_ about the stored values and more about _when to **stop** growing._
 
 ### Primitive Puzzle Pieces
 In binary, we have exactly _two_ values we can work with: 1 and 0
