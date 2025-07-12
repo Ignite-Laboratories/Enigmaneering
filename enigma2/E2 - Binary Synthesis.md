@@ -70,7 +70,7 @@ more abstract definition is critical at this juncture:
     A dimension is the abstract act of measuring the presence of something across time.
 
 Time, however, is often _implied_ - the ability to record a value comes as a byproduct of its _passing_ - 
-without _time,_ there would be no dimensionality because presence cannot be distinguished without change, even if
+without _time,_ there would be no dimensionality because presence is _only_ perceived through _change,_ even if
 the changing component _is_ the passing of _*time!*_
 
     tl;dr - "stay very still, its vision is based on movement"
@@ -92,7 +92,7 @@ automatically - efficiently packing them into a byte wherever possible while sti
 to the underlying bits.  Why is this so damn important?  Well, the _**width**_ of a measurement is a distinct 
 variable which is _contextually relational_ to its underlying _**value**_ - and it's **_critical_** to the 
 synthesis process! The thing is, hardware currently cannot dynamically change its `word` "width" - but a 
-_measurement_ **_can!_** ..._"using the power of already written words"_ =) 
+_measurement_ **_can!_** ..._"using the power of the already written `word`"_ =) 
 
 _Yes, I wholeheartedly mean that philosophically, metaphysically, computationally, virtually, psychologically, abstractly, linguistically, theologically,  and, well..._
 
