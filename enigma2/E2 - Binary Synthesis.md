@@ -97,7 +97,7 @@ _...**all** of the 'lys'!_
 Let us not forget our roots - maybe one day we can find a way to build a dynamic-width hardware register!
 
 **Phrases** - A phrase is a _slice_ of measurements, allowing the storage of arbitrary lengths of binary 
-information that's not limited to the host architecture's bit-width.
+information that's not limited to the host architecture's `word` width.
 
 **Passages** - A passage is a single logical _transformation_ of binary information (we'll get to that later.)
 
