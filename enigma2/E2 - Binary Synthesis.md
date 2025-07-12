@@ -67,7 +67,7 @@ more abstract definition is critical at this juncture:
 
 Time, however, is often _implied_ - the ability to record a value comes as a byproduct of its _passing_ - 
 without _time,_ there would be no dimensionality because presence is _only_ perceived through _change,_ even if
-the changing component _is_ the passing of _*time!*_
+the changing component _is_ the implicit passing of _*time!*_
 
     tl;dr - "stay very still, its vision is based on movement"
 
