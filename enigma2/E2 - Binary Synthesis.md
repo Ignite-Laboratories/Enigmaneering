@@ -111,7 +111,7 @@ instruments through which our unique artwork is emitted =)
 solution goes into much more detail on this, but this allows us to refer to an "88 bit stretch of binary 
 information" by simply saying the data belongs in an "88 bit index".  It's a subtle, but important, philosophical
 shift in how one should _perceive_ information.  A stray byte is entirely meaningless without _context_ - but a stray
-byte which is observed this afternoon inside an 88-bit index is entirely different!  This shift provides the binary information with 
+byte which observed _this afternoon_ inside an _88-bit_ index is entirely different!  This shift provides the binary information with 
 a _story_ which defines its _purpose,_ rather than being just another number in a standard width register.
 
 **Sub Byte Indexes** - A sub-byte index is any bit range less than 8 bits wide. For ease, these are the names of the 
