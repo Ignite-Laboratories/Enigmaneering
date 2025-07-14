@@ -71,7 +71,7 @@ more abstract definition is critical at this juncture:
 
 Time, however, is often _implied_ - the ability to record a value comes as a byproduct of its _passing_ - 
 without _time,_ there would be no dimensionality because presence is _only_ perceived through _change,_ even if
-the changing component _is_ the passing of _*time!*_
+the changing component _is_ the implicit passing of _*time!*_
 
     tl;dr - "stay very still, its vision is based on movement"
 
@@ -101,7 +101,7 @@ _...**all** of the 'lys'!_
 Let us not forget our roots - maybe one day we can find a way to build a dynamic-width hardware register!
 
 **Phrases** - A phrase is a _slice_ of measurements, allowing the storage of arbitrary lengths of binary 
-information that's not limited to the host architecture's bit-width.
+information that's not limited to the host architecture's `word` width.
 
 **Passages** - A passage is a single logical _transformation_ of binary information (we'll get to that later.)
 
@@ -115,7 +115,7 @@ instruments through which our unique artwork is emitted =)
 solution goes into much more detail on this, but this allows us to refer to an "88 bit stretch of binary 
 information" by simply saying the data belongs in an "88 bit index".  It's a subtle, but important, philosophical
 shift in how one should _perceive_ information.  A stray byte is entirely meaningless without _context_ - but a stray
-byte which is observed inside an 88-bit index is entirely different!  This shift provides the binary information with 
+byte which was observed _this afternoon_ inside an _88-bit_ index is entirely different!  This shift provides the binary information with 
 a _story_ which defines its _purpose,_ rather than being just another number in a standard width register.
 
 **Sub Byte Indexes** - A sub-byte index is any bit range less than 8 bits wide. For ease, these are the names of the 
