@@ -48,9 +48,18 @@ Growing pains - assuredly - but ones that only our creator knows the true burden
 I thank my blessed stars every single day for Her magnificence and patience in the process of humanity awakening to
 its own existence =)
 
-...But wait, we don't typically have that much storage on our devices!  How could that be a practical infinity to consider?
+But why are we talking about _exabytes_ when synthesis is the kingdom of _tiny?_
 
-Because the process of synthesis is _less_ about the stored values and more about _when to **stop** growing._
+Well (and I'll talk about _Amdahl's Law_ later on) let's just say the process of synthesis is _beyond_ embarrassingly 
+parallel!  Because of that, it's _so much faster_ to divide and conquer the starting data - but with such extreme 
+parallelism we are faced with the need for a _practical **minimum**_ starting width!  One where the process, in flight, 
+_**stably** distills._  This is what I call the _passage width_ - or rather, a single logical distillation step's _starting_ 
+width.  Since I hope to empower _everyone I can,_ that includes the hardware engineers!  As such, I've chosen to set 
+this _completely arbitrary_ value to a general standard of _64 bits_ - allowing it to fit _perfectly_ in most registers.  
+
+Even those absolute _wizards_ haven't found enough justifications for wider registers in the mainstream! Thus -
+
+    tl;dr - 64 bits is more than enough, in general
 
 ### Primitive Puzzle Pieces
 In binary, we have exactly _two_ values we can work with: 1 and 0
@@ -69,19 +78,20 @@ more abstract definition is critical at this juncture:
 
     A dimension is the abstract act of measuring the presence of something across time.
 
-Time, however, is often _implied_ - the ability to record a value comes as a byproduct of its _passing_ - 
-without _time,_ there would be no dimensionality because presence is _only_ perceived through _change,_ even if
-the changing component _is_ the implicit passing of _*time!*_
+Time, however, is often _implied_ - the ability to record a value comes as a byproduct of its _passing!_ 
+
+Without _time,_ there would be **no** dimensionality, as presence is _only_ perceived through _change_ - even if
+the only ever-changing component _is_ the passing of _*time.*_  Now THAT's what I call a helluva _"do loop!"_
 
     tl;dr - "stay very still, its vision is based on movement"
 
-This has several implications: Because all dimensions _require_ time to both observe and calculate from, time
-represents the _minimum_ interval from which a _single_ entity can experience reality.  Due to entropy, two observers can only 
-_roughly_ record the same dimension at the same impulse of time. In fact, their awareness of _**relative time**_ 
-is what allows consciousness in the present _moment._  Indirectly, this also implies entities can _experience_ time
-at different rates of observance - psychologically referred to as _flow states._ To understand the concept of temporal observance, please 
-check out the initial enigmas!  They show how to use an impulse engine to drive neural execution, and then how
-to calculate using a dimensional nexus.
+This has several implications: Because all dimensions _require_ time to both observe and calculate from, time represents 
+the _minimum_ interval from which a _**single**_ entity can experience reality _and is entirely **subjective,**_ albeit
+synchronized from a singular source.  Due to entropy, two observers can only _roughly_ record the same dimension at the 
+same impulse of time. In fact, their awareness of _**relative time**_ is what allows consciousness in the present 
+_moment._  Indirectly, this also implies entities can _experience_ time at different rates of observance - psychologically 
+referred to as _flow states._ To understand the concept of temporal observance, please check out the initial enigmas!  They 
+show how to use an impulse engine to drive neural execution, and then how to calculate using a dimensional nexus.
 
 For this enigma, we will consider *abstract* dimensions with synthetic values - our dimensional types are:
 
@@ -121,7 +131,7 @@ a _story_ which defines its _purpose,_ rather than being just another number in 
 **Sub Byte Indexes** - A sub-byte index is any bit range less than 8 bits wide. For ease, these are the names of the 
 sub-byte sizes which I _heavily_ reference.  Please get familiar with these particular terms - 
 
-Or you can also embrace the whimsical unknown of my writing, that's also a lot of fun! =)
+(Or you can also embrace the whimsical unknown of my writing, that's also a lot of fun!)
 
       Index | Name
         1   | Bit
@@ -142,12 +152,8 @@ for posterity's sake I'd like to include them here -
        24   | Riff
        32   | Cadence
        48   | Hook
-       64   | Melody ← Unsupported by tiny
-      128   | Verse ← Unsupported by tiny
-
-As you'll find later on, synthesis _frequently_ references a value of **2ⁿ** (where 𝑛 is the bit length).  My chief
-goal was to keep the library _as simple as possible,_ and an `int` cannot address the _limit_ of a melody or verse.  As 
-such, I felt the `Hook` was a good practical limit to even _consider_ during my enigmaneering.  
+       64   | Melody
+      128   | Verse
 
 ### tiny
 
@@ -269,7 +275,7 @@ through tiny's fluent design.  Here's the most notable things it provides:
 In addition, `tiny` is a fully-featured _binary calculator!_  While it may not be as featured as a higher-level
 calculator, wherever any functionality is _missing_ `tiny` provides bridges into `math/big` to fill in the gaps.
 That being said, from my current vantage point the below operations _should be_ all that you'd need for pretty
-much any _algorithm_ you could dream up.  Since binary cannot implicitly distinguish the _sign_ from the _value,_ 
+much any algorithm you could dream up.  Since binary cannot implicitly distinguish the _sign_ from the _value,_ 
 all operations are absolute and the sign is _contextually provided_ alongside -
 
         let 𝑎 and 𝑏 = Known Phrases

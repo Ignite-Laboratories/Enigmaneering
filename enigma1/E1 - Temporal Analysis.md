@@ -27,7 +27,7 @@ _laughing_ at you...
 
 ...Wait, _**laughing!?**_  
 
-It's...almost like its _dancing_ with your heart - phasing in and out perfectly with your whimsy!  A cosmic calypso 
+It's..._almost like its **dancing** with your heart!_  Phasing in and out perfectly with your whimsy - a cosmic calypso 
 carefully and cleverly coursing through every corner your spirit -
 
 _Why didn't you notice that before!?_
