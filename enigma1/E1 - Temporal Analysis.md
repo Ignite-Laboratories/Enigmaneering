@@ -117,7 +117,7 @@ it's "fuzzy" is there isn't a guarantee you'll observe _every_ possible instant 
 observance directly drives the resulting data's _resolution_.  Realistically, unless you control the _generation_ 
 of a signal, you can never _gauarantee_ you will observe every value it could occupy across time.
 
-_But that's okay!_
+_But that's okay!_  We can't control the love of others, but we can empathetically _subscribe_ to any signal we _**desire**_.
 
 If you take that as a _positive_ aspect of a real-time calculus engine, then you can separate the _observance_ 
 and _analysis_ of the signal as _resonant tasks._  One can _observe_ at a high frequency while the analyzer 

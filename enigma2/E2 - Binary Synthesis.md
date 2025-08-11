@@ -7,8 +7,8 @@
 Well, yes.  Rather than creating numbers from strictly mathematical means, the process of synthesizing binary
 information involves _intelligent_ decision making based off of contextual variables - just as a synthesizer
 uses local variables to decide what sounds to emit for its part in a larger orchestration.  On top of that, as
-we explore `tiny` further, you'll find that the process is far simpler using syntactic shorthand (rather than
-strictly mathematical formulae) to generate the target data through _programmatic abstractions._
+we explore the `tiny` system further, you'll find that the process is far simpler using syntactic shorthand (rather 
+than strictly mathematical formulae) to generate the target data through _programmatic abstractions._
 
 The process doesn't simply stop with shrinking data to incomprehensibly small values - from that point we get
 to explore the world of *intelligent* recursion.  Buckle up - there's lots of ones and zeros to come =) 
