@@ -1,4 +1,4 @@
-# `E1 - Raster Computation`
+# `E1S0 - Raster Computation`
 ### `Alex Petz, Ignite Laboratories, August 2025`
 
 ---
@@ -222,15 +222,15 @@ aligns them to the same size.
 That leaves how to describe the information we'll pad it with, while retaining the ability to randomize the data and
 dictate how it should be applied.  First, let's look at what it would mean to pad multiple elements against data.  Let's
 say we want to pad a pattern of `ABC` against a slice of `11111` to a length of `10` elements wide.  There are three
-predominant ways we can apply the data - Reflected, Tiled, or Randomized -
+predominant ways we can apply the data - Reversed, Tiled, or Randomized -
 
     result ⬎                           ⬐ source data
-        "BACBA11111" - CBA CBA CBA CBA | ← Reflected on the left
+        "BACBA11111" - CBA CBA CBA CBA | ← Reversed on the left
         "BCABC11111" - ABC ABC ABC ABC | ← Tiled on the left
         "BABCA11111" - BCA ACB CAB BCA | ← Randomized on the left
              implied pattern ⬏
     
-        "11111CBACB" - | CBA CBA CBA CBA ← Reflected on the right
+        "11111CBACB" - | CBA CBA CBA CBA ← Reversed on the right
         "11111ABCAB" - | ACB ACB ACB ACB ← Tiled on the right
         "11111BACBC" - | BAC BCA ACB BCA ← Randomized on the right
 
@@ -239,7 +239,7 @@ polar ends of the X-axis (orthogonal 'left' and 'right') - but each axis also co
 point.  If you provide a static point to the pad function, it will _interleave_ the padding information between the existing
 elements.
 
-    "1B1A1C1B1A" - CBA CBA CBA CBA ← Reflected and interleaved
+    "1B1A1C1B1A" - CBA CBA CBA CBA ← Reversed and interleaved
     "A1B1C1A1B1" - ACB ACB ACB ACB ← Tiled and interleaved
     "1A1B1A1C1B" - CBC BAC BAB ACB ← Randomized and interleaved
 
@@ -250,16 +250,16 @@ achieve this.  For our above example, these would be the appropriate function ca
 procedure -
 
      directional "side" ⬎         result width ⬎     ⬐ source data
-    pad.String[orthogonal.Left, scheme.Reflect](10, "11111", "ABC")    // BACBA11111
+    pad.String[orthogonal.Left, scheme.Reverse](10, "11111", "ABC")    // BACBA11111
     pad.String[orthogonal.Left, scheme.Tile](10, "11111", "ABC")       // BCABC11111
     pad.String[orthogonal.Left, scheme.Randomize](10, "11111", "ABC")  // BABCA11111
                           padding scheme ⬏              pattern ⬏
  
-    pad.String[orthogonal.Right, scheme.Reflect](10, "11111", "ABC")   // 11111CBACB
+    pad.String[orthogonal.Right, scheme.Reverse](10, "11111", "ABC")   // 11111CBACB
     pad.String[orthogonal.Right, scheme.Tile](10, "11111", "ABC")      // 11111ABCAB
     pad.String[orthogonal.Right, scheme.Randomize](10, "11111", "ABC") // 11111BACBC
  
-    pad.String[orthogonal.Static, scheme.Reflect](10, "11111", "ABC")   // 1B1A1C1B1A
+    pad.String[orthogonal.Static, scheme.Reverse](10, "11111", "ABC")   // 1B1A1C1B1A
     pad.String[orthogonal.Static, scheme.Tile](10, "11111", "ABC")      // A1B1C1A1B1
     pad.String[orthogonal.Static, scheme.Randomize](10, "11111", "ABC") // 1A1B1A1C1B
 
@@ -267,7 +267,7 @@ As string operations were the most common form of padding when I started this, t
 above.  However, if you wish to perform the same operation with generally _any_ information, you may do so as such -
 
          element type ⬎
-    pad.FixedPattern[byte, orthogonal.Static, scheme.Reflect](10, []byte{1,1,1,1,1}, []byte{4, 5, 6})   // 1514161514
+    pad.FixedPattern[byte, orthogonal.Static, scheme.Reverse](10, []byte{1,1,1,1,1}, []byte{4, 5, 6})   // 1514161514
     pad.FixedPattern[byte, orthogonal.Static, scheme.Tile](10, []byte{1,1,1,1,1}, []byte{4, 5, 6})      // 4151614151
     pad.FixedPattern[byte, orthogonal.Static, scheme.Randomize](10, []byte{1,1,1,1,1}, []byte{4, 5, 6}) // 1415141615
 
@@ -283,17 +283,17 @@ time.  This can be done through the standard padding function -
     }
 
     element type ⬎
-      pad.Any[time.Time, orthogonal.Static, scheme.Reflect](10, data, padFn)
+      pad.Any[time.Time, orthogonal.Static, scheme.Reverse](10, data, padFn)
       pad.Any[time.Time, orthogonal.Static, scheme.Tile](10, data, padFn)
       pad.Any[time.Time, orthogonal.Static, scheme.Randomize](10, data, padFn)
 
 However, this presents the most fascinating part of this entire project - _we've just created a means of impulsing
 a neuron!_  We have several key bits of information at this moment:
 
-0. We have a massive container structure to hold data 
-1. We can place agents within the bounded structure
-2. We have a means of seeding around the agents with directed entropy
-3. The pad function is provided a number of steps that it can perform, each of which can yield an artifact value.
+0. We have an up-to 7D container structure I call a 'nexus'
+1. We can place agents within the bounds of that structure
+2. We have a means of spatially "seeding" around the agents with directed entropy
+3. The pad function is provided a number of steps that it can perform, each of which can yield an artifact value to the structure
 4. The structure defines the spatial bounds the agent can operate within
 
 These five points are all that we need to begin _impulsing_ something from point (0,0) to (x,y) while interpolating

@@ -98,7 +98,7 @@ of the bit pattern itself -
                        | 1 0 1 - 0 ... 0 |
      The Terminus Interval ⬏        ⬑ The Terminal Region
 
-This brings me to an important note: numeric values, no batter the base, are _constructed_ right↤to↤left, but we still 
+This brings me to an important note: numeric values, no matter the base, are _constructed_ right↤to↤left, but we still 
 _read them_ from left↦to↦right.  The same applies to binary - the leftmost, or the "most significant bit," is 
 considered index position `0` - whereas the rightmost, or the "least significant bit," is considered index position 
 `𝑛-1`.  From a _value_ perspective, on the other hand, the value wouldn't _exist_ without a terminus - _the phrase 
@@ -164,7 +164,7 @@ back to the halving points of an index again -
            ⬑ Zeros are introduced proportionally on the left with each halving
 
 This is pretty obvious - we are simply halving the target index to the next smaller power of two with each 
-iteration. That being said, if you consider the first three bits to be a diminishment _bit pattern_ and the 
+iteration. That being said, if you consider the first few bits (say, three) to be a diminishment _bit pattern_ and the 
 remaining bits to be zero, a summable formula arises - 
 
     let 𝑛 = The target index bit width
