@@ -98,7 +98,7 @@ clarity in communication -
         | 0 0 0 0 |  (0)
          Light Side
 
-At larger scales it gets far too excessive to print out every single value, so the index is often truncated 
+At larger scales it gets far too excessive to print out every point, so the index is often truncated 
 to highlight only its most important qualities or (as shown above) relevant known _points_.  Thus, this is 
 the most abstract representation of an index -
 
@@ -121,10 +121,10 @@ regions in the index where the points above and below are a perfect mirror until
     "Reflection Moments of a Nibble Index"
 
          Dark Side
-        | 1 1 1 1 ] 
-        | 1 1 1 0 ]
-        | 1 1 0 1 ]
-        | 1 1 0 0 ]
+        | 1 1 1 1 | 
+        | 1 1 1 0 |
+        | 1 1 0 1 |
+        | 1 1 0 0 |
            ├─────── The implicit upper quarter moment
         | 1 0 1 1 |
         | 1 0 1 0 |
