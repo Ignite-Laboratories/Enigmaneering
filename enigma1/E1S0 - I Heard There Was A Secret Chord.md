@@ -9,7 +9,7 @@ A _diminishment_ is a less resolute pattern that approximates an index.  A _meas
 a range of scalar patterns to apply against an index, represented by the bits of each potential 
 value.  This means that a diminishment can be represented by a singular measurement.
 
-    tl;dr - a measurement defines the scale to perform against an index
+    tl;dr - a measurement defines the scale to play against an index
 
 Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (commonly called a "note")
 
