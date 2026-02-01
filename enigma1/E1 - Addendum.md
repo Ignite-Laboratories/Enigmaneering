@@ -16,7 +16,7 @@ Is a lot clunkier to speak out loud than:
 
     "use a note, then a crumb, and end with a byte"
 
-These are split into two classifiers -
+I've grouped these into two groups:
 
 **Sub Byte Indexes** - any bit range less than 8 bits:
 
