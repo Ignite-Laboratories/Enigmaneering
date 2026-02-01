@@ -33,5 +33,5 @@ Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (commo
       (5) | 1 0 1 |   | 1 0 1   1 0 1   1 0 1   1 0 | ( 1462 ) + 293
       (6) | 1 1 0 |   | 1 1 0   1 1 0   1 1 0   1 1 | ( 1755 ) + 292
       (7) | 1 1 1 |   | 1 1 1   1 1 1   1 1 1   1 1 | ( 2047 )
-          |←  𝑤  →|   |←              𝑛            →|
+          |←  𝑤  →|   |←              𝑛            →|     ⬑ Potential Value
               ⬑ 3                 11 ⬏
