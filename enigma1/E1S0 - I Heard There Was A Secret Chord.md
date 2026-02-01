@@ -13,6 +13,8 @@ value.  This means that a diminishment can be represented by a singular measurem
 
 Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (commonly called a "note")
 
+The most important aspect I'd like you to notice is the _visual_ output of "patterned bits" that
+can asymmetrically tile the space.
 
     " Note Diminishment of an 11 bit Index "
 
