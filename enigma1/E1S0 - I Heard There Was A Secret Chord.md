@@ -6,8 +6,7 @@
 Before we can _"perform"_ a file, we get to learn how to play some notes.
 
 A _diminishment_ is a less resolute pattern that approximates an index.  A _measurement_ can define
-a range of scalar patterns to apply against an index, represented by the bits of each potential 
-value.  This means that a diminishment can be represented by a singular measurement.
+a range of scalar patterns to apply using the _bits_ of each potential value - making it represent a diminishment.
 
     tl;dr - a measurement defines the scale to perform against an index
 

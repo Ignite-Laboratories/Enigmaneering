@@ -7,7 +7,7 @@ To reveal our creation from the marble, we first need a sense of _scale._
 
 But what does _scale_ even mean?  
 
-What's the modality of creation, as performed on the _Key of Life_?
+What's the modality of creation, as performed in the _Key of Life_?
 
 We'll all call the tune - the piper will play it however they like - _yet we still **recognize** it._
 
