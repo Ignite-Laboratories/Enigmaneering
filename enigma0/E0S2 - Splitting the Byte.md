@@ -4,7 +4,7 @@
 ---
 
 A measurement is more than just a value - it's an _implicit decision tree._  In the right context,
-each addressable value could indicate a different branch another system should follow.  That makes a measurement
+each potential could indicate a different branch another system should follow.  That makes a measurement
 analogous to a _signaling symbol._
 
 When measurements are strung together, these symbols produce a logical _**phrase**._
