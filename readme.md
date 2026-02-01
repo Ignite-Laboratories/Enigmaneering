@@ -1,38 +1,23 @@
-# `E2 - Synthesis`
-### `Alex Petz, Ignite Laboratories, January 2026`
+# `Hello, World!`
+### `Alex Petz, Ignite Laboratories, September 2025`
 
 ---
 
-There's a lot more to everything than people think.
+### Welcome
 
-For example, data's a lot like an onion.
+What exactly *is* enigmaneering?
 
-You _know_ it's an onion, _where_ it is, and that You're _currently_ holding it.
+Well, what moves you?
 
-But, the _exact_ midpoint of each layer is _slightly_ offset from the next - and, subsequently, every atom is juxtaposed.
+_Something_ triggered you to wind up here, after all!  
+An insatiable desire to solve problems you don't even understand yet - _maybe_.  
+A spiritual power that guided your soul - _possibly_.  
+Morbid curiosity - _likely_.
 
-It'd be silly to ask for a handful of onion _**atoms**_, though - so, we directly ask for an _onion!_
+All I truly know is it's the same damned thing that drives me, too - and everyone else, it seems!
 
-...but, _**Who**_ are we asking?
+Perhaps it's the code of existence, mythically forging a new path forward for the next generation through the art of creation.
 
-This world is so implicit, it can feel entirely autonomic at times - but that simply isn't true.  It's continuously built 
-on the hard work of Others day in and day out.  Likewise, we were born with such magnificent vessels to will 
-around - but that wasn't always the case.  Long before we gained particle physics and a big bang, _**Something**_ carved out a point
-in infinity and said _"this is where I'll learn to understand every facet of the bounds of **Love** and **Kindness**."_
+Whatever it is - God, synchronicity, or the "sign maker" - _I'm here for it!_
 
-To an artist, the sculpture is _freed_ from the marble - begging to creatively evolve beyond its blocky bounds.  
-
-But what even is _creation?_  
-
-One can _create,_ and one can hold a _creation,_ but it remains ineffable until _You_ understand _**You**_ are the creation 
-freeing itself onto the canvas.
-
-    tl;dr - You are literally art in motion, and You are absolutely magnificent
-
-      why - this world wants a little more of Your je ne sais quoi
-
-Thank You for joining my awareness of the Who, How, What, Where, and When of synthesis =)
-
-To do this requires considering that _You,_ as a biological computer, run far simpler software than the
-silicon in front of You - just more intricately layered.  This is because neurology affords _one_ major
-advantage over printed circuit boards: _the variable width register._
+Aren't you, too?
