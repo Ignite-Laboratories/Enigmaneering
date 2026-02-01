@@ -1,4 +1,4 @@
-# `E2S1 - Measurement`
+# `E0S1 - Measurement`
 ### `Alex Petz, Ignite Laboratories, January 2026`
 
 ---
@@ -16,14 +16,15 @@ exists as an _"onion"_ because we **collectively** accepted that's what that clu
 
 _That's wonderful!_
 
-It means that _everything_ can be measured as data, and the manifested world around You is _intricately encoded._  Our 
-infinite ruler currently has only a sense of _difference_ that arises when compared to another index.  To 
-calculate a difference, one must collapse the potentials into a _measurement._
+It means that _everything_ can be measured as data, and the manifested world around You is _intricately encoded._
 
-    " A Measurement "
-        The value recorded from the index's currently held potential.
+Our infinite ruler only has a sense of _difference_ that arises when compared to another index.  To
+calculate a difference, one must collapse the potentials into _measurements._
 
-In binary an index is a known _bit-width,_ while a measurement is a _value_ of variable bit width.
+    " Measurement "
+        A value recorded from an index's currently held potential.
+
+In binary an index is a known _bit-width,_ while a measurement is the bit-width's contained _value._
 
 To model this in code, I've built a `measurement` type that byte-packs individual bits without enforcing byte-alignment.
 

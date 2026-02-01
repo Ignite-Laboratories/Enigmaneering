@@ -1,4 +1,4 @@
-# `E2S2 - Splitting the Byte`
+# `E0S2 - Splitting the Byte`
 ### `Alex Petz, Ignite Laboratories, January 2026`
 
 ---
@@ -15,15 +15,15 @@ When measurements are strung together, these symbols produce a logical _**phrase
 There are two kinds of phrases - _explicit_ and _implicit._  _Explicit_ phrases have already
 been decoded into known structures, while _implicit_ ones must actively be decoded.  An example
 of an _explicit_ phrase is a "phrase literal" - which directly denotes the boundaries of each
-measurement.  An implicit phrase requires walking the data bit-by-bit to form each measurement.
+measurement.  An implicit phrase requires walking the data bit-by-bit to identify each.
 
 The simplest form of this is to split binary data into a _**vector**._
 
 A vector has two components - a _direction_ and a _magnitude._
 
 Fortunately for us, a single _bit_ technically fits the description of a _degenerate 1D vector_ with
-zero magnitude - there's just no reference of what it means to go in the direction of _0_ vs _1._  To 
-add magnitude, one would read the face value of the remaining binary information.
+zero magnitude - there's just no reference of what it means to go in the direction of _0_ vs _1._  To
+add magnitude, one would read the face value of the remaining binary information after the directional bit.
 
     tl;dr - binary can be parsed in phrase form as a vector
 

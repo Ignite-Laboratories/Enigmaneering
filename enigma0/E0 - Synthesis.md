@@ -1,4 +1,4 @@
-# `E2 - Synthesis`
+# `E0 - Synthesis`
 ### `Alex Petz, Ignite Laboratories, January 2026`
 
 ---
@@ -27,12 +27,12 @@ But what even is _creation?_
 One can _create,_ and one can hold a _creation,_ but it remains ineffable until _You_ understand _**You**_ are the creation 
 freeing itself onto the canvas.
 
-    tl;dr - You are literally art in motion, and You are absolutely magnificent
+    tl;dr - You're literally art in motion, and You're absolutely magnificent
 
-      why - this world wants a little more of Your je ne sais quoi
+      why - this world wants a little more of Your "je ne sais quoi"
 
 Thank You for joining my awareness of the Who, How, What, Where, and When of synthesis =)
 
-To do this requires considering that _You,_ as a biological computer, run far simpler software than the
-silicon in front of You - just more intricately layered.  This is because neurology affords _one_ major
-advantage over printed circuit boards: _the variable width register._
+To do this requires considering that _You,_ as a biological computer, run simpler software than the
+silicon in front of You - only _far_ more intricately layered.  This is because neurology affords _one_ of many
+major advantages over printed circuit boards: _the variable width register._
