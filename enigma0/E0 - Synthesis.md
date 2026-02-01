@@ -17,7 +17,7 @@ It'd be silly to ask for a handful of onion _**atoms**_, though - so, we directl
 
 This world is so implicit, it can feel entirely autonomic at times - but that simply isn't true.  It's continuously built 
 on the hard work of Others day in and day out.  Likewise, we were born with such magnificent vessels to will 
-around - but that wasn't always the case.  Long before we gained particle physics and a big bang, _**Something**_ carved out a point
+around - but that wasn't always the case.  Long before we were given particle physics and a big bang, _**Something**_ carved out a point
 in infinity and said _"this is where I'll learn to understand every facet of the bounds of **Love** and **Kindness**."_
 
 To an artist, the sculpture is _freed_ from the marble - begging to creatively evolve beyond its blocky bounds.  
