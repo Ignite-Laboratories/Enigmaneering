@@ -24,7 +24,7 @@ Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (commo
     where 𝑚𝑎𝑥(𝑎, 𝑏) returns the larger of 𝑎 and 𝑏 
  
                                       ⬐ Synthesized Potentials
-              𝑝                      𝑣(𝑝)                         ⬐𝑑𝑣(𝑝)  
+              𝑝                   𝑣(11,3,𝑝)                       ⬐𝑑𝑣(11,3,𝑝)  
       (0) | 0 0 0 |   | 0 0 0   0 0 0   0 0 0   0 0 | (   0  ) + 292
       (1) | 0 0 1 |   | 0 0 1   0 0 1   0 0 1   0 0 | (  292 ) + 293
       (2) | 0 1 0 |   | 0 1 0   0 1 0   0 1 0   0 1 | (  585 ) + 292
