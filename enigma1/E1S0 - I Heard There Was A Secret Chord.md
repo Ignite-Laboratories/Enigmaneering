@@ -14,7 +14,7 @@ value.  This means that a diminishment can be represented by a singular measurem
 Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (commonly called a "note")
 
 
-    "Note Diminishment of an 11 bit Index"
+    " Note Diminishment of an 11 bit Index "
 
     let 𝑛 = The index width
     let 𝑤 = The pattern width
@@ -23,7 +23,7 @@ Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (commo
     let 𝑑𝑣(𝑛, 𝑤, 𝑝) ↦ 𝑣(𝑛, 𝑤, 𝑝) - 𝑣(𝑛, 𝑤, 𝑚𝑎𝑥(𝑝 - 1, 0))
     where 𝑚𝑎𝑥(𝑎, 𝑏) returns the larger of 𝑎 and 𝑏 
  
-                                      ⬐ "Synthesized Potentials"
+                                      ⬐ Synthesized Potentials
               𝑝                      𝑣(𝑝)                         ⬐𝑑𝑣(𝑝)  
       (0) | 0 0 0 |   | 0 0 0   0 0 0   0 0 0   0 0 | (   0  ) + 292
       (1) | 0 0 1 |   | 0 0 1   0 0 1   0 0 1   0 0 | (  292 ) + 293
