@@ -10,7 +10,7 @@ These are especially helpful when verbalizing a phrase!
 
 This:
 
-    "use a 3-bit measurement, then a 2-bit measurement, and end with a byte"
+    "use a 3-bit measurement, then 2-bits, and end with a byte"
 
 Is a lot clunkier to speak out loud than:
 
