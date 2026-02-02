@@ -10,12 +10,12 @@ a range of scalar patterns to apply using the _bits_ of each potential value - m
 
     tl;dr - a measurement defines the scale to play against an index
 
-Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (which I call a "note")
+Let's take a look at how to diminish an 11-bit index with a 3-bit pattern.
 
 The most important aspect I'd like you to notice is the _visual_ output of "patterned bits" that
 can asymmetrically tile the space.
 
-    " Note Diminishment of an 11 bit Index "
+    " 3 Bit Diminishment of an 11 bit Index "
 
     let 𝑛 = The index width
     let 𝑤 = The pattern width
@@ -37,7 +37,7 @@ can asymmetrically tile the space.
           |←  𝑤  →|   |←              𝑛            →|     ⬑ Potential Values
               ⬑ 3                 11 ⬏
 
-I call this a "note" for a reason.
+3 bits (a binary "note") provides 8 scale tones to repeat across any index.
 
 Fidelity space uses music theory to best approximate a waveform, just as a curious child
 can pick a tune out by ear on a piano.  Humanity has eons of research in the primitives to
