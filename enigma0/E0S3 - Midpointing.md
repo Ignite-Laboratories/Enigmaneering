@@ -26,7 +26,7 @@ phrase with a magnitude, You've also described a _very resolute **point**_ withi
 this is to consider that _files_ in Your computer are currently stored as a scalar describing the number of steps
 towards infinity to walk before reaching it.  With each midpoint operation, the magnitude of steps _also_ halves - causing
 it's bit-width to reduce by **_at least_ one bit.**  This means the data will never _grow_ from a mid-pointing operation,
-but _could_ shrink incredibly fast.
+but _could_ shrink **incredibly fast.**
 
 At this point we're no longer describing a vector, instead something that bridges topology and geometry - making this
 what I'm calling a _directed distinction._
