@@ -6,7 +6,7 @@
 Before we can _"perform"_ a file, we get to learn how to play some notes.
 
 A _measurement_ can define a range of scalar patterns provided by its _bits_ - making it represent
-the scale tones to "diminish" a larger index into a less resolute approximation.
+the scale tones with which to "diminish" a larger index into a less resolute approximation.
 
 Let's take a look at how to diminish an 11-bit index with a 3-bit pattern.
 
