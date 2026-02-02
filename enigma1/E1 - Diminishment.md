@@ -37,4 +37,4 @@ At this point, we're going to begin evolving our signals into _**notes!**_
 
     tl;dr - indexes have an ideal range of potential compressibility defined under an exponential bell curve
 
-      why - the magnitude's binary representation grows logarithmically as it increases
+      why - the magnitude's binary representation grows logarithmically as the potential moves away from the midpoint
