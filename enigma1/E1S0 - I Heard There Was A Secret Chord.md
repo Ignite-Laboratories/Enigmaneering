@@ -40,7 +40,11 @@ can asymmetrically tile the space.
 3 bits (a binary "note") provides 8 scale tones to repeat across any index.
 
 Fidelity space is unique because the plot of "measurement values ↦ ordinal index position"
-generates a _waveform._ Because of this, I theorize that music theory can best 
+generates a _waveform._ 
+
+[insert file waveform here]
+
+As such, I theorize that music theory can best 
 approximate a waveform in fidelity space.
 
 Just as a curious child can pick a tune out by ear on a piano, numbers can be ordered to
