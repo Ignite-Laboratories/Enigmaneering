@@ -10,7 +10,7 @@ a range of scalar patterns to apply using the _bits_ of each potential value - m
 
     tl;dr - a measurement defines the scale to play against an index
 
-Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (commonly called a "note")
+Let's take a look at how to diminish an 11-bit index with a 3-bit pattern (which I call a "note")
 
 The most important aspect I'd like you to notice is the _visual_ output of "patterned bits" that
 can asymmetrically tile the space.
