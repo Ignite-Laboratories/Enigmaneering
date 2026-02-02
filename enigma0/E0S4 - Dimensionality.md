@@ -7,7 +7,7 @@ On our journey to realizing an onion, there's only a final step - _**When!?**_
 
 But here's the kicker - _"when"_ is only a frame of reference!
 
-The logical _pairing_ of multiple dimensions together is what constructs a cohesive sense
+The logical _clustering_ of multiple dimensions together is what constructs a cohesive sense
 of reality through an intricate nervous system.  Plots like "Peace ↦ Time" are derived from
 a myriad of dimensions, but still only get called out by _two._  This brings us to what I call _plot
 notation:_ `𝑓(𝐷₀) ↦ ( 𝑓(𝐷₁), 𝑓(𝐷₂) ... 𝑓(𝐷ₙ) )`.  For our example, I verbalize it as "Peace across Time." The left side represents the _**anchor dimension**_,
