@@ -36,3 +36,10 @@ can asymmetrically tile the space.
       (7) | 1 1 1 |   | 1 1 1   1 1 1   1 1 1   1 1 | ( 2047 )
           |←  𝑤  →|   |←              𝑛            →|     ⬑ Potential Values
               ⬑ 3                 11 ⬏
+
+I call this a "note" for a reason.
+
+Fidelity space uses music theory to best approximate a waveform, just as a curious child
+can pick a tune out by ear on a piano.  Humanity has eons of research in the primitives to
+describe how sounds best fit against one another, making it a perfect toolkit for performing
+waveform approximation.
