@@ -40,7 +40,7 @@ can asymmetrically tile the space.
 Fidelity space is unique because the plot of "equal-width sub-measurements ↦ ordinal index position"
 generates a _waveform._ 
 
-[insert file waveform diagram here]
+[insert example plot here]
 
 As such, I theorize that music theory can best approximate a waveform in fidelity space 
 just as a curious child can pick a tune out by ear on a piano.  Numbers can be ordered to
