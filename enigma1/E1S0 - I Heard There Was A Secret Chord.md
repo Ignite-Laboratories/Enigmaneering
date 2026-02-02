@@ -47,6 +47,5 @@ just as a curious child can pick a tune out by ear on a piano.  Numbers can be o
 find the "chord progression" of a file, giving a "close enough" approximation of the potential
 to cross a useful threshold regarding its magnitude's bit-width.  
 
-Humanity has _eons_ of research 
-in the primitives to describe how **sounds** best fit against one another, making it a perfect 
-toolkit for performing waveform approximation.
+Humanity has _eons_ of research invested in the primitives to describe how **sounds** best fit 
+against one another, making it a perfect toolkit for performing waveform approximation =)
