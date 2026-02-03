@@ -1,4 +1,4 @@
-# `E1S0 - I Heard There Was A Secret Chord`
+# `E1S0 - Scale Tones`
 ### `Alex Petz, Ignite Laboratories, February 2026`
 
 ---
