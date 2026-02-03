@@ -120,7 +120,7 @@ for each index one pattern width less wide.  I'll do so for every potential inte
                               Step 1 ⬏
 
 So, let's put that all together and validate that the 4ᵗʰ interval of a 3-bit diminishment over an 11-bit index
-indeed matches what we'd expect -
+indeed matches our expected potential -
 
                      "The Desired Target"
 
@@ -146,16 +146,16 @@ indeed matches what we'd expect -
     |                   0 1 | +  (1) ← ⌊( 2²/2³) * 2⌋
                               =  585
 
-In essence, you are taking the 4ᵗʰ 8ᵗʰ (the interval value followed by potential diminishment range) of each subsequently 
-smaller index and then summing the values together.  Ultimately, that yields the following formula for a _summation_ of
-the more simple diminishment formula.
+In essence, you are taking the 4ᵗʰ 8ᵗʰ (the interval value followed by the diminishment's resolution) of each subsequently 
+smaller index and then summing the values together.  Ultimately, that yields the following formula for a _summation_ variant
+of the more simple Diminishment Interval Formula.
 
 <picture>
 <img alt="Index Diminishment Summation Formula" src="assets/diminishment summation.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
-I'm not sure how much more proof one would need that you can simply _pattern_ an index without math and still get
-equidistant points - its a fundamental principle of indexes =)
+I'm not sure how much more proof one would need that you can simply repeat a _bit pattern_ across index and **always** get
+as equidistant of points as possible - its a fundamental principle of indexes =)
 
 _**Far more importantly,**_ however, we just inadvertently executed the essence of synthesis: using _starting
 conditions_ and an _algorithm_ to recreate a larger _target._
