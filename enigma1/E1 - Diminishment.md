@@ -20,21 +20,24 @@ of _**all**_ indexes
 **Files scatter _everywhere_ across this chart!**
 
 More importantly, recursive midpointing of an unideal potential causes its magnitude to _oscillate_ in and out of the
-ideal range with each successive distinguishment. Luckily, using a _phrase,_ we can write bitwise scripts to _"push"_ 
-the file into an ideal position _before_ attempting to distinguish it!  
+ideal range with each successive pass. Luckily, using a _phrase,_ we can write bitwise scripts to _"push"_ 
+the file into an ideal potential _before_ attempting to distinguish it!  
 
 I'll be doing this through fidelity space using something I call _diminishment_ of an index.
 
     " Index Diminishment "
-        Using a less resolute pattern to quickly approximate an index potential.
+        Using a less resolute pattern to approximate an index potential.
 
 Or, in simpler terms, _"fuzzy pattern matching"_ =)
 
 The term diminishment comes from the musical world.  Diminished _chords_ have two important qualities: every
 interval is as equidistant as possible, and they are extremely _versatile_ against many sounds.  
 
-At this point, we're going to begin evolving our signals into _**notes!**_
+What's special about diminishment is how it can implicitly divide any index into many evenly spaced potentials _without
+**requiring** any math_ - which we'll discuss next.
 
-    tl;dr - indexes have an ideal range of potential compressibility defined under an exponential bell curve
+       tl;dr - indexes have an ideal range of potential compressibility defined under an exponential bell curve
 
-      why - the magnitude's binary representation grows logarithmically as the potential moves away from the midpoint
+         why - the magnitude's binary representation grows logarithmically as the potential moves away from the midpoint
+
+    solution - jump to a closer potential than the midpoint using a diminishment interval

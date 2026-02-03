@@ -1,22 +1,24 @@
-# `E1 Addendum`
+# `E1 Compendium`
 ### `Alex Petz, Ignite Laboratories, January 2026`
 
 ---
 
-From this point onward, I'll be referring to very specific bit-width indexes.  In most cases, I'll refer
+### Named Bit-Widths
+
+From this point onward, I'll be referring to very specific bit-width indexes.  In most cases, I refer
 to them by their bit-width directly - but in some, I've chosen to use the colloquial names I was taught.
 
 These are especially helpful when verbalizing a phrase!
 
 This:
 
-    "use a 3-bit measurement, then 2-bits, and end with a byte"
+    "use a 3-bit measurement, then 2-bit, and then 6-bit"
 
 Is a lot clunkier to speak out loud than:
 
-    "use a note, then a crumb, and end with a byte"
+    "use a note, then a crumb, and then a morsel"
 
-I've grouped these in two:
+I've grouped these into two categories:
 
 **Sub Byte Indexes** - any bit range less than 8 bits:
 
@@ -46,3 +48,11 @@ None of these are standard or accepted terms, merely my own ideas:
        48   | Hook
        64   | Melody
       128   | Verse
+
+### Additional Terms
+
+**Diminishment** - Using a less resolute pattern to approximate an index potential.
+
+**Diminishment Interval** - The measured potential of a diminishment index
+
+**Diminishment Pattern** - Explicitly referencing the ordered bits represented by the interval.

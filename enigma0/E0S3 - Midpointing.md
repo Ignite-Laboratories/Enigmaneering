@@ -19,9 +19,12 @@ describe two _regions_ of space pivoted around the _midpoint_ to infinity.  Furt
 bang from our bit if we consider that the magnitude to follow _**also**_ originates from the midpoint - with a 0
 meaning to walk _negatively_ from there and a 1 _positively_.
 
-Most importantly - half of infinity is still _infinite,_ but also _**exactly one bit less wide to describe at all scales.**_
+Most importantly - this leads me to the following:
 
-This allows You to _sequentially_ use bit measurements to **infinitely subdivide** a region of space.  If You follow this
+    " The Law of Infinite Resolution "    
+        Half of infinity is still infinite, but also exactly one bit less wide to describe at all scales.
+
+This law allows a phrase to _sequentially_ use bit measurements to **infinitely subdivide** a region of space.  If You follow this
 phrase with a magnitude, You've also described a _very resolute **point**_ within that region.  The best way to understand
 this is to consider that _files_ in Your computer are currently stored as a scalar describing the number of steps
 towards infinity to walk before reaching it.  With each midpoint operation, the magnitude of steps _also_ halves - causing
@@ -34,7 +37,7 @@ what I'm calling a _directed distinction._
     " A Directed Distinction "
         A recursive phrase of decisions that infinitely subdivide a space
 
-I call the act of locating something with directed distinctions _**distinguishing**_ it.
+I call the act of locating something with directed distinctions _**distinguishing**_ it from fidelity space.
 
 Midpointing, as we'll discuss next, doesn't have to stretch infinitely in a _single_ direction =)
 
