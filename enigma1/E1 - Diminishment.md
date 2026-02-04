@@ -34,7 +34,7 @@ The term diminishment comes from the musical world.  Diminished _chords_ have tw
 interval is as equidistant as possible, and they are extremely _versatile_ against many sounds.  
 
 What's special about diminishment is how it can implicitly divide any index into many evenly spaced potentials _without
-**requiring** any math_ - which we'll discuss next.
+requiring **any** math_ - which we'll discuss next.
 
        tl;dr - indexes have an ideal range of potential compressibility defined under an exponential bell curve
 

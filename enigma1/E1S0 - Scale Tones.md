@@ -3,7 +3,7 @@
 
 ---
 
-A diminishment has a mathematical formulation, but it's so much simpler than that because it's just _**repeating
+A diminishment has a mathematical formulation, but it's so much simpler than that because _**it's just repeating
 a pattern of bits across another index.**_
 
 To highlight that, let's take a look at how to diminish an 11-bit index with a 3-bit diminishment interval.
@@ -33,18 +33,24 @@ can _**asymmetrically**_ tile the space.
           |←  𝑤  →|   |←              𝑛            →|     ⬑ Potential Values
               ⬑ 3                 11 ⬏
 
-3 bits (a binary "note") provides _8_ scale tones (an octave) to repeat across any index.
+Here, 3 bits (a binary "note") provides _8_ scale tones (an octave) to repeat across any index.
 
 Fidelity space is unique because the plot of "equal-width sub-measurements ↦ ordinal index position"
-generates a _waveform._ If the target index's bit-width isn't divisible by the diminishment's bit width, 
-a quasi-periodic waveform will emerge from the interval when plotted.
+generates a _waveform._
 
-[insert example plot here]
+[insert example waveform here]
 
-As such, I theorize that music theory can best approximate a waveform in fidelity space
-just as a curious child can pick a tune out by ear on a piano.  Diminishments can be ordered to
-find the "chord progression" of a file, giving a "close enough" approximation of the potential
-to cross a useful threshold regarding its magnitude's bit-width.
+If the target index's bit-width isn't divisible by the diminishment's bit width, a quasi-periodic waveform 
+will emerge from the interval when plotted against the target.
 
-Humanity has _eons_ of research invested in the primitives to describe how **sounds** best fit
-against one another, making it a perfect toolkit for performing waveform approximation =)
+[insert quasi-periodic waveform atop of the last]
+
+As such, I theorize that music theory can best approximate a waveform in fidelity space - just as a curious 
+child can pick a tune out by ear on a piano.  Diminishments can be ordered to find the "chord progression" of 
+a file, giving a "close enough" approximation of the target waveform.  In doing so, the magnitude to reach the
+target from the diminishment interval will decrease enough for ideal midpointing.
+
+Humanity has _eons_ of research invested in describing how **sounds** best fit against one another, making it a 
+perfect toolkit for performing waveform approximation =)
+
+    tl;dr - music theory can be used to approximate enough of a file that you'd only need to encode the delta needed to reach it
