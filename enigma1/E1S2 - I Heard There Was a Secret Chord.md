@@ -14,7 +14,7 @@ be smaller.
 
 This is the _time domain._
 
-**Concurrent** application recursively spreads each tone across the resolution identified by the last - more densely
+**Concurrent** application recursively spreads each tone across the space defined by the lowest value tone - more densely
 approximating the target potential.
 
 This is the _frequency domain._
@@ -29,3 +29,19 @@ Effectively, this means that a less-wide scale tone is a _"higher note"_ in the 
 
 Naturally - this also means a 1-bit interval is the _highest possible binary frequency._
 
+### Woah Woah Woah
+
+Okay, let's recap - because it's not as complex as that all sounds!
+
+Think of a diminishment as a spread of _**potential**_ notes.  When applied to a target index, this forms _**scale 
+tones**_ and each is called a _**diminishment interval.**_
+
+When tones are performed _sequentially_ a _**melody**_ is formed - _concurrently_, a _**chord.**_
+
+A chord is stacked from the smallest numeric tone to the largest, letting them do most of the heavy lifting.  As
+each chord tone is applied, the space above its potential up to infinity is used as the next tone's frame of reference. 
+
+This allows the smallest bit-width tones to do the majority of the heavy lifting while refining the space for the
+higher frequency ones to resolve close to the target.
+
+No Window Is An Island

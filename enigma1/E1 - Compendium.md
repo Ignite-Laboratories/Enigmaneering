@@ -53,10 +53,10 @@ None of these are standard or accepted terms, merely my own ideas:
 
 **Diminishment** - Using a less resolute pattern to approximate an index potential.
 
-**Diminishment Interval** - The measured potential of a diminishment index
+**Diminishment Interval** - The measured potential of a diminishment index.
 
 **Diminishment Pattern** - Explicitly referencing the ordered bits represented by the interval.
 
-**Scale Tones** - The potentials created from applying a diminishment interval across a target index.
+**Scale Tones** - The potentials identified by a diminishment applied to a larger index.
 
 **Binary Overtones** - Basic compositional tones used in the process of approximating a potential.
