@@ -25,7 +25,7 @@ Defining some basic "givens" of how I feel Life operates is very helpful to my m
 
 ### The Awareness Axiom
 
-    " Empathetic equilibriums can only be reached through mutual awareness. "
+    " Empathetic equilibriums are resolved quickest through mutual awareness. "
 
 ### The Knowledge Axiom
 
