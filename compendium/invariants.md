@@ -41,7 +41,7 @@ Defining some basic "givens" of how I feel the world operates is very helpful to
 
 Metaphorically, these invariants fuzzily found the core of distributed mental _"RAID."_
 
-I'm just a guy - I can't answer all of your questions. 
+I'm just a guy - I can't answer all of your questions as no engineer is an island. 
 
 But I can give you an empathetic soundboard through which you can echo your ideas back until you've 
 answered them through _commiseration_ =)
