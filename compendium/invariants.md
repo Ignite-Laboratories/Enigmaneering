@@ -3,7 +3,7 @@
 
 ---
 
-I feel like an imposter writing mathematical axioms because I'm not a mathematician - I'm a software engineer.
+I feel like an imposter writing axioms because I'm not a mathematician - I'm a software engineer.
 
 Defining some basic "givens" of how I feel Life operates is very helpful to my mental process, though.
 
@@ -41,7 +41,7 @@ Defining some basic "givens" of how I feel Life operates is very helpful to my m
 
 Metaphorically, these invariants fuzzily found the core of distributed mental _"RAID."_
 
-I'm just a guy - I can't answer all of your questions as no engineer is an island. 
+I'm just a guy - I can't answer all of your questions because no engineer is an island. 
 
 But I can give you an empathetic soundboard with which you can echo your ideas back until you've 
 answered them through _commiseration_ =)

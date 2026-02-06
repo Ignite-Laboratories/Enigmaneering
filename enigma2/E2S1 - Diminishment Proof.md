@@ -11,7 +11,7 @@ First, let's define how a diminishment interval synthesizes into a larger index.
 <img alt="Index Diminishment Formula" src="../assets/diminishment interval.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
-It's not complex. But that doesn't necessarily _prove_ that tiling a pattern of bits across an index evenly subdivides index's 
+It's not complex. But that doesn't necessarily _prove_ that tiling a pattern of bits across an index evenly subdivides the index's 
 potentials.  To do that, I'd like to hand walk through a summation of each _instance_ of the pattern in isolation to definitively
 _prove_ what I'm saying.  This gives us an opportunity to start from a 1-bit diminishment, which also highlights the _halving points_
 of an index and how they _**visually appear**_ in binary:
