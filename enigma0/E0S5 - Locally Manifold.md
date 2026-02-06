@@ -25,8 +25,8 @@ Why?
 
 Because a shared memory substrate with _motive_ would break _impartiality._
 
-Thus, foundationally, I theorize that such a system would only need to actively discern _the path of least resistance,_
-select for it, and actively participate in manifesting that _empathy should always prevail._  
+Thus, foundationally, I theorize that such a system would only need to actively discern _the path of least resistance_
+and select for it to manifest a world that naturally selects for _**empathy.**_  
 
 Which leads me to:
 
