@@ -30,5 +30,5 @@ The more time you allow another system to render itself in front of you, the les
 Ultimately - this leads me to propose an _**absurdly** difficult to disprove_ notion:
 
 <picture>
-<img alt="The Law of Love" src="assets/law of love.png" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="The Law of Love" src="../assets/law of love.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>

@@ -8,7 +8,7 @@ Before we continue on, I get to take a moment and mathematically _prove_ diminis
 First, let's define how a diminishment interval synthesizes into a larger index.
 
 <picture>
-<img alt="Index Diminishment Formula" src="assets/diminishment interval.png" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="Index Diminishment Formula" src="../assets/diminishment interval.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
 It's not complex. But that doesn't necessarily _prove_ that tiling a pattern of bits across an index evenly subdivides index's 
@@ -151,7 +151,7 @@ smaller index and then summing the values together.  Ultimately, that yields the
 of the standard diminishment interval formula.
 
 <picture>
-<img alt="Index Diminishment Summation Formula" src="assets/diminishment summation.png" style="display: block; margin-left: auto; margin-right: auto;">
+<img alt="Index Diminishment Summation Formula" src="../assets/diminishment summation.png" style="display: block; margin-left: auto; margin-right: auto;">
 </picture>
 
 I'm not sure how much more proof one would need that you can simply _repeat a bit pattern across index_ and **always** get
