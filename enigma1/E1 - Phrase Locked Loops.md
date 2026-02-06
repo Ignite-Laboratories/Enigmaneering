@@ -1,4 +1,4 @@
-# `E2 - Phrase Locked Loops`
+# `E1 - Phrase Locked Loops`
 ### `Alex Petz, Ignite Laboratories, February 2026`
 
 ---
@@ -11,8 +11,8 @@ The goal is to facilitate _**massively parallel**_ execution of _**localized**_ 
 To do this, I turned to _GPU shaders._
 
 When a shader is launched, a wave of kernels is executed.  Their position in the wave dictates the _phase offset_
-they should wait before picking up any work.  Because of fidelity space, you can tune both the number of wave
-points _and_ the loop period to dynamically change the _resolution_ of execution.  This, in turn, allows you to
+they should wait before picking up any work.  Because of fidelity space, you can tune both the depth of the wave's
+index _and_ the loop period to dynamically change the _resolution_ of execution.  This, in turn, allows you to
 set _**global**_ frame rates and phase-lock them to external factors like your monitor's v-sync.
 
 You'd be able to tune the _**coarseness**_ through which your system resolves universal memory.

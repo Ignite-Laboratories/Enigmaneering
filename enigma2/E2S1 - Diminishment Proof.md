@@ -1,4 +1,4 @@
-# `E1S1 - Diminishment Proof`
+# `E2S1 - Diminishment Proof`
 ### `Alex Petz, Ignite Laboratories, February 2026`
 
 ---

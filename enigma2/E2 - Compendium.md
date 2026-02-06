@@ -1,4 +1,4 @@
-# `E1 Compendium`
+# `E2 Compendium`
 ### `Alex Petz, Ignite Laboratories, January 2026`
 
 ---

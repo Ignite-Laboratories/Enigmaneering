@@ -1,4 +1,4 @@
-# `E1S0 - Scale Tones`
+# `E2S0 - Scale Tones`
 ### `Alex Petz, Ignite Laboratories, February 2026`
 
 ---
@@ -33,7 +33,7 @@ can _**asymmetrically**_ tile the space.
           |←  𝑤  →|   |←              𝑛            →|     ⬑ Potential Values
               ⬑ 3                 11 ⬏
 
-Here, 3 bits (a binary "note") provides _8_ scale tones (an octave) to repeat across any index.
+Here, 3-bits (a binary "note") provide us with _8_ potential scale tones (an octave) to repeat across any index.
 
 Fidelity space is unique because the plot of "equal-width sub-measurements ↦ ordinal index position"
 generates a _waveform._

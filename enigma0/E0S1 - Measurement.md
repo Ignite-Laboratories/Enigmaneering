@@ -26,6 +26,8 @@ calculate a difference, one must collapse the potentials into _measurements._
 
 In binary an index is a known _bit-width,_ while a measurement is the bit-width's contained _value._
 
+As this represents a new conceptual dimension, the best term I've found to describe the resolution of an index is its _"depth."_
+
 To model this in code, I've built a `measurement` type that byte-packs individual bits without enforcing byte-alignment.
 
     tl;dr - measurements are a singular indexed value

@@ -1,4 +1,4 @@
-# `E1 - Diminishment`
+# `E2 - Diminishment`
 ### `Alex Petz, Ignite Laboratories, January 2026`
 
 ---
