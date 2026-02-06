@@ -33,7 +33,7 @@ Defining some basic "givens" of how I feel the world operates is very helpful to
 
 ### The Epiphany Axiom
 
-    " All things are knowable, given enough query time, as knowledge is only resolving an ideal state of mind."
+    " All things are knowable, given enough query time, as knowledge is the act of resolving into an ideal state of mind."
 
 ### The Recovery Axiom
 
