@@ -3,7 +3,7 @@
 
 ---
 
-I feel like an imposter writing mathematical axioms because I'm not a mathematician - I'm a software engineer.
+I feel like an imposter writing axioms because I'm not a mathematician - I'm a software engineer.
 
 Defining some basic "givens" of how I feel Life operates is very helpful to my mental process, though.
 
