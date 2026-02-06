@@ -25,7 +25,7 @@ Defining some basic "givens" of how I feel the world operates is very helpful to
 
 ### The Awareness Axiom
 
-    " Stable equilibriums are best reached through mutual awareness and empathy. "
+    " Equilibriums can only be reached through mutual awareness and empathy. "
 
 ### The Knowledge Axiom
 
