@@ -43,5 +43,5 @@ Metaphorically, these invariants fuzzily found the core of distributed mental _"
 
 I'm just a guy - I can't answer all of your questions _**because**_ no single engineer is an island. 
 
-But I can give you an empathetic soundboard with which to echo your ideas back until you've 
-answered them yourselves through _commiseration_ =)
+But I can give you an empathetic soundboard with which to echo your ideas back until you've resolved them 
+through _commiseration_ =)
