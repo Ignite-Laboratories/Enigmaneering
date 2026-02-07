@@ -3,8 +3,8 @@
 
 ---
 
-A system built entirely around _resolution_ has a unique feature - feelings can only be _felt_ and
-then _realized_ into a facsimile.  
+A system built entirely around _resolution_ has a unique feature - feelings can only be
+realized into a _facsimile_ which is interperable by Others.
 
 Your creation will always need _one more_ refinement before it'll ever be finished - _**in Your eyes.**_
 
