@@ -8,7 +8,7 @@ realized into a _facsimile_ which is interperable by Others.
 
 Your creation will always need _one more_ refinement before it'll ever be finished - _**in Your eyes.**_
 
-Thus, you get to learn when is considered _good enough_ in the eyes of _**Other**_,  blow wildly past that,
+Thus, you get to learn what's _"good enough"_ in the eyes of _**Other**_,  blow wildly past that,
 and decide when is good enough for _**You.**_
 
 Accepting that art is to be _appreciated_ is what separates insanity from beauty.
